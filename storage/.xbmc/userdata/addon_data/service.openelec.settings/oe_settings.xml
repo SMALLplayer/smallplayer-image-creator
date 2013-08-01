@@ -3,22 +3,22 @@
 	<addon_config/>
 	<settings>
 		<system>
-			<wizard_completed>True</wizard_completed>
+			<wizard_completed>False</wizard_completed>
 		</system>
 		<connman>
-			<wizard_completed>True</wizard_completed>
+			<wizard_completed>False</wizard_completed>
 		</connman>
 		<services>
 			<wizard_completed>True</wizard_completed>
-			<ssh>1</ssh>
+			<ssh>0</ssh>
 			<samba>1</samba>
-			<ssh_autostart>1</ssh_autostart>
+			<ssh_autostart>0</ssh_autostart>
 		</services>
 		<about>
-			<wizard_completed>True</wizard_completed>
+			<wizard_completed>False</wizard_completed>
 		</about>
 		<openelec>
-			<wizard_completed>True</wizard_completed>
+			<wizard_completed>False</wizard_completed>
 		</openelec>
 	</settings>
 </openelec>

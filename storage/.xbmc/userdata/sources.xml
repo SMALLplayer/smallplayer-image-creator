@@ -2,26 +2,26 @@
     <video>
         <default pathversion="1"></default>
         <source>
-            <name>Videos</name>
-            <path pathversion="1">/storage/videos/</path>
+            <name>Films op SD-kaart</name>
+            <path pathversion="1">/storage/films/</path>
         </source>
         <source>
-            <name>TV Shows</name>
-            <path pathversion="1">/storage/tvshows/</path>
+            <name>TV-series op SD-kaart</name>
+            <path pathversion="1">/storage/series/</path>
         </source>
     </video>
     <music>
         <default pathversion="1"></default>
         <source>
-            <name>Music</name>
-            <path pathversion="1">/storage/music/</path>
+            <name>Muziek op SD-kaart</name>
+            <path pathversion="1">/storage/muziek/</path>
         </source>
     </music>
     <pictures>
         <default pathversion="1"></default>
         <source>
-            <name>Pictures</name>
-            <path pathversion="1">/storage/pictures/</path>
+            <name>Foto's op SD-kaart</name>
+            <path pathversion="1">/storage/fotos/</path>
         </source>
     </pictures>
   </sources>
