@@ -258,7 +258,7 @@ echo "#########################################################"
   mount "$PART2" $MOUNTPOINT
 
   echo "copying data to storage partition"
-  cp -rf $STORAGE/. $MOUNTPOINT
+  rsync -a -f"- .git*" -f"+ *" $STORAGE/. $MOUNTPOINT
 
   echo "syncing disks"
   sync
