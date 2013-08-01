@@ -1,0 +1,15 @@
+<package version="1.4">
+  <video>
+    <item>
+      <rendition cdn="akamai" duration="1369.56" width="416" height="312" type="video/mp4" bitrate="157">
+        <src>rtmp://cp8619.edgefcs.net/ondemand/riptide/r2/production/2011/07/19/293946a397576fa0720ddfacdb4c2593/mp4_416px_160k_b30_seg0_416x312_93704.mp4</src>
+      </rendition>
+      <rendition cdn="akamai" duration="1369.56" width="416" height="312" type="video/mp4" bitrate="568">
+        <src>rtmp://cp8619.edgefcs.net/ondemand/riptide/r2/production/2011/07/19/293946a397576fa0720ddfacdb4c2593/mp4_416px_576k_b30_seg0_416x312_472776.mp4</src>
+      </rendition>
+      <rendition cdn="akamai" duration="1369.56" width="640" height="480" type="video/mp4" bitrate="1221">
+        <src>rtmp://cp8619.edgefcs.net/ondemand/riptide/r2/production/2011/07/19/293946a397576fa0720ddfacdb4c2593/mp4_640px_1296k_m31_seg0_640x480_1125944.mp4</src>
+      </rendition>
+    </item>
+  </video>
+</package>

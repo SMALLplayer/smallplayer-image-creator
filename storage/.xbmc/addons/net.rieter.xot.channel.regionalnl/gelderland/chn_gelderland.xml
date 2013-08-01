@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<channels>
+    <channel>
+        <guid>B797D9BA-F06B-11E1-9CD5-9F7D6188709B</guid>
+        <name>Omroep Gelderland</name>
+        <description>Omroep Gelderland uitzendinggemist</description>
+        <icon>gelderlandicon.png</icon>
+        <iconlarge>gelderlandlarge.png</iconlarge>
+        <channelcode>tv1</channelcode>
+        <sortorder>12</sortorder>
+        <language>nl</language>
+        <compatible>Environments.All</compatible>
+    </channel>
+</channels>

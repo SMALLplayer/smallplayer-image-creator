@@ -1,0 +1,16 @@
+Content-Type: text/html; charset=utf-8
+Status: 200
+X-Powered-By: Phusion Passenger (mod_rails/mod_rack) 3.0.17
+X-UA-Compatible: IE=Edge,chrome=1
+ETag: "0b9bb96848b0d1db950ca45cddcc92b5"
+X-Request-Id: 015da2846d5c98b09bcf70337d783ca3
+X-Runtime: 1.264504
+X-Content-Digest: 211da0fb2b49fe61d3ffcf2b2e8d8f583a47095b
+X-Rack-Cache: miss, store
+Server: nginx/1.2.3 + Phusion Passenger 3.0.17 (mod_rails/mod_rack)
+Vary: Accept-Encoding
+Content-Length: 13386
+Cache-Control: public, max-age=515
+Date: Tue, 30 Jul 2013 21:07:19 GMT
+Connection: close
+content-encoding: none

@@ -1,0 +1,2 @@
+[B]Changelog[/B]
+Fixed: RTL now uses M38U streams and DRM items can not be played back.

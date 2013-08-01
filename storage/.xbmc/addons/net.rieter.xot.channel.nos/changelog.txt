@@ -1,0 +1,4 @@
+[B]Changelog[/B]
+
+Updated: UZG mobile hashing algorithm updated (Thanks to Daniel)
+Fixed: Added another cookie to UZG channel to prevent redirects (Issue 446)

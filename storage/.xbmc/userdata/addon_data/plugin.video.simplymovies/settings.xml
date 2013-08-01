@@ -1,0 +1,17 @@
+<settings>
+    <setting id="ask_filename" value="false" />
+    <setting id="ask_folder" value="false" />
+    <setting id="auto-view" value="false" />
+    <setting id="default" value="50" />
+    <setting id="download_best" value="true" />
+    <setting id="download_folder" value="" />
+    <setting id="episode" value="503" />
+    <setting id="ga_time" value="2013-07-30 23:13:19" />
+    <setting id="movies" value="50" />
+    <setting id="play_best" value="true" />
+    <setting id="pop_time" value="2013-07-30 20:32:46" />
+    <setting id="results" value="20" />
+    <setting id="sort" value="0" />
+    <setting id="timezone" value="" />
+    <setting id="visitor_ga" value="204573567" />
+</settings>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="net.rieter.xot.channel.uk"
+       version="3.3.6.1"
+       name="XOT-Uzg.v3 British Channels"
+       provider-name="Bas Rieter">
+
+    <requires>
+        <!--import addon="net.rieter.xot" version="3.3.1" optional="false" /-->
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" 
+               library="">
+        <!--provides>video</provides-->
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>XOT-Uzg.v3 is a plugin/script that allows the playback of a lot of TV shows that are available (legally) via the broadcasters websites.</summary>
+        <description>Set of UK related channels for XOT-Uzg.v3 (BBC iPlayer).</description>
+        <nofanart>true</nofanart>
+        <disclaimer>XOT-Uzg.v3 is provided as is. We do not take any responsibility for possible (but highly unlikely) damage cause to your system. Nor do we take responsibility for the content that can be watched via this add-on.</disclaimer>
+    </extension>
+</addon>

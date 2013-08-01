@@ -1,0 +1,625 @@
+[B]Changelog v3.3.6 - 2013-06-16[/B]
+
+[I]Framework related[/I]
+* Updated: XOT-Uzg.v3 description in add-on xml file
+* Changed: Only create a new logfile if we are really starting from scratch
+* Fixed: Temove dead TV channels from TV.NL
+* Added: Indication of active session
+* Fixed: Don't show startup notification each time we enter the channel selection file.
+* Updated: thumbnail handling in chn_class
+* Fixed: filename length < 42 check only for Xbox
+* Changed: refactored the cache cleanup code
+* Fixed: empty list on first run
+* Fixed: local file playback issue (Issue 434)
+* Added: RunType, Channel and Playback statistics feedback via statistics
+* Added: Added duration to script version of Statistics
+* Updated: check for charset after opening an URL and decode from that charset.
+* Fixed: Subtitles were always showing (if available), now also fixed in script mode (Issue 420)
+* Changed: Show a Notification in XBMC instead of a DialogBox for messages that are just for displaying purposes.
+* Added: Fanart for those channel that support it.
+* Added: Gzip and Deflate URI support
+* Fixed: possible infinite loop in JsonHelper
+
+[I]Skin related[/I]
+* None
+
+[I]Channel related[/I]
+* Added: VTM Nieuws
+* Fixed: cleanup UZG cache path based on configured config value (suggested in issue 434)
+* Added: support SMB cache paths for UZG
+* Added: SVT Live items show ETA
+* Fixed: Kanal 9 Play (Issue 440)
+* Fixed: serveral ViaSat channels (Issue 440)
+* Fixed: Apple Movie Trailers 
+* Fixed: nos.nl channel needed cookie consent and json video url retrieval
+* Added: NPO.nl theme radio channels
+* Added: NPO.nl Live Streams
+* Fixed: De Redactie (and some more Belgium channels) did not show all items (Issue 439)
+
+
+[B]Changelog v3.3.5 - 2013-05-09[/B]
+
+[I]Framework related[/I]
+* Fixed: .updates deployment won't work on Linux systems (duh!)
+* Fixed: Do not deploy updates if their version are lower than the XOT-Uzg.v3 version.
+* Added: option to add headers to the UriOpener
+* Added: m4v extension for downloads
+* Fixed: Release all references to xbmcaddon.Addon (solves the warning in the xbmc.log: ...has left several classes in memory that we couldn't clean up. The classes include: Addon)
+* Changed: Download extension detection and default destination
+* Added: Proxy to the BrightCoveHelper
+
+[I]Skin related[/I]
+* None
+
+[I]Channel related[/I]
+* Added: Workaround for UZG issues as XBMC cannot really handle the streams at the moment (Issue 423)
+* Fixed: Sporza.be/deredactie.be (Issue 429)
+* Removed: Ketnet.be
+* Fixed: 123video.nl changed and introduced encrypted data (Issue 429)
+* Removed: MyVideos.nl for now, as they seem to have disappeared and changed to a German site (Issue 430)
+* Fixed: SVT.se (Issue 427)
+* Fixed: Hardware.info broke due to youtube changes
+* Added: Download of NOS Mobile streams
+* Fixed: Kijk.nl did not play newer streams (Issue 422)
+
+
+[B]Changelog v3.3.4 - 2013-03-23[/B]
+
+[I]Framework related[/I]
+* Changed: re-ordered Plugin context menu items
+* Added: Queue Item to context menu
+* Fixed: channelitems were not correctly update if using the program add-on version of XOT-uzg.v3 (Issue 412)
+* Fixed: Don't return ok=True if no items were found (Issue 418)
+* Fixed: Subtitles were always showing (if available). Thanks to Marcel for the fix (Issue 420).
+* Removed: string encode and decode stuff. We now force Python in UTF-8 mode and thus we won't need to encode/decode.
+* Fixed: Not all channel updates showed in XBox channel updater
+* Fixed: __Hash__ did not work on Python 2.4, need to use hash()
+* Fixed: HTML Entity Helper could not handle zero padded values
+* Removed: old folder representation and fallback to the advanced method.
+* Added: preserve the existing play list when playing an XOT-Uzg.v3 item in that list.
+* Added: force UTF-8
+* Updated: use base64.b64encode and base64.b64decode
+* Updated: Add-on settings layout and labels
+* Added: Initializer.py script to do some intialization
+
+[I]Skin related[/I]
+* Updated: SE translation (Thanks to Göran)
+* Changed: replace ":: title ::" with ".: title :." to make sure some items are always on top.
+
+[I]Channel related[/I]
+* Updated: Naming of Swedish, Latvian and Lithuanian channels.
+* Fixed: Nickelodeon channels did not play due to site changes.
+* Removed: ViaSat sport (Issue 418)
+* Fixed: Kanal9 changed to the new layout (Issue 417)
+* Changed: SVT.se can now hide Geolocked items (or label them)
+* Added: L1.nl
+* Added: High Definition Live channels to SVT.se
+* Fixed: Kijk.nl (SBS, NET6 and Veronica) are no longer using relative urls (Issue 415)
+* Fixed: Minor things in Swedish channels
+* Fixed: Use M3u8 streams for TV4.se (Issue 414)
+* Added: Live channels to SVT.se (Issue 412)
+* Updated: RadioNL streams
+* Fixed: URplay.se changed layout (Issue 413)
+* Fixed: Uitzendinggemist Mobile (but now uses WMV instead of RTMP)
+* Added: 'Senaste nyhetsprogram' to SVT.se
+* Changed: Better paging in SVT.se
+
+
+[B]Changelog v3.3.3 - 2013-01-30[/B]
+
+[I]Framework related[/I]
+* Fixed: Finally got the bug in the logger that messed up multi-line log messages
+* Added: Trace log level
+* Updated: Log levels of all messages in channels
+* Updated: UriHandler method redirect like Logger
+* Fixed: stopwatch messages were not logged under the caller's name.
+* Added: Resume support for video items
+* Changed: Some refactoring of the plugin and mediaitem code
+* Added: Playlist type to mediaitem (cannot use setResolvedUrl)
+* Changed: load channels from XML instead of Python classes to improve speed (10x as fast)
+* Changed: don't resolve chars in channelinfo when not displaying (saves 200 ms)
+* Changed: replaced os.path.realpath with os.path.abspath and saved 200ms on ATV2.
+* Changed: slightly improved the jsonhelper performance
+* Changed: use cPickle instead of pickle (much faster)
+* Changed: do not use pre-compiled regexes, as they take too much performance on slower systems.
+* Changed: replaced the urllib.(un)quote_plus as it was slow
+* Changed: temporarily store the instance.getMembers method to improve performance
+* Changed: performance improved by adding as Hash to the mediaitems and using a set() for removing duplicates
+* Changed: performance improved by re-using pickled items
+* Added: bulk loading of XBMC List Items, should increase speed on slow systems
+* Fixed: HTML Entity Helper now handles Hex values
+* Changed: Made Logger independent of XBMC
+* Fixed: Channelimporter always missed the first channelupdate
+
+[I]Skin related[/I]
+* Added: Refresh plugin list from context menu
+* Updated: loglevel can be set from the settings. Defaults to info
+
+[I]Channel related[/I]
+* Added: Kijk.nl (SBS6, NET5 and Veronica) channel (Issue 409)
+* Removed: Old SBS6, NET5 and Veronica channels.
+* Fixed: UR Play (Issue 408)
+* Fixed: new RTL5 and 8 icons
+* Fixed: NOS could not resolve streams
+* Fixed: NOS mobile does not read the root item
+* Updated: SVT.se SWF URL
+* Fixed: TV5 failed because of missing descriptions
+* Fixed: NOS Mobile video's could not yet be available. Check this.
+* Changed: apparently XBMC can now handle avc1.77.30 codecs and we can use them in SVT.se
+
+[B]Changelog v3.3.2 - 2012-12-13[/B]
+
+[I]Framework related[/I]
+* Fixed: Opening channels without a channelcode would not work (Issue 400)
+* Updated: Added channel descriptions as plot to channel overview.
+* Updated: Stopwatch to make more sense in logging
+* Added: New Json interface to chn_class.py. It can now use the JsonHelper to get data passed into the Create-Video/Folder/Page/Episode-Item methods. 
+* Added: .updates mechanism for incremental updates in channels
+* Added: Advanced Json handling.
+* Added: a bit more timing info to chn_class.ParseMainList
+
+[I]Skin related[/I]
+* None 
+
+[I]Channel related[/I]
+* Fixed: Temporary fix for Dynamic HTTP Streams (Issue 404)
+* Fixed: SVT.se changed an did not show folders and all videos (Issue 398)
+* Added: Uitzendinggemist Mobile
+* Changed: Uzg.nl alphabetical items show most recent items.
+* Changed: Kanal5.se now uses the JsonHelper interface from chn_class
+* Removed: Live items from SVT.se as they are no longer available (Issue 396)
+
+
+[B]Changelog v3.3.1 - 2012-11-16[/B]
+
+[I]Framework related[/I]
+* Fixed: parameter passed onto the video add-on failed new XBMC validation causing XOT-Uzg.v3 to no longer work (Issue 394)
+* Fixed: JsonHelper did not correctly encode UTF-8 results
+* Fixed: JsonHelper could not handle booleans
+* Fixed: HTMLEntityHelper could not handle &apos;
+* Fixed: Json helper did not convert all characters correctly
+* Fixed: RuntimeError is now thrown from XBMC instead of TypeError if WindowId is not found.
+* Added: DateHelper.GetDateForNextDay and GetDateForPreviousDay
+* Added: Referer option to UriHandler
+
+[I]Skin related[/I]
+* Added: .po language files for after XBMC Frodo.
+
+[I]Channel related[/I]
+* Fixed: Kanal 5 would not list any shows (Issue 388)
+* Added: Radio 538 live streams (Webcam, 538TV and SlamFM TV) (Issue 390)
+* Fixed: Typo in Dutch MTV channel causing the URL to not load.
+* Added: German MTV channel (MTV.de)
+* Fixed: TV4.se as they changed again! (Issue 387)
+* Fixed: Apparently we can't take a shortcut and determine the video url from the image urls (Issue 384)
+* Fixed: TV4.se changed layout
+* Fixed: NOS implemented the Dutch Cookielaw (Issue 381)
+* Fixed: Added recent items to Een.be (Issue 380)
+* Updated: Southpark.nl to work with the new url's. But still no RTMPE support.
+* Fixed: Hardware.info (Youtube keeps changing) (Issue 370)
+* Fixed: BBC channels broke due to refactoring bug (Issue 379)
+* Fixed: iRTL broke if the streams included "http"
+* Fixed: MTV channel broke due to site changes (Issue 377)
+* Fixed: Kanal5.se changed layout (Issue 374)
+* Fixed: Hardwareinfo.tv did not play (Issue 370)
+* Fixed: UTF8 message for SVT
+* Added: Pathe.nl (replaces old Pathe plugin).
+* Fixed: SVT sometimes adds an \n at the end of streams. XBMC does not like that (Issue 366)
+* Fixed: error in Nick channel 
+* Fixed: SVT.se streams (Issue 363)
+* Added: Norwegian & Swedish Nickelodeon (Issue 364)
+* Fixed: in plugin mode do not de-prefix, XBMC will do that (Issue 362).
+* Added: Omroep Gelderland (Issue 359)
+* Changed: If possible hide the premium items (Isse 355)
+* Fixed: Regex changes for TV5.se (Issue 357)
+* Fixed: Video meta data format changed for TV4.se (Issue 358)
+
+
+[B]Changelog v3.3.0 - 2012-08-19[/B]
+
+[I]Framework related[/I]
+* Refactored: UriHandler
+* Refactored: Logger
+* Refactored: Regexer
+* Refactored: AddonSettings
+* Added: XBMC @Android compatibility
+* Fixed: Jsonhelper was not 100% ok
+* Fixed: Simplified packages dependencies
+* Added: Hide Geolocked items to XOT-Uzg.v3 settings
+* Fixed: message in plugin showed Video item instead of Media Item
+* Added: Plugin now shows a error when no streams are found to play
+* Fixed: UI Deadlock due to an active DialogBusy and an active OK Dialog
+* Fixed: Big performance improvement on initial start of XOT-Uzg.v3 on slower systems
+* Added: Support for Danish channels
+* Added: Estonian language
+* Changed: SWF url now sets swfvfy=1 instead swfvfy=True
+
+[I]Skin related[/I]
+* Added: Multi-Language support (for now English, Swedish and Dutch, more translations welcome)
+
+[I]Channel related[/I]
+* Added: Live streams to SVT.se
+* Fixed: Multiple SVT.se channel issues
+* Updated: SWF url for SVT.se channel
+* Fixed: SVT.se: new m3u8 codec is not supported for some servers (Issue 354)
+* Fixed: TV4.se changed layout (Issue 353)
+* Fixed: Canvas
+* Fixed: BETA svtplay.se became final (Issue 350)
+* Updated: added non-RTMPT stream for Een.be channel (Issue 349)
+* Fixed: NOS channel would not list all items due to some mark-up changes (Issue 347)
+* Fixed: NOS did not start on page 1 with listings
+* Fixed: De Redactie not showing streams
+* Added: TV3.ee (Issue 342)
+* Fixed: Facebook links appeared in video listing (Issue 341)
+
+
+[B]Changelog v3.2.14 - 2012-04-27[/B]
+
+[I]Framework related[/I]
+* Fixed: Dates on Audio files.
+* Fixed: Plugin could not handle audio files.
+* Added: Folder item prefix to settings
+* Fixed: filter out duplicate folder and video items 
+* Changed: Plugin mode is not the default from the Home icons. Changed the order in addon.xml.
+* Added: Json subtitle support.
+* Fixed: no need to re-download a subtitle if we already have it.
+* Added: Impoved the JsonHelper
+* Fixed: HTML helper lstrip() to strip()
+* Fixed: refreshing a MediaItem would not clear existing MediaParts
+* Added: usage statistics
+* Changed: do not load debugger (costs around 1.5 MB)
+* Changed: Channels can still be disabled based on language instead of just based on channel (Issue 328)
+* Added: "No videos found" message to plugin.
+* Fixed: Pre-Eden repository check disabled.
+* Fixed: other XBMC Add-on libs appeared first in the Python path and caused XOT-Uzg.v3 to load the wrong libs (Issue 318)
+
+[I]Skin related[/I]
+* Updated: XOT-Uzg.v3 logo (Inspired by Dennis Pettersson)
+* Updated: XOT icon in skin
+
+[I]Channel related[/I]
+* Added: Radio 538 Gemist channel
+* Added: SVT Beta (Issue 339)
+* Fixed: Kanal5 broke because the site was renewed (Issue 336)
+* Fixed: Special characters at the start of a title were not recognised (Issue 334).
+* Fixed: duplicate items in TV4 (Issue 333).
+* Added: "Visa fler" folder item.
+* Added: Audio Only detection to UR play (Issue 329).
+* Fixed: Again URPlay (Issue 324). The initial fix was wrong.
+* Fixed: SVT.se SWF url (Issue 327)
+* Fixed: UR Play missed some videos and folders (Issue 324)
+* Fixed: "Meest bekeken" removed from Z@pp channels.
+* Updated: BigFoot radio streams
+* Fixed: Southpark.nl
+* Fixed: Nick Jr. channel (Issue 330)
+* Added: Current/Past/.... categories to Channel 9 (Issue 320)
+* Added: Audio Only detection to UR play (Issue 329).
+* Fixed: Again URPlay (Issue 324). The initial fix was wrong.
+* Fixed: Dumpert.nl (Issue 326)
+* Fixed: MSDN Channel 9 did not show all content (Issue 320)
+
+
+[B]Changelog v3.2.13 - 2012-02-15[/B]
+
+[I]Framework related[/I]
+* Added: Proxy password options (Issue 310)
+* Fixed: CacheResponse was empty if a exception occured (stream was at the end).
+* Fixed: Cached Responses could cause exceptions
+* Fixed: SAMI -> SRT lost special characters
+* Added: Subtitle support to SMIL helper
+* Fixed: SubtitleHelper now handles SAMI better
+* Fixed: If description of a MediaItem was None, it would fail to generate a XBMC item.
+* Fixed: None stringvalue is decoded to None
+* Fixed: No video item resulted in no update in the GUI (part of Issue 299)
+* Updated: stopwatch Stop() method.
+* Updated: Stopwatch to show delta time.
+* Changed: CreatePageItem can now return None and will be ignored.
+* Fixed: Compile error in PyAMF
+* Changed: Adding a favorite in the Video Add-On now redirects to favorites. This way XBMC waits for the adding to be finished
+* Changed: logger is now passed into the LockWithDialog decorator
+* Fixed: TypeError in PyAmf
+* Added: some DB connection cleanup
+* Added: Busy Dialog in Plugin (locker.py)
+* Added: UrlDecode to the HTML Entity Helper
+* Changed: shortened "Remove from favorites" -> "Remove favorite"
+* Added: A small fix to PyAMF (commented now)
+* Added: Restart message to settings
+* Added: Option to change backgrounds
+* Fixed: Some UTF-8 issues with XBMC paths
+* Added: show error when XOT-Uzg.v3 is not installed using repository on non Xbox systems
+
+[I]Skin related[/I]
+* None
+
+[I]Channel related[/I]
+* Fixed: iRTL channel was broken due to XML changes
+* Added: Freecaster.tv became Extreme.com (Issue 309)
+* Added: Subtitle support to TV4.se (Thanks to Göran). It does need a XOT framework update.
+* Fixed: Date extraction of iRTL channel
+* Fixed: after an update the TV4.se is not marked as completed (part of Issue 299)
+* Fixed: Slow Regexes in a number of channels
+* Fixed: Search did not work in NOS channel
+* Fixed: Southpark.nl did not play more than one act (Issue 309).
+* Fixed: Southpark.nl SWF path updated.
+* Changed: BETA Uitzending Gemist channel is now the main one, as the old one is offline.
+* Fixed: "Een.be" channel had wrong videos (Issue 305)
+* Added: Search to NOS Uitzendinn Gemist BETA (Issue 304)
+* Added: TOP50 for Uitzendinggemist BETA (Issue 304)
+* Fixed: NOS Beta does not display shows that start with a number (Issue 303)
+* Added: Hardware.info TV
+* Fixed: NOS Uitzendinggemist BETA (Issue 301). Rearranged the channel.
+* Changed: iRTL now works on XBCM4Xbox again (Issue 300)
+* Fixed: iRTL did not playback (Issue 302)
+
+
+[B]Changelog v3.2.12 - 2011-12-15[/B]
+
+[I]Framework related[/I]
+* Fixed: reverted part of Environment check fix. The Unknown = 1 basically fixed it already.
+* Fixed: No ChannelUpdate for Xbox Plugin
+* Fixed: Do not cache downloads
+* Changed: ContextMenu missing method is now a warning
+* Updated: Added a real HEAD request method to UriOpener
+* Fixed: XBMC code has more Envirmonts and broke ATV2 support (Issue 293)
+* Added: SearchSite is now implemented in chn_class. Makes using it easier.
+* Added: Version class and comparisons
+* Removed: self.maxXotVersion from all channels
+* Fixed: logging of initialization error
+* Changed: Version is now check based on Addon.xml version
+* Changed: OutOfDate is no longer used
+
+[I]Skin related[/I]
+* None
+
+[I]Channel related[/I]
+* Added: NOS.nl channel (Issue 192)
+* Added: Download items from NOS Beta
+* Fixed: SVT SWF Url
+* Fixed: Exclude video's in SBS.nl streams (only show episodes)
+* Fixed: TV4 Did not show all episodes (Issue 290)
+* Fixed: No episodes for "Bonde söker fru" (Issue 294)
+* Fixed: ViaSat Sport and TV6.lt did not play due to SWF Verification (Issue 290)
+* Fixed: BBC Iplayer Regex issues
+* Added: Search to NOS.nl channel
+* Fixed: TV4.se would not play (Issue 257)
+* Added: Premium label added TV4.se (part of Issue 257)
+* Fixed: Prefix clips with "Klipp" in Kanal5.se and Kanal9.se (Issue 291)
+
+
+[B]Changelog v3.2.11 - 2011-10-18[/B]
+
+[I]Framework related[/I]
+* Updated: Moved channel importing to a point after logfile cleaning in plug-in mode
+* Added: Option to disable channels on different platforms
+* Fixed: Finally the dreaded Linux-logfile-append-issue is fixed 
+* Changed: Do not cache thumbs in plugin mode that's XBMC's work
+* Fixed: ContextMenu items that do not need Complete items, no do not force an update
+* Fixed: Python 2.4 issue with proxies (should have http:// in front of it)
+* Added: iPlayer related settings (proxy and port)
+* Added: British channel settings
+* Fixed: Ignore empty MediaParts when creating a PlayList
+* Updated: Subtitle Regex for TTML
+* Added: SubtitleHelper now supports DCSubtitle format
+* Fixed: Error when no SRT could be determined
+* Changed: Cannot add favorites without URL
+* Added: HTTP reponse caching (experimental and enabled by default)
+* Added: First time channel run messages (informational messages for different channels)
+* Changed: plugin sorting now checks if there are any dates available when sorting by dates. If not: sorting defaults to label.
+* Changed: HQ icons in Plugin mode
+* Added: Ability to also use Named Group in regular expression. 
+
+[I]Skin related[/I]
+* Fixed: Error icon would not disappear even after a second attempt was OK
+
+[I]Channel related[/I]
+* Fixed: Eén channel was broken due to the changing of the media URL's
+* Fixed: Eén Different date formats caused some episodes to not show
+* Fixed: NOS Beta channel returned .sort() and broke (Thanks to Mart.@forum.xbmc.org)
+* Added: Different RTL icons for different channels. 
+* Fixed: RTL channel broke due to XML changes
+* Fixed: iRTL broke due to XML changes
+* Added: iRTL should not load on Xbox (it's not compatible)
+* Fixed: SBS6 label is now SBS 6
+* Fixed: SBS6, NET5 and Veronica changed to Brightcove player
+* Updated: Nick Jr. url
+* Fixed: Nick.nl regex (Regression)
+* Fixed: Eredivisie live missed items due to a "gistere/yesterday" label (Issue 288)
+* Added: BBC channels (iPlayer)
+* Fixed: TV.se (TV3.se, TV6.se, TV8.se, TV3.lv, TV3.no, Viasat4.no) and MTG.se channel regex (Regression)
+* Added: TV5.se and TV9.se channels (Issue 148)
+* Added: TV6.se, TV3.se, TV8.se, TV3.lv, TV3.no and TV4.no now support subtitles
+* Added: TV4.se now supports multiple bitrates
+* Fixed: Channel9 channel had some regex issues. Now using XmlHelper
+* Fixed: MyVideo regex broke the videos
+
+
+[B]Changelog v3.2.10 - 2011-09-04[/B]
+
+[I]Framework related[/I]
+* Added: New setting to enable advanced plugin mode (default enabled). Enables these features:
+* Added: Plugin Contextmenu generated from channel contexmenuitems
+* Added: Plugin show favorites from mainlist and channel overview
+* Fixed: Refresh issue fixed for plugin for Xbox
+* Added: Favorites handling for plugin
+* Added: Playlist support in Plugin
+* Added: Subtitle support for Plugin
+
+* Changed: Thumbs are now cached using their MD5 hashed URL as filename
+* Added: HTML helper should also trigger on 'attribute' instead of just "attribute"
+* Added: Do not show already installed channel updates in XBox Channel update window.
+* Changed: sortorder of some channels
+* Fixed: channel importer was too limited in importing and breaking inheritance of classes (Issue 281)
+* Fixed: if no subtitle was found, don't try downloading it again.
+* Updated: set Year Infolabel if available
+* Updated: encode the description just like the title
+* Added: Set ContentType in Plugin to "Movie"
+* Updated: Replaced Dutch error message
+
+[I]Skin related[/I]
+* Fixed: Some skin issues related to contextmenu and update window.
+
+[I]Channel related[/I]
+* Fixed: AMT had some issues with thumbs and some URL formats
+* Updated: AMT now get's high definition posters
+* Updated: RTL iPad channel to have dates and multi bitrates
+* Updated: RTL XL 
+* Added: Eredivisie Live
+* Updated: TV4 to have a nice thumb
+* Fixed: tv3.no not working due to SWF verification (Issue 286)
+
+[B]Changelog v3.2.9 - 2011-08-12[/B]
+
+[I]Framework related[/I]
+* Updated: Load ProgramList with AddItems instead of AddItem
+* Updated: Fill Plot and PlotOutline with Description information.
+* Changed: no part number in plug-in if only one part
+* Added: Refresh option in main window
+* Added: Timed Text Markup Language -> SRT converter
+* Added: Sort method "None"
+* Fixed: sort by in the plugin now takes Addon settings into account.
+* Fixed: set no-image to incomplete video item.
+* Fixed: HTML helper attribute order was incorrect.
+* Fixed: pass user-agent to on when using the plug-in. Fixes AMT as plugin.
+* Added: Belgium language code to settings
+* Fixed: Unicode errors in XOT DB
+* Fixed: Don't add duplicates to favorites
+* Fixed: cache path could not be created if profile path did not exist (Issue 276, thanks to Sven)
+
+[I]Skin related[/I]
+* Updated: XOT Logo
+* Updated: Logo's and Icons renewed
+
+[I]Channel related[/I]
+* Fixed: AMT channel
+* Updated: AMT add description to items
+* Fixed: 123Video channel did not play recent video's
+* Added: Nick Junior
+* Fixed: Nickelodeon channel
+* Added: UR Play (Swedish)
+* Added: AT5
+* Added: VRT channels (Sporza, Ketnet, De Redactie, Cobra)
+* Fixed: Lama's channel was broken due to website changes
+* Added: Canvas.be
+* Added: Een.be to channels
+* Updated: Southpark channel now has high quality movies
+
+[B]Changelog v3.2.8 - 2011-07-13[/B]
+
+[I]Framework related[/I]
+* Fixed: Sorting issue. list.sort() always returns None and caused errors updating already loaded channels.
+* Fixed: DimValue returned an error as it was not implemented yet.
+* Fixed: Plugin did not create Cache folder (Thanks to Göran)
+* Added: Error icon if item update failed
+* Fixed: force close the logfile for script
+
+[I]Skin related[/I]
+* None
+
+[I]Channel related[/I]
+* None
+
+
+[B]Changelog v3.2.7 - 2011-07-12[/B]
+
+[I]Framework related[/I]
+* Added: ACTION_NAV_BACK in order to be compatible with commit 9ceddb029b0b01e67973.
+* Fixed: Default value for bitrate is 800 which is not in the list!
+* Fixed: context menu in some cases passed the index of the wrong list (favorites broke)
+* Fixed: Apparently showing your own progressbar breaks the normal plugin progressbar. Disabling it again. Thanks to Göran for pointing it out.
+* Changed: in plugin mode, we just pass the thumbUrl to XBMC instead of loading it.
+* Fixed: Download from Plugin
+* Updated: User-Agent handling changed so it can be passed on to XBMC
+* Moved: Cache folder to profile
+* Added: Setting for subtitle mode: show or not
+* Fixed: Change active channel index only on select.
+
+[I]Skin related[/I]
+* None
+
+[I]Channel related[/I]
+* Fixed: The regex in SVT searches for "ram" which matches "Program"! So a lot of false matches (Thanks again Göran)
+* Added: Refresh option for completed items. I some cases (NOS) the video URL expires and you will have to get a new one.
+* Changed: Apple Movie Trailers now starts playback immediately instead of downloading. Download is now a context menu option
+* Added: subtitles to SVT.se (Thanks to Göran for pointing it out)
+
+
+[B]Changelog v3.2.6 - 2011-07-04[/B]
+
+[I]Framework related[/I]
+* Fixed: in some cases Unicode was hidden in normal string and thus not correctly decoded. Hopefully the Unicode issues are now all solved (Thanks to Göran for pointing out the issue)
+* Added: Encoding info to startup
+* Added: json now replaces \uxxxx values with Unicode characters.
+* Fixed: Linux x64 caused an error due to the -1 value of 4294967295. This is now temporarily fixed with a workaround (Thanks to Maurizo and Cartaphilus @forum.xbmc.org)
+* Added: Settings logging
+* Fixed: HasMediaItemParts fixed (it now also checks for streams)
+* Fixed: resort mainlist after settings changed.
+* Fixed: Progressbar animation
+* Added: Download parts from plugin
+* Added: UriHandler now accepts an user-agent overwrite to it's download method.
+* Added: Date helper 
+* Changed: Use bitrate instead of stream quality. This makes it more usefull (Thanks to Göran for the idea).
+* Changed: XBMC4Xbox should not deploy channels outside it's folder (thanks vriesm@XBMC4Xbox for the idea)
+* Changed: month lookup in DateHelper
+
+[I]Skin related[/I]
+* Fixed: Folder icon does not show under Linux due to CAPS issue in xot_DefaultFolder.png. 
+* Fixed: Memory issues due to background
+
+[I]Channel related[/I]
+* Fixed: file:// issue under Linux preventing iRTL to work.
+* Fixed: SVT SWF verification (Thanks to Göran)
+* Added: Apple Movie Trailers 
+* Fixed: NOS channels now show better bitrates
+* Fixed: Added Includes.xml to prevent error messages
+* Changed: XBMC4Xbox now loads its channels from the \channels\ path
+* Reverted: use none MMS stream for NOS2010
+* Fixed: TV4.se did not load images
+
+
+[B]Changelog v3.2.5 - 2011-06-15[/B]
+
+[I]Framework related[/I]
+* Fixed: bug in settings module if called from a non-Eden XBMC. (Issue 268)
+
+
+[B]Changelog v3.2.4 - 2011-06-15[/B]
+
+[I]Skin related[/I]
+* Added: skin.xot is not the default skin and reworked the complete skinning engine of XOT
+* Removed: all other skins
+
+[I]Channel related[/I]
+* Added: Channel 9 @ MSDN
+* Added: Toppers to dumpert (Issue 263)
+* Fixed: UZG for IOS (Issue 261)
+* Added: NOS Beta now has subtitle support
+* Updated: NOS Beta Channel fixes (regex + date lookup)
+* Fixed: Workaround for bug in geo-checking in NOS site (thanks to Reinoud).
+* Added: Norwegian channels thanks to Rbiez (Jan Christian Liby)
+* Fixed: RTL-Ipad channel
+* Added: TV Stations (Issue 255)
+* Fixed: Radiostations would not list (Issue 254)
+* Fixed: Freecaster channel (Issue 241,149)
+* Fixed: Freecaster changed their site again, so I had to update the channel
+* Removed: SBS and RTL backgrounds
+* Fixed: Southpark channel (still Type mismatch: client sent 6, server answered 9)
+
+[I]Framework related[/I]
+* Changed: MediaItems now have MediaItemParts which again have MediaStreams
+* Added: caching of retrieved items and pre-adding option
+* Added: Log the language of channels.
+* Changed: Sorting of channels moved to Channel class
+* Fixed: Unicode logging issues
+* Fixed: Chuncked data no longer causes empty data to return. It now returns up to where the opener got.
+* Added: RawEncode and IngoreEncode methods
+* Added: date sorting option for items with dates (selectable via via the Addon settings, requires XOT restart)
+* Fixed: Menu now returns to channel window instead of going up (Issue 142) 
+* Fixed: Deprecated warnings for Eden Repository API
+* Changed: os.getcwd() to addon.getAddonInfo('path') (Compatibility for the new Eden Repository API)
+* Added: Subtitle support to channels, including caching
+* Added: Channel deployer can now deleted old channels
+* Added: Norwegian language
+* Added: French and English Canadian language options
+* Removed: XOT User Agent (too tricky for tracing)
+* Fixed: Hopefully fixed UTF-8 text displaying corrupt
+* Fixed: deployment on other than net.rieter.xot folder locations

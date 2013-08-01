@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<channels>
+    <channel>
+        <guid>66756700-6255-4973-AFFB-A1DE4FAF8678</guid>
+        <name>VTM Nieuws</name>
+        <description>Online uitzendingen van VTM Nieuws.</description>
+        <icon>vtmicon.png</icon>
+        <iconlarge>vtmlarge.png</iconlarge>
+        <channelcode>vtmnieuws</channelcode>
+        <sortorder>122</sortorder>
+        <language>be</language>
+    </channel>
+</channels>

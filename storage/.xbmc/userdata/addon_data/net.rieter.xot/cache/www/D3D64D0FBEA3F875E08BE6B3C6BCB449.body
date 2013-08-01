@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="ie6 no-js" lang="nl"><![endif]-->
+<!--[if IE 7]><html class="ie7 no-js" lang="nl"><![endif]-->
+<!--[if IE 8]><html class="ie8 no-js" lang="nl"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="nl"><![endif]-->
+<!--[if !IE]><!-->
+<html class="no-ie no-js" lang="nl">
+<!--<![endif]-->
+<head>
+<meta charset='utf-8'>
+<script>
+var domain = location.host.split(".").reverse();
+document.domain = domain[1] + '.' + domain[0];
+</script>
+<script src="/javascripts/adsmanager.js" type="text/javascript"></script>
+<script>
+  //<![CDATA[
+    com.mtvi.ads.AdManager.DART_SITE_DOMAIN = ".nl";
+    com.mtvi.ads.AdManager.setDartSite("nick");
+    com.mtvi.ads.AdManager.setServer("ad.nl.doubleclick.net");
+    com.mtvi.ads.AdManager.setMedia("adj");
+    com.mtvi.ads.AdManager.setUrl("videos");
+    com.mtvi.ads.AdManager.setZone("videos");
+    com.mtvi.ads.AdManager.setOrd("1308658588");
+    //com.mtvi.ads.AdManager.setKeyValues({"app":"site","slot":"overlay","rext":"kids_family","sky":"0","url":"/videos/show/215","testmode":"off","franchise":"avatar-de-legende-van-aang"}, true);
+  //]]>
+</script>
+
+
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<title>Avatar: De Legende Van Aang - Video’s - Nickelodeon</title>
+<meta content='Avatar: De Legende Van Aang - Video’s - Nickelodeon' property='og:title' />
+<meta content='Nickelodeon' property='og:site_name' />
+<meta content='100002135388105' property='fb:admins' />
+<meta content='game' property='og:type' />
+<meta content='http://www.nickelodeon.nl/videos/show/215' property='og:url' />
+<meta content='http://www.nickelodeon.nl/assets/nickelodeon_logo-ca7f2e7c885b67cedfebdfb0e52d1e64.png' property='og:image' />
+<meta content='Nickelodeon is de leukste website voor kinderen met veel online games en videos van Spongebob, Dora, Big Time Rush en Pinguins van Madagascar.' property='og:description' />
+<meta content='initial-scale=1, maximum-scale=1' name='viewport'>
+<meta content='KmkSGaGF-BYSJJbbP3dXOIkNNftEsfBFzHap6uT7Izk' name='google-site-verification'>
+<link href='/favicon.ico' rel='shortcut icon'>
+<link href="/stylesheets/FlamaCondensedMedium.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/CgFuturaMaxiBold.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/CgFuturaMaxiBook.css" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/style-e6ce4eec921ab20bf8175a6d39e9fbf2.css" media="all" rel="stylesheet" type="text/css" />
+
+<script src="/javascripts/modernizr.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.min.js" type="text/javascript"></script>
+<script src="http://www.mynickid.com/assets/mynickid.js?nocache=214293b1e2accd69faeeef689ab37ef1bb1bbbf3" type="text/javascript"></script>
+<script src="/javascripts/selectivizr-min.js" type="text/javascript"></script>
+<script src="/javascripts/reporting/coda.nl_NL.js" type="text/javascript"></script>
+<script src="http://games.mtvnservices.com/scripts/mtvngameloader.1.1.0.js" type="text/javascript"></script>
+<script src="/javascripts/swfobject.js" type="text/javascript"></script>
+<script>
+  //<![CDATA[
+    var crtg_nid="1603"; var crtg_cookiename="crviac"; function crtg_getCookie(c_name){var i,x,y,ARRcookies=document.cookie.split(";");for(i=0;i<ARRcookies.length;i++){x=ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));y=ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);x=x.replace(/^\s+|\s+$/g,"");if(x==c_name){return unescape(y);}}return'';} var crtg_content=crtg_getCookie(crtg_cookiename);var crtg_rnd=Math.floor(Math.random()*99999999999);var crtg_url='http://rtax.criteo.com/delivery/rta/rta.js?netId='+escape(crtg_nid);crtg_url+='&cookieName='+escape(crtg_cookiename);crtg_url+='&rnd='+crtg_rnd;crtg_url+='&varName=crtg_content';var crtg_script=document.createElement('script');crtg_script.type='text/javascript';crtg_script.src=crtg_url;crtg_script.async=true;if(document.getElementsByTagName("head").length>0)document.getElementsByTagName("head")[0].appendChild(crtg_script);else if(document.getElementsByTagName("body").length>0)document.getElementsByTagName("body")[0].appendChild(crtg_script);
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    $(function(){
+      if(!window.MyNickId){return;}
+      window.mynickid = MyNickId.initialize({
+        app_id:'4e2f22027cefa95ab3000002',
+        server_url:'http://www.mynickid.com',
+        client_url:'http://www.nickelodeon.nl',
+        namespace:'mynickid'
+      });
+    });
+  //]]>
+</script>
+
+<style>body.home #content_block_wallpaper_ad {
+  width:962px;
+  float: left;
+  background: none;
+}
+
+body.home .wide #ad_skyscraper {
+  left: auto;
+  right: 15px;
+  position: absolute;
+  top: auto;
+}
+
+body.home .wallpaper_ad_wrapper {
+  width: 100%; 
+  height: auto;
+  height:130px;
+  background-color: transparent!important;
+  background-image: url('http://images.mtvnn.com/f9377c120ea7ab1c8d055ee87f42fc40/original') ;
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+body.home {
+  background-image: url('http://images.mtvnn.com/fae043d3c233544fd8acdd10b23d3ad5/original');
+  background-color: #ffffff;
+  background-attachment: fixed;
+}
+
+.wallpaper #container {
+  /*width: 1135px;*/
+}
+
+body.shows #main {
+  background-color:#fff;
+}
+body.home #main {
+  background: #fff;
+  -moz-border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -khtml-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+</style>
+<script>
+$(document).ready(function(){
+  $('#container .wallpaper_ad_wrapper ').click(function(){
+    var link='http://www.nickelodeon.nl/zomer2013';
+    if(link != ''){
+      window.open(link, ((link.indexOf("http") != -1) ? '_blank' : '_self'));
+    }
+  });
+});
+</script>
+<style></style>
+
+
+<script src="http://player.mtvnn.com/codebase/jquery-cookie/jquery.cookie.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script></head>
+<body class='videos category'>
+<div class='content_block' data-id='894' data-site='3' id='content_block_home_ad_overlay'>
+<script type="text/javascript">
+  com.mtvi.ads.AdManager.setKeyValues("sky=1;app=site;url=/;rext=kids_family;slot=overlay;testmode=off;position_right=1;");
+  com.mtvi.ads.AdManager.placeAd({size:"1x1"});
+
+//com.mtvi.ads.AdManager.placeNewAd(1, 1);
+</script>
+
+</div>
+
+<div id='ad_script_head'>
+<div class='adv'>
+<span>advertentie</span>
+<div class='content_block' data-id='12' data-site='3' id='content_block_home_ad_leaderboard'>
+<style>
+#content_block_home_ad_leaderboard{
+  margin-right:-175px;
+}
+</style>
+<script type="text/javascript">
+com.mtvi.ads.AdManager.setKeyValues("sky=1;app=site;url=/;rext=kids_family;slot=overlay;testmode=off;position_right=1;dcopt=ist;");
+com.mtvi.ads.AdManager.placeAd({size:"728x90", keyValues:"dcopt=ist;"});
+
+// com.mtvi.ads.AdManager.placeNewAd(728, 90);
+</script>
+</div>
+
+</div>
+</div>
+<div id='splash_overlay'>
+<div id='splash_content'>
+<script src="/javascripts/splash/splash.js" type="text/javascript"></script>
+<!-- Warning: Empty ContentBlock home_splash_page! -->
+
+</div>
+</div>
+<div id='container'>
+<header>
+<h1>
+Avatar: De Legende Van Aang - Video’s
+</h1>
+<a href="/" id="logo"><img alt="Nickelodeon logo" src="/assets/nickelodeon_logo-ca7f2e7c885b67cedfebdfb0e52d1e64.png" title="Nickelodeon" />
+<span>Terug naar de startpagina</span>
+<span class='arrow'></span>
+</a><nav>
+<div id='sub_navigation'>
+</div>
+<ul id='main_navigation'>
+<li class='nav_item '>
+<a href="/games" class="games_nav_icon" title="Speel onlines games met Spongebob, Dora, Big Time Rush, Pinguins van Madagascar en Het Huis Anubis.">Games
+</a></li>
+<li class='nav_item active'>
+<a href="/videos" class="video_nav_icon" title="Bekijk videos online van Spongebob, Dora, Big Time Rush,Pinguins van Madagascar en Het Huis Anubis.">Video’s &amp; TV
+</a><ul>
+<li><a href="/videos/epg" title="Het TV programma van Nick, Nick JR, Teen Nick en Nick Toons">TV Gids</a></li>
+<li><a href="/videos" title="Bekijk videos online van Spongebob, Dora, Big Time Rush,Pinguins van Madagascar en Het Huis Anubis.">Video’s</a></li>
+<!-- / %li= link_to 'Online TV', channels_path -->
+<li><a href="/kanalen/18">Nick Jr.</a></li>
+<li><a href="/kanalen/28?window=nicktoons">Nick Toons</a></li>
+<li><a href="/kanalen/28?window=nickhits">Nick Hits</a></li>
+<li><a href="/kanalen/28?window=teennick">Teennick</a></li>
+<li><a href="http://www.kindernet.nl" rel="external" target="blank">Kindernet</a></li>
+</ul>
+<li class=' '>
+<a href="/win" class="win_nav_icon" title="">Win
+</a></li>
+</li>
+<li>
+<a href="/static/magazin" class="magazine_nav_icon" title="">magazine
+</a></li>
+<li>
+<a href="/static/info_shop" class="shop_nav_icon" target="_blank" title="">shop
+</a></li>
+</ul>
+
+</nav>
+
+<div class='mynickid-event-logged-in-visible' id='profile'></div>
+<script id='profile_template' type='text/x-jquery-tmpl'>
+<div class='user'>
+<img class='profile_avatar' src='${avatar_url}'>
+<span>${username.length > 10 ? username.substring(0, 10)+'...' : username}</span>
+</div>
+</script>
+<script id='logout_link' type='text/x-jquery-tmpl'>
+Afmelden
+</script>
+<div id='profile_actions'>
+<span class='triangle_border'></span>
+<span class='triangle'></span>
+<a href="/kobra/trading_card?album_url=http%3A%2F%2Ftradingcards.nickelodeon.nl">Ruilkaart</a>
+<a href="/favorites">myNick pagina</a>
+<a href="/profile">Mijn gegevens</a>
+<p class='mynickid-logout'></p>
+</div>
+
+<div id='login_loader'>
+<img alt="Loader_lite" src="/assets/loader_lite-bc60fa1c4522f39fe55a142420e9c058.gif" />
+</div>
+<div class='mynickid-event-logged-out-visible' id='community_login'>
+<a href="/register">Word lid van myNick!</a>
+<a href="" id="login">Aanmelden</a>
+</div>
+<script src="/javascripts/carouFredSel/jquery.carouFredSel-6.1.0.js" type="text/javascript"></script>
+<script src="/javascripts/charactermenu.js" type="text/javascript"></script>
+<div id='character_navi_wrapper'>
+<div id='character_ninjashadow'></div>
+<div id='character_navi_bg'>
+<div class='bg_rim_l'></div>
+<div class='bg_rim_r'></div>
+<div class='bubble left'>
+<div class='triangle'></div>
+</div>
+<div class='bubble right'>
+<div class='triangle'></div>
+</div>
+</div>
+<div id='character_navigation'>
+<div data-id='62' data-site='3' id='character_menu'>
+<div class='carousel_item'>
+<a href="/shows/1399-teenage-mutant-ninja-turtles" id="show_75432" style="background: url(http://images.mtvnn.com/cce432cd1cf23863dd3d600a036afc8a/original) no-repeat center 0" title="Teenage Mutant Ninja Turtles"><span>Teenage Mutant Ninja Turtles</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1490-marvin-marvin" id="show_75439" style="background: url(http://images.mtvnn.com/58bdd10c61e096ec15e9e8d0eb2e5afc/original) no-repeat center 0" title="Marvin Marvin"><span>Marvin Marvin</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="http://www.spongebob.nl" id="show_75437" rel="external" style="background: url(http://images.mtvnn.com/606b68955c9c775b170ed1698cf5b31a/original) no-repeat center 0" target="_blank" title="SpongeBob"><span>SpongeBob</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/228-big-time-rush" id="show_75436" style="background: url(http://images.mtvnn.com/02c4e6c2a93577013f8f8955a389ba22/original) no-repeat center 0" title="Big Time Rush"><span>Big Time Rush</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1539-rocket-monkeys" id="show_86255" style="background: url(http://images.mtvnn.com/8a647fb8ffdc123ee7cc8487bc0ab8da/original) no-repeat center 0" title="Rocket Monkeys"><span>Rocket Monkeys</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1389-hotel-13" id="show_75434" style="background: url(http://images.mtvnn.com/9297402c4acbe937864fd79a86c09af4/original) no-repeat center 0" title="Hotel 13"><span>Hotel 13</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/586-victorious" id="show_75441" style="background: url(http://images.mtvnn.com/2f19a94161f8b2f40d7c10b41a877099/original) no-repeat center 0" title="Victorious"><span>Victorious</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="http://www.icarly.nl" id="show_75443" rel="external" style="background: url(http://images.mtvnn.com/9f0bedbfe44fc8377b52850d6460db52/original) no-repeat center 0" target="_blank" title="iCarly"><span>iCarly</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/kanalen/18-nickjr?window=nickjr" id="show_75482" style="background: url(http://images.mtvnn.com/1d28a6e86d86ea96ba86d324ddd1e04e/original) no-repeat center 0" title="Nick Jr."><span>Nick Jr.</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1397-totally-spies" id="show_75470" style="background: url(http://images.mtvnn.com/98744dffd973efe6228fc1629f541ada/original) no-repeat center 0" title="Totally Spies"><span>Totally Spies</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/999-nick-battle" id="show_75438" style="background: url(http://images.mtvnn.com/d912eb4e3c3f1ab4e85f28ae206586fd/original) no-repeat center 0" title="Nick Battle"><span>Nick Battle</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1483-bolts-blip" id="show_86256" style="background: url(http://images.mtvnn.com/d4a900f41d830f2b12753a989c2eab24/original) no-repeat center 0" title="Bolts &amp; Blip"><span>Bolts &amp; Blip</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/963-robot-en-monster" id="show_75447" style="background: url(http://images.mtvnn.com/9b75a7792b70293f5c46aa702b9b7a25/original) no-repeat center 0" title="Robot en Monster"><span>Robot en Monster</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/520-de-pinguins-van-madagascar" id="show_75451" style="background: url(http://images.mtvnn.com/c5cf1f6cc09bf33e11292254e220e9f7/original) no-repeat center 0" title="De Pinguïns van Madagascar"><span>De Pinguïns van Madagascar</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/641-max-adventures" id="show_75472" style="background: url(http://images.mtvnn.com/6268a6cd325b894789cb27b8f186ae21/original) no-repeat center 0" title="Max Adventures"><span>Max Adventures</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/956-bucket-skinner" id="show_75457" style="background: url(http://images.mtvnn.com/d4afec908abcd9993f2e0957e63f1544/original) no-repeat center 0" title="Bucket &amp; Skinner"><span>Bucket &amp; Skinner</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/281-drake-josh" id="show_86258" style="background: url(http://images.mtvnn.com/e03f87feeb0a8aed79ca820f0e716b2e/original) no-repeat center 0" title="Drake &amp; Josh"><span>Drake &amp; Josh</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/962-de-legende-van-korra" id="show_75468" style="background: url(http://images.mtvnn.com/19593a6281059751af67be654df591a5/original) no-repeat center 0" title="De legende van Korra"><span>De legende van Korra</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1394-cheeese" id="show_75456" style="background: url(http://images.mtvnn.com/82ad7d38fdabb24e3ef83c421de03ca0/original) no-repeat center 0" title="Cheeese"><span>Cheeese</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/989-yu-gi-oh" id="show_86257" style="background: url(http://images.mtvnn.com/fd08c063137b30935ffb2862f3528ae3/original) no-repeat center 0" title="Yu-gi-oh"><span>Yu-gi-oh</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1145-monsuno" id="show_75466" style="background: url(http://images.mtvnn.com/9b7c9beff3995d7239bfb89c4845c32d/original) no-repeat center 0" title="Monsuno"><span>Monsuno</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/601-winx-club" id="show_75464" style="background: url(http://images.mtvnn.com/dbc6f7ff3c27a8fa1afb83edadcb21fc/original) no-repeat center 0" title="Winx Club"><span>Winx Club</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/1006-transformers-prime" id="show_75473" style="background: url(http://images.mtvnn.com/e033ed9777410b25be5f369880d01f6d/original) no-repeat center 0" title="Transformers: Prime"><span>Transformers: Prime</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/365-kung-fu-panda" id="show_75460" style="background: url(http://images.mtvnn.com/46222b1348434acdc7c48f4e56959f3d/original) no-repeat center 0" title="Kung Fu Panda"><span>Kung Fu Panda</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/981-life-with-boys" id="show_75478" style="background: url(http://images.mtvnn.com/b03e7a3b3e774a0f0198d125d685b727/original) no-repeat center 0" title="Life with Boys"><span>Life with Boys</span>
+<span class='arrow'></span>
+</a>
+</div>
+<div class='carousel_item'>
+<a href="/shows/215-avatar-de-legende-van-aang" id="show_75461" style="background: url(http://images.mtvnn.com/fa813d483c4edda57b5ecb2ea49b1afb/original) no-repeat center 0" title="Avatar: De Legende Van Aang"><span>Avatar: De Legende Van Aang</span>
+<span class='arrow'></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</header>
+<div class='content_block' data-id='1741' data-site='3' id='content_block_wallpaper_ad'>
+<script type="text/javascript">
+//if (window.location.pathname == "/") {
+$(document).ready(function () {
+  //$('body').addClass('wallpaper');
+  //removed because of problems with wide layout streamline
+});
+com.mtvi.ads.AdManager.placeAd({size:"932x270"});
+//};
+</script>
+
+<div class="wallpaper_ad_wrapper is_special_yes"></div>
+</div>
+
+<div class='page_title'>
+<ul id='breadcrumbs'>
+<li>
+<a href="/">startpagina</a>
+</li>
+<li>
+<a href="/videos">Video’s</a>
+</li>
+<li>
+<a href="/shows/215-avatar-de-legende-van-aang">Avatar: De Legende Van Aang</a>
+</li>
+</ul>
+<h2>
+Avatar: De Legende Van Aang - Video’s
+
+</h2>
+</div>
+<div id='middle_banner'>
+
+</div>
+<div id='main' role='main'>
+<div class='videos_category_215' id='main_column'>
+<div class='box tabbed_collection'>
+<ul class='tab_navigation'>
+<li class='tab_0 active last'>
+<span class='tab_title'><a href="?active_tab=0">Nieuwste video’s van Avatar: De Legende Van Aang</a></span>
+</li>
+</ul>
+<div class='tabs active'>
+<div class='top_items'>
+<div class='main_item teaser_item'>
+<a href="/videos/7817-bitter-work" class="preview"><span class='playicon'>Play</span>
+<img alt="" src="http://images.mtvnn.com/03883cf7b018dbf30424a8cfa9bab5c81/320x240_" title="" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - </h3>
+<a href="/videos/7817-bitter-work" class="action">bekijk</a>
+</div>
+
+</div>
+<div class='related_items'>
+<div class='teaser_item'>
+<a href="/videos/7829-de-ontwakening" class="preview"><span class='playicon'>Play</span>
+<img alt="DE ONTWAKENING" height="105" src="http://images.mtvnn.com/c164b1638414acdf3fe556f0d1ad1bb31/140x105" title="DE ONTWAKENING" width="140" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - DE ONTWAKENING</h3>
+<a href="/videos/7829-de-ontwakening" class="action">bekijk</a>
+</div>
+
+</div>
+<div class='teaser_item'>
+<a href="/videos/7830-de-hoofdband" class="preview"><span class='playicon'>Play</span>
+<img alt="DE HOOFDBAND" height="105" src="http://images.mtvnn.com/7b1d23267d55c105f4b165721651858c/140x105" title="DE HOOFDBAND" width="140" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - DE HOOFDBAND</h3>
+<a href="/videos/7830-de-hoofdband" class="action">bekijk</a>
+</div>
+
+</div>
+</div>
+</div>
+<div class='item_list_3'>
+<div class='teaser_item'>
+<a href="/videos/7831-de-geverfde-dame" class="preview"><span class='playicon'>Play</span>
+<img alt="DE GEVERFDE DAME" height="105" src="http://images.mtvnn.com/df35f6db09d0fba84bb950073e20c1f0/140x105" title="DE GEVERFDE DAME" width="140" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - DE GEVERFDE DAME</h3>
+<a href="/videos/7831-de-geverfde-dame" class="action">bekijk</a>
+</div>
+
+</div>
+<div class='teaser_item'>
+<a href="/videos/7832-sokka-s-meester" class="preview"><span class='playicon'>Play</span>
+<img alt="SOKKA&#x27;S MEESTER" height="105" src="http://images.mtvnn.com/896cbc2fad4cf031b2c64180c854fcdb2/140x105" title="SOKKA&#x27;S MEESTER" width="140" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - SOKKA'S MEESTER</h3>
+<a href="/videos/7832-sokka-s-meester" class="action">bekijk</a>
+</div>
+
+</div>
+<div class='teaser_item last'>
+<a href="/videos/7834-the-avatar-and-the-firelord" class="preview"><span class='playicon'>Play</span>
+<img height="105" src="http://images.mtvnn.com/a827ace5334f3012ea4a874ab6d8eb5a0/140x105" width="140" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - </h3>
+<a href="/videos/7834-the-avatar-and-the-firelord" class="action">bekijk</a>
+</div>
+
+</div>
+</div>
+<div class='item_list_3'>
+<div class='teaser_item'>
+<a href="/videos/7835-de-wegloper" class="preview"><span class='playicon'>Play</span>
+<img alt="DE WEGLOPER" height="105" src="http://images.mtvnn.com/040d5d25c38a5f0424fa2b2a7e7f3f55/140x105" title="DE WEGLOPER" width="140" />
+</a><div class='description'>
+<h3>Avatar: De Legende Van Aang - DE WEGLOPER</h3>
+<a href="/videos/7835-de-wegloper" class="action">bekijk</a>
+</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+
+</div>
+<div class='content_block' data-id='248' data-site='3' id='content_block_localized_scripts'>
+<script type="text/javascript">
+$(document).ready(function(){
+  var urlParams = location.href.split('/');
+  //if(location.host === 'staging.nickelodeon.nl' && urlParams[4] === '999-nick-battle') {
+  if(urlParams[4] === '999-nick-battle') {
+    $('<a id="application_button" style="float:left;margin:10px 0 15px 0;width:230px;" class="orange_link_button" href="http://www.nickelodeon.nl/static/cc_cw_nickbattle"><span>Meld je hier aan voor de show</span></a>').insertAfter('.now_and_next_franchise');
+  }
+
+  if($.cookies.get('cookie_advise_closed') === 1) {
+      $('#cookie_advise').remove();
+    } else {
+      $('#cookie_advise').show();
+    }
+  $('#cookie_advise .close').click(function(){
+    $('#cookie_advise').remove();
+    $.cookies.set('cookie_advise_closed', '1');
+   });
+});
+</script>
+
+
+<div id="cookie_advise" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-image: url('http://images.mtvnn.com/21a4f9991b0aa2ccf3757ed3fc81fdb5/original'); padding: 3px; color: white; text-align: center; z-index: 9999999999999;">
+Nickelodeon maakt gebruik van cookies. <a href="/static/info_privacy">MEER INFO.</a> <span class="close" style="cursor: pointer;">DEZE MELDING VERBERGEN.</span><span class="close" style="background: url('/assets/community_icons.png') 0 88px; width: 27px; height: 27px; display:inline-block; margin-top:-15px; cursor: pointer;"></span>
+</div>
+  
+<script type="text/javascript" src="https://web.easyresearch.se/misc/ps27119259.js"></script>
+</div>
+
+<aside>
+<div class='content_block' data-id='7252' data-site='3' id='content_block_home_sidebar_facebook'>
+<div id="sidebar_top_block">
+  <a href="/zomer2013">
+    <img src="http://images.mtvnn.com/087f96a5db08d709b8e08b3dab5cd1fb/original" style="width: 300px;"/>
+  </a>
+</div>
+</div>
+
+<div class='now_and_next box top_bg'>
+<div class='bottom_bg' data-channel_id='28' data-limit='2'>
+<h2>Nu op tv!</h2>
+</div>
+</div>
+
+<section class='box half_width teaser_collection top_bg' data-id='46' data-site='3' id='teaser_collection_video_hub_sidebar_channels'>
+<div class='bottom_bg'>
+<h2></h2>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/kanalen/18" class="preview" title="NickJr"><span>NickJr</span>
+
+<img alt="NickJr" src="http://images.mtvnn.com/f589330c2e69040b3f596f55681eebde/275x80_" title="NickJr" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/kanalen/28?window=nickhits" class="preview" title="NickHits"><span>NickHits</span>
+
+<img alt="NickHits" src="http://images.mtvnn.com/83f21037ce000bd0f05518b50f06fb65/275x80_" title="NickHits" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/kanalen/28?window=nicktoons" class="preview" title="NickToons"><span>NickToons</span>
+
+<img alt="NickToons" src="http://images.mtvnn.com/4f464f342499596d51290601aaa67259/275x80_" title="NickToons" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/kanalen/28?window=teennick" class="preview" title="TeenNick"><span>TeenNick</span>
+
+<img alt="TeenNick" src="http://images.mtvnn.com/ec041572d8d6d978a3e0b01de6dac760/275x80_" title="TeenNick" />
+</a>
+</div>
+</div>
+<div class='item_list_1 last'>
+<div class='teaser_item'>
+<a href="http://kindernet.nl/" class="preview" rel="external" target="_blank" title="Kindernet"><span>Kindernet</span>
+
+<img alt="Kindernet" src="http://images.mtvnn.com/6cbf712861b59692bd2b24fb7c21fad5/275x80_" title="Kindernet" />
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class='box half_width teaser_collection top_bg' data-id='47' data-site='3' id='teaser_collection_video_hub_sidebar_franchises'>
+<div class='bottom_bg'>
+<h2>Video’s van je favoriete serie</h2>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/videos/show/586-victorious" class="preview" title="Victorious"><span>Victorious</span>
+<span class='playicon'>Play</span>
+<img alt="Victorious" src="http://images.mtvnn.com/e00076a9b75519b86fdd1d20e8990b23/275x80_" title="Victorious" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/videos/show/342-icarly" class="preview" title="iCarly"><span>iCarly</span>
+<span class='playicon'>Play</span>
+<img alt="iCarly" src="http://images.mtvnn.com/a3d290ddd8cc3978abb9bf108b67d756/275x80_" title="iCarly" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/videos/show/228-big-time-rush" class="preview" title="Big Time Rush"><span>Big Time Rush</span>
+<span class='playicon'>Play</span>
+<img alt="Big Time Rush" src="http://images.mtvnn.com/4062157881e592a90f2808085e297628/275x80_" title="Big Time Rush" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/videos/show/474-spongebob" class="preview" title="SpongeBob"><span>SpongeBob</span>
+<span class='playicon'>Play</span>
+<img alt="SpongeBob" src="http://images.mtvnn.com/d8c457804d1b9d2e2b81ef581b2c8d5b/275x80_" title="SpongeBob" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/videos/show/520-de-pinguins-van-madagascar" class="preview" title="De Pinguïns van Madagascar"><span>De Pinguïns van Madagascar</span>
+<span class='playicon'>Play</span>
+<img alt="De Pinguïns van Madagascar" src="http://images.mtvnn.com/33afe68237a7e053ee7b912f5ccadf4d/275x80_" title="De Pinguïns van Madagascar" />
+</a>
+</div>
+</div>
+<div class='item_list_1'>
+<div class='teaser_item'>
+<a href="/videos/show/280-dora" class="preview" title="Dora"><span>Dora</span>
+<span class='playicon'>Play</span>
+<img alt="Dora" src="http://images.mtvnn.com/9508be44b78d7a63f14d7e0b56d9a46a/275x80_" title="Dora" />
+</a>
+</div>
+</div>
+<div class='item_list_1 last'>
+<div class='teaser_item'>
+<a href="/videos/show/573-true-jackson-vp" class="preview" title="True Jackson, VP"><span>True Jackson, VP</span>
+<span class='playicon'>Play</span>
+<img alt="True Jackson, VP" src="http://images.mtvnn.com/0336e54a914c6d6b81defd26387fb6d1/275x80_" title="True Jackson, VP" />
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class='ad_rectangle'>
+<span>advertentie</span>
+<div class='content_block' data-id='10' data-site='3' id='content_block_home_ad_sidebar_rectangle'>
+<script type="text/javascript">
+  com.mtvi.ads.AdManager.setKeyValues("sky=1;app=site;url=/;rext=kids_family;slot=overlay;testmode=off;position_right=1;");
+  com.mtvi.ads.AdManager.placeAd({size:"300x250"});
+
+//com.mtvi.ads.AdManager.placeNewAd(300, 250);
+</script>
+</div>
+
+</section>
+
+
+</aside>
+<footer id='footer'>
+<div class='channels'>
+<div class='content_block' data-id='101' data-site='3' id='content_block_footer_channels'>
+<!--needs to be refactored -->
+<a name="Nick Jr." href="/kanalen/18-nickjr?window=nickjr" class="nickjr">Nick Jr.</a>
+<a name="Nick Hits" href="/kanalen/28-nick-hits?window=nickhits" class="nickhits">Nick Hits</a>
+<a name="Nick Toons" href="/kanalen/28-nick-toons?window=nicktoons" class="nicktoons">Nick Toons</a>
+<a name="Teennick" href="/kanalen/28-teennick?window=teennick" class="teennick">Teennick</a>
+<a name="Kindernet" href="http://www.kindernet.nl" class="kindernet" target="_blank">Kindernet</a>
+</div>
+
+</div>
+<div class='detail_links'>
+<div class='content_block' data-id='38' data-site='3' id='content_block_footer_column_1'>
+<ul>
+  <li>Online games</li>
+  <li><a href="/games/show/474">Spongebob games</a></li>
+  <li><a href="/games/show/634">Het Huis Anubis games</a></li>
+  <li><a href="/games/show/215">Avatar Games</a></li>
+  <li><a href="/games/show/290">Fairly Odd Parents games</a></li>
+  <li><a href="/games/show/342">iCarly games</a></li>
+  <li><a href="/games/show/228">Big Time Rush games</a></li>
+</ul>
+</div>
+
+<div class='content_block' data-id='39' data-site='3' id='content_block_footer_column_2'>
+<ul>
+  <li>Nieuwe video's</li>
+  <li><a href="/videos/show/280">Dora video's</a></li>
+  <li><a href="/videos/show/520">De Pinguïns van Madagascar video's</a></li>
+  <li><a href="/videos/show/474">SpongeBob video's</a></li>
+  <li><a href="/videos/show/228">Big Time Rush video's</a></li>
+  <li><a href="/videos/show/215">Avatar video's</a></li>
+</ul>
+</div>
+
+<div class='content_block' data-id='40' data-site='3' id='content_block_footer_column_3'>
+<ul>
+  <li>Populair</li>
+  <li><a href="/games/151-spongebob-de-vliegende-hollander">Spongebob - De Vliegende Hollander</a></li>
+  <li><a href="/games/157-skipper-skidoo">Pinguins van Madagascar - Skipper Skidoo</a></li>
+  <li><a href="/games/193-victorious-ditch-the-fish">Victorious - Ditch the fish</a></li>
+  <li><a href="/games/224-spongebob-legends-of-bikini-bottom">Spongebob - Legends of Bikini Bottom</a></li>
+</ul>
+</div>
+
+<div class='content_block' data-id='41' data-site='3' id='content_block_footer_column_4'>
+<ul>
+  <li>Over Nickelodeon.nl</li>
+  <li><a href="/static/info_over_nickelodeon" rel="nofollow">Over Nickelodeon</a></li>
+  <li><a href="/static/info_algemene_voorwaarden" rel="nofollow">Algemene Voorwaarden</a></li>
+  <li><a href="/static/info_mediacode" rel="nofollow">Mediacode</a></li>
+  <li><a href="/static/info_privacy" rel="nofollow">Privacy</a></li>
+</ul>
+</div>
+
+<div class='content_block' data-id='42' data-site='3' id='content_block_footer_column_5'>
+<ul>
+  <li> Extra Informatie </li> 
+
+  <li><a href="/static/channel_broadcast_info" rel="nofollow">Frequenties</a></li> 
+
+  <li><a href="http://mtvnetworks.nl/adverteren/online/site-profielen/nickelodeonnl" rel="nofollow" target="_blank">Adverteren</a></li>
+<li><a href="http://tbe.taleo.net/NA5/ats/careers/searchResults.jsp;jsessionid=34F723ED9F52B40EDA62BE1958129EB2.NA5_primary_jvm?org=MTVNETWORKS&cws=21" target="blank" rel="nofollow">Jobs</a></li>
+
+</ul>
+</div>
+
+</div>
+<div class='brand_links'>
+<div class='content_block' data-id='102' data-site='3' id='content_block_footer_brands'>
+<small class='copyright'>
+Copyright &copy; 2011
+<a href="http://mtvnetworks.nl/" target="_blank">Viacom International Media Networks</a>
+</small>
+
+<div class='brands'>
+<a href="/" class="nickelodeon">Nickelodeon</a>
+<a href="http://www.comedycentral.nl/" class="comedycentral" target="_blank">Comedy Central</a>
+<a href="http://www.mtv.nl/" class="mtv" target="_blank">MTV</a>
+<a href="http://www.neopets.com/index.phtml?lang=nl" class="neopets" target="_blank">Neopets</a>
+</div>
+</div>
+
+</div>
+
+</footer>
+</div>
+<div id='ad_skyscraper'>
+<div class='adv'>
+<span>advertentie</span>
+<div class='content_block' data-id='11' data-site='3' id='content_block_home_ad_skyscraper'>
+<script type="text/javascript">
+  com.mtvi.ads.AdManager.setKeyValues("sky=1;app=site;url=/;rext=kids_family;slot=overlay;testmode=off;position_right=1;");
+  com.mtvi.ads.AdManager.placeAd({size:"120x600"});
+
+// com.mtvi.ads.AdManager.placeNewAd(120, 600);
+</script>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id='advice'></div>
+<div id='login_overlay'>
+<div class='close'>
+<a href="/" class="close">Close</a>
+</div>
+<h2>Aanmelden bij myNick</h2>
+<div class='mynickid-login'></div>
+
+</div>
+
+<script id='trading_card_template' type='text/x-jquery-tmpl'>
+{{if success}}
+<div id='trading_cards_overlay'>
+<a href="#" class="close" title="close">X</a>
+<h2>Hoera!</h2>
+<h3>Je hebt zojuist een nieuwe ruilkaart gevonden</h3>
+<div id='trading_card'>
+<img src="${pic_url.replace('original', '160x240_')}">
+<h4>${card_name}</h4>
+</div>
+<div class='description'>
+<p>Je hebt zojuist een nieuwe ruilkaart gevonden</p>
+<a href="#" class="link_button link_to_album"><span>Ga naar album</span>
+</a><p>Ga terug naar de vorige pagina.</p>
+<a href="#" class="link_button close_trading_card"><span>Verder</span>
+</a></div>
+</div>
+{{/if}}
+</script>
+
+<script src="/javascripts/plugins.min.js" type="text/javascript"></script>
+<script src="/special_assets/javascript_config.js?214293b1e2accd69faeeef689ab37ef1bb1bbbf3.js" type="text/javascript"></script>
+<script src="/javascripts/lib/jquery.cookies.2.2.0.min.js" type="text/javascript"></script>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tools.min.js" type="text/javascript"></script>
+<script src="/javascripts/kobra/kobra_helper.min.js" type="text/javascript"></script>
+<script src="/javascripts/reporting/reporting.js" type="text/javascript"></script>
+<script src="/javascripts/player_prime.min.js" type="text/javascript"></script>
+<script src="/javascripts/contextual_epg.js" type="text/javascript"></script>
+
+<script src="/javascripts/editorial.min.js" type="text/javascript"></script>
+<script src="/javascripts/trading_card_app.js" type="text/javascript"></script>
+<script src="/javascripts/now_and_next.js" type="text/javascript"></script>
+
+<script>
+  //<![CDATA[
+    var _gaq=[["_setAccount","UA-11675300-1"],["_trackPageview"],['_gat._anonymizeIp']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+    g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+    s.parentNode.insertBefore(g,s)}(document,"script"));
+  //]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+mtvn.btg.Controller.init();
+        mtvn.btg.Controller.sendPageCall({
+          pageName : 'Videos - Categories - Avatar: De Legende Van Aang',
+          
+          channel:  'videos',
+          hier1:    'site/videos/categories/Avatar: De Legende Van Aang',
+          campaign: '',
+          server:   'production',
+          prop1:    '',
+          prop2:    'production',
+          prop3:    '',
+          prop4:    '',
+          eVar1:    '',
+          eVar2:    '',
+          eVar3:    '',
+          eVar4:    ''
+
+        });
+        
+//]]>
+</script>
+<div class='tooltip'></div>
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "rpm-images.newrelic.com/42/eum/rum.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-4.newrelic.com","4220be7728",465917,"cVtWF0dYWwpcEEpCXVZRVxAaVFYSXAUKRk0=",0,963,new Date().getTime(),"","","","",""]);</script></body>
+</html>

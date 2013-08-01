@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<channels>
+    <!-- Ketnet broke for now -->
+    <channel>
+        <guid>756FFEC8-B6BA-11E0-898D-1F434824019B</guid>
+        <name>Ketnet</name>
+        <description>Online uitzendingen van www.ketnet.be.</description>
+        <icon>ketneticon.png</icon>
+        <iconlarge>ketnetlarge.png</iconlarge>
+        <channelcode>ketnet</channelcode>
+        <sortorder>123</sortorder>
+        <language>be</language>
+        <compatible>Environments.NoPlatform</compatible>
+    </channel>
+    
+    <channel>
+        <guid>6C7374A8-B6BA-11E0-A21E-1A434824019B</guid>
+        <name>Cobra</name>
+        <description>Online uitzendingen van www.cobra.be.</description>
+        <icon>cobraicon.png</icon>
+        <iconlarge>cobralarge.png</iconlarge>
+        <channelcode>cobra</channelcode>
+        <sortorder>125</sortorder>
+        <language>be</language>
+        <compatible>Environments.All</compatible>
+    </channel>
+</channels>

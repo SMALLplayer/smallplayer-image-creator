@@ -1,0 +1,4 @@
+[B]Changelog[/B]
+Fixed: Hardwareinfo.tv did not play due to Youtube issues
+Fixed: 123video.nl changed and introduced encrypted data (Issue 429)
+Removed: MyVideos.nl for now, as they seem to have disappeared and changed to a German site (Issue 430)

@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Movie">
+<head>
+  <title>Altijd Wat: di 30 jul 2013, 21:10 - Uitzending Gemist</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="" />
+  <meta charset="utf-8" />
+  <!--[if IE 7]><meta http-equiv="refresh" content="0;url=/unsupported" /><![endif]-->
+  <link href="//assets.www.uitzendinggemist.nl/assets/application-cf441068254320b3944a4159e5e39258.css" media="screen" rel="stylesheet" type="text/css" />
+      <link href="http://www.uitzendinggemist.nl/oembed.json?url=http://www.uitzendinggemist.nl/afleveringen/1358199" rel="alternate" type="application/json+oembed" />
+  <link href="http://www.uitzendinggemist.nl/oembed.xml?url=http://www.uitzendinggemist.nl/afleveringen/1358199" rel="alternate" type="application/xml+oembed" />
+
+  <meta content="summary" name="twitter:card" />
+<meta content="@gemist" name="twitter:site" />
+
+<meta content="Altijd Wat: di 30 jul 2013, 21:10" itemprop="name" property="og:title" /> 
+<meta content="tv_show" property="og:type" />
+<meta content="http://www.uitzendinggemist.nl/afleveringen/1358199" itemprop="url" property="og:url" />
+<meta content="http://mediadb.omroep.nl/assets/000/542/101.jpg?1375104665" itemprop="image" property="og:image" />
+<meta content="108937635846752" property="fb:app_id" />
+<meta content="Uitzending Gemist" property="og:site_name" />
+<meta content="Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving." itemprop="description" property="og:description" />
+
+<meta content="video" name="medium" />
+<meta content="http://embed.player.omroep.nl/fle/ugfl.swf?episodeID=NCRV_1616441&amp;volume=100" property="og:video" />
+<meta content="480" property="og:video:width" />
+<meta content="270" property="og:video:height" />
+<meta content="application/x-shockwave-flash" property="og:video:type" />
+
+  <script src="http://ida.omroep.nl/npoplayer/npoplayer-min.js" type="text/javascript"></script>
+  <link rel="canonical" href="http://www.uitzendinggemist.nl/afleveringen/1358199" />
+  <link href="/programmas/1084-altijd-wat.rss?id=1084-altijd-wat" rel="alternate" title="Altijd Wat op Uitzending Gemist" type="application/rss+xml" />
+
+  <script src="//assets.www.uitzendinggemist.nl/assets/application-93a9cf0f10c5fa83c227b261478fb857.js" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="iKBJ2bMaX732K3thE5P/EFM/josN6DToCq/8Lqj86Yo=" name="csrf-token" />
+  <link rel="icon" href="/favicon.gif" type="image/x-icon" >
+  <link rel="apple-touch-icon" href="/apple_icon.png" />
+  <!--[if IE]>
+  <meta http-equiv="msthemecompatible" content="no" />
+  <![endif]-->
+  <script type="text/javascript" src="http://cookiesv2.publiekeomroep.nl/data/script/cconsent.min.js"></script>
+<script type="text/javascript">
+  // <![CDATA[
+  npo_cookies.init();
+  // ]]>
+</script>
+<link rel="stylesheet" type="text/css" href="http://cookiesv2.publiekeomroep.nl/static/css/npo_cc_styles.css"/>
+
+</head>
+
+<body>
+  
+
+  <div id="balk-wrapper">
+    <script id="pb-cn-bar" src="http://balk.omroep.nl/cn/cn.js?channel=uitzendinggemist&amp;overlay=false" type="text/javascript"></script>
+  </div>
+
+  <div id="content">
+    <div id="sitenotification"></div>
+    
+		<header>
+		  <div id="header">
+		    <div id="extra_header_items">
+		      <a id="faq" href="http://help.publiekeomroep.nl/categorieen/uitzending-gemist--2" rel="external">FAQ</a>
+		    </div>
+		    <h1><a href="/">Uitzending Gemist</a></h1>
+
+		    <form action="/zoek" method="get" id="search-form" class="search-form" accept-charset="UTF-8">
+	<fieldset>
+    
+		<input autocomplete="off" class="search search-field" data-path="/zoek/autocomplete" id="search-query" name="q" type="text" />
+
+		<input class="search-submit" id="search-submit" name="" type="submit" value="Zoek" />
+
+    <img alt="Spinner" id="search-spinner" src="//assets.www.uitzendinggemist.nl/assets/spinner-43ce2da922ec7f6d649d5224c4e3c652.gif" style="display:none" />
+    
+	</fieldset>
+	<div id="search-results"></div>
+</form>
+
+
+		  </div>
+		</header>
+
+		<nav>
+		  <div id="navigation">
+  <ul>
+    <li class="iconized "><a href="/" title="Home"><img alt="Home" src="//assets.www.uitzendinggemist.nl/assets/navigation/home-icon-8b7a16cd15b6127f59c104fb0126d930.png" title="Home" /></a></li>
+    <li class="iconized "><a href="/gids" title="Nederland 1, 2 en 3"><img alt="Nederland 1, 2 en 3" src="//assets.www.uitzendinggemist.nl/assets/navigation/ned123-icon-4ffaac0f26e893ccfe222867211b4b7e.png" title="Nederland 1, 2 en 3" /></a></li>
+    <li class="iconized "><a href="/zapp" title="Zapp - voor kinderen van 6 - 12"><img alt="Zapp - voor kinderen van 6 - 12" class="small-logo" src="//assets.www.uitzendinggemist.nl/assets/navigation/zapp-icon-c2daa1afc98e28845911eacd44f4d78a.png" title="Zapp - voor kinderen van 6 - 12" /></a></li>
+    <li class="iconized "><a href="/zappelin" title="Zappelin - voor kinderen van 2 - 5"><img alt="Zappelin - voor kinderen van 2 - 5" class="small-logo" src="//assets.www.uitzendinggemist.nl/assets/navigation/zappelin-icon-15ef94706d83316a638f9e2e7d6a2d56.png" title="Zappelin - voor kinderen van 2 - 5" /></a></li>
+    <li class="dagenli"><a href="/weekarchief/vandaag">Afgelopen 7 dagen <img alt="" id="triangle" src="//assets.www.uitzendinggemist.nl/assets/navigation/triangle-95d26252ebd7976bf751db6d3066fcb3.png" /></a>
+<ol id="daystoggle" style="display:none">
+  <li><a href="/weekarchief/vandaag">Vandaag</a></li>
+  <li><a href="/weekarchief/gisteren">Gisteren</a></li>
+    <li><a href="/weekarchief/2013-07-28">Zondag 28 juli</a></li>
+    <li><a href="/weekarchief/2013-07-27">Zaterdag 27 juli</a></li>
+    <li><a href="/weekarchief/2013-07-26">Vrijdag 26 juli</a></li>
+    <li><a href="/weekarchief/2013-07-25">Donderdag 25 juli</a></li>
+    <li><a href="/weekarchief/2013-07-24">Woensdag 24 juli</a></li>
+    <li><a href="/weekarchief/2013-07-23">Dinsdag 23 juli</a></li>
+</ol>
+</li>
+    <li class="natio"><a href="/omroepen" title="Omroepen">Omroepen</a></li>
+    <li class="regio"><a href="/omroepen/regio" title="Regionale omroepen">Regio</a></li>
+    <li class=""><a href="/genres" title="Genres">Genres</a></li>
+    <li class=""><a href="/programmas" title="Programma&#x27;s A-Z">Programma&#x27;s A-Z</a></li>
+    <li class="filler"></li>
+  </ul>
+</div>
+
+		</nav>
+
+
+<div class="blackbox-wrapper" id="episode-page">
+
+	<div class="blackbox">
+	  
+	  
+		<div class="left">
+				<div id="player-wrapper">
+    <div id="player"></div>
+	</div>
+
+  <div id="player-meta">
+    <a href="#" class="popout" title="Open de player in een nieuw venster">Pop-out</a>
+    <a href="#" class="bigger" title="Toon de player op 200%">Beeld vergroten</a>
+    <a href="#" class="smaller" style="display:none" title="Toon de player op 100%">Beeld verkleinen</a>
+  </div>
+	
+
+		</div>
+		<div class="right">
+				<div id="meta-information">
+		
+
+<h1><a href="/programmas/1084-altijd-wat" class="series " title="Altijd Wat">Altijd Wat</a></h1>
+<h2><a href="/afleveringen/1358199" class="episode active " title="di 30 jul 2013, 21:10">di 30 jul 2013, 21:10</a> </h2>
+
+
+<table class="information">
+  <tr>
+	    <th>Uitgezonden</th>
+    <th>Omroep</th>
+  </tr>
+  <tr>
+    <td>di 30 jul 2013, 21:10</td>
+    <td><a href="/omroepen/ncrv" title="NCRV">NCRV</a></td>
+  </tr>
+  <tr>
+    <th>Aantal x bekeken</th>
+    <th>Genre</th>
+  </tr>
+  <tr>
+    <td>951</td>
+    <td><a href="/genres/informatief">Informatief</a></td>
+  </tr>
+</table>
+
+<div id="description">
+  <div class="desc_wrapper">
+    <p>
+
+  Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+
+</p>
+    <div class="advisories ">
+    </div>
+
+    
+
+  </div>
+
+  <span class="website"><a href="http://altijdwat.ncrv.nl/" class="website" rel="external" title="http://altijdwat.ncrv.nl/">altijdwat.ncrv.nl</a></span>
+
+
+</div>
+
+<span id="episode-data" 
+  data-episode-id="15866527" 
+  data-player-id="NCRV_1616441"
+  data-online-at="di 30 jul 2013, 21:54" 
+  data-offline-at=""
+  data-has-flash="true"
+  data-has-html5="true"
+  data-has-silverlight="false"
+  data-is-active="true"
+  data-local-id="1358199"></span>
+
+<div class="clear">&nbsp;</div>
+
+  <div id="share-options">
+    <div class="share">
+      <img alt="Share" src="//assets.www.uitzendinggemist.nl/assets/episodes/share-e6a381911ff499a09bedc6a18950a2f7.png" />
+      <a href="/share_episodes/new?episode_id=1358199" class="lightbox" id="share">Deel</a>
+    </div>
+
+
+  </div>
+  <div class="share-images">
+    <a href="http://twitter.com/home?status=Altijd%20Wat%20-%20http%3A%2F%2Fgemi.st%2F15866527" class="twitter_share" id="twitter_share" rel="external"><img alt="Twitter" src="//assets.www.uitzendinggemist.nl/assets/episodes/twitter-ca213abd5fd30977e0ebd35bdfba32e9.png" /></a>
+    <a href="http://www.facebook.com/sharer.php?u=http://gemi.st/15866527&amp;t=di+30+jul+2013%2C+21%3A10" class="facebook_share" id="facebook_share" rel="external"><img alt="Facebook" src="//assets.www.uitzendinggemist.nl/assets/episodes/facebook-67467be0a3338b3a832b3f12396789b2.png" /></a>
+    <a href="http://hyves-share.nl/button/tip/?tipcategoryid=12&amp;rating=5&amp;title=Altijd%20Wat&amp;body=Reportageprogramma%20met%20verrassende%20verhalen%2C%20opvallende%20infographics%20en%20bijzondere%20gesprekken.%20Altijd%20Wat%20gaat%20in%20tegen%20de%20waan%20van%20de%20dag%2C%20legt%20verbanden%20en%20geeft%20een%20andere%20kijk%20op%20ontwikkelingen%20in%20de%20samenleving.%20-%20http%3A%2F%2Fgemi.st%2F15866527" class="hyves_share" id="hyves_share" rel="external"><img alt="Hyves" src="//assets.www.uitzendinggemist.nl/assets/episodes/hyves-ff93a23b89c3ce8268eb03870609f7b4.png" /></a>
+  </div>
+
+
+
+
+
+	</div>
+
+		</div>
+	</div>
+  <div id="notification" style="display:none">
+    <div class="left">
+	    <img alt="Limited_driehoek" src="//assets.www.uitzendinggemist.nl/assets/episodes/limited_driehoek-3f4eefc9ef12dfe8c2fe509e637d196b.png" />
+	    <span id="notification-message"></span>
+    </div>
+    <div class="right">
+	    <img alt="Limited_meer_info" src="//assets.www.uitzendinggemist.nl/assets/episodes/limited_meer_info-38163b76109ab0f834159f2ce0e2e61d.png" />
+	    <a href="#" rel="external">Meer info</a>
+    </div>
+  </div>
+	
+	<div class="two-column-left">
+		
+<div id="quicksearch-wrapper">
+  <div id="quicksearch">
+    <ol class="tabs">
+      <li>
+        <a href="#" data-type="episodes">
+          <h3>Uitzendingen <span id="episodes-count">(142)</span></h3>
+        </a>
+      </li>
+        <li>
+          <a href="#" data-type="fragments">
+            <h3>Fragmenten <span id="fragments-count">(733)</span></h3>
+          </a>
+        </li>
+        <li class="">
+          <a href="#" data-type="webonly">
+            <h3>Web only <span id="webonly-count">(1)</span></h3>
+          </a>
+        </li>
+    </ol>
+
+		<ol class="forms">
+			<li class="episodes" id="episodes-form-li">
+				<form accept-charset="UTF-8" action="/programmas/1084-altijd-wat/afleveringen.js" data-remote="true" id="episodes-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+					<label for="range">Periode</label>
+					<select class="range" id="episodes-select" name="range"><option value="">Toon alles</option>
+<option value="2013-07-30">Vandaag (1)</option>
+<option value="2013-07-29">Ma 29 jul 2013 (0)</option>
+<option value="2013-07-28">Zo 28 jul 2013 (0)</option>
+<option value="2013-07-27">Za 27 jul 2013 (0)</option>
+<option value="2013-07-26">Vr 26 jul 2013 (0)</option>
+<option value="2013-07-25">Do 25 jul 2013 (0)</option>
+<option value="2013-07-24">Wo 24 jul 2013 (0)</option>
+<option value="2013-07-23">Di 23 jul 2013 (1)</option>
+<option value="7_dagen">Afgelopen 7 dagen (1)</option>
+<option value="14_dagen">Afgelopen 14 dagen (2)</option>
+<option value="30_dagen">Afgelopen maand (4)</option>
+<option value="3_maanden">Afgelopen 3 maanden (12)</option>
+<option value="6_maanden">Afgelopen 6 maanden (25)</option>
+<option value="jaar">Afgelopen jaar (48)</option></select>
+					<input type="text" class="search" name="query" autocomplete="off" value="" placeholder="Snel zoeken" />
+</form>			</li>
+			
+			<li class="fragments" style="display:none" id="fragments-form-li">
+				<form accept-charset="UTF-8" action="/programmas/1084-altijd-wat/fragmenten.js" data-remote="true" id="fragments-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+					<label for="range">Periode</label>
+					<select class="range" id="range" name="range"><option value="">Toon alles</option>
+<option value="2013-07-30">Vandaag (0)</option>
+<option value="2013-07-29">Ma 29 jul 2013 (0)</option>
+<option value="2013-07-28">Zo 28 jul 2013 (0)</option>
+<option value="2013-07-27">Za 27 jul 2013 (0)</option>
+<option value="2013-07-26">Vr 26 jul 2013 (0)</option>
+<option value="2013-07-25">Do 25 jul 2013 (0)</option>
+<option value="2013-07-24">Wo 24 jul 2013 (0)</option>
+<option value="2013-07-23">Di 23 jul 2013 (3)</option>
+<option value="7_dagen">Afgelopen 7 dagen (3)</option>
+<option value="14_dagen">Afgelopen 14 dagen (6)</option>
+<option value="30_dagen">Afgelopen maand (15)</option>
+<option value="3_maanden">Afgelopen 3 maanden (49)</option>
+<option value="6_maanden">Afgelopen 6 maanden (106)</option>
+<option value="jaar">Afgelopen jaar (222)</option></select>
+					<input type="text" class="search" name="query" autocomplete="off" value="" placeholder="Snel zoeken" />
+</form>			</li>
+			
+			<li class="webonly" style="display:none" id="webonly-form-li">
+				<form accept-charset="UTF-8" action="/programmas/1084-altijd-wat/webonly.js" data-remote="true" id="webonly-form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+					<label for="search"></label>
+					<input type="text" class="search" name="query" autocomplete="off" value="" placeholder="Snel zoeken" />
+</form>			</li>
+		</ol>
+  </div>
+
+  <div id="episodes" class="list">
+      <ul class="episodes">
+      <li class="episode active knav" data-broadcasted-at="1375211400" data-remote-id="15866527" id="episode_1358199">
+    <div class="image">
+      <a href="/afleveringen/1358199" class="episode active episode-image" title=""><img alt="di 30 jul 2013, 21:10 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/237/160/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 30 jul 2013, 21:10 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="0 keer bekeken">0 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1358199" class="episode active knav_link" title="di 30 jul 2013, 21:10 ">di 30 jul 2013, 21:10 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1374606600" data-remote-id="15836035" id="episode_1357170">
+    <div class="image">
+      <a href="/afleveringen/1357170" class="episode active episode-image" title=""><img alt="di 23 jul 2013, 21:10 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/537/837/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/537/838/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/537/839/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 23 jul 2013, 21:10 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="3.661 keer bekeken">3.661 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1357170" class="episode active knav_link" title="di 23 jul 2013, 21:10 ">di 23 jul 2013, 21:10 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1374001500" data-remote-id="15820661" id="episode_1356166">
+    <div class="image">
+      <a href="/afleveringen/1356166" class="episode active episode-image" title=""><img alt="di 16 jul 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/536/302/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/303/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/304/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 16 jul 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="10.311 keer bekeken">10.311 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1356166" class="episode active knav_link" title="di 16 jul 2013, 21:05 ">di 16 jul 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1373396700" data-remote-id="15785459" id="episode_1354987">
+    <div class="image">
+      <a href="/afleveringen/1354987" class="episode active episode-image" title=""><img alt="di 9 jul 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/532/083/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/084/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/085/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 9 jul 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="9.310 keer bekeken">9.310 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1354987" class="episode active knav_link" title="di 9 jul 2013, 21:05 ">di 9 jul 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1372791900" data-remote-id="15757555" id="episode_1353862">
+    <div class="image">
+      <a href="/afleveringen/1353862" class="episode active episode-image" title=""><img alt="di 2 jul 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/530/575/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/530/576/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/530/577/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 2 jul 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="15.273 keer bekeken">15.273 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1353862" class="episode active knav_link" title="di 2 jul 2013, 21:05 ">di 2 jul 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1372187100" data-remote-id="15728158" id="episode_1352610">
+    <div class="image">
+      <a href="/afleveringen/1352610" class="episode active episode-image" title=""><img alt="di 25 jun 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/528/883/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/528/884/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/528/885/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 25 jun 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="19.299 keer bekeken">19.299 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1352610" class="episode active knav_link" title="di 25 jun 2013, 21:05 ">di 25 jun 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1371582300" data-remote-id="15708804" id="episode_1351454">
+    <div class="image">
+      <a href="/afleveringen/1351454" class="episode active episode-image" title=""><img alt="di 18 jun 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/527/012/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/527/013/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/527/014/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 18 jun 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="3.872 keer bekeken">3.872 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1351454" class="episode active knav_link" title="di 18 jun 2013, 21:05 ">di 18 jun 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1370977500" data-remote-id="15693045" id="episode_1350247">
+    <div class="image">
+      <a href="/afleveringen/1350247" class="episode active episode-image" title=""><img alt="di 11 jun 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/524/557/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/524/558/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/524/559/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 11 jun 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="3.278 keer bekeken">3.278 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1350247" class="episode active knav_link" title="di 11 jun 2013, 21:05 ">di 11 jun 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1370372700" data-remote-id="15664091" id="episode_1349060">
+    <div class="image">
+      <a href="/afleveringen/1349060" class="episode active episode-image" title=""><img alt="di 4 jun 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/522/104/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/522/105/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/522/106/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 4 jun 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="3.509 keer bekeken">3.509 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1349060" class="episode active knav_link" title="di 4 jun 2013, 21:05 ">di 4 jun 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>  <li class="episode active knav" data-broadcasted-at="1369767900" data-remote-id="15641063" id="episode_1347771">
+    <div class="image">
+      <a href="/afleveringen/1347771" class="episode active episode-image" title=""><img alt="di 28 mei 2013, 21:05 " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/517/376/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/517/377/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/517/378/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="di 28 mei 2013, 21:05 " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="3.880 keer bekeken">3.880 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1347771" class="episode active knav_link" title="di 28 mei 2013, 21:05 ">di 28 mei 2013, 21:05 </a></h3>
+
+      Reportageprogramma met verrassende verhalen, opvallende infographics en bijzondere gesprekken. Altijd Wat gaat in tegen de waan van de dag, legt verbanden en geeft een andere kijk op ontwikkelingen in de samenleving.
+    </div>
+</li>
+  </ul>
+
+<div class="pagination"><span class="previous_page disabled">Vorige</span> <em class="current">1</em> <a rel="next" href="/afleveringen/1358199/afleveringen?cookie_consent=1&amp;page=2">2</a> <a href="/afleveringen/1358199/afleveringen?cookie_consent=1&amp;page=3">3</a> <a href="/afleveringen/1358199/afleveringen?cookie_consent=1&amp;page=4">4</a> <a href="/afleveringen/1358199/afleveringen?cookie_consent=1&amp;page=5">5</a> <span class="gap">&hellip;</span> <a href="/afleveringen/1358199/afleveringen?cookie_consent=1&amp;page=15">15</a> <a class="next_page" rel="next" href="/afleveringen/1358199/afleveringen?cookie_consent=1&amp;page=2">Volgende</a></div>
+
+
+  </div>
+  
+    <div id="fragments" class="list" style="display:none;">
+        <ul class="fragments">
+    
+    <li class="fragment active knav" id="fragment_44986">
+      <div class="image">
+        <a href="/afleveringen/1357170#00:34:15" class="fragment active fragment-image" title=""><img alt="Zwemmen zonder subsidie" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/538/130/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/538/131/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/538/132/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Zwemmen zonder subsidie" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1357170#00:34:15" class="fragment active knav_link" title="di 23 jul 2013, 21:10 ">di 23 jul 2013, 21:10 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1357170#00:34:15" class="fragment active " title="(00:34:15) Zwemmen zonder subsidie">(00:34:15) Zwemmen zonder subsidie</a></h4>
+
+        In de Drentse krimpgemeente Valthermond werd het plaatselijke zwembad wegbezuinigd. Daarom richtten vrijwilligers het Dorpsbedrijf op. Samen runnen zij nu het zwembad, zonder subsidie.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44987">
+      <div class="image">
+        <a href="/afleveringen/1357170#00:20:21" class="fragment active fragment-image" title=""><img alt="Lisette Pelsers over 75 jaar Kröller-Müller" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/538/127/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/538/128/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/538/129/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Lisette Pelsers over 75 jaar Kröller-Müller" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1357170#00:20:21" class="fragment active knav_link" title="di 23 jul 2013, 21:10 ">di 23 jul 2013, 21:10 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1357170#00:20:21" class="fragment active " title="(00:20:21) Lisette Pelsers over 75 jaar Kröller-Müller">(00:20:21) Lisette Pelsers over 75 jaar Kröller-Müller</a></h4>
+
+        Het Kroller-Muller Museum bestaat deze maand 75 jaar. Verslaggever Alje Kamphuis praat met Lisette Pelsers, de eerste vrouwelijke directeur sinds oprichtster Helene Kroller-Muller.
+
+Over de schoonheid van kunst, haar vrouwelijke hand van tentoonstellen, het museum als antwoord op een maatschappij op drift, de bezuinigingen in de kunst en de beruchte audiotour van Nico Dijkshoorn.
+
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44988">
+      <div class="image">
+        <a href="/afleveringen/1357170#00:00:44" class="fragment active fragment-image" title=""><img alt="De NIPT-test: einde van het Downsyndroom?" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/538/124/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/538/125/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/538/126/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="De NIPT-test: einde van het Downsyndroom?" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1357170#00:00:44" class="fragment active knav_link" title="di 23 jul 2013, 21:10 ">di 23 jul 2013, 21:10 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1357170#00:00:44" class="fragment active " title="(00:00:44) De NIPT-test: einde van het Downsyndroom?">(00:00:44) De NIPT-test: einde van het Downsyndroom?</a></h4>
+
+        Deze week in de uitzending een reportage met daarin het duivelse dilemma: test je tijdens de zwangerschap op mogelijke afwijkingen, zoals het Downsyndroom, of niet? En als je de uitslag hebt, wat doe je dan?
+
+Altijd Wat vroeg het aan meer dan 2000 vrouwen. Aanleiding is de mogelijke invoering van een nieuwe test in Nederland. Deze NIPT-test is minder risicovol voor het ongeboren kind.
+
+Besluiten ouders hierdoor vaker de zwagerschap af te breken? En welke gevolgen heeft dit voor de maatschappij? In Denemarken wordt al meer getest: daar worden nauwelijks nog kinderen met het Downsyndroom geboren.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44965">
+      <div class="image">
+        <a href="/afleveringen/1356166#00:23:45" class="fragment active fragment-image" title=""><img alt="Een openhartig gesprek met Gerard Spong" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/536/579/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/580/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/581/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Een openhartig gesprek met Gerard Spong" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1356166#00:23:45" class="fragment active knav_link" title="di 16 jul 2013, 21:05 ">di 16 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1356166#00:23:45" class="fragment active " title="(00:23:45) Een openhartig gesprek met Gerard Spong">(00:23:45) Een openhartig gesprek met Gerard Spong</a></h4>
+
+        Verslaggever Wilfred Scholten voert een openhartig gesprek met een van s lands meest vermaarde strafpleiters: Gerard Spong. Over zijn eigenzinnige karakter, zijn zoon en zijn eigen gerechtelijke dwaling.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44967">
+      <div class="image">
+        <a href="/afleveringen/1356166#00:09:06" class="fragment active fragment-image" title=""><img alt="De reportage: Oorlogsmisdadigers in Nederland?" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/536/576/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/577/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/578/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="De reportage: Oorlogsmisdadigers in Nederland?" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1356166#00:09:06" class="fragment active knav_link" title="di 16 jul 2013, 21:05 ">di 16 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1356166#00:09:06" class="fragment active " title="(00:09:06) De reportage: Oorlogsmisdadigers in Nederland?">(00:09:06) De reportage: Oorlogsmisdadigers in Nederland?</a></h4>
+
+        In Nederland lopen al jaren honderden Afghanen rond die door de IND worden beschuldigd van oorlogsmisdaden. Onduidelijk is of ze ook daadwerkelijk schuldig zijn aan bijvoorbeeld misdaden als marteling.
+
+De beschuldigingen blijken grote impact te hebben op de gezinsleden. Verslaggever Piet de Blaauw ging in Afghanistan en Nederland op onderzoek uit.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44966">
+      <div class="image">
+        <a href="/afleveringen/1356166#00:00:43" class="fragment active fragment-image" title=""><img alt="Feit of fictie: Bijensterfte" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/536/573/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/574/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/536/575/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Feit of fictie: Bijensterfte" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1356166#00:00:43" class="fragment active knav_link" title="di 16 jul 2013, 21:05 ">di 16 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1356166#00:00:43" class="fragment active " title="(00:00:43) Feit of fictie: Bijensterfte">(00:00:43) Feit of fictie: Bijensterfte</a></h4>
+
+        Nederland kampt met een massale bijensterfte. Dat is niet alleen rampzalig voor de bijen zelf, maar ook voor de flora in Nederland en de oogsten die daardoor schade oplopen.
+
+Belangrijke oorzaak: landbouwgif. Vanaf december worden een drietal insecticiden gedeeltelijk in Nederland verboden. Maar is de bij hiermee gered?
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44957">
+      <div class="image">
+        <a href="/afleveringen/1354987#00:37:58" class="fragment active fragment-image" title=""><img alt="De keuken van het Ongewenst Dier" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/532/364/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/365/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/366/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="De keuken van het Ongewenst Dier" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1354987#00:37:58" class="fragment active knav_link" title="di 9 jul 2013, 21:05 ">di 9 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1354987#00:37:58" class="fragment active " title="(00:37:58) De keuken van het Ongewenst Dier">(00:37:58) De keuken van het Ongewenst Dier</a></h4>
+
+        Ganzen bij Schiphol worden afgeschoten zodat ze niet in de motoren vliegen, Amerikaanse rivierkreeften worden met fuiken gevangen in de slootjes rondom Amsterdam omdat ze de rest van de vegetatie aantasten. En afgedankte paarden belanden bij de paardenslager. De Keuken van het Ongewenst Dier heeft de oplossing voor dit dierlijk afval: we eten het op.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44958">
+      <div class="image">
+        <a href="/afleveringen/1354987#00:25:39" class="fragment active fragment-image" title=""><img alt="Open boek Nawal al Saadawi houdt mening niet voor zich" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/532/361/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/362/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/363/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Open boek Nawal al Saadawi houdt mening niet voor zich" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1354987#00:25:39" class="fragment active knav_link" title="di 9 jul 2013, 21:05 ">di 9 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1354987#00:25:39" class="fragment active " title="(00:25:39) Open boek Nawal al Saadawi houdt mening niet voor zich">(00:25:39) Open boek Nawal al Saadawi houdt mening niet voor zich</a></h4>
+
+        Feministe, psychiater en schrijfster Nawal al Saadawi is een lastige vrouw voor Egypte. Toen ze in 1972 haar boek Women and Sex schreef, keerden politieke en religieuze leiders haar de rug toe. Ze verloor haar baan bij het Egyptische Ministerie van Volksgezondheid en stond op dodenlijsten. Toch heeft ze haar mening nooit onder stoelen of banken geschoven. Een gesprek tijdens haar korte bezoek aan Nederland.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44959">
+      <div class="image">
+        <a href="/afleveringen/1354987#00:10:29" class="fragment active fragment-image" title=""><img alt="Cybercrime: oorlog op het net" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/532/358/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/359/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/360/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Cybercrime: oorlog op het net" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1354987#00:10:29" class="fragment active knav_link" title="di 9 jul 2013, 21:05 ">di 9 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1354987#00:10:29" class="fragment active " title="(00:10:29) Cybercrime: oorlog op het net">(00:10:29) Cybercrime: oorlog op het net</a></h4>
+
+        DDOS aanvallen zorgden ervoor dat grote banken als ABN AMRO en ING volledig plat lagen. Dinsdag zochten we uit welke wereld hierachter schuil gaat.
+
+Internetprovider Sven Olaf Kamphuis was volgens justitie betrokken bij de grootste aanval uit de geschiedenis. Inmiddels houdt hij rekening met een aanslag op zijn leven.
+      </div>
+</li>
+    <li class="fragment active knav" id="fragment_44960">
+      <div class="image">
+        <a href="/afleveringen/1354987#00:08:17" class="fragment active fragment-image" title=""><img alt="Altijd Wat Wijzer: internet" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/532/355/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/356/140x79.jpg&quot;,&quot;http://mediadb.omroep.nl/assets/000/532/357/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Altijd Wat Wijzer: internet" width="140" /></a>  
+      </div>
+
+      <div class="description">
+        <h3>
+          <a href="/afleveringen/1354987#00:08:17" class="fragment active knav_link" title="di 9 jul 2013, 21:05 ">di 9 jul 2013, 21:05 </a>
+			    
+        </h3>
+
+        <h4><a href="/afleveringen/1354987#00:08:17" class="fragment active " title="(00:08:17) Altijd Wat Wijzer: internet">(00:08:17) Altijd Wat Wijzer: internet</a></h4>
+
+        Nederland heeft de hoogste internetdichtheid van Europa. Een leven zonder internet is bijna niet meer voor te stellen: toch is het ontstaan daarvan nog niet zo lang geleden. Het internet kent echter ook zo zijn schaduwkanten...
+      </div>
+</li>
+  </ul>
+
+<div class="pagination"><span class="previous_page disabled">Vorige</span> <em class="current">1</em> <a rel="next" href="/afleveringen/1358199/fragmenten?cookie_consent=1&amp;page=2">2</a> <a href="/afleveringen/1358199/fragmenten?cookie_consent=1&amp;page=3">3</a> <a href="/afleveringen/1358199/fragmenten?cookie_consent=1&amp;page=4">4</a> <a href="/afleveringen/1358199/fragmenten?cookie_consent=1&amp;page=5">5</a> <span class="gap">&hellip;</span> <a href="/afleveringen/1358199/fragmenten?cookie_consent=1&amp;page=74">74</a> <a class="next_page" rel="next" href="/afleveringen/1358199/fragmenten?cookie_consent=1&amp;page=2">Volgende</a></div>
+
+
+    </div>
+  
+    <div id="webonly" class="list selected" style="display:none;">
+        <ul class="webonly">
+      <li class="web_only_episode active knav" data-broadcasted-at="0" data-remote-id="100001308" id="web_only_episode_1299773">
+    <div class="image">
+      <a href="/afleveringen/1299773" class="episode active episode-image" title=""><img alt="Promo: Amerikaanse verkiezingen door de ogen van Bruce Springsteen  " class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/237/160/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Promo: Amerikaanse verkiezingen door de ogen van Bruce Springsteen  " width="140" /></a>  
+    </div>
+
+	  <div class="description">
+      <span class="views" title="315 keer bekeken">315 <img alt="Eye" src="//assets.www.uitzendinggemist.nl/assets/eye-21cd7a3d3b6dddfe4c7393de41205273.png" /></span>
+
+      <h3><a href="/afleveringen/1299773" class="episode active knav_link" title="Promo: Amerikaanse verkiezingen door de ogen van Bruce Springsteen  ">Promo: Amerikaanse verkiezingen door de ogen van Bruce Springsteen  <span class="date"></span></a></h3>
+
+      We bekijken de aanloop van de Amerikaanse verkiezingen door de ogen van Bruce Springsteen.
+    </div>
+</li>
+  </ul>
+
+
+
+
+    </div>
+</div>
+
+		
+	    <a href="http://www.uitzendinggemist.nl/programmas/1084-altijd-wat.rss?id=1084-altijd-wat" class="rss">RSS feed voor dit programma</a>
+	</div>
+	
+	<div class="two-column-right">
+	  
+		<div id="more-series">
+
+
+  <h2>
+    Meer van NCRV
+    <a href="http://www.ncrv.nl/" rel="external">ncrv.nl</a> 
+  </h2>
+
+  <ol class="series">
+
+
+      <li class="series" id="series_1153">
+        <div class="image">
+          <a href="/programmas/1153-spangas" class="series series-image" title="SpangaS"><img alt="SpangaS" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/236/121/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="SpangaS" width="140" /></a>
+        </div>
+
+        <div class="information">
+          <h3><a href="/programmas/1153-spangas" class="series " title="SpangaS">SpangaS</a></h3>
+          Dagelijkse jeugdsoap over een groep leerlingen van het Spangalis College.
+        </div>
+
+</li>
+
+
+      <li class="series" id="series_535">
+        <div class="image">
+          <a href="/programmas/535-de-rijdende-rechter" class="series series-image" title="De Rijdende Rechter"><img alt="De Rijdende Rechter" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/235/047/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="De Rijdende Rechter" width="140" /></a>
+        </div>
+
+        <div class="information">
+          <h3><a href="/programmas/535-de-rijdende-rechter" class="series " title="De Rijdende Rechter">De Rijdende Rechter</a></h3>
+          In De Rijdende Rechter worden conflicten van mensen voorgelegd aan een echte rechter, die een bindende uitspraak doet.
+        </div>
+
+</li>
+
+
+      <li class="series" id="series_971">
+        <div class="image">
+          <a href="/programmas/971-man-bijt-hond" class="series series-image" title="Man bijt hond"><img alt="Man bijt hond" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/235/563/140x79.png&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Man bijt hond" width="140" /></a>
+        </div>
+
+        <div class="information">
+          <h3><a href="/programmas/971-man-bijt-hond" class="series " title="Man bijt hond">Man bijt hond</a></h3>
+          Man bijt hond is altijd op zoek naar wat mensen bezig houdt. Door klein nieuws groot en groot nieuws klein te maken wordt Nederland iedere werkdag ...
+        </div>
+
+</li>
+  </ol>
+  
+</div>
+
+		<div id="related-series">
+
+  <h2>Bekijk ook eens</h2>
+
+  <ol class="series">
+
+
+      <li class="series" id="series_17">
+        <div class="image">
+					<a href="/programmas/17-eenvandaag" class="series series-image" title="EenVandaag"><img alt="EenVandaag" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/235/760/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="EenVandaag" width="140" /></a>
+        </div>
+
+        <div class="information">
+          <h3><a href="/programmas/17-eenvandaag" class="series " title="EenVandaag">EenVandaag</a> <span class="broadcasters">(<a href="/omroepen/tros" title="TROS">TROS</a> / <a href="/omroepen/avro" title="AVRO">AVRO</a>)</span></h3>
+          Nieuws en actualiteiten
+        </div>
+
+</li>
+
+
+      <li class="series" id="series_188">
+        <div class="image">
+					<a href="/programmas/188-ncrv-dokument" class="series series-image" title="NCRV Dokument"><img alt="NCRV Dokument" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/235/562/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="NCRV Dokument" width="140" /></a>
+        </div>
+
+        <div class="information">
+          <h3><a href="/programmas/188-ncrv-dokument" class="series " title="NCRV Dokument">NCRV Dokument</a> <span class="broadcasters">(<a href="/omroepen/ncrv" title="NCRV">NCRV</a>)</span></h3>
+          Dokument staat garant voor spraakmakende en betrokken sociaal-maatschappelijke documentaires.
+        </div>
+
+</li>
+
+
+      <li class="series" id="series_215">
+        <div class="image">
+					<a href="/programmas/215-andere-tijden" class="series series-image" title="Andere tijden"><img alt="Andere tijden" class="thumbnail" data-images="[&quot;http://mediadb.omroep.nl/assets/000/235/076/140x79.jpg&quot;]" height="79" src="//assets.www.uitzendinggemist.nl/assets/thumbnail-placeholder-a84b46f448433539e2e7f46a00e78a7a.png" title="Andere tijden" width="140" /></a>
+        </div>
+
+        <div class="information">
+          <h3><a href="/programmas/215-andere-tijden" class="series " title="Andere tijden">Andere tijden</a> <span class="broadcasters">(<a href="/omroepen/vpro" title="VPRO">VPRO</a> / <a href="/omroepen/ntr" title="NTR">NTR</a>)</span></h3>
+          Programma waarin oude kwesties vanuit een geheel nieuwe invalshoek worden belicht.
+        </div>
+
+</li>
+  </ol>
+  
+</div>
+
+	</div>
+
+	<div class="two-column-right">
+		<div id="ontdek">
+
+  <h2 class="title">Ontdek Uitzending Gemist</h2>
+
+  <div class="block">
+    <div class="header">
+      <div class="f"> Ik heb</div>
+      <div class="slider">
+        <div class="handle"><div class="mins">30</div></div>
+      </div>
+      <div class="f">minuten</div>
+
+      <a href="/afleveringen/random?length=30" class="link" data-remote="true"><img alt="Ontdek-verras-me" class="but" src="//assets.www.uitzendinggemist.nl/assets/homepage/ontdek-verras-me-fa432ced928001cb7371d45280bd1ffb.png" /></a>
+    </div>
+
+    <div class="results" id="ontdek-results">
+      <div class="venster"><a href="/afleveringen/random?length=30" class="link" data-remote="true">Kies en kijk</a></div>
+    </div>
+  </div>
+
+</div>
+
+	</div>
+	
+</div>
+
+		<footer>
+		   <div id="footer">
+		     <div id="service-links">
+		     <a href="http://www.publiekeomroep.nl/artikelen/algemene-voorwaarden-privacy">Algemene voorwaarden &amp; Privacyverklaring</a>
+		     <a href="http://www.publiekeomroep.nl/">Publiekeomroep.nl</a>
+			   <a href="http://cookiesv2.publiekeomroep.nl/">Cookiebeleid</a>
+		     </div>
+		     <p><strong>Uitzending Gemist</strong> is een dienst van de Nederlandse Publieke Omroep.</p>
+		   </div>
+		 </footer>
+  </div>
+  
+  
+
+
+
+  <script type="text/javascript">
+//<![CDATA[
+sitestat("http://nl.sitestat.com/klo/omroep-nl/s?uitzendinggemist.portal.series.altijd-wat.afleveringen.1358199&amp;category=uitzendinggemist&amp;ns_channel=nieuws_informatie&amp;ns_webdir=uitzendinggemist&amp;po_source=fixed&amp;po_sitetype=webonly&amp;po_merk=overig");
+//]]>
+</script>
+	<noscript><img src="http://nl.sitestat.com/klo/omroep-nl/s?uitzendinggemist.portal.series.altijd-wat.afleveringen.1358199&amp;category=uitzendinggemist&amp;ns_channel=nieuws_informatie&amp;ns_webdir=uitzendinggemist&amp;po_source=fixed&amp;po_sitetype=webonly&amp;po_merk=overig" width="1" height="1" alt="" /></noscript>
+
+
+</body>
+</html>
+
