@@ -1,0 +1,11 @@
+<settings>
+    <setting id="allowstats" value="false" />
+    <setting id="bitrate" value="2" />
+    <setting id="cacheexpire" value="720" />
+    <setting id="forceupdate" value="false" />
+    <setting id="getpremium" value="" />
+    <setting id="password" value="" />
+    <setting id="sortaz" value="true" />
+    <setting id="usefavorites" value="false" />
+    <setting id="username" value="" />
+</settings>

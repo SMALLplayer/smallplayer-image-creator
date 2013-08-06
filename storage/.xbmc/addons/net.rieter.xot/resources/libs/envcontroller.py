@@ -118,7 +118,7 @@ class EnvController:
             if self.logger:
                 self.logger.Warning("No Respository installed. Reminding user to install it.")
 
-            XbmcWrapper.ShowDialog(LanguageHelper.GetLocalizedString(LanguageHelper.RepoWarningId), LanguageHelper.GetLocalizedString(LanguageHelper.RepoWarningDetailId))
+            #XbmcWrapper.ShowDialog(LanguageHelper.GetLocalizedString(LanguageHelper.RepoWarningId), LanguageHelper.GetLocalizedString(LanguageHelper.RepoWarningDetailId))
 
         return repoAvailable
 

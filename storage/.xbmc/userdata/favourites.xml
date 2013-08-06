@@ -1,0 +1,5 @@
+<favourites>
+    <favourite name="Simply Movies" thumb="/storage/.xbmc/addons/plugin.video.simplymovies/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.simplymovies/&quot;)</favourite>
+    <favourite name="Icefilms" thumb="/storage/.xbmc/addons/plugin.video.icefilms/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.icefilms/&quot;)</favourite>
+    <favourite name="YouTube" thumb="/storage/.xbmc/addons/plugin.video.youtube/icon.png">ActivateWindow(10025,&quot;plugin://plugin.video.youtube/&quot;)</favourite>
+</favourites>

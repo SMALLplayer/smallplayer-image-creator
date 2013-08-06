@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<channels>
+    <channel>
+        <guid>A6FF1534-42F3-11DD-8F18-08F555D89593</guid>
+        <name>MyVideo.nl</name>
+        <description>Videos van Myvideo.nl</description>
+        <icon>myvideoicon.png</icon>
+        <iconlarge>myvideolarge.png</iconlarge>
+        <language>nl</language>
+        <compatible>Environments.NoPlatform</compatible>
+    </channel>
+</channels>

@@ -110,7 +110,7 @@
         </musicfiles>
     </viewstates>
     <general>
-        <systemtotaluptime>393</systemtotaluptime>
+        <systemtotaluptime>472</systemtotaluptime>
         <addonautoupdate>true</addonautoupdate>
         <addonnotifications>true</addonnotifications>
         <addonforeignfilter>false</addonforeignfilter>
@@ -141,7 +141,140 @@
         <mute>false</mute>
         <fvolumelevel>1.000000</fvolumelevel>
     </audio>
-    <resolutions />
+    <resolutions>
+        <resolution>
+            <description>1920x1080 @ 60.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>720x480 @ 60.00 - Full Screen</description>
+            <subtitles>463</subtitles>
+            <pixelratio>1.185185</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1280x720 @ 60.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>640x480 @ 60.00 - Full Screen</description>
+            <subtitles>463</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>640</right>
+                <bottom>480</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>720x576 @ 50.00 - Full Screen</description>
+            <subtitles>555</subtitles>
+            <pixelratio>1.422222</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>720</right>
+                <bottom>576</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1280x720 @ 50.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1920x1080 @ 50.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1280</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>800x600 @ 60.00 - Full Screen</description>
+            <subtitles>579</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>800</right>
+                <bottom>600</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1024x768 @ 60.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>960</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1280x960 @ 60.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>960</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1280x1024 @ 60.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>900</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+        <resolution>
+            <description>1680x1050 @ 60.00 - Full Screen</description>
+            <subtitles>694</subtitles>
+            <pixelratio>1.000000</pixelratio>
+            <overscan>
+                <left>0</left>
+                <top>0</top>
+                <right>1152</right>
+                <bottom>720</bottom>
+            </overscan>
+        </resolution>
+    </resolutions>
     <audiocds>
         <autoaction>0</autoaction>
         <bitrate>192</bitrate>
@@ -210,7 +343,7 @@
     <input>
         <enablemouse>true</enablemouse>
         <peripherals></peripherals>
-        <remoteaskeyboard>false</remoteaskeyboard>
+        <remoteaskeyboard>true</remoteaskeyboard>
     </input>
     <karaoke>
         <autopopupselector>false</autopopupselector>
@@ -240,7 +373,7 @@
         <skinsettings></skinsettings>
         <skintheme>SKINDEFAULT</skintheme>
         <skinzoom>0</skinzoom>
-        <soundskin>SKINDEFAULT</soundskin>
+        <soundskin>OFF</soundskin>
         <startupwindow>10000</startupwindow>
     </lookandfeel>
     <masterlock>
@@ -263,7 +396,7 @@
         <artistsscraper>metadata.artists.universal</artistsscraper>
         <backgroundupdate>false</backgroundupdate>
         <cleanup></cleanup>
-        <downloadinfo>false</downloadinfo>
+        <downloadinfo>true</downloadinfo>
         <enabled>true</enabled>
         <export></export>
         <import></import>
@@ -368,7 +501,7 @@
         <tvshowsdefault>metadata.tvdb.com</tvshowsdefault>
     </scrapers>
     <screensaver>
-        <mode>screensaver.xbmc.builtin.dim</mode>
+        <mode></mode>
         <preview></preview>
         <settings></settings>
         <time>3</time>
@@ -384,10 +517,10 @@
         <librefmusername></librefmusername>
     </scrobbler>
     <services>
-        <airplay>false</airplay>
+        <airplay>true</airplay>
         <airplaypassword></airplaypassword>
-        <devicename>XBMC</devicename>
-        <esallinterfaces>false</esallinterfaces>
+        <devicename>SMALLplayer</devicename>
+        <esallinterfaces>true</esallinterfaces>
         <escontinuousdelay>25</escontinuousdelay>
         <esenabled>true</esenabled>
         <esinitialdelay>750</esinitialdelay>
@@ -395,14 +528,14 @@
         <esport>9777</esport>
         <esportrange>10</esportrange>
         <upnpannounce>true</upnpannounce>
-        <upnprenderer>false</upnprenderer>
-        <upnpserver>false</upnpserver>
+        <upnprenderer>true</upnprenderer>
+        <upnpserver>true</upnpserver>
         <useairplaypassword>false</useairplaypassword>
-        <webserver>false</webserver>
+        <webserver>true</webserver>
         <webserverpassword></webserverpassword>
         <webserverport>80</webserverport>
-        <webserverusername>xbmc</webserverusername>
-        <webskin>webinterface.default</webskin>
+        <webserverusername></webserverusername>
+        <webskin>webinterface.awxi</webskin>
         <zeroconf>true</zeroconf>
     </services>
     <slideshow>
@@ -420,9 +553,9 @@
         <color>1</color>
         <custompath pathversion="1"></custompath>
         <font>arial.ttf</font>
-        <height>28</height>
+        <height>26</height>
         <overrideassfonts>false</overrideassfonts>
-        <style>1</style>
+        <style>0</style>
     </subtitles>
     <system>
         <playlistspath pathversion="1">special://profile/playlists/</playlistspath>
@@ -499,12 +632,12 @@
         <setting type="bool" name="skin.smallplayer.UseCustomBackground">false</setting>
         <setting type="bool" name="skin.smallplayer.HideBackGroundFanart">false</setting>
         <setting type="bool" name="skin.smallplayer.ShowBackgroundVideo">false</setting>
-        <setting type="bool" name="skin.smallplayer.ShowBackgroundVis">false</setting>
+        <setting type="bool" name="skin.smallplayer.ShowBackgroundVis">true</setting>
         <setting type="bool" name="skin.smallplayer.AutoScroll">false</setting>
         <setting type="bool" name="skin.smallplayer.FirstTimeRun">true</setting>
         <setting type="bool" name="skin.smallplayer.HomepageHideRecentlyAddedVideo">false</setting>
         <setting type="bool" name="skin.smallplayer.HomepageHideRecentlyAddedAlbums">false</setting>
-        <setting type="bool" name="skin.smallplayer.homepageWeatherinfo">false</setting>
+        <setting type="bool" name="skin.smallplayer.homepageWeatherinfo">true</setting>
         <setting type="bool" name="skin.smallplayer.homepageMusicinfo">false</setting>
         <setting type="bool" name="skin.smallplayer.homepageVideoinfo">false</setting>
         <setting type="bool" name="skin.smallplayer.HomeMenuNoMovieButton">false</setting>
@@ -513,9 +646,9 @@
         <setting type="bool" name="skin.smallplayer.HomeMenuNoPicturesButton">false</setting>
         <setting type="bool" name="skin.smallplayer.HomeMenuNoVideosButton">false</setting>
         <setting type="bool" name="skin.smallplayer.HomeMenuNoMusicButton">false</setting>
-        <setting type="bool" name="skin.smallplayer.HomeMenuNoProgramsButton">false</setting>
+        <setting type="bool" name="skin.smallplayer.HomeMenuNoProgramsButton">true</setting>
         <setting type="bool" name="skin.smallplayer.Show_SlideShow_Paused">false</setting>
-        <setting type="bool" name="skin.smallplayer.WindowedTrailer">false</setting>
+        <setting type="bool" name="skin.smallplayer.WindowedTrailer">true</setting>
         <setting type="bool" name="skin.smallplayer.HideFilenameFlagging">false</setting>
         <setting type="bool" name="skin.smallplayer.ActivateTvTunes">false</setting>
         <setting type="bool" name="skin.smallplayer.Use_Startup_Playlist">false</setting>
@@ -523,6 +656,8 @@
         <setting type="bool" name="skin.smallplayer.View508HideInfo">false</setting>
         <setting type="bool" name="skin.smallplayer.AnimeWindowXMLDialogClose">false</setting>
         <setting type="bool" name="skin.smallplayer.spotimc_session_remember">false</setting>
+        <setting type="bool" name="skin.smallplayer.ShowWeatherFanart">false</setting>
+        <setting type="bool" name="skin.smallplayer.WeatherScript_Enable">false</setting>
         <setting type="string" name="skin.confluence.CustomBackgroundPath"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton1"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton2"></setting>
@@ -547,16 +682,16 @@
         <setting type="string" name="skin.confluence.WeatherFanartDir"></setting>
         <setting type="string" name="skin.confluence.WeatherScript_Label"></setting>
         <setting type="string" name="skin.smallplayer.CustomBackgroundPath"></setting>
-        <setting type="string" name="skin.smallplayer.HomeVideosButton1"></setting>
-        <setting type="string" name="skin.smallplayer.HomeVideosButton2"></setting>
-        <setting type="string" name="skin.smallplayer.HomeVideosButton3"></setting>
-        <setting type="string" name="skin.smallplayer.HomeVideosButton4"></setting>
+        <setting type="string" name="skin.smallplayer.HomeVideosButton1">plugin.video.icefilms</setting>
+        <setting type="string" name="skin.smallplayer.HomeVideosButton2">plugin.video.simplymovies</setting>
+        <setting type="string" name="skin.smallplayer.HomeVideosButton3">net.rieter.xot</setting>
+        <setting type="string" name="skin.smallplayer.HomeVideosButton4">plugin.video.youtube</setting>
         <setting type="string" name="skin.smallplayer.HomeVideosButton5"></setting>
-        <setting type="string" name="skin.smallplayer.HomeMusicButton1"></setting>
-        <setting type="string" name="skin.smallplayer.HomeMusicButton2"></setting>
-        <setting type="string" name="skin.smallplayer.HomeMusicButton3"></setting>
-        <setting type="string" name="skin.smallplayer.HomeMusicButton4"></setting>
-        <setting type="string" name="skin.smallplayer.HomeMusicButton5"></setting>
+        <setting type="string" name="skin.smallplayer.HomeMusicButton1">script.audio.spotimc</setting>
+        <setting type="string" name="skin.smallplayer.HomeMusicButton2">plugin.audio.di.fm</setting>
+        <setting type="string" name="skin.smallplayer.HomeMusicButton3">plugin.audio.jazzradio.com</setting>
+        <setting type="string" name="skin.smallplayer.HomeMusicButton4">plugin.audio.soundcloud</setting>
+        <setting type="string" name="skin.smallplayer.HomeMusicButton5">plugin.audio.tuneinradio</setting>
         <setting type="string" name="skin.smallplayer.HomePictureButton1"></setting>
         <setting type="string" name="skin.smallplayer.HomePictureButton2"></setting>
         <setting type="string" name="skin.smallplayer.HomePictureButton3"></setting>
@@ -569,8 +704,10 @@
         <setting type="string" name="skin.smallplayer.HomeProgramButton5"></setting>
         <setting type="string" name="skin.smallplayer.Startup_Playlist_Path"></setting>
         <setting type="string" name="skin.smallplayer.LyricScript_Path"></setting>
-        <setting type="string" name="skin.smallplayer.SubtitleScript_Path"></setting>
+        <setting type="string" name="skin.smallplayer.SubtitleScript_Path">script.xbmc.subtitles</setting>
         <setting type="string" name="skin.smallplayer.HomeProgramButton6"></setting>
         <setting type="string" name="skin.smallplayer.Home_Custom_Back_TV_Folder"></setting>
+        <setting type="string" name="skin.smallplayer.WeatherFanartDir"></setting>
+        <setting type="string" name="skin.smallplayer.WeatherScript_Label"></setting>
     </skinsettings>
 </settings>

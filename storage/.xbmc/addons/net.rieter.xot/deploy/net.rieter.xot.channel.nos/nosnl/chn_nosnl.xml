@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<channels>
+    <channel>
+        <guid>EE33E7EC-FDAB-11E0-AA09-1EED4724019B</guid>
+        <name>NOS.nl</name>
+        <description>Video en audio van NOS.nl.</description>
+        <icon>nosnlicon.png</icon>
+        <iconlarge>nosnllarge.png</iconlarge>
+        <channelcode>nosnl</channelcode>
+        <sortorder>13</sortorder>
+        <language>nl</language>
+        <compatible>Environments.All</compatible>
+    </channel>
+</channels>

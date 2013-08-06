@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<channels>
+    <channel>
+        <guid>DB6A5104-30B0-11E1-A995-AF324924019B</guid>
+        <name>Hardware.info</name>
+        <description>Videos van Hardware.info</description>
+        <icon>hardwareinfoicon.png</icon>
+        <iconlarge>hardwareinfolarge.png</iconlarge>
+        <language>nl</language>
+    </channel>
+</channels>

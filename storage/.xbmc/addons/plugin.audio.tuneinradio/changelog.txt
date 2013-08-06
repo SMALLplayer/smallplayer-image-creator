@@ -1,0 +1,124 @@
+*** 1.0.7 ***
+Fixed a debug/error logging text encoding issue.
+Added handling of StreamTheWorld streams that have own website player.
+
+*** 1.0.6 ***
+Fixed a issue with handling of StreamTheWorld streams.
+
+*** 1.0.5 ***
+Fixed a couple of issues with Astral Radio streams handling.
+
+*** 1.0.4 ***
+Added handling of Astral Radio streams.
+
+*** 1.0.3 ***
+New fanart (provided by diegofn)
+Added Brazilian translations.
+Fixed issue with preset folders.
+
+*** 1.0.2 ***
+Fixed script error when url not set for downloadable show.
+Fixed issue with success notifcation being displayed, when download failed.
+Fixed issue where fanart was not being displayed on main menu.
+Fixed coding error in browse_local function.
+Added more information to show and station listitems.
+Added new setting to control caching of formats and genres.
+Added more debug logging to download functions.
+Added Bulgarian and Spanish translations.
+Added latitude/longitude setting.
+Added handling of StreamTheWorld streams.
+
+*** 1.0.1 ***
+Fixed issue with addon id being set incorrectly.
+
+*** 1.0.0 ***
+
+Renamed to TuneIn Radio.
+Moved to GPL 3.0.
+Moved repository to GitHub https://github.com/brianhornsby/tunein-xbmc.
+Added context menu option to remove downloaded file from downloads directory.
+Addon fanart image is now displayed on all screens (can be disabled).
+Added new way to select streaming format options in settings.
+Added setting to enable/disable downloading.
+Added setting to download in background.
+TuneIn custom url presets are now displayed.
+Added ability to save custom urls in TuneIn presets.
+Changed downloading so file saved in directory with downloadpath/showtitle/title structure.
+Fixed ordering issue with way results from TuneIn opml interface were being displayed.
+Fixed issue with playing custom url that is known to TuneIn.
+
+*** 0.4.0 ***
+
+Added ability to re-arrange users presets.
+Added option to specify transfer protocol (http or https).
+Added ability to download shows.
+Browsing of 'By Language' and 'Podcast' categories now works.
+Fixed bug introduced in previous release in recents functionality.
+Added option to turn off displaying featured station.
+Major rewrite of main loop.
+Faster loading of presets and browsing.
+
+*** 0.3.1 ***
+
+Changed context menus to remove default music context menus.
+Added settings option to turn off prompt when changing stations.
+Changed recents to display show directory, rather than individual shows.
+
+*** 0.3.0 ***
+
+Fixed incorrect path for default folder icon.
+Removed unused function.
+Changed default stream format to 'wma' only.
+Added recently played stations/shows menu option.
+
+*** 0.2.1 ***
+
+Fixed issue with add/remove presets context menu.
+Replaced old RadioTime icon with TuneIn icon.
+Added ability to change icon colour (light/dark).
+Improved error handling and logging.
+
+*** 0.2.0 ***
+
+Major rewrite of functionality.
+Improved browsing of stations and shows.
+
+*** 0.1.0 ***
+
+Presets will now display shows, as well as stations.
+Minor fixes.
+
+*** 0.0.6 ***
+
+Fixed issue with __get_mac_address function running on Windows.
+Added dialog to show streams being added.
+
+*** 0.0.5 ***
+
+Changed playing of station, so radio station logo is now displayed.
+Changed handling of playlists returned by RadioTime tune function.
+Multiple streams, for one station, are now added to playlist.
+Removed 'Local Radio' from main menu.
+
+*** 0.0.4 ***
+
+Added import simplejson element to addon.xml.
+
+*** 0.0.3 ***
+
+Added option to save entered stream, if known to RadioTime.
+Automatically refresh presets, if a preset is removed.
+Added station information to context menu.
+Changed playing of streams to use PlayMedia XBMC built in function.
+Moved to urllib2, instead of urllib.
+Fixed some minor bugs.
+
+*** 0.0.2 ***
+
+Added ability to enter a stream.
+Added remove preset to context menu.
+Fixed some minor bugs.
+
+*** 0.0.1 ***
+
+Initial release.
