@@ -4,7 +4,7 @@
 
 DL=../download
 BUILD=../build
-PATCH=../patch
+PATCH=../system-patch
 
 echo "Creating directories"
 mkdir $DL
@@ -15,7 +15,7 @@ if [ -f $DL/$OE_REL.tar ]; then
 else
   echo Downloading $OE_REL.tar
   wget $URL -O $OE_REL.tar
-  mv $FILE $DL
+  mv $OE_REL.tar $DL
 fi
 
 echo "Cleaning build directory"

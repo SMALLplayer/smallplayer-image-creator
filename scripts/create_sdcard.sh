@@ -236,7 +236,7 @@ echo "#########################################################"
 # create bootloader configuration
   echo "creating bootloader configuration..."
 
-  echo "boot=/dev/mmcblk0p1 disk=/dev/mmcblk0p2 quiet" > $MOUNTPOINT/cmdline.txt
+  echo "boot=/dev/mmcblk0p1 disk=/dev/mmcblk0p2 quiet noram" > $MOUNTPOINT/cmdline.txt
 
 # copy files
   echo "copying files to $MOUNTPOINT..."
