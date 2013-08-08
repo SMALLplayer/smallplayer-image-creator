@@ -27,11 +27,11 @@ echo "Extracting OE_REL.tar"
 tar -xvf ../$DL/$OE_REL.tar
 
 echo "Extracting squashfs partition"
-sudo unsquashfs -d system  $OE_REL/target/SYSTEM
+sudo unsquashfs -d system-part  $OE_REL/target/SYSTEM
 
 echo "Applying patch"
-sudo cp -rf ../$PATCH/. system
+sudo cp -rf ../$PATCH/. system-part
 
 echo "Creating new squashfs partition"
-sudo mksquashfs system SYSTEM -noI -noD -noF -noX -no-xattrs
+sudo mksquashfs system-part SYSTEM -noI -noD -noF -noX -no-xattrs
 md5sum SYSTEM > SYSTEM.md5

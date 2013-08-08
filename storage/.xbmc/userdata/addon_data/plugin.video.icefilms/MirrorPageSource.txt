@@ -17,7 +17,7 @@ s+=1;setTimeout(function(){ss();},1000);}ss();
   })();
 
 </script>
-<body style="font-size:12px;"><div id=CurrentIQSVersion style='display:none;'>6.0</div><div style="position:relative; height:395px; width:626px; background-color:black;" onmousemove="m-=1">
+<body style="font-size:12px;"><div id=CurrentIQSVersion style='display:none;'>6.0</div><div style="position:relative; height:392px; width:631px; background-color:black;" onmousemove="m-=1">
 			<style type="text/css">
 			i {
 				font-size:12px;
@@ -36,7 +36,7 @@ s+=1;setTimeout(function(){ss();},1000);}ss();
 			</style>
 
 			
-	<div style="position:absolute;top:477px;"><form name=frm>
+	<div style="position:absolute;top:474px;"><form name=frm>
 	<input type=text name=url>
 	<input type=hidden name=iqs id=iqs>
 	<input type=text name=captcha value=B3H9>
@@ -62,7 +62,7 @@ s+=1;setTimeout(function(){ss();},1000);}ss();
 
             <center><div id="srclist" style="float:left; width:198px; height:250px; display:table-cell; vertical-align:middle; overflow:auto;">
 
-					<br><br><br><div><p></div><div class=ripdiv><b>DVDRip / Standard Def</b><p><a rel=1 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(382907)'>Source #1: <span title='Hosted by 180upload' style='letter-spacing:-1px;font-family:impact;color:white;font-size:11px;'>180<span style='color:orangered;'>UPLOAD</span></span></a><i id=1>added 6 months ago<br>by Godric</i><p></div></div>
+					<br><br><br><div><p></div><div class=ripdiv><b>HD 720p</b><p><a rel=1 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410500)'>Source #1: <span title='Hosted by 180upload' style='letter-spacing:-1px;font-family:impact;color:white;font-size:11px;'>180<span style='color:orangered;'>UPLOAD</span></span></a><i id=1>added 3 months ago<br>by Lem</i><p><a rel=2 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410501)'>Source #2: <span title="Hosted by Movreel" style="font-family:impact;font-size:11px;color:orange;">Mov<span style="color:#666;">reel</span></span></a><i id=2>added 3 months ago<br>by Lem</i><p><a rel=3 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410502)'>Source #3: <span title="Hosted by EpicShare" style="letter-spacing:-1px;font-family:impact;font-size:11px;color:#ddd;">Epic<span style="color:orange;">Share</span></span></a><i id=3>added 3 months ago<br>by Lem</i><p><a rel=4 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410503)'>Source #4: <span title="Hosted by BillionUploads" style="letter-spacing:-1px;font-family:impact;font-size:11px;color:#0be;"><span style="color:orangered;">B</span>illion<span style="color:orangered;">U</span>ploads</span></a><i id=4>added 3 months ago<br>by Lem</i><p></div><div class=ripdiv><b>DVDRip / Standard Def</b><p><a rel=5 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410496)'>Source #5: <span title='Hosted by 180upload' style='letter-spacing:-1px;font-family:impact;color:white;font-size:11px;'>180<span style='color:orangered;'>UPLOAD</span></span></a><i id=5>added 3 months ago<br>by Lem</i><p><a rel=6 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410497)'>Source #6: <span title="Hosted by BillionUploads" style="letter-spacing:-1px;font-family:impact;font-size:11px;color:#0be;"><span style="color:orangered;">B</span>illion<span style="color:orangered;">U</span>ploads</span></a><i id=6>added 3 months ago<br>by Lem</i><p><a rel=7 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410498)'>Source #7: <span title="Hosted by Movreel" style="font-family:impact;font-size:11px;color:orange;">Mov<span style="color:#666;">reel</span></span></a><i id=7>added 3 months ago<br>by Lem</i><p><a rel=8 onMouseOver="document.getElementById(this.rel).style.display='block';" onMouseOut="document.getElementById(this.rel).style.display='none';" href='javascript:void(0)' onclick='go(410499)'>Source #8: <span title="Hosted by EpicShare" style="letter-spacing:-1px;font-family:impact;font-size:11px;color:#ddd;">Epic<span style="color:orange;">Share</span></span></a><i id=8>added 3 months ago<br>by Lem</i><p></div></div>
 	</div>
 
     </div>
@@ -75,7 +75,7 @@ s+=1;setTimeout(function(){ss();},1000);}ss();
 	
 <script type="text/javascript">
 var f=document.frm,w=0;
-function go(a){f.iqs.value&&((w=window.open("",""))||alert("To proceed, you must allow popups from www.icefilms.info"));window.XMLHttpRequest?r=new XMLHttpRequest:window.ActiveXObject&&(r=new ActiveXObject("Microsoft.XMLHTTP"));if(r)f.lastChild.value="37fn8Oklq",a="id="+a+"&s="+s+"&iqs="+f.iqs.value+"&url="+f.url.value+"&m="+m+"&cap="+f.captcha.value+"&sec="+f.secret.value+"&t=2282",r.open("POST","/membersonly/components/com_iceplayer/video.phpAjaxResp.php",!0),
+function go(a){f.iqs.value&&((w=window.open("",""))||alert("To proceed, you must allow popups from www.icefilms.info"));window.XMLHttpRequest?r=new XMLHttpRequest:window.ActiveXObject&&(r=new ActiveXObject("Microsoft.XMLHTTP"));if(r)f.lastChild.value="37fn8Oklq",a="id="+a+"&s="+s+"&iqs="+f.iqs.value+"&url="+f.url.value+"&m="+m+"&cap="+f.captcha.value+"&sec="+f.secret.value+"&t=164511",r.open("POST","/membersonly/components/com_iceplayer/video.phpAjaxResp.php",!0),
 r.onreadystatechange=ice_b,r.setRequestHeader("Content-type","application/x-www-form-urlencoded"),r.send(a)}function ice_b(){if(4==r.readyState)if(200==r.status){var a=r.responseText;if(a)5>a?(w&&w.close(),location.reload()):a.match("/GMorBMlet.php")?location=a:w?w.location=a:alert("Target window missing!")}else w&&w.close(),alert("Problem: "+r.statusText)}f.elements[2].value="";
 </script><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 <script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.1.pack.js"></script>
@@ -83,7 +83,7 @@ r.onreadystatechange=ice_b,r.setRequestHeader("Content-type","application/x-www-
 <script type="text/javascript" src="/lite/lite.min.js"></script>
 <script type="text/javascript">
 //<![CDATA[
-try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:1374622896,byc:0,owlid:"cf",mirage:{responsive:0,lazy:0},mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/abv=2706741234/"},atok:"1ac1005e12a765bc850ad0868254fa0f",zone:"icefilms.info",rocket:"0",apps:{}}];CloudFlare.push({"apps":{"ape":"3601dc4c3dc600ca6738c8e541357892"}});var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//ajax.cloudflare.com/cdn-cgi/nexp/abv=3609848800/cloudflare.min.js";b.parentNode.insertBefore(a,b);}}catch(e){};
+try{if (!window.CloudFlare) { var CloudFlare=[{verbose:0,p:1375390878,byc:0,owlid:"cf",mirage:{responsive:0,lazy:0},mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/abv=2908400176/"},atok:"1ac1005e12a765bc850ad0868254fa0f",zone:"icefilms.info",rocket:"0",apps:{}}];CloudFlare.push({"apps":{"ape":"184e42872e19158cd7efb5787c75fc0a"}});var a=document.createElement("script"),b=document.getElementsByTagName("script")[0];a.async=!0;a.src="//ajax.cloudflare.com/cdn-cgi/nexp/abv=340409193/cloudflare.min.js";b.parentNode.insertBefore(a,b);}}catch(e){};
 //]]>
 </script>
-<cookie>3da7d6ecf7a0577769989e8f1e369b33=9hiehgchuue2f7iejtfk5rmti0</cookie>
+<cookie>3da7d6ecf7a0577769989e8f1e369b33=hshusg78dgb3fdsrnkhbqgspq6</cookie>

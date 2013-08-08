@@ -245,6 +245,7 @@ echo "#########################################################"
   cp $OE_PATH/3rdparty/bootloader/* $MOUNTPOINT
   cp $OE_PATH/openelec.ico $MOUNTPOINT
   cp $OE_PATH/README.md $MOUNTPOINT
+  cp $OE_PATH/../system-part/splash/splash.png $MOUNTPOINT/oemsplash.png
 
 # sync disk
   echo "syncing disk..."
