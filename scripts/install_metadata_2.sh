@@ -1,7 +1,7 @@
 #!/bin/bash
 
 META=../metadata
-MOUNT=/mnt/oe-storage
+MOUNT=/mnt/oe-storage-2
 
 sudo mkdir -p $MOUNT
 
