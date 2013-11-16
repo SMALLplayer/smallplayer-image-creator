@@ -1,0 +1,4 @@
+ arm_freq=850
+ core_freq=325
+ sdram_freq=425
+# over_voltage=0

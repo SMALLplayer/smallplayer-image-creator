@@ -238,6 +238,7 @@ echo "#########################################################"
 
   echo "boot=/dev/mmcblk0p1 disk=/dev/mmcblk0p2 quiet noram" > $MOUNTPOINT/cmdline.txt
 
+
 # copy files
   echo "copying files to $MOUNTPOINT..."
   cp $OE_PATH/target/KERNEL $MOUNTPOINT/kernel.img
@@ -246,6 +247,7 @@ echo "#########################################################"
   cp $OE_PATH/openelec.ico $MOUNTPOINT
   cp $OE_PATH/README.md $MOUNTPOINT
   cp $OE_PATH/../system-part/splash/splash.png $MOUNTPOINT/oemsplash.png
+  cp $OE_PATH/../config.txt $MOUNTPOINT
 
 # sync disk
   echo "syncing disk..."
