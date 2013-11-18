@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: SMALLplayer Configuration
-# Addon id: service.SMALLplayer.settings
-# Addon Provider: SMALLplayer
+# Addon Name: OpenELEC Configuration
+# Addon id: service.openelec.settings
+# Addon Provider: OpenELEC
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgctxt "#600"
-msgid "SMALLplayer Settings"
+msgid "[COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] Settings"
 msgstr "SMALLplayer Instellingen"
 
 msgctxt "#601"
@@ -34,7 +34,7 @@ msgstr "Type"
 
 msgctxt "#604"
 msgid "State"
-msgstr "Staat"
+msgstr "Provincie"
 
 msgctxt "#605"
 msgid "Address"
@@ -53,16 +53,16 @@ msgid "Architecture: "
 msgstr "Architectuur:"
 
 msgctxt "#609"
-msgid ""
-msgstr ""
+msgid "Open Embedded Linux Entertainment Center (OpenELEC) is a minimal Linux distribution purpose built for XBMC media center. OpenELEC is designed to boot fast with an installation process simple enough for anyone to convert a bare HTPC into a fully configuredd media machine in under 15 minutes."
+msgstr "De software van SMALLplayer is gebaseerd op OpenELEC. Open Embedded Linux Entertainment Center (OpenELEC) is een minimale Linux distributie, speciaal gebouwd voor het XBMC mediacenter."
 
 msgctxt "#610"
-msgid ""
+msgid "[B]Support:[/B][CR]Web: http://openelec.tv[CR]Forum: http://openelec.tv/forum[CR]Wiki: http://wiki.openelec.tv[CR][CR][B]Social Media:[/B][CR]IRC: #openelec on freenode.net (web-based chat is also available from the website)[CR]Twitter: https://twitter.com/openelec[CR]Facebook: http://www.facebook.com/OpenELEC[CR]Google+: https://plus.google.com/+openelec"
 msgstr "[B]Ondersteuning:[/B][CR]Web: http://www.smallplayer.nl/support"
 
 msgctxt "#611"
-msgid ""
-msgstr ""
+msgid "The OpenELEC project runs on goodwill, love, and your donations. If you would like to contribute to the project you can donate using PayPal, Flattr or Bitcoin. Making a donation is easy and takes only a couple of minutes. http://openelec.tv/donate"
+msgstr " "
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
@@ -86,7 +86,7 @@ msgstr "Configureer en koppel Bluetooth-apparaten"
 
 msgctxt "#705"
 msgid "Useful information like version and architecture details, support and social media links, and how to make a donation to the project"
-msgstr "Nuttige informatie zoals versie- en architectuurdetails"
+msgstr "Nuttige informatie zoals versie- en architectuurdetails, ondersteuning en sociale medialinks, en hoe u een donatie aan het project kunt maken"
 
 msgctxt "#706"
 msgid "706"
@@ -105,7 +105,7 @@ msgid "709"
 msgstr "709"
 
 msgctxt "#710"
-msgid "Configure the Hostname of your SMALLplayer system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
+msgid "Configure the Hostname of your OpenELEC system. This will be used for the HTPC \\\\hostname in Windows and SMB server name in the Mac OS Finder"
 msgstr "Configureer de hostnaam van uw SMALLplayer systeem. Dit zal gebruikt worden voor de HTPC \\\\hostnaam binnen Windows en SMB servernaam in de Mac OS Finder"
 
 msgctxt "#711"
@@ -121,23 +121,23 @@ msgid "Configure the physical keyboard type"
 msgstr "Configureer het fysieke toetsenbordtype"
 
 msgctxt "#714"
-msgid "SMALLplayer can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
-msgstr "SMALLplayer kan geconfigureerd worden voor automatische of handmatige updates"
+msgid "OpenELEC can be configured for automatic or manual updates. Automatic updates are available on stable releases and stable release candidates. Automatic update self-disables on beta and development builds"
+msgstr "SMALLplayer kan geconfigureerd worden voor automatische of handmatige updates. Automatische updates zijn beschikbaar voor stabiele uitgaves en stabiele release candidates. Op betaversies en ontwikkelbuilds zijn automatische updates vanzelf uitgeschakeld"
 
 msgctxt "#715"
 msgid "Set to ON and an on-screen notification will be displayed when a new update is available"
 msgstr "Zet op AAN en een melding zal verschijnen wanneer een nieuwe update beschikbaar is"
 
 msgctxt "#716"
-msgid "Click to manually check the SMALLplayer servers for an updated release"
+msgid "Click to manually check the OpenELEC servers for an updated release"
 msgstr "Klik om handmatig op de SMALLplayer servers te controleren voor een bijgewerkte uitgave."
 
 msgctxt "#717"
-msgid "If you have an small LCD or VFD attached to your SMALLplayer system you must configure the correct display driver"
+msgid "If you have an small LCD or VFD attached to your OpenELEC system you must configure the correct display driver"
 msgstr "Indien u een smalle LCD of VFD op uw SMALLplayer systeem heeft aangesloten, dan moet u de juiste display driver configureren"
 
 msgctxt "#718"
-msgid "Set on ON and SMALLplayer will spin down attached drives (not the main system drive) when idle"
+msgid "Set on ON and OpenELEC will spin down attached drives (not the main system drive) when idle"
 msgstr "Zet op AAN en SMALLplayer zal aangekoppelde hardeschijven (niet de systeemschijf) in slaapmodus zetten"
 
 msgctxt "#719"
@@ -153,7 +153,7 @@ msgid "721"
 msgstr "721"
 
 msgctxt "#722"
-msgid "Create a tar archive containing all SMALLplayer and XBMC configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
+msgid "Create a tar archive containing all OpenELEC and XBMC configuration settings, databases and thumbnail content. Backup files will be stored in /storage/backups"
 msgstr "Maak een .tar archiefbestand met alle SMALLplayer en XBMC configuratie-instellingen, databases en thumbnails. Backupbestanden zullen worden opgeslagen in /storage/backups"
 
 msgctxt "#723"
@@ -161,11 +161,11 @@ msgid "Restore a tar archive backup previously created using the backup option a
 msgstr "Terugzetten van een tar archiefbestand gemaakt met de backup-optie hierboven"
 
 msgctxt "#724"
-msgid "Permanently reset SMALLplayer OS configuration to defaults (XBMC is not touched)"
+msgid "Permanently reset OpenELEC OS configuration to defaults (XBMC is not touched)"
 msgstr "Definitief de configuratie van SMALLplayer naar standaardwaarden resetten (XBMC blijft ongewijzigd)"
 
 msgctxt "#725"
-msgid "Permanently reset SMALLplayer OS and XBMC configuration to defaults"
+msgid "Permanently reset OpenELEC OS and XBMC configuration to defaults"
 msgstr "Definitief de configuratie van SMALLplayer en XBMC naar standaardwaarden resetten"
 
 msgctxt "#726"
@@ -233,8 +233,8 @@ msgid "Set the password for Samba sharing"
 msgstr "Stel het wachtwoord for Samba sharing in"
 
 msgctxt "#742"
-msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password 'SMALLplayer'."
-msgstr "Zet op AAN om de ingebouwde SSH-server in te schakelen. De SSH-console is te benaderen via gebruikersnaam 'root' en wachtwoord 'SMALLplayer'."
+msgid "Set to ON to enable the embedded SSH server. The SSH console can be accessed with username 'root' and password 'openelec'."
+msgstr "Zet op AAN om de ingebouwde SSH-server in te schakelen. De SSH-console is te benaderen via gebruikersnaam 'root' en wachtwoord 'openelec'."
 
 msgctxt "#743"
 msgid "Set to ON if you have copied private SSH keys to your HTPC and would like to improve security by disabling SSH username and password authentication."
@@ -649,8 +649,8 @@ msgid "Update Available"
 msgstr "Update beschikbaar"
 
 msgctxt "#32180"
-msgid "Would you like to update SMALLplayer now?"
-msgstr "Wilt u SMALLplayer nu updaten?"
+msgid "Would you like to update OpenELEC now?"
+msgstr "Wilt u uw SMALLplayer nu updaten?"
 
 msgctxt "#32181"
 msgid "Filename"
@@ -725,8 +725,8 @@ msgid "SSID"
 msgstr "SSID"
 
 msgctxt "#32199"
-msgid ""
-msgstr ""
+msgid "If you would like to contribute to the OpenELEC project you can make a donation using [CR]PayPal, Flattr or Bitcoin. Donating is easy and takes only a few minutes."
+msgstr " "
 
 msgctxt "#32200"
 msgid "Samba"
@@ -801,8 +801,8 @@ msgid "Welcome"
 msgstr "Welkom"
 
 msgctxt "#32302"
-msgid ""
-msgstr "Deze wizard helpt u tijdens het opzetten van uw nieuwe SMALLplayer. Deze instellingen kunnen later gewijzigd worden door te navigeren naar Add-ons -> Instellingen.[CR][CR]Haal meer uit uw SMALLplayer op www.trickstore.nl!"
+msgid "This wizard will guide you through the process of setting up your new [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] installation - setting your location, timezone and connecting you to the internet.[CR][CR]These settings can be changed later by navigating to Programs > [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] Settings.[CR][CR]To begin your [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] experience, select your regional settings and your keyboard layout, then click Next."
+msgstr "Deze wizard helpt u tijdens het opzetten van uw nieuwe SMALLplayer. Deze instellingen zijn ook te vinden bij Add-ons -> Instellingen"
 
 msgctxt "#32303"
 msgid "Next"
@@ -810,7 +810,7 @@ msgstr "Volgende"
 
 msgctxt "#32304"
 msgid "To be identified easily on the network, your new [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] machine needs a name.[CR][CR]Try to choose something meaningful - like the room it's in - so you'll know what it is when you see it on the network.[CR][CR]This name is used when configuring network services, like file sharing using samba."
-msgstr "Om makkelijk op het netwerk herkend te worden, heeft uw nieuwe SMALLplayer een naam nodig.[CR][CR]Probeer iets herkenbaars te kiezen - zoals de kamer waar het in staat - zodat u weet wat het is als u op uw netwerk kijkt.[CR][CR]Deze naam wordt gebruikt bij het configureren van netwerkservices, zoals het delen van bestanden met gebruik van Samba."
+msgstr "Om makkelijk op het netwerk herkend te worden, heeft uw nieuwe SMALLplayer een naam nodig."
 
 msgctxt "#32305"
 msgid "Networking"
@@ -818,7 +818,7 @@ msgstr "Netwerken"
 
 msgctxt "#32306"
 msgid "In order to download backdrops, banners and thumbnails for your movies and TV shows and to stream online content from sites like YouTube, [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] needs to be connected the Internet.[CR][CR]An Internet connection is also required for [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] to automatically update itself."
-msgstr "Stel hier uw internetverbinding in."
+msgstr "Stel hier de internetverbinding van uw SMALLplayer in."
 
 msgctxt "#32307"
 msgid "Select your Regional Settings:"
@@ -841,12 +841,12 @@ msgid "Sharing and Remote Access"
 msgstr "Bestandsdeling en externe toegang "
 
 msgctxt "#32312"
-msgid ""
-msgstr "Uw SMALLplayer ondersteunt ook SSH voor externe toegang. Dit is voor gevorderde gebruikers die met het onderliggende systeem van de SMALLplayer willen werken"
+msgid "[COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] also supports SSH for remote access. This is for advanced users who wish to interact with [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR]'s underlying operating system. The default user is [COLOR blue]root[/COLOR] and the default password is [COLOR blue]openelec.[/COLOR]"
+msgstr "SMALLplayer ondersteunt ook SSH voor externe toegang. Dit is voor gevorderde gebruikers. De standaardgebruiker is [COLOR blue]root[/COLOR] en het standaardwachtwoord is [COLOR blue]openelec.[/COLOR]"
 
 msgctxt "#32313"
-msgid ""
-msgstr "Om uw bestanden tussen uw computers te delen, heeft uw SMALLplayer een ingebouwde Samba server. Deze Samba server kan in uw lokale netwerk geïntegreerd worden op de gebruikelijke manier met Mac Finder of Windows Explorer."
+msgid "In order to share your files between your computers [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] has incorporated a samba server. This samba server can be integrated into your local network by accessing it in a familiar way with Finder or Windows Explorer."
+msgstr "Om uw bestanden tussen uw computers te delen, heeft uw SMALLplayer een ingebouwde Samba server. Deze Samba server kan in uw lokale netwerk geïntegreerd  worden op de gebruikelijke manier met Mac Finder of Windows Explorer."
 
 msgctxt "#32314"
 msgid "enabled"
@@ -865,8 +865,8 @@ msgid "Thank you"
 msgstr "Dankuwel"
 
 msgctxt "#32318"
-msgid ""
-msgstr "Uw SMALLplayer installatie is nu voltooid."
+msgid "You [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] installation is now complete and you'll now enter XBMC when you can set up your media libraries. For help with this, there is a guide available at wiki.xbmc.org[CR][CR][COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] is developed by a dedicated team of developers who work purely in their spare time. Even as a volunteer project, we still have to pay for our internet bandwidth and development resources so if you find [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] useful, we will always appreciate a donation of any amount.[CR][CR]Finally, we hope you enjoy using [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] as much as we've enjoying building it. If you need any more help, you can find links to get help along with latest news at openelec.tv"
+msgstr "De installatie van uw SMALLplayer is voltooid.[CR][CR]Ga naar www.trickstore.nl om nog meer uit uw SMALLplayer te halen!"
 
 msgctxt "#32319"
 msgid "Cron"
@@ -878,7 +878,7 @@ msgstr "Inschakelen cron"
 
 msgctxt "#32321"
 msgid "Virtual Private Networks"
-msgstr "Virtual Private Networks"
+msgstr "Virtuele privé netwerken"
 
 msgctxt "#32322"
 msgid "Add new VPN configuration"
@@ -890,11 +890,11 @@ msgstr "Terugzetten naar standaardwaarden"
 
 msgctxt "#32324"
 msgid "Reset System Settings to defaults"
-msgstr "Terugzetten systeeminstellingen naar standaardwaarden"
+msgstr "Terugzetten systeeminstellingen naar standaardwaarden. Dit kan niet ongedaan gemaakt worden!"
 
 msgctxt "#32325"
-msgid "Reset SMALLplayer to defaults"
-msgstr "Zet SMALLplayer terug naar standaardwaarden"
+msgid "Reset OpenELEC to defaults"
+msgstr "Terugzetten SMALLplayer naar standaardwaarden. Dit kan niet ongedaan gemaakt worden!"
 
 msgctxt "#32326"
 msgid "Are you sure?"
