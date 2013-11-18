@@ -21,9 +21,9 @@
         <setting type="lsep" label="30012" />
         <setting id="show_other" type="bool" label="30042" default="true" />
         <setting type="sep" />
-        <setting id="channel_887F773F-E4E5-4E80-AD7D-65F627D1CA44_visible" type="bool" label="- Apple Movie Trailers" default="true" visible="eq(-3,True)" />
-        <setting id="channel_21D74788-8084-11E0-9A28-39E64824019B_visible" type="bool" label="- MSDN Channel 9" default="true" visible="eq(-4,True)" />
-        <setting id="channel_52230AF6-FBA9-11DD-87D4-15B656D89593_visible" type="bool" label="- Extreme.com" default="true" visible="eq(-5,True)" />
+        <setting id="channel_887F773F-E4E5-4E80-AD7D-65F627D1CA44_visible" type="bool" label="- Apple Movie Trailers" default="true" visible="eq(-2,True)" />
+        <setting id="channel_21D74788-8084-11E0-9A28-39E64824019B_visible" type="bool" label="- MSDN Channel 9" default="true" visible="eq(-3,True)" />
+        <setting id="channel_52230AF6-FBA9-11DD-87D4-15B656D89593_visible" type="bool" label="- Extreme.com" default="true" visible="eq(-4,True)" />
         <setting type="lsep" label="30024" />
         <setting id="show_belgium" type="bool" label="30042" default="true" />
         <setting type="sep" />
@@ -37,10 +37,6 @@
         <setting id="show_german" type="bool" label="30042" default="true" />
         <setting type="sep" />
         <setting id="channel_55635AAA-183C-11E2-ABEC-36706188709B_visible" type="bool" label="- MTV.de" default="true" visible="eq(-2,True)" />
-        <setting type="lsep" label="30044" />
-        <setting id="show_estonia" type="bool" label="30042" default="true" />
-        <setting type="sep" />
-        <setting id="channel_45527F0C-91FE-11E1-942B-5AB5BBE59B18_visible" type="bool" label="- TV3 Play (Eesti)" default="true" visible="eq(-2,True)" />
         <setting type="lsep" label="30027" />
         <setting id="show_engb" type="bool" label="30042" default="true" />
         <setting type="sep" />
@@ -55,15 +51,7 @@
         <setting id="channel_724FD12C-DE34-11E0-9795-3B804824019B_visible" type="bool" label="- BBC Parliament" default="true" visible="eq(-10,True)" />
         <setting id="channel_718219B2-DE34-11E0-94D7-37804824019B_visible" type="bool" label="- BBC Alba" default="true" visible="eq(-11,True)" />
         <setting id="channel_739E4322-E796-11E0-8604-1B2F4924019B_visible" type="bool" label="- BBC iPlayer Search" default="true" visible="eq(-12,True)" />
-        <setting type="lsep" label="30007" />
-        <setting id="show_lithuanian" type="bool" label="30042" default="true" />
-        <setting type="sep" />
-        <setting id="channel_7FEDC7EA-2281-11E0-8F30-67B5DFD72085_visible" type="bool" label="- TV3 Play (Lietuva)" default="true" visible="eq(-2,True)" />
-        <setting id="channel_49A02D20-2283-11E0-8771-2AB7DFD72085_visible" type="bool" label="- TV6 Play (Lietuva)" default="true" visible="eq(-3,True)" />
-        <setting type="lsep" label="30008" />
-        <setting id="show_latvian" type="bool" label="30042" default="true" />
-        <setting type="sep" />
-        <setting id="channel_8D9FBD00-2284-11E0-8957-55B8DFD72085_visible" type="bool" label="- TV3 Play (Latvija)" default="true" visible="eq(-2,True)" />
+        <setting id="channel_8BFC5538-FB78-11E2-9D7C-61DE6088709B_visible" type="bool" label="- TWiT.TV" default="true" visible="eq(-13,True)" />
         <setting type="lsep" label="30005" />
         <setting id="show_dutch" type="bool" label="30042" default="true" />
         <setting type="sep" />
@@ -85,31 +73,22 @@
         <setting id="channel_B797D9BA-F06B-11E1-9CD5-9F7D6188709B_visible" type="bool" label="- Omroep Gelderland" default="true" visible="eq(-17,True)" />
         <setting id="channel_29D36E00-730B-11E2-AD39-B0F06188709B_visible" type="bool" label="- L1" default="true" visible="eq(-18,True)" />
         <setting id="channel_EE33E7EC-FDAB-11E0-AA09-1EED4724019B_visible" type="bool" label="- NOS.nl" default="true" visible="eq(-19,True)" />
-        <setting id="channel_CC524DC0-C846-11E0-871B-984F4824019B_visible" type="bool" label="- Eredivisie Live" default="true" visible="eq(-20,True)" />
-        <setting id="channel_0C59FF4A-8E07-11E1-B2D2-8071BBE59B18_visible" type="bool" label="- Radio 538" default="true" visible="eq(-21,True)" />
-        <setting id="channel_3D4C7F88-FAB8-11E1-868D-8CDA6088709B_visible" type="bool" label="- Pathé Nederland" default="true" visible="eq(-22,True)" />
-        <setting id="channel_9B43CA5A-42F3-11DD-9D91-B6F355D89593_visible" type="bool" label="- De Lama's" default="true" visible="eq(-23,True)" />
-        <setting id="channel_743D04B2-42F3-11DD-84F5-6CEF55D89593_visible" type="bool" label="- 123Video.nl" default="true" visible="eq(-24,True)" />
-        <setting id="channel_80726A74-42F3-11DD-BBA6-A1F055D89593_visible" type="bool" label="- Dumpert.nl" default="true" visible="eq(-25,True)" />
-        <setting id="channel_DB6A5104-30B0-11E1-A995-AF324924019B_visible" type="bool" label="- Hardware.info" default="true" visible="eq(-26,True)" />
+        <setting id="channel_4DEB8C26-D294-11E2-B26C-71EC6088709B_visible" type="bool" label="- NPO.nl Live" default="true" visible="eq(-20,True)" />
+        <setting id="channel_CC524DC0-C846-11E0-871B-984F4824019B_visible" type="bool" label="- Eredivisie Live" default="true" visible="eq(-21,True)" />
+        <setting id="channel_0C59FF4A-8E07-11E1-B2D2-8071BBE59B18_visible" type="bool" label="- Radio 538" default="true" visible="eq(-22,True)" />
+        <setting id="channel_3D4C7F88-FAB8-11E1-868D-8CDA6088709B_visible" type="bool" label="- Pathé Nederland" default="true" visible="eq(-23,True)" />
+        <setting id="channel_9B43CA5A-42F3-11DD-9D91-B6F355D89593_visible" type="bool" label="- De Lama's" default="true" visible="eq(-24,True)" />
+        <setting id="channel_743D04B2-42F3-11DD-84F5-6CEF55D89593_visible" type="bool" label="- 123Video.nl" default="true" visible="eq(-25,True)" />
+        <setting id="channel_80726A74-42F3-11DD-BBA6-A1F055D89593_visible" type="bool" label="- Dumpert.nl" default="true" visible="eq(-26,True)" />
+        <setting id="channel_DB6A5104-30B0-11E1-A995-AF324924019B_visible" type="bool" label="- Hardware.info" default="true" visible="eq(-27,True)" />
         <setting type="lsep" label="30015" />
         <setting id="show_norwegian" type="bool" label="30042" default="true" />
         <setting type="sep" />
-        <setting id="channel_89673FF0-5EF3-11E0-8CC9-494DDFD72085_visible" type="bool" label="- TV3 Play (Norge)" default="true" visible="eq(-2,True)" />
-        <setting id="channel_90DD5C88-5EF3-11E0-93A2-4D4DDFD72085_visible" type="bool" label="- Viasat4 (Norge)" default="true" visible="eq(-3,True)" />
-        <setting id="channel_47AA717E-F919-11E1-977F-0DEC6188709B_visible" type="bool" label="- Nickelodeon (Norge)" default="true" visible="eq(-4,True)" />
+        <setting id="channel_47AA717E-F919-11E1-977F-0DEC6188709B_visible" type="bool" label="- Nickelodeon (Norge)" default="true" visible="eq(-2,True)" />
         <setting type="lsep" label="30006" />
         <setting id="show_swedish" type="bool" label="30042" default="true" />
         <setting type="sep" />
-        <setting id="channel_3AF9C61E-88B2-11E1-A03F-08F6BAE59B18_visible" type="bool" label="- SVT Play" default="true" visible="eq(-2,True)" />
-        <setting id="channel_9F0F57D6-B897-11E0-AF2E-92314924019B_visible" type="bool" label="- UR Play" default="true" visible="eq(-3,True)" />
-        <setting id="channel_9EC8F612-2EA4-11DE-867C-B84656D89593_visible" type="bool" label="- TV3 Play (Sverige)" default="true" visible="eq(-4,True)" />
-        <setting id="channel_98506F58-CD6F-11DE-99BA-187F55D89593_visible" type="bool" label="- TV4 Play" default="true" visible="eq(-5,True)" />
-        <setting id="channel_C72D24F6-5FAE-11E0-9935-5F41E0D72085_visible" type="bool" label="- Kanal 5 Play" default="true" visible="eq(-6,True)" />
-        <setting id="channel_FB34E1F0-2930-11DE-A339-255856D89593_visible" type="bool" label="- TV6 Play (Sverige)" default="true" visible="eq(-7,True)" />
-        <setting id="channel_BDC1A5C5-2777-4D05-BB5B-742A88B89CC5_visible" type="bool" label="- TV8 Play (Sverige)" default="true" visible="eq(-8,True)" />
-        <setting id="channel_8D1E5858-F926-11E1-BE1C-90F66188709B_visible" type="bool" label="- Nickelodeon (Sverige)" default="true" visible="eq(-9,True)" />
-        <setting id="channel_CE108D08-5FAE-11E0-B2D0-6141E0D72085_visible" type="bool" label="- Kanal 9 Play" default="true" visible="eq(-10,True)" />
+        <setting id="channel_8D1E5858-F926-11E1-BE1C-90F66188709B_visible" type="bool" label="- Nickelodeon (Sverige)" default="true" visible="eq(-2,True)" />
     </category>
     <!-- end of channel selection -->
     

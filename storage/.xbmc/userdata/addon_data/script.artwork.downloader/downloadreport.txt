@@ -1,0 +1,9 @@
+[B]Artwork Downloader:[/B]
+ - Tijd van beëindigen: 18 November 2013 - 23:10
+[B]Gedownload:[/B]
+ - Artwork totaal: 14
+ - Logo: 5
+ - Minatuur 16:9: 5
+ - ClearArt: 4
+[B]Mislukte items:[/B]
+ - [Mud] clearart niet gevonden!

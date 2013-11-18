@@ -64,23 +64,23 @@
             <sortorder>1</sortorder>
         </videonavgenres>
         <videonavtitles>
-            <viewmode>65536</viewmode>
-            <sortmethod>1</sortmethod>
+            <viewmode>66037</viewmode>
+            <sortmethod>25</sortmethod>
             <sortorder>1</sortorder>
         </videonavtitles>
         <videonavepisodes>
-            <viewmode>65536</viewmode>
-            <sortmethod>1</sortmethod>
+            <viewmode>65596</viewmode>
+            <sortmethod>22</sortmethod>
             <sortorder>1</sortorder>
         </videonavepisodes>
         <videonavseasons>
-            <viewmode>65536</viewmode>
-            <sortmethod>1</sortmethod>
+            <viewmode>66037</viewmode>
+            <sortmethod>24</sortmethod>
             <sortorder>1</sortorder>
         </videonavseasons>
         <videonavtvshows>
-            <viewmode>65536</viewmode>
-            <sortmethod>1</sortmethod>
+            <viewmode>66037</viewmode>
+            <sortmethod>25</sortmethod>
             <sortorder>1</sortorder>
         </videonavtvshows>
         <videonavmusicvideos>
@@ -110,7 +110,7 @@
         </musicfiles>
     </viewstates>
     <general>
-        <systemtotaluptime>48</systemtotaluptime>
+        <systemtotaluptime>71</systemtotaluptime>
         <addonautoupdate>true</addonautoupdate>
         <addonnotifications>true</addonnotifications>
         <addonforeignfilter>false</addonforeignfilter>
@@ -242,7 +242,7 @@
         <skinsettings></skinsettings>
         <skintheme>SKINDEFAULT</skintheme>
         <skinzoom>0</skinzoom>
-        <soundskin>SKINDEFAULT</soundskin>
+        <soundskin>OFF</soundskin>
         <startupwindow>10000</startupwindow>
     </lookandfeel>
     <masterlock>
@@ -389,7 +389,7 @@
         <airplay>true</airplay>
         <airplaypassword></airplaypassword>
         <devicename>SMALLplayer</devicename>
-        <esallinterfaces>false</esallinterfaces>
+        <esallinterfaces>true</esallinterfaces>
         <escontinuousdelay>25</escontinuousdelay>
         <esenabled>true</esenabled>
         <esinitialdelay>750</esinitialdelay>
@@ -510,7 +510,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShows">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusic">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomePrograms">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.ShowWeatherFanart">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.ShowWeatherFanart">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HideHomeProfileInfo">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.Skin.Initialization">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.NextAired.Update">false</setting>
@@ -523,7 +523,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.OSDVisualisation.ShowFanart">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ArtistSlideShow.Enabled">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ArtistSlideShow.Animate">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.OSDDefaultSubtitleButton.Enabled">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.OSDDefaultSubtitleButton.Enabled">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.Guide.HideClock">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.Guide.HideUserImage">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.Guide.Custom1">false</setting>
@@ -544,18 +544,18 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile1">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile2">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile3">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile4">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile4">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile1">true</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile2">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile2">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile3">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile4">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile1">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile2">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile3">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile4">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile4">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile5">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile6">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile7">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile7">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile8">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.InfoListHideInfo">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.InfoListShowPlotOnFocus">false</setting>
@@ -570,10 +570,10 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.ExtendedUseClearMovieLogo">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ExtendedUseClearMovieArt">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.nohdflag">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailSmall">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailVideoSmall">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailSmall">true</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailVideoSmall">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailHideInfo">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailPlot">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.ThumbnailPlot">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.posterstv">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ProgramInfoListHideInfo">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ProgramInfoListPlot">false</setting>
@@ -587,6 +587,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.ProgramThumbnailHideInfo">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ProgramThumbnailPlot">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ProgramThumbnailSquarePlot">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.ShowDailyWeatherFanart">true</setting>
         <setting type="string" name="skin.confluence.CustomBackgroundPath"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton1"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton2"></setting>
@@ -608,7 +609,7 @@
         <setting type="string" name="skin.confluence.HomeProgramButton3"></setting>
         <setting type="string" name="skin.confluence.HomeProgramButton4"></setting>
         <setting type="string" name="skin.confluence.HomeProgramButton5"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.GlobalBackdropSingle">special://skin/extras/backgrounds/01.jpg</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.GlobalBackdropSingle"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.GlobalBackdropMulti"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.1.Type">service.skin.widgets</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.1.SubType">Movie</setting>
@@ -652,7 +653,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile5.ShowLabel">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile5.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile5.Animate">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile6.Label">Add-Ons</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile6.Label">Add-ons</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile6.Icon"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile6.ShowLabel"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile6.Path"></setting>
@@ -683,11 +684,11 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile3.ShowLabel"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile3.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile3.Animate"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Label"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Icon"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.ShowLabel"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Path"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Animate"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Label">Uitzending Gemist</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Icon">smallplayer/uitzendinggemist.png</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.ShowLabel">on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Path">net.rieter.xot.smallplayer</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Label">Online overzicht</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Icon">smallplayer/tvshows_demand.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.ShowLabel">on</setting>
@@ -710,30 +711,30 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile4.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile4.Animate"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Label">Online radio</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Icon">/storage/.xbmc/addons/plugin.audio.tuneinradio.smallplayer/icon.png</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Icon">smallplayer/radio.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.ShowLabel">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Path">plugin.audio.tuneinradio.smallplayer</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Animate">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Label">Bestanden</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Icon">smallplayer/files.png</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Label">Spotify</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Icon">smallplayer/spotify.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Path">ActivateWindow(musicfiles)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Path">script.audio.spotimc.smallplayer</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Label"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Icon"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.ShowLabel"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Animate"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Label"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Icon"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Label">YouTube</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Icon">/storage/.xbmc/addons/plugin.video.youtube/icon.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.ShowLabel"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Path">plugin.video.youtube</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Animate"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Label">SMALLplayer instellen</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Icon">smallplayer/smallplayer_tile.png</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Path">service.openelec.settings</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Animate">on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Label">SoundCloud</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Icon">/storage/.xbmc/addons/plugin.audio.soundcloud/icon.png</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.ShowLabel"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Path">plugin.audio.soundcloud</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Animate"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Label"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Icon"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.ShowLabel"></setting>
@@ -754,11 +755,11 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.ShowLabel"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.Animate"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Label"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Icon"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.ShowLabel"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Path"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Animate"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Label">Instellingen</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Icon">smallplayer/smallplayer_tile.png</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.ShowLabel">on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Path">service.openelec.settings</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.WeatherFanartDir"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.1.Playlist"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.2.Playlist"></setting>
@@ -794,22 +795,22 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.TypeName">Custom</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.TypeName">Custom</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.TypeName">Muziek add-on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.TypeName">Custom</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.TypeName">Programma add-on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.TypeName">Muziek add-on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.TypeName">Muziek add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.TypeName"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.TypeName"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.TypeName">Video add-on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.TypeName">Programma add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeHomeTile1.TypeName"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeHomeTile2.TypeName"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile5.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile6.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile3.TypeName">Video add-on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile3.TypeName"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile4.TypeName"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.TypeName"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.TypeName"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.TypeName">Video add-on</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile8.TypeName"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile5.Type">0</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile1.Type">7</setting>
@@ -826,7 +827,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.Guide.Custom3.Label"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.Guide.Custom4.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.Guide.Custom4.Label"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Type">7</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Type">1</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.StartupPlaylist.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.rss.setting">Bottom</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.music.name">Library</setting>
@@ -836,9 +837,15 @@
         <setting type="string" name="skin.xperience1080.smallplayer.rss.setting.pos">2</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.music.path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeHomeTile1.Type"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Type">3</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Type">1</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Type"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile4.Type"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Type">1</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.Type">0</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Type">3</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Type">0</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.GameTile.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.Type">0</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Type">0</setting>
     </skinsettings>
 </settings>

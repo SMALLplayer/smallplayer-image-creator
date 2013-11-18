@@ -191,8 +191,8 @@
                     <effect type="zoom" start="100" end="50" center="125,80" tween="sine" easing="inout" time="300" />
                 </animation>
                 <control type="image">
-                    <posx>25</posx>
-                    <posy>46</posy>
+                    <posx>10</posx>
+                    <posy>10</posy>
                     <width>150</width>
                     <height>135</height>
                     <texture>smallplayer/smallplayer_small.png</texture>

@@ -1,0 +1,113 @@
+20131118 23:13:48 - [ 245MB] INFO     - addonsettings.py     - 417  - Loading Settings into static object
+20131118 23:13:48 - [ 245MB] INFO     - urihandler.py        - 149  - UriHandler initialised [pbEnabled=False, useCaching=True]
+20131118 23:13:48 - [ 245MB] INFO     - envcontroller.py     - 276  - Setting Skin to: skin.xot
+20131118 23:13:51 - [ 245MB] INFO     - database.py          - 20   - Loading sqlite3 as DB engine
+20131118 23:13:54 - [ 245MB] INFO     - plugin.py            - 98   - *********** Starting XOT-Uzg.v3 plugin version v3.3.6 ***********
+20131118 23:13:54 - [ 245MB] INFO     - plugin.py            - 110  - Add-On start detected. Performing startup actions.
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - XBMC Information:
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | Version: 12.2 Git:97a9f05
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | BuildDate: Oct 17 2013
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | Environment: Linux (folder=\libs\)
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | Platform: Linux
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | Python Version: 2.7.3
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | XOT-Uzg.v3 Version: 3.3.6
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | AddonID: net.rieter.xot.smallplayer
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | Path: /storage/.xbmc/addons/net.rieter.xot.smallplayer/
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | ProfilePath: /storage/.xbmc/userdata/addon_data/net.rieter.xot.smallplayer
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | PathDetection: addon.getAddonInfo('path')
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - | Encoding: utf-8
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 159  - + Repository: <not installed>
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - XOT-Uzg Settings:
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | MaxNumberOfPages: 5
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | MaxStreamBitrate: 1500
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | SortingAlgorithm: name
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | DimPercentage: 0ffffff
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | UseSubtitle: True
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | CacheHttpResponses: True
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | IPlayerProxy: None
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Folder Prefx: ''
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Loglevel: 20
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Hide GeoLocked: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show Dutch: True
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show Swedish: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show Lithuanian: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show Latvian: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show French Canadian: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show English Canadian: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show British: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show German: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | Show Other languages: False
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - | UZG Cache Path: 
+20131118 23:13:54 - [ 245MB] INFO     - envcontroller.py     - 162  - + UZG Cache Time: 0
+20131118 23:13:54 - [ 245MB] INFO     - urihandler.py        - 314  - Opening requested uri Async: http://www.rieter.net/uitzendinggemist/index.php?currentversion=3.3.6 (already 1 threads)
+20131118 23:13:58 - [ 244MB] INFO     - urihandler.py        - 364  - Url http://www.rieter.net/uitzendinggemist/index.php?currentversion=3.3.6 was opened successfully
+20131118 23:13:58 - [ 244MB] INFO     - update.py            - 40   - New version available: 3.3.7
+20131118 23:13:58 - [ 237MB] WARNING  - envcontroller.py     - 119  - No Respository installed. Reminding user to install it.
+20131118 23:13:58 - [ 237MB] INFO     - common.py            - 47   - Cleaning up cache in '/storage/.xbmc/userdata/addon_data/net.rieter.xot.smallplayer/cache/' that is older than 7 days
+20131118 23:13:58 - [ 242MB] INFO     - common.py            - 67   - Removed 0 of 0 files from cache in: '/storage/.xbmc/userdata/addon_data/net.rieter.xot.smallplayer/cache/*.*'
+20131118 23:13:58 - [ 241MB] INFO     - common.py            - 47   - Cleaning up cache in '' that is older than 0 days
+20131118 23:13:58 - [ 241MB] INFO     - common.py            - 49   - Did not cleanup cache: folder does not exist
+20131118 23:13:58 - [ 241MB] INFO     - plugin.py            - 221  - Plugin::ShowChannelList
+20131118 23:13:58 - [ 238MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.streams' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.streams'
+20131118 23:13:58 - [ 238MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.nos' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.nos'
+20131118 23:13:58 - [ 238MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.nick' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.nick'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.be' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.be'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.mtv' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.mtv'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.radio' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.radio'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.regionalnl' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.regionalnl'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.videos' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.videos'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.uk' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.uk'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.rtlnl' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.rtlnl'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 200  - Deploying Channel Addon 'net.rieter.xot.channel.sbsnl' to '/storage/.xbmc/addons/net.rieter.xot.smallplayer.channel.sbsnl'
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.nick version 3.3.6.2
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.streams version 3.3.6.1
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.mtv version 3.3.6.0
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.nos version 3.3.6.6
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.be version 3.3.6.0
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.sbsnl version 3.3.6.1
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.rtlnl version 3.3.6.2
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.regionalnl version 3.3.6.0
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.videos version 3.3.6.3
+20131118 23:13:59 - [ 245MB] INFO     - channelimporter.py   - 396  - Loading net.rieter.xot.channel.uk version 3.3.6.2
+20131118 23:14:11 - [ 245MB] INFO     - channelimporter.py   - 329  - Showing first time message 'XOT-Uzg.v3 gaat altijd akkoord met het plaatsen van cookies|door de uitzendinggemist.nl website. Wilt u dit niet, dan|moet u dit kanaal niet langer gebruiken binnen XOT-Uzg.v3.' for channel chn_chn_nos2010
+20131118 23:14:16 - [ 245MB] INFO     - channelimporter.py   - 329  - Showing first time message 'XOT-Uzg.v3 gaat altijd akkoord met het plaatsen van cookies|door de npo.nl website. Wilt u dit niet, dan|moet u dit kanaal niet langer gebruiken binnen XOT-Uzg.v3.' for channel chn_chn_npo
+20131118 23:14:21 - [ 245MB] INFO     - channelimporter.py   - 329  - Showing first time message 'De meeste streams van RTL Gemist zijn beschermd|met behulp van DRM. Deze items kunnen enkel binnen|Nederland worden afgespeeld.' for channel chn_chn_rtl
+20131118 23:14:29 - [ 245MB] INFO     - channelimporter.py   - 329  - Showing first time message 'De oudere streams van 538 gemist komen bij RTL XL|vandaan. Deze kunnen niet met dit kanaal worden|afgespeeld. Gebruik daarvoor het RTL XL kanaal.' for channel chn_chn_radio538
+20131118 23:14:32 - [ 243MB] INFO     - channelimporter.py   - 329  - Showing first time message 'Be advised that the BBC iPlayer is only available|to people inside the UK. If you live outside the UK,|a proxy can be configured in the Add-on settings.' for channel chn_chn_bbc
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Canvas [be, DA1992AE-B600-11E0-AC62-B3D74824019B] (Order: 121) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: E&#233;n [be, 16A5C86D-52C5-48C1-B894-1CC23EBF1CD8] (Order: 120) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 470  - Not loading: Ketnet (ketnet) [be, 756FFEC8-B6BA-11E0-898D-1F434824019B] (Order: 123) -> platform 'Linux' is not compatible
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Cobra (cobra) [be, 6C7374A8-B6BA-11E0-A21E-1A434824019B] (Order: 125) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: De Redactie (redactie) [be, 79C799AE-B6BA-11E0-87FD-20434824019B] (Order: 122) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Sporza (sporza) [be, 71128378-B6BA-11E0-A68A-1B434824019B] (Order: 124) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: VTM Nieuws (vtmnieuws) [be, 66756700-6255-4973-AFFB-A1DE4FAF8678] (Order: 122) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: MTV.de (mtvde) [de, 55635AAA-183C-11E2-ABEC-36706188709B] (Order: 140) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 470  - Not loading: Southpark Sweden (southpark.se) [se, F9616B7C-5CC8-11E1-8F40-43194824019B] (Order: 255) -> platform 'Linux' is not compatible
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 470  - Not loading: Southpark.NL (southpark) [nl, 3ac3d6d0-5b2a-11dd-ae16-0800200c9a66] (Order: 255) -> platform 'Linux' is not compatible
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Nickelodeon (Norge) (nickno) [no, 47AA717E-F919-11E1-977F-0DEC6188709B] (Order: 93) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 470  - Not loading: Nick Jr. (Norge) (nickjrno) [no, 3A1DE3B8-F9F2-11E1-A2CD-6B7A6188709B] (Order: 93) -> platform 'Linux' is not compatible
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Nickelodeon (Sverige) (nickse) [se, 8D1E5858-F926-11E1-BE1C-90F66188709B] (Order: 109) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 470  - Not loading: Nick Jr. (Sverige) (nickjrse) [se, C523A2C2-F9F2-11E1-87CE-BA7A6188709B] (Order: 109) -> platform 'Linux' is not compatible
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: RTL 4,5,7 &amp; 8 [nl, 15D92364-42F4-11DD-AF9B-7BFF55D89593] (Order: 5) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC One (bbc1) [en-gb, CB6B08F0-DD6A-11E0-B158-FFFB4824019B] (Order: 151) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC Two (bbc2) [en-gb, 8FF7DE8A-DD6D-11E0-AF1F-A4FF4824019B] (Order: 152) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC Three (bbc3) [en-gb, C7962E5C-DE33-11E0-A9EE-1D7F4824019B] (Order: 153) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC Four (bbc4) [en-gb, DEB79882-DE33-11E0-94A4-267F4824019B] (Order: 154) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: CBBC (cbbc) [en-gb, 28198F12-DE34-11E0-8523-C77F4824019B] (Order: 155) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: CBeebies (cbeebies) [en-gb, 632E7568-DE34-11E0-A644-02804824019B] (Order: 156) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC HD (bbchd) [en-gb, 67794EAE-DE34-11E0-B79B-11804824019B] (Order: 157) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC News Channel (bbcnews) [en-gb, 6C99A8FC-DE34-11E0-B40A-18804824019B] (Order: 157) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC Parliament (bbcparliament) [en-gb, 724FD12C-DE34-11E0-9795-3B804824019B] (Order: 157) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC Alba (bbcalba) [en-gb, 718219B2-DE34-11E0-94D7-37804824019B] (Order: 157) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: BBC iPlayer Search (bbciplayersearch) [en-gb, 739E4322-E796-11E0-8604-1B2F4924019B] (Order: 158) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Apple Movie Trailers [None, 887F773F-E4E5-4E80-AD7D-65F627D1CA44] (Order: 255) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: MSDN Channel 9 (channel9) [None, 21D74788-8084-11E0-9A28-39E64824019B] (Order: 255) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: Extreme.com (extreme) [None, 52230AF6-FBA9-11DD-87D4-15B656D89593] (Order: 255) -> Channel was disabled from settings.
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 470  - Not loading: MyVideo.nl [nl, A6FF1534-42F3-11DD-8F18-08F555D89593] (Order: 255) -> platform 'Linux' is not compatible
+20131118 23:14:41 - [ 245MB] WARNING  - channelimporter.py   - 477  - Not loading: TWiT.TV (twit) [en-gb, 8BFC5538-FB78-11E2-9D7C-61DE6088709B] (Order: 255) -> Channel was disabled from settings.
+20131118 23:14:42 - [ 244MB] INFO     - addonsettings.py     - 182  - Settings.xml updated succesfully. Reloading settings.
+20131118 23:14:42 - [ 244MB] INFO     - addonsettings.py     - 417  - Loading Settings into static object
+20131118 23:14:42 - [ 244MB] INFO     - channelimporter.py   - 492  - Imported 56 channels from which 25 are enabled
+20131118 23:14:45 - [ 243MB] INFO     - urihandler.py        - 314  - Opening requested uri Async: http://www.rieter.net/net.rieter.xot.usage/Run%20Type%20Logging/Plugin/63507 (already 1 threads)
+20131118 23:14:46 - [ 243MB] INFO     - urihandler.py        - 364  - Url http://www.rieter.net/net.rieter.xot.usage/Run%20Type%20Logging/Plugin/63507 was opened successfully
+20131118 23:14:46 - [ 243MB] INFO     - default.py           - 99   - XOT-Uzg.v3 :: Flushing and closing logfile.

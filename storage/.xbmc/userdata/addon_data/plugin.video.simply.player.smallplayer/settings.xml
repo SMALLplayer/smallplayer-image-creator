@@ -1,0 +1,14 @@
+<settings>
+    <setting id="downloads" value="" />
+    <setting id="fanart" value="true" />
+    <setting id="meta" value="true" />
+    <setting id="movie_library" value="/storage/videos/" />
+    <setting id="quality" value="true" />
+    <setting id="subs" value="0" />
+    <setting id="subscriptions_clean" value="true" />
+    <setting id="subscriptions_interval" value="3" />
+    <setting id="subscriptions_run" value="2013-11-18 22:27:12.655895" />
+    <setting id="subscriptions_update" value="true" />
+    <setting id="subscriptions_updatelibrary" value="true" />
+    <setting id="tv_library" value="/storage/tvshows/" />
+</settings>
