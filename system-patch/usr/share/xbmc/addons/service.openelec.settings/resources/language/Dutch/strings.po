@@ -53,16 +53,16 @@ msgid "Architecture: "
 msgstr "Architectuur:"
 
 msgctxt "#609"
-msgid ""
-msgstr ""
+msgid " "
+msgstr " "
 
 msgctxt "#610"
-msgid ""
+msgid " "
 msgstr "[B]Ondersteuning:[/B][CR]Web: http://www.smallplayer.nl/support"
 
 msgctxt "#611"
-msgid ""
-msgstr ""
+msgid " "
+msgstr " "
 
 msgctxt "#700"
 msgid "Configure a hostname, keyboard type, perform a reset, update, or backups and restores"
@@ -294,7 +294,7 @@ msgstr "Type"
 
 msgctxt "#32006"
 msgid "State"
-msgstr "Provincie"
+msgstr "Status"
 
 msgctxt "#32007"
 msgid "Driver"
@@ -725,8 +725,8 @@ msgid "SSID"
 msgstr "SSID"
 
 msgctxt "#32199"
-msgid ""
-msgstr ""
+msgid " "
+msgstr " "
 
 msgctxt "#32200"
 msgid "Samba"
@@ -793,7 +793,7 @@ msgid "Invalid Email Address"
 msgstr "Ongeldig emailadres"
 
 msgctxt "#32300"
-msgid "Welcome to [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR]"
+msgid " "
 msgstr "Welkom bij SMALLplayer"
 
 msgctxt "#32301"
@@ -801,7 +801,7 @@ msgid "Welcome"
 msgstr "Welkom"
 
 msgctxt "#32302"
-msgid ""
+msgid " "
 msgstr "Deze wizard helpt u tijdens het opzetten van uw nieuwe SMALLplayer. Deze instellingen kunnen later gewijzigd worden door te navigeren naar Add-ons -> Instellingen.[CR][CR]Haal meer uit uw SMALLplayer op www.trickstore.nl!"
 
 msgctxt "#32303"
@@ -841,11 +841,11 @@ msgid "Sharing and Remote Access"
 msgstr "Bestandsdeling en externe toegang "
 
 msgctxt "#32312"
-msgid ""
+msgid " "
 msgstr "Uw SMALLplayer ondersteunt ook SSH voor externe toegang. Dit is voor gevorderde gebruikers die met het onderliggende systeem van de SMALLplayer willen werken"
 
 msgctxt "#32313"
-msgid ""
+msgid " "
 msgstr "Om uw bestanden tussen uw computers te delen, heeft uw SMALLplayer een ingebouwde Samba server. Deze Samba server kan in uw lokale netwerk geïntegreerd worden op de gebruikelijke manier met Mac Finder of Windows Explorer."
 
 msgctxt "#32314"
@@ -865,7 +865,7 @@ msgid "Thank you"
 msgstr "Dankuwel"
 
 msgctxt "#32318"
-msgid ""
+msgid " "
 msgstr "Uw SMALLplayer installatie is nu voltooid."
 
 msgctxt "#32319"
@@ -1037,7 +1037,7 @@ msgid "Check for updates now:"
 msgstr "Controleer nu op updates:"
 
 msgctxt "#32363"
-msgid "[COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR]"
+msgid " "
 msgstr "SMALLplayer"
 
 msgctxt "#32364"
