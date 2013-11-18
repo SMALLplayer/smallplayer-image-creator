@@ -1,0 +1,13 @@
+<settings>
+    <setting id="BackgroundFanart" value="false" />
+    <setting id="DownloadBanners" value="" />
+    <setting id="DownloadLogos" value="" />
+    <setting id="DownloadPosters" value="" />
+    <setting id="DownloadPreviewThumbs" value="" />
+    <setting id="PreviewThumbs" value="false" />
+    <setting id="Reset" value="" />
+    <setting id="ShowAllTVShowsOnHome" value="false" />
+    <setting id="ThumbType" value="0" />
+    <setting id="update_hour" value="17" />
+    <setting id="update_minute" value="00" />
+</settings>

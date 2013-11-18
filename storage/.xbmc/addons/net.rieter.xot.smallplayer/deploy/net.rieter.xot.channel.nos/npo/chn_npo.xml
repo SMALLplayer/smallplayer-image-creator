@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<channels>
+    <channel>
+        <guid>4DEB8C26-D294-11E2-B26C-71EC6088709B</guid>
+        <name>NPO.nl Live</name>
+        <description>Live video en audio van NPO.nl.</description>
+        <icon>npoicon.png</icon>
+        <iconlarge>npolarge.png</iconlarge>
+        <channelcode>npo</channelcode>
+        <sortorder>13</sortorder>
+        <language>nl</language>
+        <compatible>Environments.All</compatible>
+        <message>XOT-Uzg.v3 gaat altijd akkoord met het plaatsen van cookies|door de npo.nl website. Wilt u dit niet, dan|moet u dit kanaal niet langer gebruiken binnen XOT-Uzg.v3.</message>
+    </channel>
+</channels>

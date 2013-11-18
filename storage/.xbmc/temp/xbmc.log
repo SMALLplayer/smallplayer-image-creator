@@ -1,0 +1,770 @@
+﻿00:00:26 T:3046756352  NOTICE: -----------------------------------------------------------------------
+00:00:26 T:3046756352  NOTICE: Starting XBMC (12.2 Git:97a9f05), Platform: Linux (, 3.10.16 armv6l). Built on Oct 17 2013
+00:00:26 T:3046756352  NOTICE: special://xbmc/ is mapped to: /usr/share/xbmc
+00:00:26 T:3046756352  NOTICE: special://xbmcbin/ is mapped to: /usr/lib/xbmc
+00:00:26 T:3046756352  NOTICE: special://masterprofile/ is mapped to: /storage/.xbmc/userdata
+00:00:26 T:3046756352  NOTICE: special://home/ is mapped to: /storage/.xbmc
+00:00:26 T:3046756352  NOTICE: special://temp/ is mapped to: /storage/.xbmc/temp
+00:00:26 T:3046756352  NOTICE: The executable running is: /usr/lib/xbmc/xbmc.bin
+00:00:26 T:3046756352  NOTICE: Local hostname: SMALLplayer
+00:00:26 T:3046756352  NOTICE: Log File is located: /storage/.xbmc/temp/xbmc.log
+00:00:26 T:3046756352  NOTICE: -----------------------------------------------------------------------
+00:00:26 T:3046756352  NOTICE: load settings...
+00:00:26 T:3046756352  NOTICE: special://profile/ is mapped to: special://masterprofile/
+00:00:26 T:3046756352  NOTICE: loading special://masterprofile/guisettings.xml
+00:00:26 T:3046756352  NOTICE: Getting hardware information now...
+00:00:26 T:3046756352  NOTICE: Loading player core factory settings from special://xbmc/system/playercorefactory.xml.
+00:00:27 T:3046756352  NOTICE: Loaded playercorefactory configuration
+00:00:27 T:3046756352  NOTICE: Loading player core factory settings from special://masterprofile/playercorefactory.xml.
+00:00:27 T:3046756352  NOTICE: special://masterprofile/playercorefactory.xml does not exist. Skipping.
+00:00:27 T:3046756352  NOTICE: Loaded settings file from special://xbmc/system/advancedsettings.xml
+00:00:27 T:3046756352  NOTICE: Contents of special://xbmc/system/advancedsettings.xml are...
+                                            <?xml version="1.0" encoding="UTF-8" ?>
+                                            <advancedsettings>
+                                              <showexitbutton>false</showexitbutton>
+                                              <destroywindowcontrols>false</destroywindowcontrols>
+                                              <fanartres>720</fanartres>
+                                              <imageres>540</imageres>
+                                              <bginfoloadermaxthreads>2</bginfoloadermaxthreads>
+                                              <useddsfanart>false</useddsfanart>
+                                              <video>
+                                                <defaultplayer>omxplayer</defaultplayer>
+                                                <defaultdvdplayer>omxplayer</defaultdvdplayer>
+                                                <busydialogdelayms>750</busydialogdelayms>
+                                              </video>
+                                              <audio>
+                                                <defaultplayer>omxplayer</defaultplayer>
+                                                <streamsilence>false</streamsilence>
+                                              </audio>
+                                              <network>
+                                                <cachemembuffersize>20971520</cachemembuffersize>
+                                              </network>
+                                              <samba>
+                                                <clienttimeout>30</clienttimeout>
+                                              </samba>
+                                              <network>
+                                                <curlclienttimeout>30</curlclienttimeout>
+                                                <readbufferfactor>4.0</readbufferfactor>
+                                              </network>
+                                            </advancedsettings>
+00:00:27 T:3046756352  NOTICE: Getting hardware information now...
+00:00:27 T:3046756352  NOTICE: No settings file to load (special://masterprofile/advancedsettings.xml)
+00:00:27 T:3046756352  NOTICE: Default DVD Player: omxplayer
+00:00:27 T:3046756352  NOTICE: Default Video Player: omxplayer
+00:00:27 T:3046756352  NOTICE: Default Audio Player: omxplayer
+00:00:27 T:3046756352  NOTICE: Disabled debug logging due to GUI setting. Level 0.
+00:00:27 T:3046756352  NOTICE: Log level changed to 0
+00:00:27 T:3046756352  NOTICE: Loading media sources from special://masterprofile/sources.xml
+00:00:28 T:3046756352   ERROR: Error: Requested setting (audiooutput.guisoundmode) was not found.  It must be case-sensitive
+00:00:28 T:3046756352  NOTICE: Running database version Addons15
+19:39:17 T:3046756352  NOTICE: Register - new cec device registered on cec->RPI: CEC Adapter (2708:1001)
+19:39:17 T:3028284512  NOTICE: Thread XBMC Peripherals start, auto delete: false
+19:39:17 T:3036673120  NOTICE: Thread CEC Adapter start, auto delete: false
+19:39:17 T:3017798752  NOTICE: Thread XBMC Peripherals start, auto delete: false
+19:39:17 T:3046756352  NOTICE: Raspberry PI firmware version: Oct 12 2013 22:21:03 
+                                            Copyright (c) 2012 Broadcom
+                                            version 7886c07c77a1caafd1f08448c8fcd9c3895ab5ca (clean) (release)
+19:39:17 T:3046756352  NOTICE: ARM mem: 384MB GPU mem: 128MB
+19:39:17 T:3046756352  NOTICE: InitWindowSystem: Using EGL Implementation: raspberrypi
+19:39:17 T:3046756352  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 720 x 480 for display 0 with 720 x 480 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 720 x 576 for display 0 with 720 x 576 @ 50.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 50.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 50.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 960 x 720 for display 0 with 1280 x 960 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 900 x 720 for display 0 with 1280 x 1024 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found resolution 1152 x 720 for display 0 with 1680 x 1050 @ 60.000000 Hz
+19:39:17 T:3046756352  NOTICE: Found (1280x720@60.000000) at 19, setting to RES_DESKTOP at 16
+19:39:17 T:3046756352  NOTICE: Checking resolution 16
+19:39:17 T:3046756352  NOTICE: GL_VENDOR = Broadcom
+19:39:17 T:3046756352  NOTICE: GL_RENDERER = VideoCore IV HW
+19:39:17 T:3046756352  NOTICE: GL_VERSION = OpenGL ES 2.0
+19:39:17 T:3046756352  NOTICE: GL_SHADING_LANGUAGE_VERSION = OpenGL ES GLSL ES 1.00
+19:39:17 T:3046756352  NOTICE: GL_EXTENSIONS = GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_depth24 GL_OES_vertex_half_float GL_OES_EGL_image GL_OES_EGL_image_external GL_EXT_discard_framebuffer GL_OES_rgb8_rgba8 GL_OES_depth32 GL_OES_mapbuffer GL_EXT_texture_format_BGRA8888 GL_APPLE_rgb_422 GL_EXT_debug_marker
+19:39:20 T:3036673120   ERROR: CecLogMessage - failed to release the previous LA
+19:39:20 T:3036673120   ERROR: CecLogMessage - could not open a connection (try 1)
+19:39:22 T:2957943904  NOTICE: Thread CEC Adapter Update Thread start, auto delete: false
+19:39:25 T:3046756352  NOTICE: Running database version Addons15
+19:39:25 T:3046756352  NOTICE: Running database version ViewModes4
+19:39:25 T:3046756352  NOTICE: Running database version Textures13
+19:39:25 T:3046756352  NOTICE: Running database version MyMusic32
+19:39:25 T:3046756352  NOTICE: Running database version MyVideos75
+19:39:25 T:3046756352  NOTICE: Running database version TV22
+19:39:25 T:3046756352  NOTICE: Running database version Epg7
+19:39:25 T:3046756352  NOTICE: start dvd mediatype detection
+19:39:25 T:3046756352  NOTICE: initializing playlistplayer
+19:39:25 T:3046756352  NOTICE: DONE initializing playlistplayer
+19:39:25 T:3019318368  NOTICE: Thread CDetectDVDMedia start, auto delete: false
+19:39:40 T:2909701216  NOTICE: Thread XBPyThread start, auto delete: false
+19:39:41 T:3046756352  NOTICE: Previous line repeats 1 times.
+19:39:41 T:3046756352  NOTICE: initialize done
+19:39:41 T:3046756352  NOTICE: Running the application...
+19:39:41 T:2901312608  NOTICE: Thread XBPyThread start, auto delete: false
+19:39:41 T:3046756352  NOTICE: Previous line repeats 1 times.
+19:39:41 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:39:41 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:39:41 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:39:41 T:2884535392  NOTICE: Thread Jobworker start, auto delete: true
+19:39:41 T:3046756352   ERROR: GLES: Vertical Blank Syncing unsupported
+19:39:45 T:2865079392  NOTICE: Thread Jobworker start, auto delete: true
+19:39:45 T:2856690784  NOTICE: Thread XBPyThread start, auto delete: false
+19:39:46 T:2909701216  NOTICE: -->Python Interpreter Initialized<--
+19:39:47 T:2918089824  NOTICE: -->Python Interpreter Initialized<--
+19:39:47 T:2848302176  NOTICE: Thread Jobworker start, auto delete: true
+19:39:47 T:2839913568  NOTICE: Thread CAlarmClock start, auto delete: false
+19:39:47 T:3046756352  NOTICE: ES: Starting event server
+19:39:47 T:2823136352  NOTICE: Thread CTCPServer start, auto delete: false
+19:39:47 T:2831524960  NOTICE: Thread CEventServer start, auto delete: false
+19:39:47 T:2831524960  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
+19:39:47 T:2831524960  NOTICE: UDP: Listening on port 9777
+19:39:47 T:3046756352  NOTICE: starting zeroconf publishing
+19:39:47 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:39:47 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:39:47 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:39:47 T:2806174816  NOTICE: Thread Jobworker start, auto delete: true
+19:39:49 T:2901312608  NOTICE: -->Python Interpreter Initialized<--
+19:39:49 T:2892924000  NOTICE: -->Python Interpreter Initialized<--
+19:39:49 T:3019318368  NOTICE: Thread CRssReader start, auto delete: false
+19:39:50 T:2856690784  NOTICE: -->Python Interpreter Initialized<--
+19:39:55 T:2784568416  NOTICE: Thread CFileCache start, auto delete: false
+19:40:04 T:2901312608  NOTICE: Previous line repeats 1 times.
+19:40:04 T:2901312608  NOTICE: ## OpenELEC Addon ## 0.2.19
+19:40:08 T:2892924000  NOTICE:  StorageServer Module loaded RUN
+19:40:16 T:2784568416  NOTICE: Thread CFileCache start, auto delete: false
+19:40:20 T:2892924000  NOTICE: StorageClient-2.5.2 Starting server
+19:40:20 T:2892924000  NOTICE: StorageServer-2.5.2 Storage Server starting /storage/.xbmc/temp/commoncache.db
+19:40:20 T:2909701216  NOTICE: Artwork Downloader: ## Service - Run at startup: False
+19:40:21 T:2909701216  NOTICE: Artwork Downloader: ## Service - Delayed startup:  minutes
+19:40:21 T:2909701216  NOTICE: Artwork Downloader: ## Service - Run as service: False
+19:40:21 T:2909701216  NOTICE: Artwork Downloader: ## Service - Time: :00
+19:41:16 T:3046756352 WARNING: Trying to add unsupported control type 1
+19:41:17 T:2848302176 WARNING: Previous line repeats 1 times.
+19:41:17 T:2848302176  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:41:17 T:2848302176  NOTICE: Thread Jobworker start, auto delete: true
+19:41:23 T:2772431968  NOTICE: Previous line repeats 1 times.
+19:41:23 T:2772431968  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:42:39 T:2784568416  NOTICE: Previous line repeats 8 times.
+19:42:39 T:2784568416   ERROR: Texture manager unable to load file: /usr/share/xbmc/media/AppIcon.png
+19:42:58 T:3046756352   ERROR: Previous line repeats 1 times.
+19:42:58 T:3046756352 WARNING: Trying to add unsupported control type 1
+19:42:59 T:2772431968 WARNING: Previous line repeats 1 times.
+19:42:59 T:2772431968  NOTICE: Thread Jobworker start, auto delete: true
+19:42:59 T:2764043360  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:44:03 T:2764043360  NOTICE: Previous line repeats 10 times.
+19:44:03 T:2764043360  NOTICE: Thread XBPyThread start, auto delete: false
+19:44:04 T:2764043360  NOTICE: -->Python Interpreter Initialized<--
+19:44:05 T:3046756352   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+19:44:07 T:3046756352   ERROR: Control 1000 in window 13007 has been asked to focus, but it can't
+19:44:28 T:3046756352   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+19:44:37 T:3046756352 WARNING: Trying to add unsupported control type 1
+19:44:38 T:2865079392 WARNING: Previous line repeats 1 times.
+19:44:38 T:2865079392  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:45:32 T:3046756352  NOTICE: Previous line repeats 3 times.
+19:45:32 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:45:32 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:45:32 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:45:39 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:45:39 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:45:39 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:45:43 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:45:43 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:45:43 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:45:54 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:45:54 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:45:54 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:45:57 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:45:57 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:45:57 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:46:30 T:3046756352   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+19:46:30 T:3046756352   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+19:46:39 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:46:39 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:46:39 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:46:42 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:46:42 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:46:42 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:46:57 T:3046756352   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+19:46:57 T:3046756352   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+19:46:59 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:46:59 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:46:59 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:47:20 T:3046756352   ERROR: unmatched parentheses in IsEmpty(ListItem.Property(NumEpisodes)
+19:47:23 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:47:23 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:47:23 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:47:32 T:3046756352   ERROR: Unable to find plugin plugin.video.simply.player.smallplayer
+19:47:32 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.video.simply.player.smallplayer/?action=root_shows
+19:47:32 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.video.simply.player.smallplayer/?action=root_shows) failed
+19:47:35 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:47:35 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:47:35 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:47:38 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:47:38 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:47:38 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:47:39 T:3046756352   ERROR: Unable to find plugin plugin.video.simply.player.smallplayer
+19:47:39 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.video.simply.player.smallplayer/?action=shows_search
+19:47:39 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.video.simply.player.smallplayer/?action=shows_search) failed
+19:47:41 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:47:41 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:47:41 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:47:56 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:47:56 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:47:56 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:47:58 T:2884535392  NOTICE: Thread Jobworker start, auto delete: true
+19:48:02 T:2772431968  NOTICE: Thread CFileCache start, auto delete: false
+19:48:19 T:2772431968  NOTICE: Previous line repeats 1 times.
+19:48:19 T:2772431968  NOTICE: Thread XBPyThread start, auto delete: false
+19:48:19 T:2865079392  NOTICE: Thread Jobworker start, auto delete: true
+19:48:20 T:2784568416  NOTICE: Thread CFileCache start, auto delete: false
+19:48:21 T:2772431968  NOTICE: -->Python Interpreter Initialized<--
+19:48:25 T:2772431968  NOTICE: Thread Jobworker start, auto delete: true
+19:48:25 T:2784568416  NOTICE: Thread CFileCache start, auto delete: false
+19:48:30 T:2784568416  NOTICE: Thread XBPyThread start, auto delete: false
+19:48:33 T:2784568416  NOTICE: Previous line repeats 1 times.
+19:48:33 T:2784568416  NOTICE: -->Python Interpreter Initialized<--
+19:48:38 T:2848302176  NOTICE: -->Python Interpreter Initialized<--
+19:48:48 T:2784568416  NOTICE: CommonFunctions-2.5.1
+19:48:57 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:48:57 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:48:57 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:49:00 T:2764043360  NOTICE: Thread XBPyThread start, auto delete: false
+19:49:05 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:49:05 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:49:05 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:49:06 T:2784568416  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:08 T:2848302176  NOTICE: CommonFunctions-2.5.1
+19:49:08 T:2755654752  NOTICE: Thread XBPyThread start, auto delete: false
+19:49:09 T:2784568416  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:11 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:49:11 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:49:11 T:2848302176  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:11 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:49:12 T:2764043360  NOTICE: -->Python Interpreter Initialized<--
+19:49:12 T:2848302176  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:13 T:2755654752  NOTICE: -->Python Interpreter Initialized<--
+19:49:16 T:2747266144  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:49:17 T:2764043360  NOTICE: CommonFunctions-2.5.1
+19:49:20 T:2755654752  NOTICE: CommonFunctions-2.5.1
+19:49:20 T:2747266144  NOTICE: Thread Jobworker start, auto delete: true
+19:49:22 T:2764043360  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:22 T:2736780384  NOTICE: Thread XBPyThread start, auto delete: false
+19:49:25 T:2755654752  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:26 T:2736780384  NOTICE: Previous line repeats 2 times.
+19:49:26 T:2736780384  NOTICE: -->Python Interpreter Initialized<--
+19:49:27 T:2784568416   ERROR: EXCEPTION Thrown (PythonToCppException) : -->Python callback/script returned the following error<--
+                                             - NOTE: IGNORING THIS CAN LEAD TO MEMORY LEAKS!
+                                            Error Type: <class 'sqlite3.OperationalError'>
+                                            Error Contents: database is locked
+                                            Traceback (most recent call last):
+                                              File "/storage/.xbmc/addons/plugin.video.simply.player.smallplayer/default.py", line 49, in <module>
+                                                metaget             = metahandlers.MetaData(preparezip=False)
+                                              File "/storage/.xbmc/addons/script.module.metahandler/lib/metahandler/metahandlers.py", line 185, in __init__
+                                                self._cache_create_movie_db()
+                                              File "/storage/.xbmc/addons/script.module.metahandler/lib/metahandler/metahandlers.py", line 254, in _cache_create_movie_db
+                                                self.dbcur.execute(sql_create)
+                                            OperationalError: database is locked
+                                            -->End of Python script error report<--
+19:49:31 T:2736780384  NOTICE: CommonFunctions-2.5.1
+19:49:34 T:2736780384  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:36 T:2764043360  NOTICE: Previous line repeats 1 times.
+19:49:36 T:2764043360   ERROR: EXCEPTION Thrown (PythonToCppException) : -->Python callback/script returned the following error<--
+                                             - NOTE: IGNORING THIS CAN LEAD TO MEMORY LEAKS!
+                                            Error Type: <class 'sqlite3.OperationalError'>
+                                            Error Contents: database is locked
+                                            Traceback (most recent call last):
+                                              File "/storage/.xbmc/addons/plugin.video.simply.player.smallplayer/default.py", line 49, in <module>
+                                                metaget             = metahandlers.MetaData(preparezip=False)
+                                              File "/storage/.xbmc/addons/script.module.metahandler/lib/metahandler/metahandlers.py", line 185, in __init__
+                                                self._cache_create_movie_db()
+                                              File "/storage/.xbmc/addons/script.module.metahandler/lib/metahandler/metahandlers.py", line 254, in _cache_create_movie_db
+                                                self.dbcur.execute(sql_create)
+                                            OperationalError: database is locked
+                                            -->End of Python script error report<--
+19:49:43 T:3046756352   ERROR: Previous line repeats 2 times.
+19:49:43 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.video.simply.player.smallplayer/
+19:49:43 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.video.simply.player.smallplayer/) failed
+19:49:43 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:49:43 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.video.simply.player.smallplayer/?action=movies_search
+19:49:43 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.video.simply.player.smallplayer/?action=movies_search) failed
+19:49:43 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.video.simply.player.smallplayer/?action=root_movies
+19:49:43 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.video.simply.player.smallplayer/?action=root_movies) failed
+19:49:47 T:2736780384  NOTICE: Thread XBPyThread start, auto delete: false
+19:49:48 T:2736780384  NOTICE: -->Python Interpreter Initialized<--
+19:49:53 T:2736780384  NOTICE: CommonFunctions-2.5.1
+19:49:55 T:2736780384  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:49:56 T:2848302176  NOTICE: Previous line repeats 1 times.
+19:49:56 T:2848302176  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
+19:49:57 T:2736780384  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
+19:49:57 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:49:58 T:3046756352  NOTICE: Previous line repeats 1 times.
+19:49:58 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.video.simply.player.smallplayer/?action=root_movies
+19:49:58 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.video.simply.player.smallplayer/?action=root_movies) failed
+19:50:01 T:2848302176  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:50:28 T:3046756352  NOTICE: Previous line repeats 1 times.
+19:50:28 T:3046756352 WARNING: Trying to add unsupported control type 1
+19:50:28 T:2848302176 WARNING: Previous line repeats 1 times.
+19:50:28 T:2848302176  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:50:28 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:50:28 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:50:28 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:50:39 T:2848302176  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:50:39 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:50:39 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:50:39 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:50:42 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:50:42 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:50:42 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:50:44 T:2848302176  NOTICE: Thread XBPyThread start, auto delete: false
+19:50:44 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:50:44 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:50:44 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:50:44 T:3046756352   ERROR: Control 50 in window 10025 has been asked to focus, but it can't
+19:50:45 T:2848302176  NOTICE: -->Python Interpreter Initialized<--
+19:50:49 T:2848302176  NOTICE: CommonFunctions-2.5.1
+19:50:49 T:3046756352   ERROR: Control 50 in window 10025 has been asked to focus, but it can't
+19:50:49 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:50:49 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:50:49 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:50:51 T:2848302176  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:50:51 T:2848302176  NOTICE: Previous line repeats 1 times.
+19:50:51 T:2848302176  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
+19:50:57 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:50:57 T:3046756352   ERROR: Control 50 in window 10025 has been asked to focus, but it can't
+19:51:12 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:51:15 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:51:17 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:51:17 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:51:19 T:2736780384  NOTICE: Thread XBPyThread start, auto delete: false
+19:51:19 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:51:19 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:51:19 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:51:19 T:3046756352   ERROR: Control 50 in window 10025 has been asked to focus, but it can't
+19:51:20 T:2736780384  NOTICE: -->Python Interpreter Initialized<--
+19:51:24 T:2736780384  NOTICE: CommonFunctions-2.5.1
+19:51:26 T:2736780384  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+19:51:26 T:2736780384  NOTICE: Previous line repeats 1 times.
+19:51:26 T:2736780384  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
+19:51:31 T:2848302176  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:51:34 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:51:34 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:51:34 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:52:06 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:52:06 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:52:06 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:52:14 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:52:14 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:52:14 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:52:37 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:52:37 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:52:37 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:52:45 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:52:45 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:52:45 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:55:22 T:2865079392  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:55:22 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:55:22 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:55:22 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:55:24 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:55:24 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:55:24 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:55:31 T:2865079392  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:55:31 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:55:31 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:55:31 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:55:34 T:2865079392  NOTICE: Thread Jobworker start, auto delete: true
+19:55:34 T:2884535392  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:55:34 T:2747266144  NOTICE: Thread Jobworker start, auto delete: true
+19:55:44 T:2884535392  NOTICE: Previous line repeats 1 times.
+19:55:44 T:2884535392  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:56:06 T:2785014880  NOTICE: Previous line repeats 1 times.
+19:56:06 T:2785014880  NOTICE: Thread Jobworker start, auto delete: true
+19:56:14 T:2755654752  NOTICE: Thread CFileCache start, auto delete: false
+19:58:20 T:2755654752  NOTICE: Previous line repeats 4 times.
+19:58:20 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:58:52 T:2736780384  NOTICE: Previous line repeats 3 times.
+19:58:52 T:2736780384  NOTICE: Thread CFileCache start, auto delete: false
+19:58:52 T:2736780384  NOTICE: Previous line repeats 1 times.
+19:58:52 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:58:53 T:2736780384  NOTICE: Previous line repeats 1 times.
+19:58:53 T:2736780384  NOTICE: Thread CFileCache start, auto delete: false
+19:58:54 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:59:06 T:3046756352  NOTICE: Previous line repeats 1 times.
+19:59:06 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:59:06 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:59:06 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:59:09 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+19:59:09 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+19:59:09 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+19:59:09 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+19:59:12 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+20:00:12 T:2736780384  NOTICE: Previous line repeats 2 times.
+20:00:12 T:2736780384  NOTICE: Thread CFileCache start, auto delete: false
+20:00:50 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+20:00:50 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+20:00:50 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+20:01:11 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+20:01:11 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+20:01:11 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+20:01:15 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+20:01:15 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+20:01:15 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+20:01:18 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+20:01:18 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+20:01:18 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:02:56 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:02:56 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:02:56 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:03:15 T:2772431968  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:03:15 T:3046756352  NOTICE: Previous line repeats 1 times.
+21:03:15 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:03:15 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:03:15 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:03:16 T:2772431968  NOTICE: Thread Jobworker start, auto delete: true
+21:03:24 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:03:24 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:03:24 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:03:32 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:03:33 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:03:33 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:03:33 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:04 T:2736780384  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:04:04 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:04:04 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:04:04 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:17 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:04:17 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:04:17 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:04:17 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:18 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:04:18 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:04:18 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:32 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:04:32 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:04:32 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:37 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:04:37 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:04:37 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:41 T:2764043360  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:04:41 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:04:41 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:04:41 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:04:49 T:2764043360  NOTICE: Thread Jobworker start, auto delete: true
+21:04:59 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:09:16 T:2755654752  NOTICE: Previous line repeats 1 times.
+21:09:16 T:2755654752  NOTICE: Thread CFileCache start, auto delete: false
+21:09:39 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:10:28 T:2755654752  NOTICE: Previous line repeats 1 times.
+21:10:28 T:2755654752  NOTICE: Thread CFileCache start, auto delete: false
+21:10:40 T:2755654752  NOTICE: Previous line repeats 2 times.
+21:10:40 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:10:43 T:2884535392  NOTICE: Thread CFileCache start, auto delete: false
+21:11:09 T:2755654752  NOTICE: Thread Jobworker start, auto delete: true
+21:11:26 T:2772431968  NOTICE: Thread XBPyThread start, auto delete: false
+21:11:27 T:2772431968  NOTICE: -->Python Interpreter Initialized<--
+21:11:27 T:2884535392  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:11:32 T:2728391776  NOTICE: Previous line repeats 2 times.
+21:11:32 T:2728391776  NOTICE: Thread CFileCache start, auto delete: false
+21:12:08 T:2884535392  NOTICE: Previous line repeats 5 times.
+21:12:08 T:2884535392  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:13:32 T:3046756352   ERROR: GetDirectory - Error getting addons://all/xbmc.metadata.scraper.tvshows
+21:13:32 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(addons://all/xbmc.metadata.scraper.tvshows) failed
+21:13:35 T:2764043360  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:14:05 T:2772431968  NOTICE: Previous line repeats 2 times.
+21:14:05 T:2772431968  NOTICE: Thread Jobworker start, auto delete: true
+21:14:15 T:2728391776  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:15:16 T:3046756352  NOTICE: Previous line repeats 2 times.
+21:15:16 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:15:16 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:15:16 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:15:23 T:2772431968  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:15:23 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:15:23 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:15:23 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:15:27 T:2772431968  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:16:14 T:3046756352  NOTICE: Previous line repeats 7 times.
+21:16:14 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:16:14 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:16:14 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:16:22 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:16:22 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:16:22 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:16:27 T:2772431968  NOTICE: Thread CFileCache start, auto delete: false
+21:17:37 T:3046756352  NOTICE: Previous line repeats 2 times.
+21:17:37 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:18:06 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:18:06 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:18:06 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:18:11 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:18:11 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:18:11 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:18:46 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:18:46 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:18:46 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:18:50 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:18:50 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:18:50 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:19:22 T:3046756352   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+21:19:22 T:3046756352   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+21:19:58 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:19:58 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:19:58 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:01 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:01 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:01 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:14 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:14 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:14 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:17 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:17 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:17 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:36 T:3046756352   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+21:20:36 T:3046756352   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+21:20:39 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:40 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:40 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:43 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:44 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:44 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:44 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:44 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:44 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:20:46 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:20:46 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:20:46 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:21:36 T:3046756352   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+21:21:36 T:3046756352   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+21:21:40 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:21:40 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:21:40 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:21:44 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:21:44 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:21:44 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:21:53 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:21:53 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:21:53 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:21:55 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:21:55 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:21:55 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:22:28 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:22:29 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:22:29 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:22:34 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:22:35 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:22:35 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:22:50 T:3046756352  NOTICE: starting upnp server
+21:22:52 T:3046756352  NOTICE: starting upnp renderer
+21:22:55 T:3046756352  NOTICE: Webserver: Starting...
+21:22:56 T:3046756352  NOTICE: WebServer: Started the webserver
+21:22:57 T:3046756352  NOTICE: Webserver: Stopping...
+21:22:57 T:3046756352  NOTICE: WebServer: Stopped the webserver
+21:22:57 T:3046756352  NOTICE: Webserver: Stopped...
+21:22:59 T:3046756352  NOTICE: Webserver: Starting...
+21:22:59 T:3046756352  NOTICE: WebServer: Started the webserver
+21:23:05 T:3046756352  NOTICE: Webserver: Stopping...
+21:23:05 T:3046756352  NOTICE: WebServer: Stopped the webserver
+21:23:05 T:3046756352  NOTICE: Webserver: Stopped...
+21:23:05 T:3046756352  NOTICE: Webserver: Starting...
+21:23:05 T:3046756352  NOTICE: WebServer: Started the webserver
+21:23:16 T:3046756352  NOTICE: Webserver: Stopping...
+21:23:16 T:3046756352  NOTICE: WebServer: Stopped the webserver
+21:23:16 T:3046756352  NOTICE: Webserver: Stopped...
+21:23:16 T:3046756352  NOTICE: Webserver: Starting...
+21:23:16 T:3046756352  NOTICE: WebServer: Started the webserver
+21:23:25 T:2694837344  NOTICE: Thread AirPlayServer start, auto delete: false
+21:23:25 T:2686448736  NOTICE: Thread AirTunesServer start, auto delete: false
+21:23:40 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:23:40 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:23:40 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:23:45 T:2678060128  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:23:45 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:23:45 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:23:45 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:24:02 T:2678060128  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:24:02 T:2669671520  NOTICE: Thread Jobworker start, auto delete: true
+21:24:17 T:2678060128  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:24:29 T:3046756352   ERROR: GetDirectory - Error getting addons://all/xbmc.service
+21:24:30 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(addons://all/xbmc.service) failed
+21:24:30 T:2678060128  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:24:53 T:2652894304  NOTICE: Previous line repeats 1 times.
+21:24:53 T:2652894304  NOTICE: Thread CFileCache start, auto delete: false
+21:24:56 T:2652894304  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:25:28 T:3046756352  NOTICE: Previous line repeats 2 times.
+21:25:28 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:25:28 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:25:28 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:25:46 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:25:46 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:25:46 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:25:58 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:25:58 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:25:58 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:26:02 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:26:02 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:26:02 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:26:29 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:26:29 T:2652894304 WARNING: Previous line repeats 1 times.
+21:26:29 T:2652894304  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:26:36 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:26:37 T:3046756352 WARNING: Previous line repeats 1 times.
+21:26:37 T:3046756352 WARNING: Create - Unsupported protocol(image) in image://Browse/
+21:26:37 T:3046756352   ERROR: Exists - Error checking for image://Browse
+21:26:37 T:2652894304  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:26:54 T:3046756352  NOTICE: Previous line repeats 3 times.
+21:26:54 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:26:54 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:26:54 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:27:01 T:2669671520  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:27:01 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:27:01 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:27:01 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:27:10 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:27:10 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:27:10 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:27:13 T:3046756352   ERROR: Error: Requested setting (videoscreen.screen) was not found.  It must be case-sensitive
+21:27:13 T:3046756352   ERROR: Previous line repeats 2 times.
+21:27:13 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:27:13 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:27:13 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:29:51 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:29:52 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:29:52 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:30:07 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:30:07 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:30:07 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:31:01 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:31:01 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:31:01 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:34:38 T:3046756352   ERROR: Keymapping error: no such action 'runaddon()' defined
+21:36:25 T:2669671520  NOTICE: Thread Jobworker start, auto delete: true
+21:37:15 T:2652894304  NOTICE: Thread XBPyThread start, auto delete: false
+21:37:15 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:37:15 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:37:15 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:37:16 T:3046756352   ERROR: Control 50 in window 10501 has been asked to focus, but it can't
+21:37:16 T:2652894304  NOTICE: -->Python Interpreter Initialized<--
+21:37:25 T:2652894304   ERROR: Use of deprecated functionality. Please to not assume that "os.getcwd" will return the script directory.
+21:37:48 T:2652894304  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:37:52 T:2652894304  NOTICE: Previous line repeats 1 times.
+21:37:52 T:2652894304  NOTICE: Thread Jobworker start, auto delete: true
+21:37:52 T:2644505696  NOTICE: Thread XBPyThread start, auto delete: false
+21:37:53 T:2644505696  NOTICE: -->Python Interpreter Initialized<--
+21:37:56 T:2644505696   ERROR: Use of deprecated functionality. Please to not assume that "os.getcwd" will return the script directory.
+21:38:03 T:3046756352   ERROR: GetDirectory - Error getting plugin://plugin.audio.tuneinradio.smallplayer/?id=presets&path=browse
+21:38:04 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://plugin.audio.tuneinradio.smallplayer/?id=presets&path=browse) failed
+21:38:32 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:38:47 T:2652894304  NOTICE: Previous line repeats 1 times.
+21:38:47 T:2652894304   ERROR: Unable to find plugin
+21:38:47 T:3046756352   ERROR: GetDirectory - Error getting plugin://
+21:38:47 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(plugin://) failed
+21:38:47 T:2747266144  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:38:48 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:38:48 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:38:48 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:38:54 T:2747266144  NOTICE: Thread XBPyThread start, auto delete: false
+21:38:55 T:2747266144  NOTICE: -->Python Interpreter Initialized<--
+21:38:56 T:3046756352   ERROR: Control 1000 in window 13000 has been asked to focus, but it can't
+21:39:15 T:3046756352   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+21:39:39 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:39:39 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:39:39 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:39:41 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:39:41 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:39:41 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:39:45 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:39:45 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:39:45 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:39:54 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:39:54 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:39:54 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:40:18 T:2747266144  NOTICE: Thread XBPyThread start, auto delete: false
+21:40:19 T:2747266144  NOTICE: -->Python Interpreter Initialized<--
+21:40:20 T:3046756352   ERROR: Control 1000 in window 13000 has been asked to focus, but it can't
+21:40:24 T:3046756352   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+21:40:28 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:40:29 T:2644505696 WARNING: Previous line repeats 1 times.
+21:40:29 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:41:30 T:2644505696  NOTICE: Thread XBPyThread start, auto delete: false
+21:41:32 T:2644505696  NOTICE: -->Python Interpreter Initialized<--
+21:45:00 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:45:00 T:2644505696 WARNING: Previous line repeats 1 times.
+21:45:00 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:45:44 T:3046756352  NOTICE: Previous line repeats 3 times.
+21:45:44 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:45:44 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:45:44 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:45:47 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:45:47 T:2644505696 WARNING: Previous line repeats 1 times.
+21:45:47 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:46:06 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:46:06 T:3046756352 WARNING: Previous line repeats 1 times.
+21:46:06 T:3046756352 WARNING: Create - Unsupported protocol(image) in image://Browse/
+21:46:06 T:3046756352   ERROR: Exists - Error checking for image://Browse
+21:46:07 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:46:36 T:3046756352  NOTICE: Previous line repeats 3 times.
+21:46:36 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:46:40 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:46:40 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:47:21 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:47:21 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:47:21 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:47:24 T:3046756352 WARNING: Trying to add unsupported control type 1
+21:47:24 T:2644505696 WARNING: Previous line repeats 1 times.
+21:47:24 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+21:47:31 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:47:31 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:47:31 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:47:53 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:47:53 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:47:53 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:48:36 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:48:36 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:48:36 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+21:49:34 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+21:49:34 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+21:49:34 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:10:30 T:2865079392  NOTICE: Thread Jobworker start, auto delete: true
+22:11:34 T:2652894304  NOTICE: Previous line repeats 1 times.
+22:11:34 T:2652894304  NOTICE: Thread XBPyThread start, auto delete: false
+22:11:36 T:2652894304  NOTICE: -->Python Interpreter Initialized<--
+22:15:28 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:15:28 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:15:28 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:15:31 T:2865079392  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:15:31 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:15:31 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:15:31 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:15:35 T:2865079392  NOTICE: Thread Jobworker start, auto delete: true
+22:15:35 T:2652894304  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:15:40 T:2652894304  NOTICE: Previous line repeats 1 times.
+22:15:40 T:2652894304  NOTICE: Thread Jobworker start, auto delete: true
+22:15:51 T:2669671520  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:15:57 T:2644505696  NOTICE: Previous line repeats 2 times.
+22:15:57 T:2644505696  NOTICE: Thread Jobworker start, auto delete: true
+22:16:05 T:2669671520  NOTICE: Thread CFileCache start, auto delete: false
+22:16:39 T:2644505696  NOTICE: Previous line repeats 1 times.
+22:16:39 T:2644505696  NOTICE: Thread Jobworker start, auto delete: true
+22:16:39 T:2865079392  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:17:24 T:2865079392  NOTICE: Thread CFileCache start, auto delete: false
+22:17:27 T:3046756352   ERROR: GetDirectory - Error getting addons://repository.smallplayer/xbmc.gui.skin
+22:17:27 T:3046756352   ERROR: CGUIMediaWindow::GetDirectory(addons://repository.smallplayer/xbmc.gui.skin) failed
+22:17:27 T:2865079392  NOTICE: Thread Jobworker start, auto delete: true
+22:36:30 T:2747266144  NOTICE: Previous line repeats 1 times.
+22:36:30 T:2747266144  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:41:39 T:2755654752  NOTICE: Previous line repeats 1 times.
+22:41:39 T:2755654752  NOTICE: Thread Jobworker start, auto delete: true
+22:41:39 T:2644505696  NOTICE: Thread XBPyThread start, auto delete: false
+22:41:40 T:2644505696  NOTICE: -->Python Interpreter Initialized<--
+22:43:34 T:3046756352 WARNING: Cleanup: Having to cleanup texture views/list/other/separator.png
+22:43:34 T:3046756352 WARNING: Cleanup: Having to cleanup texture dialogs/options/buttons/default-fo.png
+22:43:34 T:3046756352 WARNING: Cleanup: Having to cleanup texture windows/settings/images/right-focus.png
+22:50:16 T:2755654752  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:50:16 T:3046756352   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:50:16 T:3046756352  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:50:16 T:3046756352   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:50:17 T:2755654752  NOTICE: Thread Jobworker start, auto delete: true
+22:50:17 T:2644505696  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:50:22 T:2644505696  NOTICE: Thread Jobworker start, auto delete: true

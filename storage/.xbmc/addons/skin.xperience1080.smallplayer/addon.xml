@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="skin.xperience1080.smallplayer" version="0.0.5" name="SMALLplayer XP1080" provider-name="SMALLplayer">
+	<requires>
+		<import addon="xbmc.gui" version="4.0.0" />
+		<import addon="service.skin.widgets" version="0.0.25" />
+		<import addon="script.artwork.downloader" version="12.0.15" />
+		<import addon="script.tv.show.next.aired" version="5.0.7" />
+		<import addon="script.tvtunes" version="3.0.6" />
+		<import addon="script.globalsearch" version="1.1.1" />
+		<import addon="script.favourites" version="4.0.9" />
+		<import addon="script.artistslideshow" version="1.5.0" />
+		<import addon="script.videolanguage" version="0.1.0" />
+		<import addon="script.randomandlastitems" version="2.1.2" />
+	</requires>
+	<extension point="xbmc.gui.skin" defaultthemename="textures.xbt" effectslowdown="1.00" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+        <summary lang="en">SMALLplayer XP1080 skin, based on the Xperience1080 skin by Black. The original can be found in the official XBMC repository.</summary>
+        <summary lang="nl">SMALLplayer XP1080 skin, gebaseerd op de Xperience1080 skin van Black. Het origineel is te vinden in de officiele XBMC repository.</summary>
+        <platform>all</platform>
+        <license>Creative Commons Attribution-Noncommercial-Share Alike 3.0</license>
+        <forum></forum>
+	<website>http://www.smallplayer.nl</website>
+	<source>https://github.com/SMALLplayer/skin.smallplayer-xp1080</source>
+        <email>info at smallplayer dot nl</email>
+	</extension>
+</addon>

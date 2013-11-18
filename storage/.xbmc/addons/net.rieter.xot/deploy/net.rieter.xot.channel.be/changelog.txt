@@ -1,3 +1,0 @@
-[B]Changelog[/B]
-
-Fixed: Added recent items to Een.be (Issue 380)

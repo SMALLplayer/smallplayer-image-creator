@@ -4,7 +4,7 @@
     <nextIdProfile>1</nextIdProfile>
     <profile>
         <id>0</id>
-        <name>Master user</name>
+        <name>SMALLplayer</name>
         <directory pathversion="1">special://masterprofile/</directory>
         <thumbnail pathversion="1"></thumbnail>
         <hasdatabases>true</hasdatabases>
@@ -19,7 +19,7 @@
         <lockpictures>false</lockpictures>
         <lockprograms>false</lockprograms>
         <lockmode>0</lockmode>
-        <lockcode></lockcode>
+        <lockcode>-</lockcode>
         <lastdate></lastdate>
     </profile>
 </profiles>

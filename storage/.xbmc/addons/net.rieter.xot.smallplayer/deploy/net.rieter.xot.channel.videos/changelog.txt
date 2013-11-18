@@ -1,0 +1,5 @@
+[B]Changelog[/B]
+Fixed: Live streams of Flosoft.biz changed
+
+Added: TWiT.TV Live streams
+Added: TWiT.TV

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<openelec>
+	<addon_config/>
+	<settings>
+		<system>
+			<wizard_completed>False</wizard_completed>
+			<hostname>SMALLplayer</hostname>
+		</system>
+		<connman>
+			<wizard_completed>False</wizard_completed>
+		</connman>
+		<services>
+			<wizard_completed>False</wizard_completed>
+		</services>
+		<about>
+			<wizard_completed>False</wizard_completed>
+		</about>
+		<openelec>
+			<wizard_completed>False</wizard_completed>
+		</openelec>
+	</settings>
+</openelec>
