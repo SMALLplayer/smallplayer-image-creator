@@ -51,7 +51,7 @@
 # mode 'High'                   :    950   |    450    |    450     |      6
 # mode 'Turbo'                  :   1000   |    500    |    500     |      6
 
-arm_freq=825
+arm_freq=850
 core_freq=325
 sdram_freq=425
 over_voltage=0
