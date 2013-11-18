@@ -27,10 +27,12 @@ echo "Extracting OE_REL.tar"
 tar -xvf ../$DL/$OE_REL.tar
 
 echo "Extracting squashfs partition"
-sudo unsquashfs -d system-part  $OE_REL/target/SYSTEM
+sudo unsquashfs -d system-part $OE_REL/target/SYSTEM
 
 echo "Applying patch"
 sudo cp -rf ../$PATCH/. system-part
+sudo sed -i 's/update.openelec.tv/update.smallplayer.nl/' system-part/usr/share/xbmc/addons/service.openelec.settings/defaults.py
+sudo sed -i 's/%s.openelec.tv/%s.smallplayer.nl/' system-part/usr/share/xbmc/addons/service.openelec.settings/defaults.py
 
 echo "Creating new squashfs partition"
 sudo mksquashfs system-part SYSTEM -noI -noD -noF -noX -no-xattrs
