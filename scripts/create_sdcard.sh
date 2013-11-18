@@ -247,7 +247,7 @@ echo "#########################################################"
   cp $OE_PATH/openelec.ico $MOUNTPOINT
   cp $OE_PATH/README.md $MOUNTPOINT
   cp $OE_PATH/../system-part/splash/splash.png $MOUNTPOINT/oemsplash.png
-  cp $OE_PATH/../config.txt $MOUNTPOINT
+  cp $OE_PATH/../../../config.txt $MOUNTPOINT
 
 # sync disk
   echo "syncing disk..."
