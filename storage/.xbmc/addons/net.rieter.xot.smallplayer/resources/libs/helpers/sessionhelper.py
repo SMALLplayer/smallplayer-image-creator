@@ -15,6 +15,9 @@ from config import Config
 
 
 class SessionHelper:
+    __TimeOut = 1 * 60 * 60
+    #__TimeOut = 10
+
     def __init__(self):
         # static only
         raise NotImplementedError()
@@ -54,7 +57,7 @@ class SessionHelper:
         """ Returns True if an active session file is found """
 
         if logger:
-            logger.Debug("Checking for existing sessions.")
+            logger.Debug("Checking for active sessions (%.2f minutes / %.2f hours).", SessionHelper.__TimeOut / 60, SessionHelper.__TimeOut / 3600.0)
 
         if not os.path.exists(SessionHelper.__GetSessionPath()):
             if logger:
@@ -63,9 +66,13 @@ class SessionHelper:
 
         timeStamp = os.path.getmtime(SessionHelper.__GetSessionPath())
         nowStamp = time.time()
-        if logger:
+        modifiedInLastHours = (nowStamp - SessionHelper.__TimeOut) < timeStamp
+
+        if logger and modifiedInLastHours:
             logger.Debug("Found active session at '%s' which was modified %.2f minutes (%.2f hours) ago", SessionHelper.__GetSessionPath(), (nowStamp - timeStamp) / 60, (nowStamp - timeStamp) / 3600.0)
-        modifiedInLastHours = (nowStamp - 2 * 60 * 60) < timeStamp
+        elif logger:
+            logger.Debug("Found expired session at '%s' which was modified %.2f minutes (%.2f hours) ago", SessionHelper.__GetSessionPath(), (nowStamp - timeStamp) / 60, (nowStamp - timeStamp) / 3600.0)
+
         return modifiedInLastHours
 
     @staticmethod

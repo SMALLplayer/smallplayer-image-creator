@@ -24,35 +24,35 @@ currentPath = Initializer.SetupPythonPaths()
 # Handles an AttributeError during intialization
 #===============================================================================
 def HandleInitAttributeError(loadedModules):
-    if(Logger.Exists()):
+    if Logger.Exists():
         Logger.Critical("AtrributeError during intialization", exc_info=True)
-        if ("config" in loadedModules):
+        if "config" in loadedModules:
             Logger.Debug("'config' was imported from %s", Config.__file__)
-        if ("logger" in loadedModules):
+        if "logger" in loadedModules:
             Logger.Debug("'logger' was imported from %s", Logger.__file__)
-        if ("UriHandler" in loadedModules):
+        if "UriHandler" in loadedModules:
             Logger.Debug("'UriHandler' was imported from %s", UriHandler.__file__)
-        if ("common" in loadedModules):
+        if "common" in loadedModules:
             Logger.Debug("'common' was imported from %s", common.__file__)
-        if ("update" in loadedModules):
+        if "update" in loadedModules:
             Logger.Debug("'update' was imported from %s", update.__file__)
     else:
         traceback.print_exception(sys.exc_info()[0], sys.exc_info()[1], sys.exc_info()[2])
-        if ("config" in loadedModules):
+        if "config" in loadedModules:
             print("'config' was imported from %s" % Config.__file__)
-        if ("logger" in loadedModules):
+        if "logger" in loadedModules:
             print("'logger' was imported from %s" % Logger.__file__)
-        if ("UriHandler" in loadedModules):
+        if "UriHandler" in loadedModules:
             print("'UriHandler' was imported from %s" % UriHandler.__file__)
-        if ("common" in loadedModules):
+        if "common" in loadedModules:
             print("'common' was imported from %s" % common.__file__)
-        if ("update" in loadedModules):
+        if "update" in loadedModules:
             print("'update' was imported from %s" % update.__file__)
     return
 
 
 def RunPlugin():
-    """ Runs XOT-Uzg.v3 as a Video Add-On """
+    """ Runs XBMC Online TV as a Video Add-On """
 
     try:
         from config import Config
@@ -61,10 +61,9 @@ def RunPlugin():
         # get a logger up and running
         from logger import Logger
 
-        # only append if there are not arguments (main add-on call) and we have
-        # no active session (in that case we came back to the channel list
-        if sys.argv[2].strip('?') == "" and not SessionHelper.IsSessionActive():
-            # first call in the cycle, so cleanup log
+        # only append if there are no active sessions
+        if not SessionHelper.IsSessionActive():
+            # first call in the session, so do not append the log
             appendLogFile = False
         else:
             appendLogFile = True
@@ -106,9 +105,11 @@ def RunPlugin():
         # globalLogger.Critical("Error initializing %s plugin", Config.appName, exc_info=True)
         try:
             orgEx = sys.exc_info()
+            #noinspection PyUnboundLocalVariable
             Logger.Critical("Error initializing %s plugin", Config.appName, exc_info=True)
         except:
-            print "Exception during the initialisation of the script. No logging information was present because the logger was not loaded."
+            xbmc.log("Exception during the initialisation of the script. No logging information was present because the logger was not loaded.", xbmc.LOGFATAL)
+            #noinspection PyUnboundLocalVariable
             traceback.print_exception(orgEx[0], orgEx[1], orgEx[2])
 
 #===============================================================================
@@ -132,10 +133,11 @@ else:
     #===============================================================================
     # SCRIPT: Setup the script
     #===============================================================================
+    pb = None
     try:
         pb = xbmcgui.DialogProgress()
         from config import Config  # @Reimport
-        pb.create("Initialising %s" % (Config.appName), "Importing configuration")
+        pb.create("Initialising %s" % (Config.appName, ), "Importing configuration")
 
         pb.update(10, "Initialising Logger")
         from logger import Logger  # @Reimport
@@ -167,15 +169,15 @@ else:
         pb.update(50, LanguageHelper.GetLocalizedString(LanguageHelper.DeterminSkinId))
         Config.skinFolder = envcontroller.EnvController.GetSkinFolder(Config.rootDir, Logger.Instance())
 
-        Logger.Info("************** Starting %s version v%s **************", Config.appName, Config.Version)
+        Logger.Info("************** Starting %s version v%s **************", Config.appName, Config.version)
         Logger.Info("Skinfolder = %s", Config.skinFolder)
-        print("************** Starting %s version v%s **************" % (Config.appName, Config.Version))
+        print("************** Starting %s version v%s **************" % (Config.appName, Config.version))
 
         # check for updates
         pb.update(60, LanguageHelper.GetLocalizedString(LanguageHelper.CheckForUpdatesId))
         import update
         try:
-            update.CheckVersion(Config.Version, Config.updateUrl)
+            update.CheckVersion(Config.version, Config.updateUrl)
             pass
         except:
             Logger.Critical("Error checking for updates", exc_info=True)
@@ -225,6 +227,8 @@ else:
             # close the log to prevent locking on next call
             Logger.Instance().CloseLog()
         except:
-            print "Exception during the initialisation of the script. No logging information was present because the logger was not loaded."
+            xbmc.log("Exception during the initialisation of the script. No logging information was present because the logger was not loaded.", xbmc.LOGFATAL)
+            #noinspection PyUnboundLocalVariable
             traceback.print_exception(orgEx[0], orgEx[1], orgEx[2])
-        pb.close()
+        if pb:
+            pb.close()

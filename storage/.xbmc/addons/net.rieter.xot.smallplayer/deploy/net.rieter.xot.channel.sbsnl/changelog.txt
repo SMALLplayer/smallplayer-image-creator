@@ -1,0 +1,3 @@
+﻿[B]Changelog[/B]
+
+Fixed: some programs were missing from kijk.nl main lists (Issue 448)

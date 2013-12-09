@@ -1,0 +1,5 @@
+﻿[B]Changelog[/B]
+
+Fixed: Nickelodeon channels broke (Issue 449)
+Changed: try to determine titles for items without titles in the Nickelodeon channels
+Fixed: Nickelodeon channels did not play

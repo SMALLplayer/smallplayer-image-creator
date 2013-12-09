@@ -92,6 +92,11 @@ class XbmcWrapper:
             return False
 
     @staticmethod
+    def ShowSelectionDialog(title, options):
+        inputDialog = xbmcgui.Dialog()
+        return inputDialog.select(title, options)
+
+    @staticmethod
     def ShowDialog(title, lines):
         """ Shows a dialog box with title and text
 

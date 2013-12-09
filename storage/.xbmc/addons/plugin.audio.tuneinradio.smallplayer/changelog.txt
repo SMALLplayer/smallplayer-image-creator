@@ -1,3 +1,27 @@
+*** 2.0.3 ***
+Fixed issue #35 where geadless control of plugin caused XBMC to freeze.
+Fixed issue #36 and #37 where XBMC sometimes fails to play url's that point to an ASX file.
+
+*** 2.0.2 ***
+Fixed issue #34 where a unicode character was causing the parsing of ASX files to fail.
+
+*** 2.0.1 ***
+Fixed issues #28 and #30 where the 'Add Station/Show' context menu item was not being displayed.
+Fixed issue #33 where check_for_redirect function was raising a URLError exception. If URLError is now raised it is ignored.
+
+*** 2.0.0 ***
+Code now meets PEP8 code style guidelines.
+Fixed issue with __get_mac_address function on Android.
+Merged in changes from diegofn.
+General tidy up.
+
+*** 1.0.9 ***
+Improvment icons
+Update Browse list to Browse.ashx in radiotime.com
+
+** 1.0.8 ***
+Added options to get categories' names in different languages. (Alex-dit-Sean)
+
 *** 1.0.7 ***
 Fixed a debug/error logging text encoding issue.
 Added handling of StreamTheWorld streams that have own website player.

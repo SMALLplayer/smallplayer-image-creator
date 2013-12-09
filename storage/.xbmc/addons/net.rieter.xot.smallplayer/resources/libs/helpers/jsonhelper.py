@@ -13,6 +13,7 @@ import re
 # from logger import Logger
 
 
+#noinspection PyShadowingNames
 class JsonHelper:
     def __init__(self, data, logger=None):
         """Creates a class object with HTML <data>
@@ -134,7 +135,7 @@ class JsonHelper:
         for k, v in replacements:
             cleanText = cleanText.replace(k, v)
 
-        if (doQuotes):
+        if doQuotes:
             cleanText = JsonHelper.__ConvertQuotes(cleanText)
 
         return cleanText
@@ -165,13 +166,16 @@ class JsonHelper:
 
         except Exception, e:
             error = "%s at %s: %s>>>%s<<<%s" % (e, self.__pointer, self.data[self.__pointer - 25:self.__pointer], self.data[self.__pointer], self.data[self.__pointer + 1:self.__pointer + 25])
+            #noinspection PyPropertyAccess
             e.args = (error,)
             raise
 
         return self.json
 
-    def GetValue(self, *args):
-        if len(self.json) <= 0:
+    #noinspection PyUnboundLocalVariable
+    def GetValue(self, *args, **kwargs):
+        # if we did not already load the json data, so so, but only if there was data in the input
+        if len(self.json) <= 0 and self.data:
             self.GetJsonData()
 
         try:
@@ -179,6 +183,11 @@ class JsonHelper:
             for arg in args:
                 data = data[arg]
         except KeyError:
+            if "fallback" in kwargs:
+                if self.Logger:
+                    self.Logger.Debug("Key ['%s'] not found in Json", arg)
+                return kwargs["fallback"]
+
             if self.Logger:
                 self.Logger.Warning("Key ['%s'] not found in Json", arg, exc_info=True)
             return None
@@ -281,7 +290,7 @@ class JsonHelper:
                 data = self.__ProcessBool()
 
             elif char in self.keyEnd:
-                if (data is None):
+                if data is None:
                     raise AttributeError("Data is needed for a key")
 
                 key = data
@@ -349,17 +358,16 @@ class JsonHelper:
 
         """
 
-        data = False
         char = self.__Read(offset=0)
         if char.lower() == "t":
             data = True
-            char = self.__Move(3)
+            self.__Move(3)
         elif char.lower() == "n":
             data = None
-            char = self.__Move(3)
+            self.__Move(3)
         else:
             data = False
-            char = self.__Move(4)
+            self.__Move(4)
 
         return data
 
@@ -370,12 +378,10 @@ class JsonHelper:
 
         """
 
-        data = ""
-
         # where do we start
         startIndex = self.__pointer
 
-        if(self.__Seek(self.keyValueEnd)):
+        if self.__Seek(self.keyValueEnd):
             # the next read will be one from the self.keyValueEnd
             data = self.data[startIndex:self.__pointer + 1]
         else:
@@ -494,7 +500,7 @@ class JsonHelper:
         nextIndex = self.__maxPointer + 256  # just a random location past the end
         for needle in needles:
             thisNextIndex = self.data.find(needle, self.__pointer)
-            if thisNextIndex >= 0 and thisNextIndex < nextIndex:
+            if 0 <= thisNextIndex < nextIndex:
                 nextIndex = thisNextIndex
 
         if nextIndex == self.__maxPointer + 256:
@@ -609,21 +615,25 @@ if __name__ == "__main__":
         results4 = wrapper.GetNamedValues("title6")
         # print results
 
+    #noinspection PyUnboundLocalVariable
     if len(results) > 1:
         print results[1]
     else:
         print None
 
+    #noinspection PyUnboundLocalVariable
     if len(results2) > 1:
         print results2[1]
     else:
         print None
 
+    #noinspection PyUnboundLocalVariable
     if len(results3) > 0:
         print results3[0]
     else:
         print None
 
+    #noinspection PyUnboundLocalVariable
     if len(results4) > 0:
         print results4[0]
     else:

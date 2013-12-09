@@ -20,6 +20,7 @@
 	<string id="1015">Свалени</string>
 	<string id="1016">Премахни свалянето</string>
 	<string id="1017">Премахни персоналния URL адрес</string>
+	<string id="1018">Add to XBMC favourites</string>
 
 	<!--Settings-->
 	<string id="2000">Потребителско име</string>
@@ -30,8 +31,8 @@
 	<string id="2006">Medium</string>
 	<string id="2007">High</string>
 	<string id="2008">Цвят на иконата</string>
-	<string id="2009">Светъл</string>
-	<string id="2010">Тъмен</string>
+	<string id="2009">White</string>
+	<string id="2010">черен</string>
 	<string id="2011">Брой "Наскоро слушани"</string>
 	<string id="2012">Запитване преди смяна на текущата станция</string>
 	<string id="2013">HTTPS</string>
@@ -59,6 +60,15 @@
 	<string id="2035">Разреши свалянията</string>
 	<string id="2036">Актуализиране на кеша (часове)</string>
 	<string id="2037">Географска ширина/дължина</string>
+	<string id="2038">Language</string>
+	<string id="2039">червен</string>
+	
+	<!-- Settings Titles -->
+	<string id="2050">TuneIn</string>
+	<string id="2051">Appearance</string>
+	<string id="2052">Downloads</string>
+	<string id="2053">Formats</string>
+	<string id="2054">Advanced</string>
 
 	<!--Dialogs-->
 	<string id="3000">Въведете име на станцията/шоуто/артиста</string>
@@ -81,6 +91,7 @@
 	<string id="3015">Свалянето на шоуто се провали.</string>
 	<string id="3016">URL адресът на шоуто за сваляне е празен.
 Пробвайте първо с възпроизвеждане.</string>
+	<string id="3017">Unable to add station to XBMC favourites.</string>
 
 	<!--Download Dialogs-->
 	<string id="4000">Радио TuneIn</string>

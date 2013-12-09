@@ -25,9 +25,9 @@ from logger import Logger
 
 
 class ChannelInfo:
-    __channelInfoRegex = re.compile('<channel>\W+(?:<guid>(?P<guid>[^<]+)</guid>){0,1}\W+(?:<name>(?P<name>[^<]+)</name>){0,1}\W+(?:<description>(?P<description>[^<]+)</description>){0,1}\W+(?:<icon>(?P<icon>[^<]+)</icon>){0,1}\W+(?:<iconlarge>(?P<iconlarge>[^<]+)</iconlarge>){0,1}\W+(?:<channelcode>(?P<channelcode>[^<]+)</channelcode>){0,1}\W+(?:<sortorder>(?P<sortorder>[^<]+)</sortorder>){0,1}\W+(?:<language>(?P<language>[^<]+)</language>){0,1}\W+(?:<compatible>(?P<compatible>[^<]+)</compatible>){0,1}\W+(?:<message>(?P<message>[^<]+)</message>){0,1}\W+<', re.DOTALL + re.IGNORECASE)
+    __channelInfoRegex = re.compile('<channel>\W+<guid>(?P<guid>[^<]+)</guid>\W+<name>(?P<name>[^<]+)</name>\W+<description>(?P<description>[^<]+)</description>\W+<icon>(?P<icon>[^<]+)</icon>\W+<iconlarge>(?P<iconlarge>[^<]+)</iconlarge>\W+(?:<category>(?P<category>[^<]+)</category>)?\W+(?:<channelcode>(?P<channelcode>[^<]+)</channelcode>)?\W+(?:<sortorder>(?P<sortorder>[^<]+)</sortorder>)?\W+(?:<language>(?P<language>[^<]+)</language>)?\W+(?:<compatible>(?P<compatible>[^<]+)</compatible>)?\W+(?:<message>(?P<message>[^<]+)</message>)?\W+<', re.DOTALL + re.IGNORECASE)
 
-    def __init__(self, guid, name, description, icon, iconLarge, path, channelCode=None, sortOrder=255, language=None, compatiblePlatforms=Environments.All):
+    def __init__(self, guid, name, description, icon, iconLarge, category, path, channelCode=None, sortOrder=255, language=None, compatiblePlatforms=Environments.All):
         """ Creates a ChannelInfo object with basic information for a channel
 
         Arguments:
@@ -58,6 +58,7 @@ class ChannelInfo:
 
         self.icon = self.__GetImagePath(icon)
         self.iconLarge = self.__GetImagePath(iconLarge)
+        self.category = category
 
         self.channelName = name
         self.channelCode = channelCode
@@ -103,9 +104,9 @@ class ChannelInfo:
         """Returns a string representation of the current channel."""
 
         if self.channelCode is None:
-            return "%s [%s, %s] (Order: %s)" % (self.channelName, self.language, self.guid, self.sortOrder)
+            return "%s [%s, %s, %s] (Order: %s)" % (self.channelName, self.language, self.category, self.guid, self.sortOrder)
         else:
-            return "%s (%s) [%s, %s] (Order: %s)" % (self.channelName, self.channelCode, self.language, self.guid, self.sortOrder)
+            return "%s (%s) [%s, %s, %s] (Order: %s)" % (self.channelName, self.channelCode, self.language, self.category, self.guid, self.sortOrder)
 
     def __repr__(self):
         """ Technical representation """
@@ -122,7 +123,7 @@ class ChannelInfo:
 
         """
 
-        if other == None:
+        if other is None:
             return False
 
         return self.guid == other.guid
@@ -138,12 +139,12 @@ class ChannelInfo:
 
         """
 
-        if other == None:
+        if other is None:
             return 1
 
         compVal = cmp(self.sortOrder, other.sortOrder)
         if compVal == 0:
-            compVal = cmp(self.channelName, self.channelName)
+            compVal = cmp(self.channelName, other.channelName)
 
         return compVal
 
@@ -162,7 +163,7 @@ class ChannelInfo:
         """
 
         skinPath = self.ospathjoin(Config.rootDir, "resources", "skins", Config.skinFolder, "media", image)
-        if (os.path.exists(skinPath)):
+        if os.path.exists(skinPath):
             return image
         else:
             return self.ospathjoin(self.path, image)
@@ -185,6 +186,11 @@ class ChannelInfo:
         it = ChannelInfo.__channelInfoRegex.finditer(xmlData)
         channels = map(lambda x: x.groupdict(), it)
 
+        # double check
+        channelTagCount = xmlData.count("<channel>")
+        if channelTagCount != len(channels):
+            Logger.Warning("Inconsistant ChannelInfo Regex match with <channel> tags")
+
         channelInfos = []
         for channel in channels:
             # retrieve the base info
@@ -196,6 +202,10 @@ class ChannelInfo:
             channelCode = ChannelInfo.__GetText(channel, "channelcode")
             if channelCode == "None":
                 channelCode = None
+
+            category = ChannelInfo.__GetText(channel, "category")
+            if not category:
+                category = "None"
 
             sortOrder = ChannelInfo.__GetText(channel, "sortorder")
             if sortOrder:
@@ -215,10 +225,10 @@ class ChannelInfo:
             else:
                 compatiblePlatforms = eval(compatiblePlatforms)
 
-            ci = ChannelInfo(guid, name, description, icon, iconLarge, path, channelCode, sortOrder, language, compatiblePlatforms)
-            ci.firstTimeMessage = ChannelInfo.__GetText(channel, "message")
+            channelInfo = ChannelInfo(guid, name, description, icon, iconLarge, category, path, channelCode, sortOrder, language, compatiblePlatforms)
+            channelInfo.firstTimeMessage = ChannelInfo.__GetText(channel, "message")
 
-            channelInfos.append(ci)
+            channelInfos.append(channelInfo)
 
         return channelInfos
 
@@ -245,6 +255,7 @@ if __name__ == "__main__":
                      "",
                      "offloneicon.png",
                      "offlinelarge.png",
+                     "Geen",
                      __file__,
                      None,
                      - 1,

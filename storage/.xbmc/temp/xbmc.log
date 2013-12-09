@@ -1,24 +1,24 @@
-﻿23:05:29 T:3047084560  NOTICE: -----------------------------------------------------------------------
-23:05:29 T:3047084560  NOTICE: Starting XBMC (12.2 Git:97a9f05), Platform: Linux (, 3.10.16 armv6l). Built on Oct 17 2013
-23:05:29 T:3047084560  NOTICE: special://xbmc/ is mapped to: /usr/share/xbmc
-23:05:29 T:3047084560  NOTICE: special://xbmcbin/ is mapped to: /usr/lib/xbmc
-23:05:29 T:3047084560  NOTICE: special://masterprofile/ is mapped to: /storage/.xbmc/userdata
-23:05:29 T:3047084560  NOTICE: special://home/ is mapped to: /storage/.xbmc
-23:05:29 T:3047084560  NOTICE: special://temp/ is mapped to: /storage/.xbmc/temp
-23:05:29 T:3047084560  NOTICE: The executable running is: /usr/lib/xbmc/xbmc.bin
-23:05:29 T:3047084560  NOTICE: Local hostname: OpenELEC
-23:05:29 T:3047084560  NOTICE: Log File is located: /storage/.xbmc/temp/xbmc.log
-23:05:29 T:3047084560  NOTICE: -----------------------------------------------------------------------
-23:05:29 T:3047084560  NOTICE: load settings...
-23:05:29 T:3047084560  NOTICE: special://profile/ is mapped to: special://masterprofile/
-23:05:29 T:3047084560  NOTICE: loading special://masterprofile/guisettings.xml
-23:05:29 T:3047084560  NOTICE: Getting hardware information now...
-23:05:29 T:3047084560  NOTICE: Loading player core factory settings from special://xbmc/system/playercorefactory.xml.
-23:05:29 T:3047084560  NOTICE: Loaded playercorefactory configuration
-23:05:29 T:3047084560  NOTICE: Loading player core factory settings from special://masterprofile/playercorefactory.xml.
-23:05:29 T:3047084560  NOTICE: special://masterprofile/playercorefactory.xml does not exist. Skipping.
-23:05:29 T:3047084560  NOTICE: Loaded settings file from special://xbmc/system/advancedsettings.xml
-23:05:29 T:3047084560  NOTICE: Contents of special://xbmc/system/advancedsettings.xml are...
+﻿22:05:03 T:3047195152  NOTICE: -----------------------------------------------------------------------
+22:05:03 T:3047195152  NOTICE: Starting XBMC (12.2 Git:d1002b4), Platform: Linux (, 3.10.20 armv6l). Built on Nov 26 2013
+22:05:03 T:3047195152  NOTICE: special://xbmc/ is mapped to: /usr/share/xbmc
+22:05:03 T:3047195152  NOTICE: special://xbmcbin/ is mapped to: /usr/lib/xbmc
+22:05:03 T:3047195152  NOTICE: special://masterprofile/ is mapped to: /storage/.xbmc/userdata
+22:05:03 T:3047195152  NOTICE: special://home/ is mapped to: /storage/.xbmc
+22:05:03 T:3047195152  NOTICE: special://temp/ is mapped to: /storage/.xbmc/temp
+22:05:03 T:3047195152  NOTICE: The executable running is: /usr/lib/xbmc/xbmc.bin
+22:05:03 T:3047195152  NOTICE: Local hostname: openelec
+22:05:03 T:3047195152  NOTICE: Log File is located: /storage/.xbmc/temp/xbmc.log
+22:05:03 T:3047195152  NOTICE: -----------------------------------------------------------------------
+22:05:03 T:3047195152  NOTICE: load settings...
+22:05:03 T:3047195152  NOTICE: special://profile/ is mapped to: special://masterprofile/
+22:05:03 T:3047195152  NOTICE: loading special://masterprofile/guisettings.xml
+22:05:03 T:3047195152  NOTICE: Getting hardware information now...
+22:05:03 T:3047195152  NOTICE: Loading player core factory settings from special://xbmc/system/playercorefactory.xml.
+22:05:03 T:3047195152  NOTICE: Loaded playercorefactory configuration
+22:05:03 T:3047195152  NOTICE: Loading player core factory settings from special://masterprofile/playercorefactory.xml.
+22:05:03 T:3047195152  NOTICE: special://masterprofile/playercorefactory.xml does not exist. Skipping.
+22:05:03 T:3047195152  NOTICE: Loaded settings file from special://xbmc/system/advancedsettings.xml
+22:05:03 T:3047195152  NOTICE: Contents of special://xbmc/system/advancedsettings.xml are...
                                             <?xml version="1.0" encoding="UTF-8" ?>
                                             <advancedsettings>
                                               <showexitbutton>false</showexitbutton>
@@ -47,104 +47,117 @@
                                                 <readbufferfactor>4.0</readbufferfactor>
                                               </network>
                                             </advancedsettings>
-23:05:29 T:3047084560  NOTICE: Getting hardware information now...
-23:05:29 T:3047084560  NOTICE: No settings file to load (special://masterprofile/advancedsettings.xml)
-23:05:29 T:3047084560  NOTICE: Default DVD Player: omxplayer
-23:05:29 T:3047084560  NOTICE: Default Video Player: omxplayer
-23:05:29 T:3047084560  NOTICE: Default Audio Player: omxplayer
-23:05:29 T:3047084560  NOTICE: Disabled debug logging due to GUI setting. Level 0.
-23:05:29 T:3047084560  NOTICE: Log level changed to 0
-23:05:29 T:3047084560  NOTICE: Loading media sources from special://masterprofile/sources.xml
-23:05:30 T:3047084560   ERROR: Error: Requested setting (audiooutput.guisoundmode) was not found.  It must be case-sensitive
-23:05:30 T:3047084560  NOTICE: Running database version Addons15
-23:05:31 T:3047084560  NOTICE: Register - new cec device registered on cec->RPI: CEC Adapter (2708:1001)
-23:05:31 T:3028284512  NOTICE: Thread XBMC Peripherals start, auto delete: false
-23:05:31 T:3036673120  NOTICE: Thread CEC Adapter start, auto delete: false
-23:05:31 T:3017798752  NOTICE: Thread XBMC Peripherals start, auto delete: false
-23:05:31 T:3047084560  NOTICE: Raspberry PI firmware version: Oct 12 2013 22:21:03 
+22:05:03 T:3047195152  NOTICE: Getting hardware information now...
+22:05:03 T:3047195152  NOTICE: No settings file to load (special://masterprofile/advancedsettings.xml)
+22:05:03 T:3047195152  NOTICE: Default DVD Player: omxplayer
+22:05:03 T:3047195152  NOTICE: Default Video Player: omxplayer
+22:05:03 T:3047195152  NOTICE: Default Audio Player: omxplayer
+22:05:03 T:3047195152  NOTICE: Disabled debug logging due to GUI setting. Level 0.
+22:05:03 T:3047195152  NOTICE: Log level changed to 0
+22:05:03 T:3047195152  NOTICE: Loading media sources from special://masterprofile/sources.xml
+22:05:03 T:3047195152   ERROR: Error: Requested setting (audiooutput.guisoundmode) was not found.  It must be case-sensitive
+22:05:04 T:3047195152  NOTICE: Running database version Addons15
+22:05:06 T:3047195152  NOTICE: Register - new cec device registered on cec->RPI: CEC Adapter (2708:1001)
+22:05:06 T:3028284512  NOTICE: Thread XBMC Peripherals start, auto delete: false
+22:05:06 T:3036673120  NOTICE: Thread CEC Adapter start, auto delete: false
+22:05:06 T:3017798752  NOTICE: Thread XBMC Peripherals start, auto delete: false
+22:05:06 T:3047195152  NOTICE: Raspberry PI firmware version: Nov 15 2013 14:13:47 
                                             Copyright (c) 2012 Broadcom
-                                            version 7886c07c77a1caafd1f08448c8fcd9c3895ab5ca (clean) (release)
-23:05:31 T:3047084560  NOTICE: ARM mem: 384MB GPU mem: 128MB
-23:05:31 T:3047084560  NOTICE: InitWindowSystem: Using EGL Implementation: raspberrypi
-23:05:31 T:3047084560  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 720 x 480 for display 0 with 720 x 480 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 720 x 576 for display 0 with 720 x 576 @ 50.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 50.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 50.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 960 x 720 for display 0 with 1280 x 960 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 900 x 720 for display 0 with 1280 x 1024 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found resolution 1152 x 720 for display 0 with 1680 x 1050 @ 60.000000 Hz
-23:05:31 T:3047084560  NOTICE: Found (1280x720@60.000000) at 19, setting to RES_DESKTOP at 16
-23:05:31 T:3047084560  NOTICE: Checking resolution 16
-23:05:31 T:3047084560  NOTICE: GL_VENDOR = Broadcom
-23:05:31 T:3047084560  NOTICE: GL_RENDERER = VideoCore IV HW
-23:05:31 T:3047084560  NOTICE: GL_VERSION = OpenGL ES 2.0
-23:05:31 T:3047084560  NOTICE: GL_SHADING_LANGUAGE_VERSION = OpenGL ES GLSL ES 1.00
-23:05:31 T:3047084560  NOTICE: GL_EXTENSIONS = GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_depth24 GL_OES_vertex_half_float GL_OES_EGL_image GL_OES_EGL_image_external GL_EXT_discard_framebuffer GL_OES_rgb8_rgba8 GL_OES_depth32 GL_OES_mapbuffer GL_EXT_texture_format_BGRA8888 GL_APPLE_rgb_422 GL_EXT_debug_marker
-23:05:34 T:3036673120   ERROR: CecLogMessage - failed to release the previous LA
-23:05:34 T:3036673120   ERROR: CecLogMessage - could not open a connection (try 1)
-23:05:34 T:3047084560  NOTICE: Running database version Addons15
-23:05:34 T:3047084560  NOTICE: Running database version ViewModes4
-23:05:34 T:3047084560  NOTICE: Running database version Textures13
-23:05:34 T:3047084560  NOTICE: Running database version MyMusic32
-23:05:34 T:3047084560  NOTICE: Running database version MyVideos75
-23:05:34 T:3047084560  NOTICE: Running database version TV22
-23:05:34 T:3047084560  NOTICE: Running database version Epg7
-23:05:34 T:3047084560  NOTICE: start dvd mediatype detection
-23:05:34 T:3047084560  NOTICE: initializing playlistplayer
-23:05:34 T:3047084560  NOTICE: DONE initializing playlistplayer
-23:05:34 T:3037828192  NOTICE: Thread CDetectDVDMedia start, auto delete: false
-23:05:46 T:2926756960  NOTICE: Thread CEC Adapter Update Thread start, auto delete: false
-23:05:47 T:2909979744  NOTICE: Thread XBPyThread start, auto delete: false
-23:05:47 T:3047084560  NOTICE: Previous line repeats 5 times.
-23:05:47 T:3047084560  NOTICE: initialize done
-23:05:47 T:3047084560  NOTICE: Running the application...
-23:05:47 T:2868036704  NOTICE: Thread XBPyThread start, auto delete: false
-23:05:47 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:05:47 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:05:47 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:05:47 T:2859648096  NOTICE: Thread Jobworker start, auto delete: true
-23:05:47 T:3047084560   ERROR: GLES: Vertical Blank Syncing unsupported
-23:05:51 T:2838492256  NOTICE: Thread Jobworker start, auto delete: true
-23:05:51 T:2830103648  NOTICE: Thread XBPyThread start, auto delete: false
-23:05:52 T:2821715040  NOTICE: Thread Jobworker start, auto delete: true
-23:05:53 T:2813326432  NOTICE: Thread CAlarmClock start, auto delete: false
-23:05:53 T:3047084560  NOTICE: Webserver: Starting...
-23:05:53 T:3047084560  NOTICE: WebServer: Started the webserver
-23:05:53 T:3047084560  NOTICE: starting upnp server
-23:05:53 T:3047084560  NOTICE: starting upnp renderer
-23:05:53 T:3047084560  NOTICE: ES: Starting event server
-23:05:53 T:3047084560  NOTICE: starting zeroconf publishing
-23:05:53 T:2721051744  NOTICE: Thread CEventServer start, auto delete: false
-23:05:53 T:2721051744  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
-23:05:53 T:2721051744  NOTICE: UDP: Listening on port 9777
-23:05:53 T:2712663136  NOTICE: Thread CTCPServer start, auto delete: false
-23:05:53 T:2704274528  NOTICE: Thread AirPlayServer start, auto delete: false
-23:05:53 T:2695885920  NOTICE: Thread AirTunesServer start, auto delete: false
-23:05:53 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:05:53 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:05:53 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:05:53 T:2686993504  NOTICE: Thread Jobworker start, auto delete: true
-23:05:56 T:2893202528  NOTICE: -->Python Interpreter Initialized<--
-23:05:59 T:2909979744  NOTICE: -->Python Interpreter Initialized<--
-23:05:59 T:2901591136  NOTICE: -->Python Interpreter Initialized<--
-23:05:59 T:2884813920  NOTICE: -->Python Interpreter Initialized<--
-23:06:00 T:2918368352  NOTICE: -->Python Interpreter Initialized<--
-23:06:00 T:2876425312  NOTICE: -->Python Interpreter Initialized<--
-23:06:02 T:2830103648  NOTICE: -->Python Interpreter Initialized<--
-23:06:07 T:2876425312  NOTICE: ## OpenELEC Addon ## 0.2.19
-23:06:09 T:2868036704  NOTICE: -->Python Interpreter Initialized<--
-23:06:12 T:3047084560   ERROR: unmatched parentheses in IsEmpty(ListItem.Property(NumEpisodes)
-23:06:13 T:2893202528   ERROR: EXCEPTION: Could not get AddonPtr given a script id of plugin.video.1channel.If you are trying to use 'os.getcwd' to set the path, you cannot do that in a Versie: 2.0 plugin.
-23:06:17 T:2909979744  NOTICE: Thread XBPyThread start, auto delete: false
-23:06:17 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:06:17 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:06:17 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:06:18 T:2893202528   ERROR: EXCEPTION Thrown (PythonToCppException) : -->Python callback/script returned the following error<--
+                                            version 162026b1448f491e97e3b3b57cdca29be6a1d61a (tainted) (release)
+22:05:06 T:3047195152  NOTICE: ARM mem: 384MB GPU mem: 128MB
+22:05:06 T:3047195152  NOTICE: InitWindowSystem: Using EGL Implementation: raspberrypi
+22:05:06 T:2967467104  NOTICE: Thread CRBPWorker start, auto delete: false
+22:05:06 T:3047195152  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 720 x 480 for display 0 with 720 x 480 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 720 x 576 for display 0 with 720 x 576 @ 50.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 50.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 50.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 24.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 25.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 30.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 72.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 75.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 72.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 75.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 70.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 75.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 960 x 720 for display 0 with 1152 x 864 @ 75.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1152 x 720 for display 0 with 1280 x 800 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 900 x 720 for display 0 with 1280 x 1024 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 900 x 720 for display 0 with 1280 x 1024 @ 75.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1152 x 720 for display 0 with 1440 x 900 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1152 x 720 for display 0 with 1680 x 1050 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1366 x 768 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found resolution 1280 x 720 for display 0 with 1600 x 900 @ 60.000000 Hz
+22:05:06 T:3047195152  NOTICE: Found (1280x720@60.000000) at 19, setting to RES_DESKTOP at 16
+22:05:06 T:3047195152  NOTICE: Checking resolution 16
+22:05:06 T:3047195152  NOTICE: GL_VENDOR = Broadcom
+22:05:06 T:3047195152  NOTICE: GL_RENDERER = VideoCore IV HW
+22:05:06 T:3047195152  NOTICE: GL_VERSION = OpenGL ES 2.0
+22:05:06 T:3047195152  NOTICE: GL_SHADING_LANGUAGE_VERSION = OpenGL ES GLSL ES 1.00
+22:05:06 T:3047195152  NOTICE: GL_EXTENSIONS = GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_depth24 GL_OES_vertex_half_float GL_OES_EGL_image GL_OES_EGL_image_external GL_EXT_discard_framebuffer GL_OES_rgb8_rgba8 GL_OES_depth32 GL_OES_mapbuffer GL_EXT_texture_format_BGRA8888 GL_APPLE_rgb_422 GL_EXT_debug_marker
+22:05:09 T:3036673120   ERROR: CecLogMessage - failed to release the previous LA
+22:05:09 T:3036673120   ERROR: CecLogMessage - could not open a connection (try 1)
+22:05:10 T:3047195152  NOTICE: Running database version Addons15
+22:05:10 T:3047195152  NOTICE: Running database version ViewModes4
+22:05:10 T:3047195152  NOTICE: Running database version Textures13
+22:05:10 T:3047195152  NOTICE: Running database version MyMusic32
+22:05:10 T:3047195152  NOTICE: Running database version MyVideos75
+22:05:10 T:3047195152  NOTICE: Running database version TV22
+22:05:10 T:3047195152  NOTICE: Running database version Epg7
+22:05:10 T:3047195152  NOTICE: start dvd mediatype detection
+22:05:10 T:3047195152  NOTICE: initializing playlistplayer
+22:05:10 T:3047195152  NOTICE: DONE initializing playlistplayer
+22:05:10 T:3037938784  NOTICE: Thread CDetectDVDMedia start, auto delete: false
+22:05:11 T:2919478368  NOTICE: Thread CEC Adapter Update Thread start, auto delete: false
+22:05:23 T:2901591136  NOTICE: Thread XBPyThread start, auto delete: false
+22:05:24 T:3047195152  NOTICE: Previous line repeats 2 times.
+22:05:24 T:3047195152  NOTICE: initialize done
+22:05:24 T:3047195152  NOTICE: Running the application...
+22:05:24 T:2884813920  NOTICE: Thread XBPyThread start, auto delete: false
+22:05:24 T:3047195152  NOTICE: Previous line repeats 3 times.
+22:05:24 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:05:24 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:05:24 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:05:24 T:2851259488  NOTICE: Thread Jobworker start, auto delete: true
+22:05:24 T:3047195152   ERROR: GLES: Vertical Blank Syncing unsupported
+22:05:28 T:2831803488  NOTICE: Thread Jobworker start, auto delete: true
+22:05:28 T:2823414880  NOTICE: Thread XBPyThread start, auto delete: false
+22:05:29 T:2815026272  NOTICE: Thread Jobworker start, auto delete: true
+22:05:29 T:2804937824  NOTICE: Thread CAlarmClock start, auto delete: false
+22:05:29 T:3047195152  NOTICE: Webserver: Starting...
+22:05:29 T:3047195152  NOTICE: WebServer: Started the webserver
+22:05:29 T:3047195152  NOTICE: starting upnp server
+22:05:29 T:3047195152  NOTICE: starting upnp renderer
+22:05:30 T:3047195152  NOTICE: ES: Starting event server
+22:05:30 T:2712663136  NOTICE: Thread CEventServer start, auto delete: false
+22:05:30 T:2712663136  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
+22:05:30 T:2712663136  NOTICE: UDP: Listening on port 9777
+22:05:30 T:3047195152   ERROR: JSONRPC Server: Failed to connect to sdpd
+22:05:30 T:3047195152  NOTICE: starting zeroconf publishing
+22:05:30 T:2694923360  NOTICE: Thread AirPlayServer start, auto delete: false
+22:05:30 T:2703311968  NOTICE: Thread CTCPServer start, auto delete: false
+22:05:30 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:05:30 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:05:30 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:05:30 T:2678146144  NOTICE: Thread Jobworker start, auto delete: true
+22:05:32 T:2884813920  NOTICE: -->Python Interpreter Initialized<--
+22:05:34 T:2901591136  NOTICE: -->Python Interpreter Initialized<--
+22:05:35 T:2893202528  NOTICE: -->Python Interpreter Initialized<--
+22:05:35 T:2876425312  NOTICE: -->Python Interpreter Initialized<--
+22:05:35 T:2909979744  NOTICE: -->Python Interpreter Initialized<--
+22:05:35 T:2823414880  NOTICE: -->Python Interpreter Initialized<--
+22:05:37 T:2868036704  NOTICE: -->Python Interpreter Initialized<--
+22:05:38 T:2859648096  NOTICE: -->Python Interpreter Initialized<--
+22:05:40 T:2842350688  NOTICE: Thread CFileCache start, auto delete: false
+22:05:48 T:2868036704  NOTICE: ## OpenELEC Addon ## 0.2.20
+22:05:48 T:3047195152   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+22:05:48 T:2884813920   ERROR: EXCEPTION: Could not get AddonPtr given a script id of plugin.video.1channel.If you are trying to use 'os.getcwd' to set the path, you cannot do that in a Versie: 2.0 plugin.
+22:05:48 T:2884813920   ERROR: EXCEPTION Thrown (PythonToCppException) : -->Python callback/script returned the following error<--
                                              - NOTE: IGNORING THIS CAN LEAD TO MEMORY LEAKS!
                                             Error Type: <type 'exceptions.RuntimeError'>
                                             Error Contents: Could not get AddonPtr given a script id of plugin.video.1channel.If you are trying to use 'os.getcwd' to set the path, you cannot do that in a Versie: 2.0 plugin.
@@ -153,606 +166,197 @@
                                                 ADDON = xbmcaddon.Addon(id='plugin.video.1channel')
                                             RuntimeError: Could not get AddonPtr given a script id of plugin.video.1channel.If you are trying to use 'os.getcwd' to set the path, you cannot do that in a Versie: 2.0 plugin.
                                             -->End of Python script error report<--
-23:06:18 T:2868036704  NOTICE:  StorageServer Module loaded RUN
-23:06:19 T:2901591136  NOTICE: Artwork Downloader: ## Service - Run at startup: False
-23:06:19 T:2901591136  NOTICE: Artwork Downloader: ## Service - Delayed startup:  minutes
-23:06:19 T:2901591136  NOTICE: Artwork Downloader: ## Service - Run as service: False
-23:06:19 T:2901591136  NOTICE: Artwork Downloader: ## Service - Time: :00
-23:06:20 T:2868036704  NOTICE: StorageClient-2.5.2 Starting server
-23:06:20 T:2909979744  NOTICE: -->Python Interpreter Initialized<--
-23:06:20 T:2868036704  NOTICE: StorageServer-2.5.2 Storage Server starting /storage/.xbmc/temp/commoncache.db
-23:06:29 T:2909979744  NOTICE: CommonFunctions-2.5.1
-23:06:33 T:2909979744  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
-23:06:33 T:2909979744  NOTICE: Previous line repeats 1 times.
-23:06:33 T:2909979744  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
-23:06:34 T:2859648096  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:06:34 T:2859648096  NOTICE: Thread Jobworker start, auto delete: true
-23:06:39 T:2893202528  NOTICE: Thread XBPyThread start, auto delete: false
-23:06:40 T:2893202528  NOTICE: -->Python Interpreter Initialized<--
-23:06:45 T:2893202528  NOTICE: CommonFunctions-2.5.1
-23:06:48 T:2893202528  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
-23:06:49 T:2893202528  NOTICE: Previous line repeats 1 times.
-23:06:49 T:2893202528  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
-23:07:02 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:02 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Breaking Bad  0903747
-23:07:02 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:02 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Simpsons  0096697
-23:07:02 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:02 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Big Bang Theory  0898266
-23:07:02 T:2893202528 WARNING: GetDurationFromMinuteString <runtime> should be in minutes. Interpreting '' as 0 minutes
-23:07:02 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:02 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Walking Dead  1520211
-23:07:02 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:02 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Family Guy  0182576
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Game of Thrones  0944947
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: South Park  0121955
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Dexter  0773262
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: How I Met Your Mother  0460649
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Sons of Anarchy  1124373
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Homeland  1796960
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Two and a Half Men  0369179
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Modern Family  1442437
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Boardwalk Empire  0979432
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Top Gear  1628033
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Suits  1632701
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Person of Interest  1839578
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: American Dad  0397306
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Supernatural  0460681
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Friends  0108778
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: American Horror Story  1844624
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Vampire Diaries  1405406
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Grey's Anatomy  0413573
-23:07:03 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:03 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: New Girl  1826940
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Criminal Minds  0452046
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Sopranos  0141842
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: True Blood  0844441
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: NCIS: Naval Criminal Investigative Service  0364845
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Its always sunny in Philadelphia  0472954
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Bones  0460627
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:04 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Seinfeld  0098904
-23:07:04 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Revolution  2070791
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Doctor Who  0436992
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Castle  1219024
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Under the Dome  1553656
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Agents of SHIELD  2364582
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Mentalist  1196946
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: CSI: Crime Scene Investigation  0247082
-23:07:05 T:2893202528 WARNING: GetDurationFromMinuteString <runtime> should be in minutes. Interpreting '' as 0 minutes
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Downton Abbey  1606375
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Parks and Recreation  1266020
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Hawaii Five-0  1600194
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Falling Skies  1462059
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Wire  0306414
-23:07:05 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:05 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Once Upon a Time  1843230
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Elementary  2191671
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Grimm  1830617
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Arrow  0387779
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: 2 Broke Girls  1845307
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Mad Men  0804503
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Archer  1486217
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Burn Notice  0810788
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Californication  0904208
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Ancient Aliens  1643266
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: America's Next Top Model  0363307
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Lost  0411008
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Orange Is the New Black  2372162
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: 24  0285331
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Arrested Development  0367279
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Office  0386676
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Continuum  1954347
-23:07:06 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:06 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Ray Donovan  2249007
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Misfits  1548850
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Tosh.0  1430587
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Warehouse 13  1132290
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: White Collar  1358522
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Entourage  0387199
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Revenge  0231627
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Fringe  1119644
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Community  1439629
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Glee  1327801
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Mike and Molly  1608180
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Justified  1489428
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Strike Back  1492179
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:07 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Psych  0491738
-23:07:07 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Bob's Burgers  1561755
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Duck Dynasty  2229907
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Rome  0384766
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Planet Earth  0795176
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Good Wife  1442462
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Newsroom  1870479
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Raising Hope  1615919
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The League  1480684
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Sleepy Hollow  2647544
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Band Of Brothers  0185906
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Law & Order: Special Victims Unit  0203259
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Nikita  1592154
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Adventure Time with Finn & Jake  1305826
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: House M.D.  0412142
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Girls  1826940
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: The Blacklist  1273282
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: NCIS Los Angeles  1378167
-23:07:08 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:08 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Impractical Jokers  2100976
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Futurama  0149460
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Pretty Little Liars  1578873
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Hell on Wheels  1699748
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Being Human  1595680
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Eastbound And Down
-23:07:09 T:2893202528 WARNING: GetDurationFromMinuteString <runtime> should be in minutes. Interpreting '' as 0 minutes
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Dragon Ball Z  0214341
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Hannibal  1691887
-23:07:09 T:2893202528  NOTICE: metahandler: ---------------------------------------------------------------------------------------
-23:07:09 T:2893202528  NOTICE: metahandler: Attempting to retreive meta data for tvshow: Scandal  1837576
-23:07:09 T:2859648096  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:07:11 T:2859648096  NOTICE: Thread Jobworker start, auto delete: true
-23:07:20 T:2830103648  NOTICE: Previous line repeats 1 times.
-23:07:20 T:2830103648  NOTICE: Thread XBPyThread start, auto delete: false
-23:07:21 T:2830103648  NOTICE: -->Python Interpreter Initialized<--
-23:07:25 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:07:25 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:07:25 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:07:27 T:2830103648  NOTICE: CommonFunctions-2.5.1
-23:07:29 T:2830103648  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
-23:07:30 T:2830103648  NOTICE: Previous line repeats 1 times.
-23:07:30 T:2830103648  NOTICE: ************* tmp_tvshow_meta does not exist: no such table: tmp_tvshow_meta
-23:07:50 T:2644022368  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:07:50 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:07:50 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:07:50 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:07:52 T:2644022368  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:07:54 T:3047084560  NOTICE: Previous line repeats 1 times.
-23:07:54 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:07:54 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:07:54 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:07:56 T:2830103648 WARNING: Attempt to use invalid handle -1
-23:07:57 T:2830103648 WARNING: Previous line repeats 1 times.
-23:07:57 T:2830103648  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:07:57 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:07:57 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:07:57 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:07:58 T:2830103648  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:07:59 T:3047084560  NOTICE: Previous line repeats 1 times.
-23:07:59 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:07:59 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:07:59 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:08:02 T:2830103648  NOTICE: Thread CVideoInfoScanner start, auto delete: false
-23:08:02 T:2830103648  NOTICE: VideoInfoScanner: Starting scan ..
-23:08:03 T:2830103648  NOTICE: VideoInfoScanner: Finished scan. Scanning for video info took 00:01
-23:08:04 T:2830103648  NOTICE: Thread XBPyThread start, auto delete: false
-23:08:06 T:2830103648  NOTICE: -->Python Interpreter Initialized<--
-23:08:08 T:2644022368  NOTICE: Thread CVideoInfoScanner start, auto delete: false
-23:08:08 T:2644022368  NOTICE: VideoInfoScanner: Starting scan ..
-23:08:10 T:2644022368  NOTICE: VideoInfoScanner: Finished scan. Scanning for video info took 00:02
-23:08:11 T:2644022368  NOTICE: Thread XBPyThread start, auto delete: false
-23:08:14 T:2644022368  NOTICE: -->Python Interpreter Initialized<--
-23:08:18 T:2830103648  NOTICE: Artwork Downloader: ######## Artwork Downloader: Initializing...............................
-23:08:18 T:2830103648  NOTICE: Artwork Downloader: ## Add-on Name = Artwork Downloader
-23:08:18 T:2830103648  NOTICE: Artwork Downloader: ## Version     = 12.0.21
-23:08:18 T:2631943264  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:08:18 T:2644022368  NOTICE: Artwork Downloader: ######## Artwork Downloader: Initializing...............................
-23:08:18 T:2644022368  NOTICE: Artwork Downloader: ## Add-on Name = Artwork Downloader
-23:08:18 T:2644022368  NOTICE: Artwork Downloader: ## Version     = 12.0.21
-23:08:18 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:08:18 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:08:18 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:08:41 T:2631943264  NOTICE: Thread CVideoInfoScanner start, auto delete: false
-23:08:41 T:2686993504  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:08:41 T:2631943264  NOTICE: VideoInfoScanner: Starting scan ..
-23:08:42 T:2686993504  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:08:43 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:08:43 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:08:43 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:08:59 T:2686993504  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:08:59 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:08:59 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:08:59 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:09:00 T:2686993504  NOTICE: Thread Jobworker start, auto delete: true
-23:09:01 T:2652955744  NOTICE: Previous line repeats 2 times.
-23:09:01 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:09:09 T:2830103648  NOTICE: Previous line repeats 3 times.
-23:09:09 T:2830103648   ERROR: SQL: Abort due to constraint violation
-                                            Query: insert into actorlinkmovie (idActor, idMovie, strRole, iOrder) values(44,3,'Carver',8)
-23:09:09 T:2830103648   ERROR: AddLinkToActor failed
-23:09:10 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:09:12 T:2644022368  NOTICE: Previous line repeats 1 times.
-23:09:12 T:2644022368   ERROR: SQL: Abort due to constraint violation
-                                            Query: insert into genrelinkmovie (idGenre,idMovie) values(2,4)
-23:09:12 T:2644022368   ERROR: AddToLinkTable failed
-23:09:14 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:09:30 T:2830103648  NOTICE: Previous line repeats 3 times.
-23:09:30 T:2830103648   ERROR: SQL: Abort due to constraint violation
-                                            Query: insert into countrylinkmovie (idCountry,idMovie) values(1,4)
-23:09:30 T:2830103648   ERROR: AddToLinkTable failed
-23:09:31 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:09:36 T:2830103648  NOTICE: Previous line repeats 1 times.
-23:09:36 T:2830103648   ERROR: SQL: Abort due to constraint violation
-                                            Query: insert into actorlinkmovie (idActor, idMovie, strRole, iOrder) values(5,1,'Kayleigh',2)
-23:09:36 T:2830103648   ERROR: AddLinkToActor failed
-23:09:38 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:09:49 T:2830103648  NOTICE: Previous line repeats 2 times.
-23:09:49 T:2830103648   ERROR: SQL: Abort due to constraint violation
-                                            Query: insert into actorlinkmovie (idActor, idMovie, strRole, iOrder) values(7,1,'Tommy',4)
-23:09:49 T:2830103648   ERROR: AddLinkToActor failed
-23:09:51 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:10:16 T:2644022368  NOTICE: Previous line repeats 6 times.
-23:10:16 T:2644022368   ERROR: SQL: Abort due to constraint violation
-                                            Query: insert into actorlinkmovie (idActor, idMovie, strRole, iOrder) values(80,5,'Weeping',3)
-23:10:16 T:2644022368   ERROR: AddLinkToActor failed
-23:10:17 T:2652955744  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:10:21 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:10:21 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:10:21 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:10:23 T:2644022368  NOTICE: Artwork Downloader: script stopped
-23:10:46 T:3047084560  NOTICE: Previous line repeats 1 times.
-23:10:46 T:3047084560 WARNING: Trying to add unsupported control type 1
-23:11:01 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:11:01 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/439587.jpg GetCodingType=0x7fffffff
-23:11:01 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/439587.jpg
-23:11:32 T:2830103648  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:11:32 T:2644022368  NOTICE: Thread XBPyThread start, auto delete: false
-23:11:32 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:11:32 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:11:32 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:11:34 T:2644022368  NOTICE: -->Python Interpreter Initialized<--
-23:11:35 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:11:35 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/1975621.jpg GetCodingType=0x7fffffff
-23:11:35 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/1975621.jpg
-23:12:59 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:12:59 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/4437045.jpg GetCodingType=0x7fffffff
-23:12:59 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/4437045.jpg
-23:13:26 T:2830103648  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:13:29 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:13:29 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:13:30 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:13:39 T:2644022368  NOTICE: Thread XBPyThread start, auto delete: false
-23:13:39 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:13:39 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:13:39 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:13:39 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:13:39 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/4668379.jpg GetCodingType=0x7fffffff
-23:13:39 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/4668379.jpg
-23:13:39 T:3047084560   ERROR: Control 50 in window 10025 has been asked to focus, but it can't
-23:13:41 T:2644022368  NOTICE: -->Python Interpreter Initialized<--
-23:13:41 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:13:41 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/4668380.jpg GetCodingType=0x7fffffff
-23:13:41 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/4668380.jpg
-23:13:43 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:13:43 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/4694392.jpg GetCodingType=0x7fffffff
-23:13:43 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/4694392.jpg
-23:13:45 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:13:45 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80379/4700015.jpg GetCodingType=0x7fffffff
-23:13:45 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80379/4700015.jpg
-23:14:17 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:14:17 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/actors/319378.jpg GetCodingType=0x7fffffff
-23:14:17 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/actors/319378.jpg
-23:14:28 T:2686993504 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:14:28 T:2686993504   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasons/75760-1-2.jpg GetCodingType=0x7fffffff
-23:14:28 T:2686993504  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasons/75760-1-2.jpg
-23:14:38 T:2686993504 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:14:39 T:2686993504   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasons/75760-2-4.jpg GetCodingType=0x7fffffff
-23:14:39 T:2686993504  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasons/75760-2-4.jpg
-23:14:45 T:2830103648  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:14:45 T:2623554656  NOTICE: Thread XBPyThread start, auto delete: false
-23:14:49 T:2623554656  NOTICE: -->Python Interpreter Initialized<--
-23:14:54 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:14:54 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasons/75760-3-5.jpg GetCodingType=0x7fffffff
-23:14:54 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasons/75760-3-5.jpg
-23:15:19 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:19 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasons/75760-5-3.jpg GetCodingType=0x7fffffff
-23:15:19 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasons/75760-5-3.jpg
-23:15:24 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:15:24 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:15:24 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:15:25 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:25 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasonswide/75760-6.jpg GetCodingType=0x7fffffff
-23:15:25 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasonswide/75760-6.jpg
-23:15:33 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:33 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasons/75760-7-6.jpg GetCodingType=0x7fffffff
-23:15:33 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasons/75760-7-6.jpg
-23:15:38 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:15:38 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:15:38 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:15:45 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:45 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/75760/177831.jpg GetCodingType=0x7fffffff
-23:15:45 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/75760/177831.jpg
-23:15:46 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:46 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/75760/300336.jpg GetCodingType=0x7fffffff
-23:15:46 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/75760/300336.jpg
-23:15:47 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:47 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/75760/300337.jpg GetCodingType=0x7fffffff
-23:15:47 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/75760/300337.jpg
-23:15:52 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:15:52 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/75760/300338.jpg GetCodingType=0x7fffffff
-23:15:52 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/75760/300338.jpg
-23:16:34 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:16:34 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:16:34 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:16:37 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:16:37 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:16:37 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:16:44 T:3047084560   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
-23:16:44 T:3047084560   ERROR: GetDirectory - Error getting special://home/media/Fonts/
-23:16:45 T:3047084560   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
-23:16:45 T:3047084560   ERROR: GetDirectory - Error getting special://home/media/Fonts/
-23:16:51 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:16:51 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:16:51 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:16:54 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:16:54 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:16:54 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:17:05 T:3047084560   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
-23:17:05 T:3047084560   ERROR: GetDirectory - Error getting special://home/media/Fonts/
-23:17:06 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:17:06 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:17:06 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:17:12 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:17:12 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:17:12 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:17:12 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:17:12 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasons/247897-2-2.jpg GetCodingType=0x7fffffff
-23:17:12 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasons/247897-2-2.jpg
-23:17:21 T:3047084560  NOTICE: ES: Stopping event server with confirmation
-23:17:22 T:2721051744  NOTICE: ES: UDP Event server stopped
-23:17:22 T:3047084560  NOTICE: ES: Starting event server
-23:17:22 T:2721051744  NOTICE: Thread CEventServer start, auto delete: false
-23:17:22 T:2721051744  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
-23:17:22 T:2721051744  NOTICE: UDP: Listening on port 9777
-23:17:23 T:3047084560   ERROR: JSONRPC Server: Failed to connect to sdpd
-23:17:23 T:2712663136  NOTICE: Thread CTCPServer start, auto delete: false
-23:17:27 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:17:27 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:17:27 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:17:36 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:17:36 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:17:36 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:19:17 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:19:17 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:19:17 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:19:19 T:2631943264  NOTICE: VideoInfoScanner: Finished scan. Scanning for video info took 10:38
-23:19:21 T:3047084560   ERROR: Error: Requested setting (videoscreen.screen) was not found.  It must be case-sensitive
-23:19:21 T:3047084560   ERROR: Previous line repeats 2 times.
-23:19:21 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:19:21 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:19:21 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:20:44 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:20:44 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/121361/3254641.jpg GetCodingType=0x7fffffff
-23:20:44 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/121361/3254641.jpg
-23:20:49 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:20:49 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:20:49 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:21:07 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:21:07 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/121361/4245778.jpg GetCodingType=0x7fffffff
-23:21:07 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/121361/4245778.jpg
-23:21:10 T:2631943264  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:21:11 T:2623554656  NOTICE: Thread XBPyThread start, auto delete: false
-23:21:11 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:21:11 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:21:11 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:21:11 T:2623554656  NOTICE: -->Python Interpreter Initialized<--
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/1/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/2/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/3/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/4/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/5/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/6/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/7/?tvshowid=1
-23:21:20 T:2686993504 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/-1/?tvshowid=1
-23:21:21 T:2631943264  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:21:21 T:2838492256  NOTICE: Previous line repeats 1 times.
-23:21:21 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:21:21 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/121361/4517458.jpg GetCodingType=0x7fffffff
-23:21:21 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/121361/4517458.jpg
-23:21:30 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:21:30 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:21:30 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/1/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/2/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/3/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/4/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/5/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/6/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/7/?tvshowid=1
-23:21:32 T:3047084560 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/-1/?tvshowid=1
-23:21:33 T:2623554656  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:21:33 T:2631943264  NOTICE: Previous line repeats 1 times.
-23:21:33 T:2631943264  NOTICE: Thread XBPyThread start, auto delete: false
-23:21:33 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:21:33 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:21:33 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:21:34 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:21:34 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/121361/4517465.jpg GetCodingType=0x7fffffff
-23:21:34 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/121361/4517465.jpg
-23:21:35 T:2631943264  NOTICE: -->Python Interpreter Initialized<--
-23:21:38 T:2623554656  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/1/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/2/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/3/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/4/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/5/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/6/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/7/?tvshowid=1
-23:21:49 T:2859648096 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/-1/?tvshowid=1
-23:21:50 T:2623554656  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:21:55 T:2893202528  NOTICE: Previous line repeats 3 times.
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/1/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/2/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/3/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/4/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/5/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/6/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/7/?tvshowid=1
-23:21:55 T:2893202528 WARNING: GetIcon - Unknown nodetype requested videodb://2/2/1/-1/?tvshowid=1
-23:21:55 T:2623554656  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:21:58 T:3047084560  NOTICE: Previous line repeats 3 times.
-23:21:58 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:21:58 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:21:58 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:22:02 T:2631943264  NOTICE: Thread BackgroundLoader start, auto delete: false
-23:22:03 T:2623554656  NOTICE: Previous line repeats 1 times.
-23:22:03 T:2623554656  NOTICE: Thread XBPyThread start, auto delete: false
-23:22:03 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:22:03 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:22:03 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:22:05 T:2623554656  NOTICE: -->Python Interpreter Initialized<--
-23:22:08 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:08 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasonswide/81189-1.jpg GetCodingType=0x7fffffff
-23:22:08 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasonswide/81189-1.jpg
-23:22:12 T:3047084560   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-23:22:12 T:3047084560  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-23:22:12 T:3047084560   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-23:22:15 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:15 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasonswide/81189-2.jpg GetCodingType=0x7fffffff
-23:22:15 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasonswide/81189-2.jpg
-23:22:24 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:24 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasonswide/81189-3.jpg GetCodingType=0x7fffffff
-23:22:24 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasonswide/81189-3.jpg
-23:22:30 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:30 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasonswide/81189-4-3.jpg GetCodingType=0x7fffffff
-23:22:30 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasonswide/81189-4-3.jpg
-23:22:38 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:38 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/seasonswide/81189-5.jpg GetCodingType=0x7fffffff
-23:22:38 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/seasonswide/81189-5.jpg
-23:22:47 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:47 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/81189/349235.jpg GetCodingType=0x7fffffff
-23:22:47 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/81189/349235.jpg
-23:22:49 T:2838492256 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:22:49 T:2838492256   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/81189/349236.jpg GetCodingType=0x7fffffff
-23:22:49 T:2838492256  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/81189/349236.jpg
-23:23:37 T:2859648096 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
-23:23:37 T:2859648096   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/81189/4364463.jpg GetCodingType=0x7fffffff
-23:23:37 T:2859648096  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/81189/4364463.jpg
-23:24:36 T:2838492256  NOTICE: Thread Jobworker start, auto delete: true
-23:28:29 T:3047084560  NOTICE: Storing total System Uptime
-23:28:29 T:3047084560  NOTICE: Saving settings
-23:28:29 T:3047084560  NOTICE: stop all
-23:28:29 T:3047084560  NOTICE: ES: Stopping event server
-23:28:29 T:3047084560  NOTICE: stopping upnp
-23:28:29 T:3047084560  NOTICE: stopping zeroconf publishing
-23:28:29 T:3047084560  NOTICE: Webserver: Stopping...
-23:28:29 T:3047084560  NOTICE: WebServer: Stopped the webserver
-23:28:29 T:3047084560  NOTICE: Webserver: Stopped...
-23:28:29 T:2721051744  NOTICE: ES: UDP Event server stopped
-23:28:29 T:3047084560  NOTICE: stop dvd detect media
-23:28:31 T:3047084560  NOTICE: stop sap announcement listener
-23:28:31 T:3047084560  NOTICE: clean cached files!
-23:28:31 T:3047084560  NOTICE: unload skin
-23:28:31 T:3047084560   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
-23:28:31 T:3047084560   ERROR: Previous line repeats 1 times.
-23:28:31 T:3047084560 WARNING: Cleanup: Having to cleanup texture dialogs/options/buttons/default-fo.png
-23:28:32 T:2876425312  NOTICE: ## OpenELEC Addon ## STOP SERVICE DONE !
-23:28:32 T:2918368352 WARNING: The python script "/storage/.xbmc/addons/service.skin.widgets/default.py" has left several classes in memory that we couldn't clean up. The classes include: Monitor,Player,Window
-23:28:32 T:2868036704  NOTICE: StorageServer-2.5.2 Closed down
-23:28:32 T:3047084560  NOTICE: stop python
-23:28:32 T:3047084560  NOTICE: stopped
-23:28:32 T:3047084560  NOTICE: destroy
-23:28:32 T:3047084560  NOTICE: closing down remote control service
-23:28:32 T:3047084560  NOTICE: unload sections
-23:28:32 T:3047084560   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
-23:28:32 T:3047084560  NOTICE: destroy
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10013 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10014 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10015 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10016 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10017 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10018 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10019 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10021 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10107 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10115 from the window manager when it didn't exist
-23:28:32 T:3047084560 WARNING: Attempted to remove window 10104 from the window manager when it didn't exist
-23:28:32 T:3047084560  NOTICE: closing down remote control service
-23:28:32 T:3047084560  NOTICE: unload sections
-23:28:32 T:3047084560  NOTICE: application stopped...
+22:05:49 T:3047195152   ERROR: Unable to find plugin plugin.video.simply.player
+22:05:52 T:2851259488 WARNING: FillBuffer: curl failed with code 28
+22:05:52 T:2851259488   ERROR: CCurlFile::CReadState::Open, didn't get any data from stream.
+22:05:52 T:2851259488   ERROR: Open - failed to open source <http://mirrors.xbmc.org/addons/frodo/addons.xml.md5>
+22:05:54 T:2859648096  NOTICE:  StorageServer Module loaded RUN
+22:05:59 T:2859648096  NOTICE: StorageClient-2.5.2 Starting server
+22:05:59 T:2859648096  NOTICE: StorageServer-2.5.2 Storage Server starting /storage/.xbmc/temp/commoncache.db
+22:05:59 T:2893202528  NOTICE: Artwork Downloader: ## Service - Run at startup: False
+22:05:59 T:2893202528  NOTICE: Artwork Downloader: ## Service - Delayed startup:  minutes
+22:05:59 T:2893202528  NOTICE: Artwork Downloader: ## Service - Run as service: False
+22:05:59 T:2893202528  NOTICE: Artwork Downloader: ## Service - Time: :00
+22:06:02 T:2851259488 WARNING: FillBuffer: curl failed with code 28
+22:06:02 T:2851259488   ERROR: CCurlFile::CReadState::Open, didn't get any data from stream.
+22:06:02 T:2851259488   ERROR: Repository XBMC.org Add-ons returned no add-ons, listing may have failed
+22:06:05 T:2893202528  NOTICE: Thread Jobworker start, auto delete: true
+22:06:07 T:3047195152   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+22:06:08 T:3047195152   ERROR: Control 1500 in window 13000 has been asked to focus, but it can't
+22:06:40 T:2851259488   ERROR: Previous line repeats 2 times.
+22:06:40 T:2851259488 WARNING: FillBuffer: curl failed with code 28
+22:06:40 T:2851259488   ERROR: CCurlFile::CReadState::Open, didn't get any data from stream.
+22:06:40 T:2851259488   ERROR: Open - failed to open source <http://addons.openelec.tv/3.1/RPi/arm/addons.xml.md5>
+22:06:46 T:3047195152   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
+22:06:54 T:2884813920  NOTICE: Thread CVideoInfoScanner start, auto delete: false
+22:06:54 T:2884813920  NOTICE: VideoInfoScanner: Starting scan ..
+22:07:00 T:2851259488 WARNING: FillBuffer: curl failed with code 28
+22:07:00 T:2851259488   ERROR: CCurlFile::CReadState::Open, didn't get any data from stream.
+22:07:00 T:2851259488   ERROR: Repository [COLOR FF757677]Open[/COLOR][COLOR FF8ABEE2]ELEC[/COLOR] Mediacenter OS Add-ons returned no add-ons, listing may have failed
+22:07:00 T:2893202528  NOTICE: Thread Jobworker start, auto delete: true
+22:07:05 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:07:05 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/posters/80337-4.jpg GetCodingType=0x7fffffff
+22:07:06 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:07:06 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/posters/80337-4.jpg GetCodingType=0x7fffffff
+22:07:06 T:2831803488  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/posters/80337-4.jpg
+22:07:44 T:2678146144  NOTICE: Thread Jobworker start, auto delete: true
+22:10:20 T:2831803488  NOTICE: Previous line repeats 2 times.
+22:10:20 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:20 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007621.jpg GetCodingType=0x7fffffff
+22:10:20 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:20 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007621.jpg GetCodingType=0x7fffffff
+22:10:20 T:2831803488  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80337/1007621.jpg
+22:10:21 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:21 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007641.jpg GetCodingType=0x7fffffff
+22:10:21 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:21 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007641.jpg GetCodingType=0x7fffffff
+22:10:21 T:2831803488  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80337/1007641.jpg
+22:10:26 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:26 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007671.jpg GetCodingType=0x7fffffff
+22:10:26 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:26 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007671.jpg GetCodingType=0x7fffffff
+22:10:26 T:2831803488  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80337/1007671.jpg
+22:10:28 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:28 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007691.jpg GetCodingType=0x7fffffff
+22:10:28 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:28 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007691.jpg GetCodingType=0x7fffffff
+22:10:28 T:2831803488  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80337/1007691.jpg
+22:10:30 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:30 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007701.jpg GetCodingType=0x7fffffff
+22:10:30 T:2831803488 WARNING: COMXImageFile::GetCodingType progressive images not supported by decoder
+22:10:30 T:2831803488   ERROR: COMXImageFile::ReadFile http://thetvdb.com/banners/episodes/80337/1007701.jpg GetCodingType=0x7fffffff
+22:10:30 T:2831803488  NOTICE: LoadJpeg: unable to load http://thetvdb.com/banners/episodes/80337/1007701.jpg
+22:11:16 T:3047195152   ERROR: unmatched parentheses in IsEmpty(ListItem.Property(NumEpisodes)
+22:11:23 T:2842350688  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:11:24 T:2678146144  NOTICE: Previous line repeats 1 times.
+22:11:24 T:2678146144  NOTICE: Thread XBPyThread start, auto delete: false
+22:11:24 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:11:24 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:11:24 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:11:24 T:2641073248  NOTICE: Thread Jobworker start, auto delete: true
+22:11:27 T:2678146144  NOTICE: -->Python Interpreter Initialized<--
+22:12:03 T:2884813920 WARNING: Process directory '/storage/tvshows/How I Met Your Mother/' does not exist - skipping scan.
+22:12:03 T:2884813920 WARNING: Process directory '/storage/tvshows/The Big Bang Theory/' does not exist - skipping scan.
+22:12:16 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:12:16 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:12:16 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:12:36 T:2678146144  NOTICE: Thread Jobworker start, auto delete: true
+22:15:37 T:2884813920 WARNING: Process directory '/storage/videos/Butterfly Effect (2004)/' does not exist - skipping scan.
+22:15:37 T:2884813920 WARNING: Process directory '/storage/videos/Kung Fu Panda 2 (2011)/' does not exist - skipping scan.
+22:15:37 T:2884813920 WARNING: Process directory '/storage/videos/Mud (2011)/' does not exist - skipping scan.
+22:15:37 T:2884813920 WARNING: Process directory '/storage/videos/Safe (2012)/' does not exist - skipping scan.
+22:15:37 T:2884813920 WARNING: Process directory '/storage/videos/The Great Gatsby (2013)/' does not exist - skipping scan.
+22:15:37 T:2884813920  NOTICE: VideoInfoScanner: Finished scan. Scanning for video info took 08:42
+22:15:38 T:2884813920  NOTICE: Thread Jobworker start, auto delete: true
+22:15:38 T:2831803488  NOTICE: Thread XBPyThread start, auto delete: false
+22:15:40 T:2831803488  NOTICE: -->Python Interpreter Initialized<--
+22:15:45 T:2641073248  NOTICE: Thread Jobworker start, auto delete: true
+22:15:49 T:2831803488  NOTICE: Artwork Downloader: ######## Artwork Downloader: Initializing...............................
+22:15:49 T:2831803488  NOTICE: Artwork Downloader: ## Add-on Name = Artwork Downloader
+22:15:49 T:2831803488  NOTICE: Artwork Downloader: ## Version     = 12.0.21
+22:16:03 T:2893202528  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:16:04 T:2842350688  NOTICE: Previous line repeats 1 times.
+22:16:04 T:2842350688  NOTICE: Thread XBPyThread start, auto delete: false
+22:16:04 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:16:04 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:16:04 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:16:07 T:2842350688  NOTICE: -->Python Interpreter Initialized<--
+22:16:10 T:2893202528  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:16:46 T:3047195152  NOTICE: Previous line repeats 1 times.
+22:16:46 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:16:46 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:16:46 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:16:47 T:2884813920  NOTICE: Thread Jobworker start, auto delete: true
+22:18:23 T:3047195152  NOTICE: Previous line repeats 1 times.
+22:18:23 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:18:23 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:18:24 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:18:35 T:3047195152  NOTICE: CleanDatabase: Starting videodatabase cleanup ..
+22:18:51 T:3047195152  NOTICE: CleanDatabase: Cleaning videodatabase done. Operation took 00:16
+22:19:47 T:2831803488  NOTICE: Artwork Downloader: script stopped
+22:20:04 T:2831803488  NOTICE: Thread Jobworker start, auto delete: true
+22:20:15 T:3047195152   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+22:20:15 T:3047195152   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+22:20:16 T:3047195152   ERROR: GetDirectory - Error getting /storage/.xbmc/media/Fonts/
+22:20:16 T:3047195152   ERROR: GetDirectory - Error getting special://home/media/Fonts/
+22:20:20 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:20:20 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:20:20 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:20:20 T:2884813920  NOTICE: Thread Jobworker start, auto delete: true
+22:21:21 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:21:21 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:21:21 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:22:42 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:22:42 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:22:42 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:22:47 T:2831803488  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:22:47 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:22:47 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:22:47 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:22:50 T:2831803488  NOTICE: Thread Jobworker start, auto delete: true
+22:22:50 T:2884813920  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:22:57 T:2884813920  NOTICE: Previous line repeats 1 times.
+22:22:57 T:2884813920  NOTICE: Thread Jobworker start, auto delete: true
+22:23:06 T:3047195152 WARNING: Trying to add unsupported control type 1
+22:26:33 T:2831803488  NOTICE: Thread Jobworker start, auto delete: true
+22:26:33 T:2884813920  NOTICE: Thread BackgroundLoader start, auto delete: false
+22:26:36 T:3047195152  NOTICE: Previous line repeats 1 times.
+22:26:36 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:26:36 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:26:36 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:27:06 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:27:06 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:27:06 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:27:06 T:2831803488  NOTICE: Thread Jobworker start, auto delete: true
+22:27:31 T:3047195152 WARNING: Trying to add unsupported control type 1
+22:28:01 T:3047195152 WARNING: Previous line repeats 1 times.
+22:28:01 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:28:01 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:28:01 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:28:06 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:28:06 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:28:06 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:28:06 T:2831803488  NOTICE: Thread Jobworker start, auto delete: true
+22:28:10 T:3047195152 WARNING: Trying to add unsupported control type 1
+22:28:19 T:2831803488 WARNING: Previous line repeats 1 times.
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/27/
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/28/
+22:28:19 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/30/
+22:28:19 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/32/
+22:28:19 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/30/
+22:28:19 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/28/
+22:28:19 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:19 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/27/
+22:28:22 T:3047195152   ERROR: Previous line repeats 1 times.
+22:28:22 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:28:22 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:28:22 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:28:22 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/27/
+22:28:26 T:3047195152   ERROR: Previous line repeats 1 times.
+22:28:26 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:28:26 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:28:26 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:28:26 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/27/
+22:28:26 T:2831803488   ERROR: Previous line repeats 3 times.
+22:28:26 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/28/
+22:28:27 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:27 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/30/
+22:28:27 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:27 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/32/
+22:28:27 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:27 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/30/
+22:28:28 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:28 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/28/
+22:28:28 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:28 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/41/
+22:28:28 T:2831803488   ERROR: Previous line repeats 1 times.
+22:28:28 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/30/
+22:28:36 T:3047195152   ERROR: Previous line repeats 7 times.
+22:28:36 T:3047195152   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+22:28:36 T:3047195152  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+22:28:36 T:3047195152   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+22:28:36 T:2831803488   ERROR: GetDirectory - Error getting /storage/pictures/27/

@@ -141,7 +141,7 @@ class HtmlEntityHelper:
 
         """
 
-        return re.sub("&(#?x?)(.+?);", self.__HTMLEntityConverter, html)
+        return re.sub("&(#?x?)(\w+?);", self.__HTMLEntityConverter, html)
 
     def __ConvertURLEntities(self, url):
         """Convert the entities in an URL using the UrlEntityConverter into

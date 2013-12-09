@@ -7,7 +7,7 @@ import HTMLParser
 from t0mm0.common.net import Net
 from t0mm0.common.addon import Addon
 
-addon = Addon('plugin.video.1channel', sys.argv)
+addon = Addon('plugin.video.1channel.smallplayer', sys.argv)
 BASE_URL = addon.get_setting('domain')
 display_name = '1Channel'
 required_addons = []
@@ -101,7 +101,7 @@ def Search(section, query, imdb):
                 result = {'tag': tag, 'provider_name': display_name}
                 qs = {'url': url, 'title': title, 'img': thumb, 'year': year, 'imdbnum': imdb, 'video_type': video_type,
                       'strm': True, 'mode': 'PlaySource'}
-                result['li_url'] = 'plugin://plugin.video.1channel/?%s' % urllib.urlencode(qs)
+                result['li_url'] = 'plugin://plugin.video.1channel.smallplayer/?%s' % urllib.urlencode(qs)
                 print result['li_url']
                 result['info_labels'] = {'title': disp_title}
                 yield result

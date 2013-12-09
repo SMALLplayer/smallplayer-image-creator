@@ -9,14 +9,15 @@
 #===============================================================================
 
 from regexer import Regexer
-from helpers import taghelperbase
+from helpers.taghelperbase import TagHelperBase
 
 #===============================================================================
 # Make global object available
 #===============================================================================
 from logger import Logger
 
-class XmlHelper(taghelperbase.TagHelperBase):
+
+class XmlHelper(TagHelperBase):
     """Class that helps getting the content of XML nodes"""
 
     def GetSingleNodeContent(self, nodeTag, *args, **kwargs):
@@ -38,7 +39,7 @@ class XmlHelper(taghelperbase.TagHelperBase):
         
         """
         
-        if kwargs.has_key("stripCData"):
+        if "stripCData" in kwargs:
             stripCData = kwargs["stripCData"]
         else:
             stripCData = False
@@ -71,10 +72,10 @@ class XmlHelper(taghelperbase.TagHelperBase):
         regex = "<%s" % (nodeTag,)
         
         for arg in args:
-            regex = regex + '[^>]*%s\W*=\W*"%s"' % (arg.keys()[0], arg[arg.keys()[0]])
+            regex += '[^>]*%s\W*=\W*"%s"' % (arg.keys()[0], arg[arg.keys()[0]])
             # just do one pass
-        
-        regex = regex + "[^>]*>([\w\W]+?)</%s>" % (nodeTag,)
+
+        regex += "[^>]*>([\w\W]+?)</%s>" % (nodeTag,)
         Logger.Trace("XmlRegex = %s", regex)
         
         #regex = '<%s>([^<]+)</%s>' % (nodeTag, nodeTag)
@@ -93,5 +94,4 @@ class XmlHelper(taghelperbase.TagHelperBase):
         
         #Logger.Debug(data)
         #Logger.Debug(data.replace("<![CDATA[","").replace("]]>",""))
-        return data.replace("<![CDATA[","").replace("]]>","")
-        
+        return data.replace("<![CDATA[", "").replace("]]>","")

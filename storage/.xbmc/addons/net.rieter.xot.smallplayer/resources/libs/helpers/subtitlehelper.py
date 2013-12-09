@@ -32,7 +32,7 @@ class SubtitleHelper:
         pass
 
     @staticmethod
-    def DownloadSubtitle(url, fileName="", format='sami'):
+    def DownloadSubtitle(url, fileName="", format='sami', proxy=None):
         """Downloads a SAMI and stores the SRT in the cache folder
 
         Arguments:
@@ -62,7 +62,7 @@ class SubtitleHelper:
                 return localCompletePath
 
             Logger.Trace("Opening Subtitle URL")
-            raw = UriHandler.Open(url)
+            raw = UriHandler.Open(url, proxy=proxy)
 
             if raw == "":
                 Logger.Warning("Empty Subtitle path found. Not setting subtitles.")

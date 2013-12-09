@@ -70,6 +70,16 @@ class ChannelImporter:
         ChannelImporter.__channelImporter = self
         return
 
+    def GetCategories(self):
+        """ Retrieves the available categories from the channels """
+
+        # now get the categories
+        categories = set()
+        channels = self.GetChannels(infoOnly=True)
+        map(lambda c: categories.add(c.category), channels)
+        Logger.Debug("Found these categories: %s", ", ".join(categories))
+        return categories
+
     def GetChannels(self, includeDisabled=False, infoOnly=False):
         """Retrieves the available channels. If the channels were not already
         loaded, it will import them.
@@ -85,10 +95,10 @@ class ChannelImporter:
         A list of <Channel> objects
 
         """
-        if self.__enabledChannels == []:
+        if not self.__enabledChannels:
             self.__ImportChannels()
 
-        if (includeDisabled):
+        if includeDisabled:
             result = self.__allChannels
         else:
             result = self.__enabledChannels
@@ -121,7 +131,7 @@ class ChannelImporter:
             raise ValueError("className should be specified.")
 
         Logger.Info("Loading channels for class '%s' and channelCode '%s'", className, channelCode)
-        if self.__enabledChannels == []:
+        if not self.__enabledChannels:
             self.__ImportChannels()
 
         # now we filter the channels
@@ -225,7 +235,7 @@ class ChannelImporter:
 
         # show the first time message when no Optimezed (.pyo) and no Compiled (.pyc) files are there
         if os.path.exists(os.path.join(channelInfo.path, compiledName)) or os.path.exists(os.path.join(channelInfo.path, optimizedName)):
-            return
+            return False
 
         Logger.Debug("Performing First time actions for channel: %s [%s]", channelInfo.moduleName, channelInfo.channelCode)
 
@@ -241,7 +251,7 @@ class ChannelImporter:
         # see if the channel included XOT updates
         self.__DeployUpdates(channelInfo.path)
 
-        return
+        return True
 
     def __DeployUpdates(self, channelPath, cleanup=False):
         """ checks if there are updates to be deployed. If updates are found, they
@@ -274,9 +284,9 @@ class ChannelImporter:
                 updateParts = update.split("-")
                 versionNumber = version.Version(updateParts[-1])
 
-                if versionNumber < Config.Version:
-                    Logger.Info("Skipping updated file: %s. A higher version of %s was already installed: %s", update, Config.appName, Config.Version)
-                    break;
+                if versionNumber < Config.version:
+                    Logger.Info("Skipping updated file: %s. A higher version of %s was already installed: %s", update, Config.appName, Config.version)
+                    break
 
                 # split the other part on the dots and create a new path
                 updateParts = updateParts[0].split(".")
@@ -370,7 +380,7 @@ class ChannelImporter:
                 addonPath = os.path.abspath(os.path.join(Config.rootDir, ".."))
 
             for directory in os.listdir(addonPath):
-                channelPathStart = "%s.channel" % (Config.addonDir)
+                channelPathStart = "%s.channel" % (Config.addonDir, )
                 if channelPathStart in directory and not "BUILD" in directory:
                     path = os.path.join(addonPath, directory)
 
@@ -381,7 +391,7 @@ class ChannelImporter:
 
                     f = open(addonFile, 'r+')
                     addonXml = f.read()
-                    f.close
+                    f.close()
 
                     packVersion = Regexer.DoRegex('id="([^"]+)"\W+version="([^"]{5,10})"', addonXml)
                     if len(packVersion) > 0:
@@ -392,7 +402,7 @@ class ChannelImporter:
                         packageVersion = version.Version(version=packVersion[1])
                         # channelAddon = os.path.split(path)[-1]
                         # packVersion = packVersion.
-                        if Config.Version.EqualRevisions(packageVersion):
+                        if Config.version.EqualRevisions(packageVersion):
                             Logger.Info("Loading %s version %s", packageId, packageVersion)
 
                             # save to the list of present items, for querying in the
@@ -414,6 +424,7 @@ class ChannelImporter:
             importTimer.Lap("Directories scanned for .channel")
 
             # we need to make sure we don't load multiple channel classes!
+            channelsUpdated = False
             loadedChannels = []
             for channelPath in channelImport:
                 if os.path.isdir(channelPath):
@@ -436,14 +447,14 @@ class ChannelImporter:
                     fileName = os.path.join(channelPath, "chn_" + channelName + ".xml")
 
                     Logger.Trace("Loading info for chn_%s @ %s", channelName, fileName)
-                    if (os.path.exists(fileName)):
+                    if os.path.exists(fileName):
                         try:
                             ci = ChannelInfo.FromFile(fileName)
                             self.__channelsToImport += ci
 
                             # check for first time messages and updates
                             for channelInfo in ci:
-                                self.__PerformFirstTimeActions(channelInfo)
+                                channelsUpdated |= self.__PerformFirstTimeActions(channelInfo)
                         except:
                             Logger.Error("Error import chn_%s.xml", channelName, exc_info=True)
 
@@ -451,6 +462,9 @@ class ChannelImporter:
 
             # What platform are we
             platform = envcontroller.EnvController.GetPlatform()
+
+            # Uncomment to import in sortorder (wast of CPU otherwise)
+            # self.__channelsToImport.sort()
 
             # instantiate the registered channels
             for channelInfo in self.__channelsToImport:
@@ -487,7 +501,11 @@ class ChannelImporter:
             self.__allChannels.sort()
             self.__validChannels.sort()
 
-            self.__addonSettings.UpdateAddOnSettingsWithChannels(self.__validChannels, Config)
+            if channelsUpdated:
+                Logger.Info("New or updated channels found. Updating add-on configuration for all channels")
+                self.__addonSettings.UpdateAddOnSettingsWithChannels(self.__validChannels, Config)
+            else:
+                Logger.Debug("No channel changes found. Skipping add-on configuration for channels")
 
             Logger.Info("Imported %s channels from which %s are enabled", len(self.__allChannels), len(self.__enabledChannels))
             importTimer.Stop()

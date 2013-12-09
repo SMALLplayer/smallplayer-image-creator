@@ -42,7 +42,7 @@ import metapacks
 from utils import *
 
 
-_1CH = Addon('plugin.video.1channel', sys.argv)
+_1CH = Addon('plugin.video.1channel.smallplayer', sys.argv)
 try:
     DB_NAME = _1CH.get_setting('db_name')
     DB_USER = _1CH.get_setting('db_user')
@@ -620,7 +620,7 @@ def AddonMenu():  # homescreen
     if has_upgraded():
         _1CH.log('Showing update popup')
         TextBox()
-        adn = xbmcaddon.Addon('plugin.video.1channel')
+        adn = xbmcaddon.Addon('plugin.video.1channel.smallplayer')
         upgrade_db()
         fix_existing_strms()
         adn.setSetting('domain', 'http://www.primewire.ag')
@@ -967,7 +967,7 @@ def browse_favorites(section):
         year = row[3]
         img = ''
 
-        remfavstring = 'RunScript(plugin.video.1channel,%s,?mode=DeleteFav&section=%s&title=%s&year=%s&url=%s)' % (
+        remfavstring = 'RunScript(plugin.video.1channel.smallplayer,%s,?mode=DeleteFav&section=%s&title=%s&year=%s&url=%s)' % (
             sys.argv[1], section, title, year, favurl)
         menu_items = [('Remove from Favorites', remfavstring)]
 

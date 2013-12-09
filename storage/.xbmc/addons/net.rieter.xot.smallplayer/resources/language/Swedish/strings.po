@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2013-10-09 19:48+0000\n"
+"POT-Creation-Date: 2013-11-26 10:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE\n"
@@ -34,48 +34,48 @@ msgid "Maximum number of pages to load"
 msgstr "Maximalt antal sidor att ladda"
 
 msgctxt "#30005"
-msgid "Dutch channels"
-msgstr "Nederländska kanaler"
+msgid "Dutch"
+msgstr "Nederländska"
 
 msgctxt "#30006"
-msgid "Swedish channels"
-msgstr "Svenska kanaler"
+msgid "Swedish"
+msgstr "Svenska"
 
 msgctxt "#30007"
-msgid "Lithuanian channels"
-msgstr "Litauiska kanaler"
+msgid "Lithuanian"
+msgstr "Litauiska"
 
 msgctxt "#30008"
-msgid "Latvian channels"
-msgstr "Lettiska kanaler"
+msgid "Latvian"
+msgstr "Lettiska"
 
 msgctxt "#30009"
-msgid "Add-on"
-msgstr "Add-on"
+msgid "General"
+msgstr "Allmän"
 
 msgctxt "#30010"
 msgid "Channels"
 msgstr "Kanaler"
 
 msgctxt "#30011"
-msgid "Requires restart of XOT-Uzg to take effect."
-msgstr "Omstart av XOT-Uzg krävs."
+msgid "Requires restart of XBMC Online TV to take effect."
+msgstr "Omstart av XBMC Online TV krävs."
 
 msgctxt "#30012"
-msgid "Other channels"
-msgstr "Andra kanaler"
+msgid "Other"
+msgstr "Andra"
 
 msgctxt "#30013"
-msgid "French Canadian channels"
-msgstr "Fransk-Kanadensiska kanaler"
+msgid "French Canadian"
+msgstr "Fransk-Kanadensiska"
 
 msgctxt "#30014"
-msgid "English Canadian channels"
-msgstr "Engelsk-Kanadensiska kanaler"
+msgid "English Canadian"
+msgstr "Engelsk-Kanadensiska"
 
 msgctxt "#30015"
-msgid "Norwegian channels"
-msgstr "Norska kanaler"
+msgid "Norwegian"
+msgstr "Norska"
 
 msgctxt "#30016"
 msgid "Sort by"
@@ -102,7 +102,7 @@ msgid "Subtitle mode"
 msgstr "Visa undertexter"
 
 msgctxt "#30022"
-msgid "if available"
+msgid "If available"
 msgstr "Om det finns"
 
 msgctxt "#30023"
@@ -110,28 +110,28 @@ msgid "Never show"
 msgstr "Aldrig"
 
 msgctxt "#30024"
-msgid "Belgium channels"
-msgstr "Belgiska kanaler"
+msgid "Belgium"
+msgstr "Belgiska"
 
 msgctxt "#30025"
 msgid "None"
 msgstr "Ingen"
 
 msgctxt "#30027"
-msgid "British channels"
-msgstr "Brittiska kanaler"
+msgid "British"
+msgstr "Brittiska"
 
 msgctxt "#30028"
-msgid "Channel Settings"
-msgstr "Kanalinställning"
+msgid "Proxy Settings"
+msgstr "Proxy-inställning"
 
 msgctxt "#30029"
-msgid "Proxy server(empty = disabled)"
-msgstr "Serveradress för proxyn (tom = avaktiverad)"
+msgid "- Proxy server"
+msgstr "- Serveradress"
 
 msgctxt "#30030"
-msgid "Proxy port"
-msgstr "Portnummer för proxyn"
+msgid "- Proxy port"
+msgstr "- Portnummer"
 
 msgctxt "#30031"
 msgid "Cache HTTP requests (experimental)"
@@ -150,12 +150,12 @@ msgid "Backgrounds"
 msgstr "Bakgrunder"
 
 msgctxt "#30035"
-msgid "Proxy Username"
-msgstr "Användarnamn för proxyn"
+msgid "- Proxy Username"
+msgstr "- Användarnamn"
 
 msgctxt "#30036"
-msgid "Proxy Password"
-msgstr "Lösenord för proxyn"
+msgid "- Proxy Password"
+msgstr "- Lösenord"
 
 msgctxt "#30037"
 msgid "BBC iPlayer Settings"
@@ -166,8 +166,8 @@ msgid "Channels"
 msgstr "Kanaler"
 
 msgctxt "#30041"
-msgid "Available after running XOT-Uzg.v3 for the first time."
-msgstr "Tillgängligt efter du startat XOT-Uzg.v3 för första gången."
+msgid "Available after running XBMC Online TV for the first time."
+msgstr "Tillgängligt efter du startat XBMC Online TV för första gången."
 
 msgctxt "#30042"
 msgid "Enabled"
@@ -178,20 +178,20 @@ msgid "Folder prefix"
 msgstr "Mapp-prefix"
 
 msgctxt "#30044"
-msgid "Estonian channels"
-msgstr "Estniska kanaler"
+msgid "Estonian"
+msgstr "Estniska"
 
 msgctxt "#30045"
-msgid "Danish channels"
-msgstr "Danska kanaler"
+msgid "Danish"
+msgstr "Danska"
 
 msgctxt "#30046"
-msgid "Hide Geo-Locked items (if possible)"
+msgid "Hide Geo-Locked/Paid items (if possible)"
 msgstr "Göm GEO-låsta objekt (om det är möjligt)"
 
 msgctxt "#30047"
-msgid "German channels"
-msgstr "Tyska kanaler"
+msgid "German"
+msgstr "Tyska"
 
 msgctxt "#30048"
 msgid "Log level"
@@ -199,19 +199,123 @@ msgstr "Loggnivå"
 
 msgctxt "#30049"
 msgid "Uitzendinggemist.nl Settings"
-msgstr "Uitzendinggemist.nl Settings"
+msgstr "Uitzendinggemist.nl-inställningar"
 
 msgctxt "#30050"
 msgid "Cache path"
-msgstr "Cache path"
+msgstr "Buffert-sökväg"
 
 msgctxt "#30051"
 msgid "Cleanup cache after # days (0=Streaming Playback)"
-msgstr "Cleanup cache after # days (0=Streaming Playback)"
+msgstr "Töm bufferten efter # dagar (0=Ingen buffert)"
 
 msgctxt "#30052"
 msgid "Send usage statistics"
-msgstr "Send usage statistics"
+msgstr "Skicka användarstatestik"
+
+msgctxt "#30053"
+msgid "Appearance"
+msgstr "Utseende"
+
+msgctxt "#30054"
+msgid "Change display name (requires XBMC restart)"
+msgstr "Ändra visningsnamn (omstart av XBMC krävs)"
+
+msgctxt "#30055"
+msgid "Advanced"
+msgstr "Avancerat"
+
+msgctxt "#30056"
+msgid "Dutch Proxy"
+msgstr "Nederländska"
+
+msgctxt "#30057"
+msgid "British Proxy"
+msgstr "Brittiska"
+
+msgctxt "#30058"
+msgid "Swedish Proxy"
+msgstr "Svenska"
+
+msgctxt "#30059"
+msgid "Custom Proxy"
+msgstr "Anpassad"
+
+msgctxt "#30060"
+msgid "Select a language to manage its channels"
+msgstr "Välj det språk du vill hantera kanaler för"
+
+msgctxt "#30061"
+msgid "Channel Language"
+msgstr "Kanalspråk"
+
+msgctxt "#30062"
+msgid "Proxy Channel Selection"
+msgstr "Välj proxy-kanal"
+
+msgctxt "#30063"
+msgid "Channel to configure"
+msgstr "Kanal du vill konfigurera"
+
+msgctxt "#30064"
+msgid "Proxy Group"
+msgstr "Proxy-grupp"
+
+msgctxt "#30065"
+msgid "Proxy Group Configuration"
+msgstr "Inställningar för proxy-grupp"
+
+msgctxt "#30066"
+msgid "Select a proxy group to configure"
+msgstr "Välj en proxy-grupp du vill konfigurera"
+
+msgctxt "#30067"
+msgid "Show channels in categories"
+msgstr "Visa kanaler i kategorier"
+
+msgctxt "#30068"
+msgid "Active"
+msgstr "Aktiv"
+
+msgctxt "#30069"
+msgid "Select a proxy"
+msgstr "Välj en proxy"
+
+msgctxt "#30100"
+msgid "None"
+msgstr "Ingen"
+
+msgctxt "#30101"
+msgid "Regional"
+msgstr "Regionala"
+
+msgctxt "#30102"
+msgid "National"
+msgstr "Nationala"
+
+msgctxt "#30103"
+msgid "Video"
+msgstr "Video"
+
+msgctxt "#30104"
+msgid "Radio"
+msgstr "Radio"
+
+msgctxt "#30105"
+msgid "Sport"
+msgstr "Sport"
+
+msgctxt "#30106"
+msgid "Kids"
+msgstr "Barn"
+
+msgctxt "#30107"
+msgid "Tech"
+msgstr "Teknik"
+
+msgctxt "#30108"
+msgid "Other"
+msgstr "Andra"
 
 msgctxt "#30501"
 msgid "Favourite"
@@ -258,11 +362,11 @@ msgid "No updates"
 msgstr "Inga uppdateringar"
 
 msgctxt "#30512"
-msgid "Restart XOT-Uzg.v3"
-msgstr "Starta om XOT-Uzg.v3"
+msgid "Restart XBMC Online TV"
+msgstr "Starta om XBMC Online TV"
 
 msgctxt "#30513"
-msgid "The update of '%s' was complete.|Please restart XOT to complete the update."
+msgid "The update of '%s' was complete.|Please restart XBMC Online TV to complete the update."
 msgstr "Uppdateringen av '%s' är klar.|Starta om XOT för att slutföra uppdateringen."
 
 msgctxt "#30514"
@@ -294,8 +398,8 @@ msgid "Repository Warning"
 msgstr "Tilläggsförråds-varning"
 
 msgctxt "#30521"
-msgid "The XOT-Uzg.v3 repository is not installed.|Please install it to allow future updates."
-msgstr "XOT-Uzg.v3 tilläggsförråd är inte installerat.|Installera detta för framtida uppdateringar."
+msgid "The XBMC Online TV repository is not installed.|Please install it to allow future updates."
+msgstr "XBMC Online TV tilläggsförråd är inte installerat.|Installera detta för framtida uppdateringar."
 
 msgctxt "#30522"
 msgid "Channel message"
@@ -307,7 +411,7 @@ msgstr "Fel"
 
 msgctxt "#30524"
 msgid "No videos were found for the selected item."
-msgstr "Det fanns ingen video att vis a för det valda objektet."
+msgstr "Det fanns ingen video att visa för det valda objektet."
 
 msgctxt "#30525"
 msgid "The selected item does not have|any streams associated."
@@ -375,8 +479,8 @@ msgstr "GEO-låsta"
 
 msgctxt "#30541"
 msgid "Queue item"
-msgstr "Queue item"
+msgstr "Köa objekt"
 
 msgctxt "#30542"
 msgid "Starting %s as an Add-On."
-msgstr "Starting %s as an Add-On."
+msgstr "Startar %s som ett tillägg."

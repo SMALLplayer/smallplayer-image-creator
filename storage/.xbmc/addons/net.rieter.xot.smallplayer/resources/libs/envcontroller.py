@@ -103,17 +103,17 @@ class EnvController:
             return "win32"
 
     def IsInstallMethodValid(self, config):
-        """ Validates that XOT-uzg.v3 is installed using the repository. If not
+        """ Validates that XBMC Online TV is installed using the repository. If not
         it will popup a dialog box.
 
         Arguments:
-        config : Config - The XOT-Uzg.v3 config object.
+        config : Config - The XBMC Online TV config object.
 
         """
 
         repoAvailable = self.__IsRepoAvailable(config)
 
-        if (not repoAvailable):
+        if not repoAvailable:
             # show alert
             if self.logger:
                 self.logger.Warning("No Respository installed. Reminding user to install it.")
@@ -130,8 +130,8 @@ class EnvController:
 
         """
 
+        directory = "<Unknown>"
         try:
-            directory = "<Unknown>"
             # in order to minimize the number of method resolves for os.path.join
             # we create a shortcut for it.
             ospathjoin = os.path.join
@@ -149,7 +149,7 @@ class EnvController:
             infoString = "%s\n%s: %s (folder=\libs\%s)" % (infoString, "Environment", env, envCtrl.GetEnvironmentFolder())
             infoString = "%s\n%s: %s" % (infoString, "Platform", envCtrl.GetPlatform(True))
             infoString = "%s\n%s: %s" % (infoString, "Python Version", envCtrl.GetPythonVersion())
-            infoString = "%s\n%s: %s" % (infoString, "XOT-Uzg.v3 Version", config.Version)
+            infoString = "%s\n%s: %s" % (infoString, "XBMC Online TV Version", config.version)
             infoString = "%s\n%s: %s" % (infoString, "AddonID", config.addonId)
             infoString = "%s\n%s: %s" % (infoString, "Path", config.rootDir)
             infoString = "%s\n%s: %s" % (infoString, "ProfilePath", config.profileDir)
@@ -186,10 +186,10 @@ class EnvController:
                             for fileName in files:
                                 if not fileName.startswith(".") and not fileName.endswith(".pyo"):
                                     dirPrint = "%s\n%s" % (dirPrint, ospathjoin(directory, fileName))
-            self.logger.Debug("%s" % (dirPrint))
+            self.logger.Debug("%s" % (dirPrint, ))
         except:
             self.logger.Critical("Error printing folder %s", directory, exc_info=True)
-    #===========================================================================
+
     @staticmethod
     def GetPlatform(returnName=False):
         """Returns the platform that XBMC returns as it's host:
@@ -225,7 +225,7 @@ class EnvController:
         elif xbmc.getCondVisibility("system.platform.android"):
             platform = Environments.Android
 
-        if (returnName):
+        if returnName:
             return Environments.Name(platform)
         else:
             return platform
@@ -248,6 +248,7 @@ class EnvController:
         # return plat & platform  == platform
         return platform & plat == plat
 
+    #noinspection PyUnusedLocal
     @staticmethod
     def GetSkinFolder(rootDir, logFile):
         """Returns the folder that matches the currently active XBMC skin
@@ -267,9 +268,9 @@ class EnvController:
         """
 
         skinName = xbmc.getSkinDir()
-        if (os.path.exists(os.path.join(rootDir, "resources", "skins", skinName))):
+        if os.path.exists(os.path.join(rootDir, "resources", "skins", skinName)):
             skinFolder = skinName
-        elif (os.path.exists(os.path.join(rootDir, "resources", "skins", "skin." + skinName.lower()))):
+        elif os.path.exists(os.path.join(rootDir, "resources", "skins", "skin." + skinName.lower())):
             skinFolder = "skin.%s" % (skinName.lower(),)
         else:
             skinFolder = "skin.xot"
@@ -280,7 +281,7 @@ class EnvController:
         """ Checks if the repository is available in XBMC and returns it's name.
 
         Arguments:
-        config     : Config  - The configuration object of XOT-Uzg.v3
+        config     : Config  - The configuration object of XBMC Online TV
 
         Keyword Arguments:
         returnName : Boolean - [opt] If set to True the name of the repository will
@@ -292,7 +293,7 @@ class EnvController:
         NOT_INSTALLED = "<not installed>"
         UNKWOWN = "<data only available in Eden builds>"
 
-        if (EnvController.IsPlatform(Environments.Xbox)):
+        if EnvController.IsPlatform(Environments.Xbox):
             if self.logger:
                 self.logger.Debug("Skipping repository check on Xbox.")
 
@@ -303,7 +304,7 @@ class EnvController:
                 # always return True for Xbox
                 return True
 
-        if (xbmc.getInfoLabel("system.buildversion").startswith("10.")):
+        if xbmc.getInfoLabel("system.buildversion").startswith("10."):
             if self.logger:
                 self.logger.Debug("Skipping repository check on 10.x builds.")
 

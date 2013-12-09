@@ -1,5 +1,5 @@
---------------------------------------------------------------------------------------------
- XOT-Uzg.v3.x.x                                                                   
+ï»¿--------------------------------------------------------------------------------------------
+ XBMC Online TV v3.x.x
 --------------------------------------------------------------------------------------------
  Contents
  0. License
@@ -43,7 +43,7 @@ problems/suggestions in either of these threads:
  - Most recent XBMC thread at http://gathering.tweakers.net (Dutch only)
 
 Download the latest version at: 
- - http://www.rieter.net/pages/XOT:Uzg or use the official XOT-Uzg.v3 repository (http://www.rieter.net/pages/XOT:Download#XBMC_Repository)
+ - http://www.rieter.net/content/ or use the official XBMC Online TV repository (http://www.rieter.net/content/xot/downloads/#XBMC_Repository)
 
 Direct contact can be done using the following e-mailadres: 
  - uitzendinggemist.vx[@t]gmail[d0t]com
@@ -173,7 +173,7 @@ The following persons have supported XOT by donating (the list is sorted chronol
 - Dennis van Kapel
 - Cameq
 - Bart Macco
-- Markus Sjöström
+- Markus SjÃ¶strÃ¶m
 - Mathijs Groothuis
 - Rene Popken
 - KEJ Kamperman
@@ -185,7 +185,7 @@ The following persons have supported XOT by donating (the list is sorted chronol
 - Webframe.NL
 - Jan Willemsen
 - Marcin Holmstrom
-- Örjan Magnusson
+- Ã–rjan Magnusson
 - M H Jongen
 - Ola Lindberg
 - Elcyion
@@ -202,7 +202,7 @@ The following persons have supported XOT by donating (the list is sorted chronol
 - D J vd Wielen 
 - Erik Bots
 - Alexander Jongeling
-- Robert Thörnberg
+- Robert ThÃ¶rnberg
 - Tom Urlings
 - Dirk Jeroen Breebaart
 - Hans Nijhuis
@@ -217,7 +217,7 @@ The following persons have supported XOT by donating (the list is sorted chronol
 - Michael Forss
 - Dick Verwoerd
 - Dimitri Olof Areskogh
-- Andreas Hägg
+- Andreas HÃ¤gg
 - Oscar Gala y Hondema
 - Tjerk Pruyssers
 - Ramon de Klein
@@ -242,7 +242,7 @@ The following persons have supported XOT by donating (the list is sorted chronol
 - G.F.P. van Dijck
 - Thijs van Nuland
 - Mathijs van der Kooi
-- Michael Rydén
+- Michael RydÃ©n
 - Jelmer Hartman
 - Tirza Bosma
 - Tijmen Klein
@@ -312,7 +312,33 @@ The following persons have supported XOT by donating (the list is sorted chronol
 - Mikael Eriksson
 - Martin Wikstrand
 - Arjan de Jong
-- Jan-Åke Skoglund
+- Jan-Ã…ke Skoglund
 - Eric Smit
 - G.F.P. van Dijck
 - Jan Papenhove
+- Herman Driessen
+- Matias Toftrup
+- Bob Langerak
+- Martien Wijnands
+- Mark Oost
+- Chris Evertz
+- David Embrechts
+- Roeland Koevoets
+- John Poussart
+- Pieter Geljon
+- Josef GÃ¥rdstam
+- Paul Moes
+- Marco Beeren
+- Bulent Malgaz
+- G Hosmar
+- Robert Klep
+- Bas van Marwijk
+- Thomas Pettersson
+- Peter Oosterhoff
+- Alexander Kleyn van Willigen
+- Onno Ruijsbroek
+- Cornelis Pasma
+- Roy van Hal
+- Henrik SjÃ¶holm
+- Christian Ahlin
+- Gerben Roest

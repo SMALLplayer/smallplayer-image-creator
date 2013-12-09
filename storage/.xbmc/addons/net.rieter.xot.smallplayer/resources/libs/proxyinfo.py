@@ -32,17 +32,51 @@ class ProxyInfo:
         self.Scheme = scheme
         self.Username = username
         self.Password = password
+        self.Filter = []            # : If specified, only URLs that contain these parts will be routed via the proxy.
 
-    def GetSmartProxyHandler(self):
-        """ Gets a Proxy Handler  based on the settings """
+    def GetSmartProxyHandler(self, scheme=None):
+        """ Gets a Proxy Handler  based on the settings
+
+        Keyword Arguments:
+        scheme : String - Can be used to override the scheme
+
+        """
 
         if self.Proxy == "":
             proxyHandler = urllib2.ProxyHandler({})
-        elif self.__IsSecure():
-            proxyHandler = urllib2.ProxyHandler({self.Scheme: "%s://%s:%s@%s:%s" % (self.Scheme, self.Username, self.Password, self.Proxy, self.Port)})
         else:
-            proxyHandler = urllib2.ProxyHandler({self.Scheme: "%s://%s:%s" % (self.Scheme, self.Proxy, self.Port)})
+            address = self.GetProxyAddress()
+            proxyHandler = urllib2.ProxyHandler({scheme or self.Scheme: address})
+
         return proxyHandler
+
+    def GetProxyAddress(self, hidePassword=False):
+        """ Returns the proxy address for this proxy
+
+        Keyword Arguments:
+        hidePassword : Boolean - Should we show or hide the password
+
+        """
+        if self.__IsSecure():
+            if hidePassword:
+                return "%s://%s:*******@%s:%s" % (self.Scheme, self.Username, self.Proxy, self.Port)
+            else:
+                return "%s://%s:%s@%s:%s" % (self.Scheme, self.Username, self.Password, self.Proxy, self.Port)
+        else:
+            return "%s://%s:%s" % (self.Scheme, self.Proxy, self.Port)
+
+    def UseProxyForUrl(self, url):
+        """ Checks whether the URL is allowed based on the proxy filter
+
+        Arguments:
+        url : String - The URL
+
+        """
+        if not self.Filter:
+            return True
+
+        # if any word in the filterlist appears in the url, use the proxy
+        return any(f in url for f in self.Filter)
 
     def __IsSecure(self):
         """ An easy way of determining if this server should use proxy authentication."""
@@ -52,11 +86,7 @@ class ProxyInfo:
     def __str__(self):
         """ returns a string representation """
 
-        if self.__IsSecure():
-            if self.Password == "":
-                password = self.Password
-            else:
-                password = "********"
-            return "Proxy (%s): %s://%s:%s@%s:%s" % (self.Scheme, self.Scheme, self.Username, password, self.Proxy, self.Port)
+        if self.Proxy == "":
+            return "Proxy Default Override."
 
-        return "Proxy (%s): %s://%s:%s" % (self.Scheme, self.Scheme, self.Proxy, self.Port)
+        return "Proxy (%s): %s" % (self.Scheme, self.GetProxyAddress(True))

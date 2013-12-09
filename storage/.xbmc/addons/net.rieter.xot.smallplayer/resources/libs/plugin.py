@@ -15,6 +15,7 @@ import urllib
 
 import xbmcplugin
 import xbmc
+import xbmcgui
 
 #===============================================================================
 # Import XOT stuff
@@ -28,11 +29,13 @@ try:
 
     from locker import LockWithDialog
     from config import Config
+    from channelinfo import ChannelInfo
     from xbmcwrapper import XbmcWrapper
     from environments import Environments
     from initializer import Initializer
     from helpers.channelimporter import ChannelImporter
     from helpers.languagehelper import LanguageHelper
+    from helpers.htmlentityhelper import HtmlEntityHelper
     from helpers import stopwatch
     from helpers.statistics import Statistics
     from helpers.sessionhelper import SessionHelper
@@ -68,11 +71,14 @@ class XotPlugin:
         self.actionUpdateChannels = "updatechannels".lower()        # : Action used to update channels
         self.actionParseMainList = "mainlist".lower()               # : Action used to show the mainlist
         self.actionListFolder = "listfolder".lower()                # : Action used to list a folder
+        self.actionListCategory = "listcategory"                    # : Action used to show the channels from a category
+        self.actionConfigureProxy = "configureproxy"                # : Action used to configure the proxy for a channel
 
         self.keywordPickle = "pickle".lower()                       # : Keyword used for the pickle item
         self.keywordAction = "action".lower()                       # : Keyword used for the action item
         self.keywordChannel = "channel".lower()                     # : Keyword used for the channel
         self.keywordChannelCode = "channelcode".lower()             # : Keyword used for the channelcode
+        self.keywordCategory = "category"                           # : Keyword used for the category
 
         self.pluginName = pluginName
         self.handle = int(handle)
@@ -95,31 +101,26 @@ class XotPlugin:
         # determine the query parameters
         self.params = self.__GetParameters(params)
 
-        Logger.Info("*********** Starting %s plugin version v%s ***********", Config.appName, Config.Version)
+        Logger.Info("*********** Starting %s plugin version v%s ***********", Config.appName, Config.version)
         Logger.Debug("Plugin Params: %s (%s) [handle=%s, name=%s, query=%s]", self.params, len(self.params), self.handle, self.pluginName, params)
 
-        #===============================================================================
-        #        Start the plugin version of progwindow
-        #===============================================================================
-        if len(self.params) == 0:
+        # are we in session?
+        sessionActive = SessionHelper.IsSessionActive(Logger)
+
+        if not sessionActive:
+            # do add-on start stuff
+            Logger.Info("Add-On start detected. Performing startup actions.")
+
             envCtrl = envcontroller.EnvController(Logger.Instance())
 
-            # do add-on start stuff
-            sessionActive = SessionHelper.IsSessionActive(Logger)
-            if not sessionActive:
-                Logger.Info("Add-On start detected. Performing startup actions.")
+            # print the folder structure
+            envCtrl.DirectoryPrinter(Config, addonsettings.AddonSettings())
 
-                # print the folder structure
-                envCtrl.DirectoryPrinter(Config, addonsettings.AddonSettings())
-
-                # show notification
-                XbmcWrapper.ShowNotification(None, LanguageHelper.GetLocalizedString(LanguageHelper.StartingAddonId) % (Config.appName,), fallback=False, logger=Logger)
-
-            # clear the session to indicate we have a clean start
-            SessionHelper.ClearSession()
+            # show notification
+            XbmcWrapper.ShowNotification(None, LanguageHelper.GetLocalizedString(LanguageHelper.StartingAddonId) % (Config.appName,), fallback=False, logger=Logger)
 
             # check for updates
-            update.CheckVersion(Config.Version, Config.updateUrl)
+            update.CheckVersion(Config.version, Config.updateUrl)
 
             # check if the repository is available
             envCtrl.IsInstallMethodValid(Config)
@@ -131,27 +132,28 @@ class XotPlugin:
             common.CacheCleanUp(Config.cacheDir, Config.cacheValidTime)
             common.CacheCleanUp(self.settings.GetUzgCachePath(), self.settings.GetUzgCacheDuration() * 24 * 3600, "xot.*")
 
+        # create a session
+        SessionHelper.CreateSession(Logger.Instance())
+
+        #===============================================================================
+        #        Start the plugin version of progwindow
+        #===============================================================================
+        if len(self.params) == 0:
+
             # Show initial start if not in a session
             # now show the list
-            self.ShowChannelList()
-
-            if not sessionActive:
-                # log the type
-                Statistics.RegisterRunType("Plugin", Initializer.StartTime)
+            if self.settings.ShowCategories():
+                self.ShowCategories()
+            else:
+                self.ShowChannelList()
 
         #===============================================================================
         #        Start the plugin verion of the episode window
         #===============================================================================
         else:
-            # check for cache folder
-            common.CacheCheck()
-
-            # create a session
-            SessionHelper.CreateSession()
-
             try:
                 # Determine what stage we are in. Check that there are more than 2 Parameters
-                if len(self.params) > 1:
+                if len(self.params) > 1 and self.keywordChannel in self.params:
                     # retrieve channel characteristics
                     self.channelFile = os.path.splitext(self.params[self.keywordChannel])[0]
                     self.channelCode = self.params[self.keywordChannelCode]
@@ -170,6 +172,11 @@ class XotPlugin:
                     # init the channel as plugin
                     self.channelObject.InitPlugin()
                     Logger.Info("Loaded: %s", self.channelObject.channelName)
+
+                elif self.keywordCategory in self.params:
+                    # no channel needed.
+                    pass
+
                 else:
                     Logger.Critical("Error determining Plugin action")
                     return
@@ -177,11 +184,17 @@ class XotPlugin:
                 #===============================================================================
                 # See what needs to be done.
                 #===============================================================================
-                if (not self.keywordAction in self.params):
+                if not self.keywordAction in self.params:
                     Logger.Critical("Action parameters missing from request. Parameters=%s", self.params)
                     return
 
-                if self.params[self.keywordAction] == self.actionParseMainList:
+                if self.params[self.keywordAction] == self.actionListCategory:
+                    self.ShowChannelList(self.params[self.keywordCategory])
+
+                elif self.params[self.keywordAction] == self.actionConfigureProxy:
+                    self.__ConfigureProxy(self.channelObject)
+
+                elif self.params[self.keywordAction] == self.actionParseMainList:
                     # only the channelName and code is present, so ParseMainList is needed
                     self.ParseMainList()
 
@@ -214,11 +227,49 @@ class XotPlugin:
             except:
                 Logger.Critical("Error parsing for add-on", exc_info=True)
 
-    def ShowChannelList(self):
-        """Displays the channels that are currently available in XOT as a directory
-        listing."""
+        # finally register the runtype
+        if not sessionActive:
+            # log the type
+            Statistics.RegisterRunType("Plugin", Initializer.StartTime)
 
-        Logger.Info("Plugin::ShowChannelList")
+        return
+
+    def ShowCategories(self):
+        """Displays the ShowCategories that are currently available in XOT as a directory
+        listing.
+        """
+
+        Logger.Info("Plugin::ShowCategories")
+        channelRegister = ChannelImporter.GetRegister()
+        categories = channelRegister.GetCategories()
+
+        xbmcItems = []
+        for category in categories:
+            icon = os.path.join(Config.rootDir, "icon.png")
+            name = LanguageHelper.GetLocalizedCategory(category)
+            xbmcItem = xbmcgui.ListItem(name, name, icon, icon)
+            url = self.__CreateActionUrl(None, action=self.actionListCategory, category=category)
+            xbmcItems.append((url, xbmcItem, True))
+
+        Logger.Trace(xbmcItems)
+        ok = xbmcplugin.addDirectoryItems(self.handle, xbmcItems, len(xbmcItems))
+        xbmcplugin.addSortMethod(handle=self.handle, sortMethod=xbmcplugin.SORT_METHOD_LABEL)
+        xbmcplugin.endOfDirectory(self.handle, ok)
+        return ok
+
+    def ShowChannelList(self, category=None):
+        """Displays the channels that are currently available in XOT as a directory
+        listing.
+
+        Keyword Arguments:
+        category : String - The category to show channels for
+
+        """
+
+        if category:
+            Logger.Info("Plugin::ShowChannelList for %s", category)
+        else:
+            Logger.Info("Plugin::ShowChannelList")
         try:
             # import ProgWindow
             ok = False
@@ -229,6 +280,10 @@ class XotPlugin:
 
             xbmcItems = []
             for channel in channels:
+                if category and channel.category != category:
+                    Logger.Debug("Skipping %s (%s) due to category filter", channel.channelName, channel.category)
+                    continue
+
                 item = channel.GetXBMCItem()
 
                 contextMenuItems = self.__GetContextMenuItems(channel)
@@ -240,8 +295,8 @@ class XotPlugin:
                     xbmcItems.append((url, item, True))
                 else:
                     ok = xbmcplugin.addDirectoryItem(self.handle, url, item, isFolder=True, totalItems=len(channels))
-                    if (not ok):
-                            break
+                    if not ok:
+                        break
 
             if self.bulkInsert:
                 ok = xbmcplugin.addDirectoryItems(self.handle, xbmcItems, len(xbmcItems))
@@ -266,8 +321,6 @@ class XotPlugin:
         Logger.Info("Plugin::ParseMainList")
         stopWatch = stopwatch.StopWatch("Plugin Mainlist timer", Logger.Instance())
         try:
-            ok = False
-
             # only the channelName and code is present, so ParseMainList is needed
             if showFavorites:
                 Logger.Info("Showing Favorites")
@@ -281,7 +334,6 @@ class XotPlugin:
 
                 # Logger.Debug(episodeItems)
                 # nothing to show, set to true
-                ok = True
                 pass
             else:
                 Logger.Info("Showing normal program list")
@@ -373,14 +425,14 @@ class XotPlugin:
                 else:
                     Logger.Critical("Plugin::ProcessFolderList: Cannot determine what to add")
 
-                if (not ok and not self.bulkInsert):
+                if not ok and not self.bulkInsert:
                     break
 
             watcher.Lap("XBMC Items generated")
             if self.bulkInsert:
                 ok = xbmcplugin.addDirectoryItems(self.handle, xbmcItems, len(xbmcItems))
 
-            if (len(episodeItems) == 0):
+            if len(episodeItems) == 0:
                 XbmcWrapper.ShowNotification(LanguageHelper.GetLocalizedString(LanguageHelper.ErrorId), LanguageHelper.GetLocalizedString(LanguageHelper.NoVideosId), XbmcWrapper.Error)
                 ok = False
 
@@ -472,7 +524,7 @@ class XotPlugin:
         showSubs = addonsettings.AddonSettings().UseSubtitle()
         if srt and (srt != ""):
             Logger.Info("Adding subtitle: %s and setting showSubtitles to %s", srt, showSubs)
-            XbmcWrapper.WaitForPlayerToStart(xbmcPlayer, 10, Logger.Instance())
+            XbmcWrapper.WaitForPlayerToStart(xbmcPlayer, logger=Logger.Instance())
 
             xbmcPlayer.setSubtitles(srt)
             xbmcPlayer.showSubtitles(showSubs)
@@ -513,12 +565,51 @@ class XotPlugin:
         functionString = "returnItem = self.channelObject.%s(item)" % (action,)
         Logger.Debug("Calling '%s'", functionString)
         try:
-            exec(functionString)
+            exec functionString
         except:
             Logger.Error("OnActionFromContextMenu :: Cannot execute '%s'.", functionString, exc_info=True)
         return
 
+    def __ConfigureProxy(self, channelInfo):
+        """ Configures a proxy for a channel
 
+        Arguments:
+        channelInfo : ChannelInfo - The channel info
+
+        """
+
+        if not channelInfo:
+            Logger.Warning("Cannot configure proxy without channel info")
+
+        Logger.Info("Configuring proxy for channel: %s", channelInfo)
+
+        proxies = []
+
+        addonSettings = addonsettings.AddonSettings()
+        currentProxy = addonSettings.GetProxyIdForChannel(channelInfo) or 0
+        Logger.Debug("Currently Selected Proxy Index: %s", currentProxy)
+
+        for lang in addonsettings.AddonSettings.GetProxyGroupIds():
+            title = LanguageHelper.GetLocalizedString(lang)
+            proxies.append(title)
+
+        if currentProxy < len(proxies):
+            proxies[currentProxy] = "%s [%s]" % (proxies[currentProxy], LanguageHelper.GetLocalizedString(LanguageHelper.Active))
+            Logger.Debug("Currently Selected Proxy: %s", proxies[currentProxy])
+        else:
+            Logger.Warning("Currently Selected Proxy Index is higher than the number of proxies")
+
+        title = LanguageHelper.GetLocalizedString(LanguageHelper.SelectProxyGroup)
+        index = XbmcWrapper.ShowSelectionDialog(title, proxies)
+
+        if index < 0:
+            Logger.Info("Proxy selection was cancelled")
+            return
+        Logger.Info("New proxy index that was selected: %s", index)
+
+        addonSettings.SetProxyIdForChannel(channelInfo, index)
+        #xbmcplugin.endOfDirectory(self.handle, False)
+        return
 
     def __PickleMediaItem(self, item):
         """Serialises a mediaitem
@@ -564,7 +655,7 @@ class XotPlugin:
             hexString = reduce(lambda x, y: x.replace(self.base64chars[y], y), self.base64chars, hexString)
             # hexString = urllib.unquote_plus(hexString).replace("-", "\n").replace("%3D", "=").replace("%2F", "/").replace("%2B","+")
 
-        Logger.Debug("DePickle: HexString: %s", hexString)
+        Logger.Trace("DePickle: HexString: %s (might be truncated)", hexString[0:256])
 
         # Logger.Trace("DePickle: HexString: %s", hexString)
         pickleString = base64.b64decode(hexString)
@@ -594,7 +685,7 @@ class XotPlugin:
 
         url = self.__CreateActionUrl(self.channelObject, self.actionListFolder, item=episodeItem)
 
-        return (url, item, True)
+        return url, item, True
 
     def __AddSortMethodToHandle(self, handle, items=None):
         """ Add a sort method to the plugin output. It takes the Add-On settings into
@@ -660,7 +751,7 @@ class XotPlugin:
         Logger.Warning("ContextMenuAction [%s] not found in channel", action)
         return False
 
-    def __CreateActionUrl(self, channel, action, item=None):
+    def __CreateActionUrl(self, channel, action, item=None, category=None):
         """Creates an URL that includes an action
 
         Arguments:
@@ -671,28 +762,33 @@ class XotPlugin:
         item : MediaItem - The media item to add
 
         """
-        if (action is None):
-            raise "action is required"
+        if action is None:
+            raise Exception("action is required")
 
         params = dict()
-        params[self.keywordChannel] = channel.moduleName
-        if channel.channelCode:
-            params[self.keywordChannelCode] = channel.channelCode
+        if channel:
+            params[self.keywordChannel] = channel.moduleName
+            if channel.channelCode:
+                params[self.keywordChannelCode] = channel.channelCode
+
         params[self.keywordAction] = action
 
         # it might have an item or not
         if not item is None:
             params[self.keywordPickle] = self.__PickleMediaItem(item)
 
-        url = "%s?" % (self.pluginName)
+        if category:
+            params[self.keywordCategory] = category
+
+        url = "%s?" % (self.pluginName, )
         for k in params.keys():
-            if (self.quotedPlus):
+            if self.quotedPlus:
                 url = "%s%s=%s&" % (url, k, urllib.quote_plus(params[k]))
             else:
                 url = "%s%s=%s&" % (url, k, params[k])
 
         url = url.strip('&')
-        #Logger.Trace("Created url: '%s'", url)
+        # Logger.Trace("Created url: '%s'", url)
         return url
 
     def __GetContextMenuItems(self, channel, item=None, favoritesList=False):
@@ -714,9 +810,15 @@ class XotPlugin:
             # it's just the channel, so only add the favorites
             cmdUrl = self.__CreateActionUrl(channel, action=self.actionFavorites)
             cmd = "XBMC.Container.Update(%s)" % (cmdUrl,)
-            #Logger.Trace("Adding command: %s", cmd)
+            # Logger.Trace("Adding command: %s", cmd)
             show = LanguageHelper.GetLocalizedString(LanguageHelper.ShowId)
             contextMenuItems.append(("XOT: %s %s" % (show, favs), cmd))
+
+            cmdUrl = self.__CreateActionUrl(channel, action=self.actionConfigureProxy)
+            cmd = "XBMC.RunPlugin(%s)" % (cmdUrl,)
+            Logger.Trace("Adding command: %s", cmd)
+            title = LanguageHelper.GetLocalizedString(LanguageHelper.SelectProxyGroup)
+            contextMenuItems.append(("XOT: %s" % (title, ), cmd))
 
             if envcontroller.EnvController.IsPlatform(Environments.Xbox):
                 # we need to run RunPlugin here instead of Refresh as we don't want to refresh any lists
@@ -729,24 +831,24 @@ class XotPlugin:
 
             return contextMenuItems
 
-        # add a default enqueu list
+        # add a default enqueue list
         cmd = "XBMC.Action(Queue)"
         enqueue = LanguageHelper.GetLocalizedString(LanguageHelper.QueueItemId)
         contextMenuItems.append(("%s" % (enqueue,), cmd))
-        #Logger.Trace("Adding command: %s", cmd[:100])
+        # Logger.Trace("Adding command: %s", cmd[:100])
 
         # add a default refresh list
         cmd = "XBMC.Container.Refresh()"
         refresh = LanguageHelper.GetLocalizedString(LanguageHelper.RefreshListId)
         contextMenuItems.append(("XOT: %s" % (refresh,), cmd))
-        #Logger.Trace("Adding command: %s", cmd)
+        # Logger.Trace("Adding command: %s", cmd)
 
         # we have an item
         if favoritesList:
             # we have list of favorites
             cmdUrl = self.__CreateActionUrl(self.channelObject, action=self.actionRemoveFavorite, item=item)
             cmd = "XBMC.Container.Update(%s)" % (cmdUrl,)
-            #Logger.Trace("Adding command: %s", cmd)
+            # Logger.Trace("Adding command: %s", cmd)
 
             remove = LanguageHelper.GetLocalizedString(LanguageHelper.RemoveId)
             fav = LanguageHelper.GetLocalizedString(LanguageHelper.FavouriteId)
@@ -758,7 +860,7 @@ class XotPlugin:
             cmdUrl = self.__CreateActionUrl(channel, action=self.actionAddFavorite, item=item)
             # cmd = "XBMC.RunPlugin(%s)" % (cmdUrl,)
             cmd = "XBMC.Container.Update(%s)" % (cmdUrl,)
-            #Logger.Trace("Adding command: %s", cmd)
+            # Logger.Trace("Adding command: %s", cmd)
             addTo = LanguageHelper.GetLocalizedString(LanguageHelper.AddToId)
             contextMenuItems.append(("XOT: %s %s" % (addTo, favs), cmd))
 
@@ -771,7 +873,7 @@ class XotPlugin:
             if not menuItem.plugin:
                 continue
 
-            if menuItem.itemTypes == None or item.type in menuItem.itemTypes:
+            if menuItem.itemTypes is None or item.type in menuItem.itemTypes:
                 # We don't care for complete here!
                 # if menuItem.completeStatus == None or menuItem.completeStatus == item.complete:
 
@@ -820,11 +922,11 @@ class XotPlugin:
         """
         result = dict()
         queryString = queryString.strip('?')
-        if (queryString != ''):
+        if queryString != '':
             try:
                 for pair in queryString.split("&"):
                     (k, v) = pair.split("=")
-                    if (self.quotedPlus):
+                    if self.quotedPlus:
                         result[k] = urllib.unquote_plus(v)
                     else:
                         result[k] = v

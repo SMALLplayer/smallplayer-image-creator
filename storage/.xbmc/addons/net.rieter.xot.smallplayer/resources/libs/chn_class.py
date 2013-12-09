@@ -35,6 +35,7 @@ from helpers import encodinghelper
 from helpers.jsonhelper import JsonHelper
 from helpers.languagehelper import LanguageHelper
 from helpers.statistics import Statistics
+from addonsettings import AddonSettings
 
 from logger import Logger
 from urihandler import UriHandler
@@ -72,7 +73,7 @@ class Channel:
         self.appendIcon = "xot_DefaultAppend.png"
 
         self.initialItem = None  # uri that is used for the episodeList. NOT mainListUri
-        self.proxy = None
+        self.proxy = AddonSettings().GetProxyForChannel(channelInfo)
         self.loggedOn = False
 
         # initialise user defined variables
@@ -250,6 +251,7 @@ class Channel:
         settings.AddToFavorites(item, self)
         return
 
+    #noinspection PyUnusedLocal
     def CtMnSettings(self, item):  # @UnusedVariable
         """Shows the Addon settings
 
@@ -306,7 +308,7 @@ class Channel:
                 self.mainListItems.sort()
 
             if returnData:
-                return (self.mainListItems, "")
+                return self.mainListItems, ""
             else:
                 return self.mainListItems
 
@@ -351,7 +353,7 @@ class Channel:
         self.mainListItems = items
 
         if returnData:
-            return (items, data)
+            return items, data
         else:
             return items
 
@@ -383,13 +385,13 @@ class Channel:
             items = []
             keyboard = xbmc.Keyboard('')
             keyboard.doModal()
-            if (keyboard.isConfirmed()):
+            if keyboard.isConfirmed():
                 needle = keyboard.getText()
                 Logger.Debug("Searching for '%s'", needle)
                 if len(needle) > 0:
                     # convert to HTML
                     needle = htmlentityhelper.HtmlEntityHelper.UrlEncode(needle)
-                    searchUrl = url % (needle)
+                    searchUrl = url % (needle, )
                     temp = mediaitem.MediaItem("Search", searchUrl)
                     return self.ProcessFolderList(temp)
 
@@ -480,7 +482,7 @@ class Channel:
         Logger.Info("Performing Pre-Processing")
         items = []
         Logger.Debug("Pre-Processing finished")
-        return (data, items)
+        return data, items
 
     #==============================================================================
     def ProcessFolderList(self, item=None):
@@ -505,7 +507,7 @@ class Channel:
 
         """
 
-        if item == None:
+        if item is None:
             Logger.Warning("ProcessFolderList :: No item was specified. Returning an empty list")
             return []
 
@@ -517,16 +519,12 @@ class Channel:
 
         try:
             watch = stopwatch.StopWatch("ProcessFolderList", Logger.Instance())
-            preItems = []
-            folderItems = []
-            videoItems = []
-            pageItems = []
 
-            if (item.url == "searchSite"):
+            if item.url == "searchSite":
                 Logger.Debug("Starting to search")
                 return self.SearchSite()
 
-            data = UriHandler.Open(item.url, proxy=self.proxy)
+            data = UriHandler.Open(item.url, proxy=self.proxy, additionalHeaders=item.httpHeaders)
 
             # first of all do the Pre handler
             (data, preItems) = self.PreProcessFolderList(data)
@@ -540,7 +538,7 @@ class Channel:
 
             elif not self.folderItemJson is None:
                 folderJson = JsonHelper(data, Logger.Instance())
-                folders = folderJson.GetValue(*self.folderItemJson)
+                folders = folderJson.GetValue(fallback=[], *self.folderItemJson)
                 watch.Lap("Folders Json complete")
 
             Logger.Trace('Starting CreateFolderItem for %s items', len(folders))
@@ -567,7 +565,7 @@ class Channel:
 
             elif not self.videoItemJson is None:
                 videoJson = JsonHelper(data, Logger.Instance())
-                videos = videoJson.GetValue(*self.videoItemJson)
+                videos = videoJson.GetValue(fallback=[], *self.videoItemJson)
                 watch.Lap("Video Json complete")
 
             Logger.Debug('Starting CreateVideoItem for %s items', len(videos))
@@ -744,7 +742,7 @@ class Channel:
 
         Logger.Debug('Starting UpdateVideoItem for %s (%s)', item.name, self.channelName)
 
-        _data = UriHandler.Open(item.url, pb=False, proxy=self.proxy)
+        _data = UriHandler.Open(item.url, pb=False, proxy=self.proxy, additionalHeaders=item.httpHeaders)
 
         url = Regexer.DoRegex(self.mediaUrlRegex, _data)[-1]
         part = mediaitem.MediaItemPart(item.name, url)
@@ -790,11 +788,11 @@ class Channel:
             return item
 
         if item.IsPlayable():
-            if item.complete == False:
+            if not item.complete:
                 Logger.Info("Fetching MediaUrl for PlayableItem[%s]", item.type)
                 item = self.UpdateVideoItem(item)
 
-            if item.complete == False or not item.HasMediaItemParts():
+            if not item.complete or not item.HasMediaItemParts():
                 item.SetErrorState("Update did not result in streams")
                 Logger.Error("Cannot download incomplete item or item without MediaItemParts")
                 return item
@@ -806,20 +804,21 @@ class Channel:
                 stream = mediaItemPart.GetMediaStreamForBitrate(bitrate)
                 downloadUrl = stream.Url
                 extension = UriHandler.GetExtensionFromUrl(downloadUrl)
-                if (len(item.MediaItemParts) > 1):
+                if len(item.MediaItemParts) > 1:
                     saveFileName = "%s-Part_%s.%s" % (item.name, i, extension)
                 else:
                     saveFileName = "%s.%s" % (item.name, extension)
                 Logger.Debug(saveFileName)
 
                 agent = mediaItemPart.UserAgent
-                UriHandler.Download(downloadUrl, saveFileName, userAgent=agent)
-                i = i + 1
+                UriHandler.Download(downloadUrl, saveFileName, proxy=self.proxy, userAgent=agent)
+                i += 1
 
             item.downloaded = True
 
         return item
-    #==============================================================================
+
+    #noinspection PyUnusedLocal
     def LogOn(self, *args):
         """Logs on to a website, using an url.
 
@@ -849,10 +848,7 @@ class Channel:
             Logger.Info("Already logged in")
             return True
 
-        _rtrn = False
-        _passWord = args["userName"]
-        _userName = args["passWord"]
-        return _rtrn
+        return False
 
     #==============================================================================
     def PlayVideoItem(self, item, player="", bitrate=None, pluginMode=False):
@@ -884,7 +880,7 @@ class Channel:
             if player == "":
                 player = self.defaultPlayer
 
-            if bitrate == None:
+            if bitrate is None:
                 # use the bitrate from the xbmc settings if bitrate was not specified and the item is MultiBitrate
                 bitrate = self.GetSettingsQuality()
 
@@ -906,17 +902,20 @@ class Channel:
                         # setResolved will not work.
                         xbmc.executebuiltin("Dialog.Close(busydialog)")
 
-                        cacheFile = UriHandler.Download(stream.Url, "xot.%s.%skbps-%s.%s" % (fileName, stream.Bitrate, item.name, extension), self.GetDefaultCachePath(), proxy=self.proxy, userAgent=part.UserAgent)
+                        cacheFile = UriHandler.Download(stream.Url, "xot.%s.%skbps-%s.%s" % (
+                            fileName, stream.Bitrate, item.name, extension), self.GetDefaultCachePath(),
+                            proxy=self.proxy, userAgent=part.UserAgent)
+
                         if cacheFile == "":
                             Logger.Error("Cannot download stream %s \nFrom: %s", stream, part)
                             return
 
                         if cacheFile.startswith("\\\\"):
                             cacheFile = cacheFile.replace("\\", "/")
-                            stream.Url = "file:///%s" % (cacheFile)
+                            stream.Url = "file:///%s" % (cacheFile,)
                         else:
                             stream.Url = "file://%s" % (cacheFile,)
-                        # stream.Url = cacheFile
+                            # stream.Url = cacheFile
                         stream.Downloaded = True
 
             # We need to substract the download time from processing time
@@ -930,7 +929,7 @@ class Channel:
             Logger.Info("Starting Video Playback using the %s", player)
 
             # get the playlist
-            (playList, srt) = item.GetXBMCPlayList(bitrate, updateItemUrls=pluginMode)
+            (playList, srt) = item.GetXBMCPlayList(bitrate, updateItemUrls=pluginMode, proxy=self.proxy)
 
             # determine the player
             if player == "dvdplayer":
@@ -952,10 +951,10 @@ class Channel:
                 Statistics.RegisterPlayback(self, Initializer.StartTime, -downloadDuration)
 
                 # if the item urls have been updated, don't start playback, but return
-                return (playList, srt, xbmcPlayer)
-            # no reporting for script as it's harder to determine the startime as
+                return playList, srt, xbmcPlayer
+                # no reporting for script as it's harder to determine the startime as
             # it should also include the update time and that could have already happened
-            #else:
+            # else:
             #    # call for statistics
             #    Statistics.RegisterPlayback(self)
 
@@ -966,11 +965,13 @@ class Channel:
             showSubs = addonsettings.AddonSettings().UseSubtitle()
             if srt and (srt != ""):
                 Logger.Info("Adding subtitle: %s and setting showSubtitles to %s", srt, showSubs)
-                XbmcWrapper.WaitForPlayerToStart(xbmcPlayer, 10, Logger.Instance())
+                XbmcWrapper.WaitForPlayerToStart(xbmcPlayer, logger=Logger.Instance())
                 xbmcPlayer.setSubtitles(srt)
                 xbmcPlayer.showSubtitles(showSubs)
         except:
-            XbmcWrapper.ShowNotification(LanguageHelper.GetLocalizedString(LanguageHelper.ErrorId), LanguageHelper.GetLocalizedString(LanguageHelper.NoPlaybackId), XbmcWrapper.Error)
+            XbmcWrapper.ShowNotification(LanguageHelper.GetLocalizedString(LanguageHelper.ErrorId),
+                                         LanguageHelper.GetLocalizedString(LanguageHelper.NoPlaybackId),
+                                         XbmcWrapper.Error)
             Logger.Critical("Could not playback the url", exc_info=True)
 
     def GetDefaultCachePath(self):
@@ -1057,7 +1058,7 @@ class Channel:
         else:
             background = self.backgroundImage16x9
 
-        if (background == ""):
+        if background == "":
             background = addonsettings.AddonSettings().BackgroundImageProgram()
 
         return background
@@ -1092,7 +1093,6 @@ class Channel:
             return remoteImage
 
         Logger.Debug("Caching url=%s", remoteImage)
-        thumb = ""
 
         # get image
         localImageName = encodinghelper.EncodingHelper.EncodeMD5(remoteImage)
@@ -1103,12 +1103,13 @@ class Channel:
         localCompletePath = os.path.join(Config.cacheDir, localImageName)
         try:
             if os.path.exists(localCompletePath):  # check cache
-                    thumb = localCompletePath
+                thumb = localCompletePath
             else:  # save them in cache folder
-                    Logger.Debug("Downloading thumb. Filename=%s", localImageName)
-                    thumb = UriHandler.Download(remoteImage, localImageName, folder=Config.cacheDir, pb=False)
-                    if thumb == "":
-                        return self.noImage
+                Logger.Debug("Downloading thumb. Filename=%s", localImageName)
+                thumb = UriHandler.Download(remoteImage, localImageName, folder=Config.cacheDir, pb=False,
+                                            proxy=self.proxy)
+                if thumb == "":
+                    return self.noImage
         except:
             Logger.Error("Error opening thumbfile!", exc_info=True)
             return self.noImage
@@ -1124,7 +1125,8 @@ class Channel:
         if self.channelCode is None:
             return "%s [%s, %s] (Order: %s)" % (self.channelName, self.language, self.guid, self.sortOrder)
         else:
-            return "%s (%s) [%s, %s] (Order: %s)" % (self.channelName, self.channelCode, self.language, self.guid, self.sortOrder)
+            return "%s (%s) [%s, %s] (Order: %s)" % (
+                self.channelName, self.channelCode, self.language, self.guid, self.sortOrder)
 
     #==============================================================================
     def __eq__(self, other):
@@ -1137,7 +1139,7 @@ class Channel:
 
         """
 
-        if other == None:
+        if other is None:
             return False
 
         return self.guid == other.guid
@@ -1153,7 +1155,7 @@ class Channel:
 
         """
 
-        if other == None:
+        if other is None:
             return 1
 
         compVal = cmp(self.sortOrder, other.sortOrder)

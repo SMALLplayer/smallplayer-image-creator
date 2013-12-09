@@ -1,12 +1,13 @@
 #===============================================================================
 # LICENSE XOT-Framework - CC BY-NC-ND
 #===============================================================================
-# This work is licenced under the Creative Commons 
-# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a 
-# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/ 
-# or send a letter to Creative Commons, 171 Second Street, Suite 300, 
+# This work is licenced under the Creative Commons
+# Attribution-Non-Commercial-No Derivative Works 3.0 Unported License. To view a
+# copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/3.0/
+# or send a letter to Creative Commons, 171 Second Street, Suite 300,
 # San Francisco, California 94105, USA.
 #===============================================================================
+
 
 class Environments:
 
@@ -21,23 +22,23 @@ class Environments:
     ATV2 = 32
     IOS = 64
     Android = 128
-    
+
     # special groups
     Apple = OSX | ATV2 | IOS
     Google = Android
     All = Xbox | Linux | Windows | OSX | ATV2 | IOS | Android
-    
+
     @staticmethod
     def Name(environment):
         """Returns a string representation of the Environments
-        
+
         Arguments:
-        environment : integer - The integer matching one of the  
+        environment : integer - The integer matching one of the
                                 environments enums.
-        
-        Returns a string                
+
+        Returns a string
         """
-        
+
         if (environment == Environments.OSX):
             return "OS X"
         elif (environment == Environments.Windows):
@@ -45,7 +46,7 @@ class Environments:
         elif (environment == Environments.Xbox):
             return "Xbox"
         elif (environment == Environments.Linux):
-            return "Linux" 
+            return "Linux"
         elif (environment == Environments.IOS):
             return "iOS"
         elif (environment == Environments.ATV2):
@@ -59,7 +60,7 @@ class Environments:
         else:
             return "Unknown"
 
-if __name__ == "__main__":  
+if __name__ == "__main__":
     format = "%-10s - %s"
     print format % ("NoPlatform", Environments.Name(Environments.NoPlatform))
     print format % ("Unknown", Environments.Name(Environments.Unknown))

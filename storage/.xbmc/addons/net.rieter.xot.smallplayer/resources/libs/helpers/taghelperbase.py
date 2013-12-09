@@ -11,6 +11,7 @@
 from regexer import Regexer
 from logger import Logger
 
+
 class TagHelperBase:
     """Base class that holds the mutual code for XMLHelper and HTMLHelper"""
         
@@ -48,7 +49,7 @@ class TagHelperBase:
         """
         
         firstOnly = True
-        if kwargs.keys().count("firstOnly") > 0:
+        if list(kwargs.keys()).count("firstOnly") > 0:
             firstOnly = kwargs["firstOnly"]
             Logger.Trace("Setting 'firstOnly' to '%s'", firstOnly)
             
@@ -64,14 +65,14 @@ class TagHelperBase:
                 name = "class"
             
             if value is None:
-                htmlRegex = htmlRegex + '[^>]*%s\W*=\W*["\']([^"\']+)["\']' % (name,)
+                htmlRegex += '[^>]*%s\W*=\W*["\']([^"\']+)["\']' % (name,)
             else:
-                htmlRegex = htmlRegex + '[^>]*%s\W*=\W*["\']%s["\']' % (name, value)
-                
-        htmlRegex = htmlRegex + "[^>]*>"
+                htmlRegex += '[^>]*%s\W*=\W*["\']%s["\']' % (name, value)
+
+        htmlRegex += "[^>]*>"
         Logger.Trace("HtmlRegex = %s", htmlRegex)
         
-        result = Regexer.DoRegex(htmlRegex , self.data)
+        result = Regexer.DoRegex(htmlRegex, self.data)
         Logger.Trace(result)
         
         if len(result) > 0:
@@ -81,4 +82,3 @@ class TagHelperBase:
                 return result
         else:
             return ""
-        

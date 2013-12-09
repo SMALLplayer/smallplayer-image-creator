@@ -39,6 +39,7 @@ class MediaItem:
 
     """
 
+    #noinspection PyShadowingBuiltins
     def __init__(self, title, url, type="folder", parent=None):  # @ReservedAssignment
         """Creates a new MediaItem
 
@@ -66,7 +67,7 @@ class MediaItem:
         dePrefixer = prefixhelper.PrefixHelper()
         name = title.strip()
 
-        if (addonsettings.AddonSettings.GetPluginMode()):
+        if addonsettings.AddonSettings.GetPluginMode():
             self.name = name
         else:
             self.name = dePrefixer.GetDePrefixedName(name)
@@ -90,12 +91,13 @@ class MediaItem:
         self.downloaded = False
         self.downloadable = False
         self.items = []
+        self.httpHeaders = dict()
         self.rating = None
 
         # GUID used for identifcation of the object. Do not set from script, MD5 needed
         # to prevent UTF8 issues
         try:
-            self.guid = "%s%s" % (encodinghelper.EncodingHelper.EncodeMD5(title), encodinghelper.EncodingHelper.EncodeMD5(url))
+            self.guid = "%s%s" % (encodinghelper.EncodingHelper.EncodeMD5(title), encodinghelper.EncodingHelper.EncodeMD5(url or ""))
             # self.guid = ("%s-%s" % (encodinghelper.EncodingHelper.EncodeMD5(title), url)).replace(" ", "")
         except:
             Logger.Error("Error setting GUID for title:'%s' and url:'%s'. Falling back to UUID", title, url, exc_info=True)
@@ -229,7 +231,7 @@ class MediaItem:
             dateTimeFormat = dateFormat + " %H:%M"
 
             if hour is None and minutes is None and seconds is None:
-                timeStamp = datetime.datetime(int(year), int(month), int(day), 0, 0, 0)
+                timeStamp = datetime.datetime(int(year), int(month), int(day))
                 date = timeStamp.strftime(dateFormat)
             else:
                 timeStamp = datetime.datetime(int(year), int(month), int(day), int(hour), int(minutes), int(seconds))
@@ -239,7 +241,7 @@ class MediaItem:
                 return
 
             self.__timestamp = timeStamp
-            if (text is None):
+            if text is None:
                 self.__date = date
             else:
                 self.__date = text
@@ -249,6 +251,7 @@ class MediaItem:
             self.__timestamp = datetime.datetime.min
             self.date = ""
 
+    #noinspection PyUnusedLocal
     def SetErrorState(self, errorMessage=None, error=True, complete=False):  # @UnusedVariable
         """Sets the item in error
 
@@ -289,7 +292,7 @@ class MediaItem:
 
         # Logger.Debug("Creating XBMC ListItem: ListItem(%s, %s, %s, %s)",self.name, self.__date, self.icon, self.thumb)
 
-        if name == None:
+        if not name:
             itemName = self.name
         else:
             itemName = name
@@ -362,7 +365,7 @@ class MediaItem:
 
         """
 
-        if name == None:
+        if not name:
             name = self.name
 
         # the likelihood of getting an name with both HTML entities and Unicode is very low. So do both
@@ -382,12 +385,19 @@ class MediaItem:
             xbmcYear = 0
 
         # specific items
+        infoLabels = dict()
+        infoLabels["Label"] = name
+        if xbmcDate:
+            infoLabels["Date"] = xbmcDate
+            infoLabels["Year"] = xbmcYear
+        if self.type != "Audio":
+            infoLabels["PlotOutline"] = description
+            infoLabels["Outline"] = description
+
         if self.type == "audio":
-            item.setInfo(type="Audio", infoLabels={"Label": name, "Date": xbmcDate, "title": name, "Year": xbmcYear})
-            pass
+            item.setInfo(type="Audio", infoLabels=infoLabels)
         else:
-            item.setInfo(type="Video", infoLabels={"Label": name, "date": xbmcDate, "title": name, "PlotOutline": description, "Plot": description, "Year": xbmcYear})
-            pass
+            item.setInfo(type="Video", infoLabels=infoLabels)
 
         # all items
         item.setLabel(name)
@@ -401,7 +411,7 @@ class MediaItem:
         if self.fanart:
             item.setProperty('fanart_image', self.fanart)
 
-        if self.rating == None:
+        if not self.rating:
             item.setProperty("XOT_Rating", str(-1))
         else:
             item.setProperty("XOT_Rating", "xot_rating%s.png" % (self.rating,))
@@ -409,14 +419,15 @@ class MediaItem:
         item.setThumbnailImage("")              # this one forces the update of the complete item, so always do this
         item.setThumbnailImage(self.thumb)      # this one forces the update of the complete item, so always do this
 
-    def GetXBMCPlayList(self, bitrate=None, updateItemUrls=False):
+    def GetXBMCPlayList(self, bitrate=None, updateItemUrls=False, proxy=None):
         """ Creates a XBMC Playlist containing the MediaItemParts in this MediaItem
 
         Keyword Arguments:
-        bitrate        : [opt] integer - The bitrate of the streams that should be in
-                                         the playlist. Given in kbps
-        updateItemUrls : [opt] boolean - If specified, the Playlist items will
-                                         have a path pointing to the actual stream
+        bitrate        : [opt] integer   - The bitrate of the streams that should be in
+                                           the playlist. Given in kbps
+        updateItemUrls : [opt] boolean   - If specified, the Playlist items will
+                                           have a path pointing to the actual stream
+        proxy          : [opt] ProxyInfo - The proxy to set
 
         Returns:
         a XBMC Playlist for this MediaItem
@@ -464,14 +475,26 @@ class MediaItem:
             (stream, xbmcItem) = part.GetXBMCPlayListItem(self, bitrate=bitrate, updateItemUrls=updateItemUrls)
             logText = "%s\n + %s" % (logText, stream)
 
+            streamUrl = stream.Url
+            if proxy:
+                if stream.Downloaded:
+                    logText = "%s\n    + Not adding proxy as the stream is already downloaded" % (logText, )
+                elif proxy.Scheme == "http" and not stream.Url.startswith("http"):
+                    logText = "%s\n    + Not adding proxy due to scheme mismatch" % (logText, )
+                elif not proxy.UseProxyForUrl(streamUrl):
+                    logText = "%s\n    + Not adding proxy due to filter mismatch" % (logText, )
+                else:
+                    streamUrl = "%s|HttpProxy=%s" % (stream.Url, proxy.GetProxyAddress())
+                    logText = "%s\n    + Adding %s" % (logText, proxy)
+
             if index == currentIndex and index < len(playListItems):
                 # We need to replace the current item.
                 Logger.Trace("Replacing current XBMC ListItem at Playlist index %s (of %s)", index, len(playListItems))
-                playListItems[index] = (stream.Url, xbmcItem)
+                playListItems[index] = (streamUrl, xbmcItem)
             else:
                 # We need to add at the current index
                 Logger.Trace("Inserting XBMC ListItem at Playlist index %s", index)
-                playListItems.insert(index, (stream.Url, xbmcItem))
+                playListItems.insert(index, (streamUrl, xbmcItem))
 
             index += 1
 
@@ -486,7 +509,7 @@ class MediaItem:
         for playListItem in playListItems:
             playList.add(playListItem[0], playListItem[1])
 
-        return (playList, srt)
+        return playList, srt
 
     def __GetUUID(self):
         """Generates a Unique Identifier based on Time and Random Integers"""
@@ -747,13 +770,13 @@ class MediaItemPart:
 
         """
 
-        if name == None:
+        if not name:
             Logger.Debug("Creating XBMC ListItem '%s' [PluginMode=%s]", self.Name, pluginMode)
         else:
             Logger.Debug("Creating XBMC ListItem '%s' [PluginMode=%s]", name, pluginMode)
         item = parent.GetXBMCItem(pluginMode=pluginMode, name=name)
 
-        if bitrate == None:
+        if not bitrate:
             bitrate = addonsettings.AddonSettings().GetMaxStreamBitrate()
 
         for prop in self.Properties:
@@ -763,7 +786,7 @@ class MediaItemPart:
         # now find the correct quality stream
         stream = self.GetMediaStreamForBitrate(bitrate)
 
-        if self.UserAgent:
+        if self.UserAgent and "|User-Agent" not in stream.Url:
             url = "%s|User-Agent=%s" % (stream.Url, htmlentityhelper.HtmlEntityHelper.UrlEncode(self.UserAgent))
             stream.Url = url
 
@@ -771,7 +794,7 @@ class MediaItemPart:
             Logger.Info("Updating xbmc playlist-item path: %s", stream.Url)
             item.setProperty("path", stream.Url)
 
-        return (stream, item)
+        return stream, item
 
     def GetMediaStreamForBitrate(self, bitrate):
         """Returns the MediaStream for the requested bitrate.

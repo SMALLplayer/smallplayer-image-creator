@@ -63,7 +63,7 @@ class MmsHelper:
             return url
 
     @staticmethod
-    def GetMmsFromAsx(url):
+    def GetMmsFromAsx(url, proxy):
         """Opens a URL with an ASX playlist and returns the first found stream
         in the ASX file. Only searches for mms://url.
 
@@ -102,7 +102,7 @@ class MmsHelper:
             return url
 
         Logger.Debug("Parsing %s to find MMS", url)
-        data = UriHandler.Open(url, pb=True)
+        data = UriHandler.Open(url, pb=True, proxy=proxy)
         urls = Regexer.DoRegex('[Rr]ef href="mms://([^"]+)"', data)
 
         if len(urls) > 0:

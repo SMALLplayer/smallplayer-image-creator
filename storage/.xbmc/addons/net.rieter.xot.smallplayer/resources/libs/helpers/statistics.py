@@ -98,7 +98,7 @@ class Statistics:
             Logger.Debug("Sending statistics: %s", url)
 
             # now we need something async without caching
-            UriHandler.Open(url, False)
+            UriHandler.Open(url, False, additionalHeaders={"User-Agent": UriHandler.GetXBMCUserAgent()})
         except:
             # we should never ever fail here
             Logger.Warning("Cannot send statistics", exc_info=True)

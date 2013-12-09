@@ -17,6 +17,7 @@
 	<string id="1015">Descargas</string>
 	<string id="1016">Eliminar descarga</string>
 	<string id="1017">Eliminar URL personalizada</string>
+	<string id="1018">Add to XBMC favourites</string>
 
 	<!--Settings-->
 	<string id="2000">Usuario</string>
@@ -27,8 +28,8 @@
 	<string id="2006">Medio</string>
 	<string id="2007">Alto</string>
 	<string id="2008">Color de íconos</string>
-	<string id="2009">Claro</string>
-	<string id="2010">Oscuro</string>
+	<string id="2009">White</string>
+	<string id="2010">Negro</string>
 	<string id="2011">Número de recientes</string>
 	<string id="2012">Mensaje cuando cambia estación</string>
 	<string id="2013">HTTPS</string>
@@ -56,6 +57,16 @@
 	<string id="2035">Habilitar descargas</string>
 	<string id="2036">Actualizar cache (hrs)</string>
 	<string id="2037">Latitud/Longitud</string>
+	<string id="2038">Language</string>
+	<string id="2039">Rojo</string>
+	
+	
+	<!-- Settings Titles -->
+	<string id="2050">TuneIn</string>
+	<string id="2051">Appearance</string>
+	<string id="2052">Downloads</string>
+	<string id="2053">Formats</string>
+	<string id="2054">Advanced</string>
 	
 	<!--Dialogs-->
 	<string id="3000">Escriba el nombre de estación/show/artista</string>
@@ -75,6 +86,7 @@
 	<string id="3014">Escriba un nombre para la URL personalizada</string>
 	<string id="3015">Fallo en descarga del show.</string>
 	<string id="3016">El URL de descarga del show esta vacio, intente reproducirlo.</string>
+	<string id="3017">Unable to add station to XBMC favourites.</string>
 	
 	<!--Download Dialogs-->
 	<string id="4000">TuneIn Radio</string>

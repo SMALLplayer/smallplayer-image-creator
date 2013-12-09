@@ -107,7 +107,7 @@ def BrowseListMenu(section): #This must match the 'function' key of an option fr
 
 
 def art(filename):
-    adn = Addon('plugin.video.1channel', sys.argv)
+    adn = Addon('plugin.video.1channel.smallplayer', sys.argv)
     THEME_LIST = ['mikey1234', 'Glossy_Black']
     THEME = THEME_LIST[int(adn.get_setting('theme'))]
     THEME_PATH = os.path.join(adn.get_path(), 'art', 'themes', THEME)

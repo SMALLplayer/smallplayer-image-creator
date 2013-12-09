@@ -1,43 +1,114 @@
-TuneIn Radio Add-on for XBMC
-======================
-
-About
------
-This projects goal is to provide an interface to [TuneIn][1] in XBMC. 
-It is my plan to try and implement as much of the TuneIn functionality as possible.
+TuneIn Radio for XBMC
+=====================
+A plugin that allows you to access thousands of radio stations at TuneIn from within XBMC.
 
 Features
------
-- Display TuneIn presets.
+--------
+- Display TuneIn favourites.
 - Display recently played stations/shows.
 - Download shows and podcasts.
 - Browse thousands of radio station streams.
 - Search for a specific radio station.
-- Ability to add/remove stations to/from presets.
+- Ability to add/remove stations to/from TuneIn favourites.
 - Manually enter a stream to play.
+- Add stations to XBMC favourites.
 
-See [wiki][3] for more information on using add-on.
+Screenshots
+-----------
+<img alt="TuneIn Radio Main Menu" src="https://raw.github.com/brianhornsby/www_brianhornsby_com/master/img/tunein_main_menu.png" height="128"/>
+<img alt="TuneIn Radio Favourites Menu" src="https://raw.github.com/brianhornsby/www_brianhornsby_com/master/img/tunein_favourites_menu.png" height="128"/>
+<img alt="TuneIn Radio Browse Stations Menu" src="https://raw.github.com/brianhornsby/www_brianhornsby_com/master/img/tunein_browse_stations.png" height="128"/>
+<img alt="TuneIn Radio Station Information" src="https://raw.github.com/brianhornsby/www_brianhornsby_com/master/img/tunein_station_information.png" height="128"/>
 
-Prerequisites
+Installation
+------------
+Download the latest zip file and install the addon. 
+See [http://wiki.xbmc.org/?title=Add-ons#How_to_install_from_a_ZIP_file][1] for more details on installing addons from zip file.
+
+Usage
 -----
-- Ubuntu 11.04 (Natty Narwhal), Windows XP or Mac OS X (Lion)
-- XBMC 10.1 (Dharma), XBMC 11.0 Beta 1 (Eden)
+The TuneIn Radio add-on can be accessed from the Music Addons menu.
 
-Installation Instructions
------
-1. Download the latest zip file for add-on from [Download][4] section.
+Settings
+--------
+The following settings are available.
 
-2. Install add-on into XBMC using 'install from zip file' option. The plugin will be installed in the music add-ons section.
+**TuneIn**
 
-Third-party Libraries
----------------------
-- simplejson
+**Username**: TuneIn account username.
+
+**Password**: TuneIn account password.
+
+**Display TuneIn Featured Station**: If set to true display TuneIn featured stations. Default: true
+
+**Display TuneIn Local Station(s)**: If set to true display TuneIn local stations. Default: true
+
+**Language**: Language used by TuneIn. Allowed values: ar-SA|cs-CZ|da-DK|nl-NL|fi-FI|fr-FR|de-DE|el-GR|hi-IN|hu-HU|it-IT|ja-JP|ko-KR|pl-PL|pt-PT|ru-RU|zh-CN|es-ES|sv-SV|zh-TW|tr-TR|en-GB|en-US. Default: en-GB
+
+**Latitude/Longitude**: A specific latitude/longitude pair, comma separated, used to target local radio.
+
+**Appearance**
+
+**Icon Colour**: Set the colour of the icons used in add-on. Allowed values: White|Black|Red. Default: White
+
+**Number Of Recents**: Number of recent stations/shows to store. Default: 5
+
+**Prompt When Changing Station**: Default: true
+
+**Display Fanart**: Default: true
+
+**Downloads**
+
+**Enable Downloads**: Default: true
+
+**Download Path**: Path to download files to.
+
+**Download In Background**: Whether the downloads should occur in background. Default: false
+
+**Formats**
+
+**AAC/AAC+**: Default: false
+
+**AM (Broadcast)**: Default: false
+
+**DAB (Broadcast)**: Default: false
+
+**FM (Broadcast)**: Default: false
+
+**HD (Broadcast)**: Default: false
+
+**HTML Web Page**: Default: false
+
+**MP3**: Default: true
+
+**OGG**: Default: false
+
+**QuickTime**: Default: false
+
+**RealMedia**: Default: false
+
+**RTMP Flash**: Default: false
+
+**Satellite (Broadcast)**: Default: false
+
+**Windows Media**: Default: true
+
+**Windows Media Professional**: Default: true
+
+**Windows Media Video**: Default: true
+
+**Windows Media Voice**: Default: true
+
+**Advanced**
+
+**HTTPS**: Use to set protocol (http or https). Default: true
+
+**Update Cache (hrs)**: How often to contact TuneIn to update format and genres cache. Default: 24
+
 
 License
 -------
 This software is released under the [GPL 3.0 license] [2].
 
-[1]: http://tunein.com
+[1]: http://wiki.xbmc.org/?title=Add-ons#How_to_install_from_a_ZIP_file
 [2]: http://www.gnu.org/licenses/gpl-3.0.html
-[3]: https://github.com/brianhornsby/tunein-xbmc/wiki
-[4]: https://github.com/brianhornsby/tunein-xbmc/downloads

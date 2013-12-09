@@ -18,6 +18,7 @@ import string
 import StringIO
 import gzip
 import zlib
+import platform
 from httplib import IncompleteRead
 
 import xbmcgui
@@ -31,11 +32,13 @@ from envcontroller import EnvController
 from envcontroller import Environments
 
 
+#noinspection PyClassHasNoInit,PyShadowingBuiltins
 class UriHandler:
     """Class that handles all the URL downloads"""
 
     __handler = None
     __error = "UriHandler not initialized. Use UriHandler.CreateUriHandler ======="
+    __UserAgent = None
 
     @staticmethod
     def CreateUriHandler(useProgressBars=True, useCaching=False):
@@ -51,7 +54,7 @@ class UriHandler:
 
         """
 
-        if (UriHandler.__handler is None):
+        if UriHandler.__handler is None:
             UriHandler.__handler = CustomUriHandler(useProgressBars, useCaching)
 
             # hook up all the methods to pass to the actual UriHandler
@@ -73,15 +76,15 @@ class UriHandler:
         return UriHandler.__handler
 
     @staticmethod
-    def Download(uri, filename, folder="", pb=True, proxy=None, params="", userAgent=None, referer=None, additionalHeaders=dict()):
+    def Download(uri, filename, folder="", pb=True, proxy=None, params="", userAgent=None, referer=None, additionalHeaders=None):
         pass
 
     @staticmethod
-    def Open(uri, pb=True, proxy=None, bytes=0, params="", referer=None, headers=dict(), additionalHeaders=dict()):
+    def Open(uri, pb=True, proxy=None, bytes=0, params="", referer=None, additionalHeaders=None, noCache=False):
         pass
 
     @staticmethod
-    def Header(uri, proxy=None, params="", additionalHeaders=dict()):
+    def Header(uri, proxy=None, params="", additionalHeaders=None, noCache=False):
         pass
 
     @staticmethod
@@ -97,6 +100,42 @@ class UriHandler:
         pass
 
     @staticmethod
+    def GetXBMCUserAgent():
+        """ Creates an XBMC user agent:
+        Actual
+        User-Agent: XBMC/12.2 Git:20130502-32b1a5e (Windows NT 6.1;WOW64;Win64;x64; http://www.xbmc.org)
+        XOT:
+        User-Agent: XBMC/12.2 Git:20130502-32b1a5e (Windows 7;x86; http://www.xbmc.org)
+
+        Actual:
+        User-Agent: XBMC/13.0-ALPHA3 Git:e8fe5cf (Linux; Ubuntu 11.10 - XBMCbuntu; 3.0.0-17-generic i686; http://www.xbmc.org)
+        XOT:
+        User-Agent: XBMC/13.0-ALPHA3 Git:e8fe5cf (Linux 3.0.0-17-generic;i686; http://www.xbmc.org)
+
+        """
+
+        if not UriHandler.__UserAgent:
+            version = xbmc.getInfoLabel("system.buildversion")
+
+            # UriHandler.__UserAgent = "XBMC/%s (%s;%s;%s;%s, http://www.xbmc.org)" % (version, kernel, machine, windows, "")
+            try:
+                # The platform.<method> are not working on rPi and IOS
+                # kernel = platform.architecture()
+                # Logger.Trace(kernel)
+
+                # machine = platform.machine()
+                # Logger.Trace(machine)
+
+                uname = platform.uname()
+                Logger.Trace(uname)
+                UriHandler.__UserAgent = "XBMC/%s (%s %s;%s; http://www.xbmc.org)" % (version, uname[0], uname[2], uname[4])
+            except:
+                currentEnv = EnvController.GetPlatform(True)
+                UriHandler.__UserAgent = "XBMC/%s (%s; <unknown>; http://www.xbmc.org)" % (version, currentEnv)
+
+        return UriHandler.__UserAgent
+
+    @staticmethod
     def GetExtensionFromUrl(url):
         """ determines the file extension for a certain URL
 
@@ -109,12 +148,13 @@ class UriHandler:
 
         extensions = {".divx": "divx", ".flv": "flv", ".mp4": "mp4", "m4v": ".mp4", ".avi": "avi", "h264": "mp4"}
         for ext in extensions:
-            if  url.find(ext) > 0:
+            if url.find(ext) > 0:
                 return extensions[ext]
 
         return ""
 
 
+#noinspection PyShadowingBuiltins
 class CustomUriHandler:
     """Class that handles all the URL downloads"""
 
@@ -152,7 +192,8 @@ class CustomUriHandler:
         self.webTimeOutInterval = Config.webTimeOut  # max duration of request
         self.pollInterval = 0.1                      # time between polling of activity
 
-    def Download(self, uri, filename, folder="", pb=True, proxy=None, params="", userAgent=None, referer=None, additionalHeaders=dict()):
+    #noinspection PyUnboundLocalVariable
+    def Download(self, uri, filename, folder="", pb=True, proxy=None, params="", userAgent=None, referer=None, additionalHeaders=None):
         """Downloads an file
 
         Arguments:
@@ -172,8 +213,10 @@ class CustomUriHandler:
 
         """
 
+        if not uri:
+            return ""
+
         pbEnabled = pb  # and self.pbEnabled -> downloads should always show progressbar
-        pbTitle = ""
         pbLine1 = ""
         pbLine2 = ""
         if pbEnabled:
@@ -204,9 +247,9 @@ class CustomUriHandler:
                 pbLine1 = uri
                 uriPB.create(pbTitle, pbLine1)
             if params == "":
-                sourceHandle = self.__GetOpener(proxy, userAgent, disableCaching=True, referer=referer, additionalHeaders=additionalHeaders, acceptCompression=False).open(uri)
+                sourceHandle = self.__GetOpener(uri, proxy, userAgent, disableCaching=True, referer=referer, additionalHeaders=additionalHeaders, acceptCompression=False).open(uri)
             else:
-                sourceHandle = self.__GetOpener(proxy, userAgent, disableCaching=True, referer=referer, additionalHeaders=additionalHeaders, acceptCompression=False).open(uri, params)
+                sourceHandle = self.__GetOpener(uri, proxy, userAgent, disableCaching=True, referer=referer, additionalHeaders=additionalHeaders, acceptCompression=False).open(uri, params)
             destHandle = open(destComplete, 'wb')
             headers = sourceHandle.info()
 
@@ -272,7 +315,8 @@ class CustomUriHandler:
 
             return ""
 
-    def Open(self, uri, pb=True, proxy=None, bytes=0, params="", referer=None, additionalHeaders=dict()):
+    #noinspection PyUnboundLocalVariable
+    def Open(self, uri, pb=True, proxy=None, bytes=0, params="", referer=None, additionalHeaders=None, noCache=False):
         """Open an URL Async using a thread
 
         Arguments:
@@ -291,6 +335,8 @@ class CustomUriHandler:
 
         """
 
+        progressbarEnabled = pb and self.pbEnabled
+        openThread = None
         try:
             if uri == "":
                 return ""
@@ -300,14 +346,10 @@ class CustomUriHandler:
                 if index > 0:
                     uri = uri[0:index]
 
-            progressbarEnabled = pb and self.pbEnabled
             parameters = params
             targetUrl = uri
-            pbTitle = ''
             pbLine1 = ''
             pbLine2 = ''
-            blocks = 0
-            filesize = 0
             canceled = False
             timeOut = False
 
@@ -322,7 +364,7 @@ class CustomUriHandler:
             # set the start time in seconds
             startTime = time.time()
 
-            openThread = AsyncOpener(targetUrl, self.__GetOpener(proxy, referer=referer, additionalHeaders=additionalHeaders), self.blockSize, action='open', bytes=bytes, params=parameters)
+            openThread = AsyncOpener(targetUrl, self.__GetOpener(uri, proxy, disableCaching=noCache, referer=referer, additionalHeaders=additionalHeaders), self.blockSize, action='open', bytes=bytes, params=parameters)
             openThread.start()
             # time.sleep(0.1)
 
@@ -352,11 +394,11 @@ class CustomUriHandler:
 
             if canceled:
                 Logger.Warning("Opening of %s was cancelled", targetUrl)
-                data = ""
+
             if timeOut:
                 Logger.Critical("The URL lookup did not respond within the TimeOut (%s s)", self.webTimeOutInterval)
-                data = ""
-            if openThread.error != None:
+
+            if openThread.error:
                 Logger.Critical("The URL was not opened successfully: %s", openThread.error)
                 # perhaps there was data?
                 data = openThread.data
@@ -364,7 +406,7 @@ class CustomUriHandler:
                 Logger.Info("Url %s was opened successfully", targetUrl)
                 data = openThread.data
 
-            if (openThread.isAlive()):
+            if openThread.isAlive():
                 Logger.Debug("UriOpener thread is still alive, wait for it to close")
                 openThread.join(Config.webTimeOut)
 
@@ -375,13 +417,13 @@ class CustomUriHandler:
 
             Logger.Error("Error in threading", exc_info=True)
 
-            if (openThread.isAlive()):
+            if openThread and openThread.isAlive():
                 Logger.Debug("UriOpener thread is still alive, wait for it to close")
                 openThread.join(Config.webTimeOut)
 
             return ""
 
-    def Header(self, uri, proxy=None, params="", referer=None, additionalHeaders=dict()):
+    def Header(self, uri, proxy=None, params="", referer=None, additionalHeaders=None, noCache=False):
         """Retrieves header information only
 
         Arguments:
@@ -401,21 +443,24 @@ class CustomUriHandler:
         # uri = uri
         # params = params
 
+        if not uri:
+            return ""
+
         try:
             if params == "":
-                uriHandle = self.__GetOpener(proxy, headOnly=True, referer=referer, additionalHeaders=additionalHeaders).open(uri)
+                uriHandle = self.__GetOpener(uri, proxy, disableCaching=noCache, headOnly=True, referer=referer, additionalHeaders=additionalHeaders).open(uri)
             else:
-                uriHandle = self.__GetOpener(proxy, headOnly=True, referer=referer, additionalHeaders=additionalHeaders).open(uri, params)
+                uriHandle = self.__GetOpener(uri, proxy, disableCaching=noCache, headOnly=True, referer=referer, additionalHeaders=additionalHeaders).open(uri, params)
 
             data = uriHandle.info()
             realUrl = uriHandle.geturl()
             data = data.get('Content-Type')
             uriHandle.close()
             Logger.Debug("Header info retreived: %s for realUrl %s", data, realUrl)
-            return (data, realUrl)
+            return data, realUrl
         except:
             Logger.Critical("Header info not retreived", exc_info=True)
-            return ("", "")
+            return "", ""
 
     def CookieCheck(self, cookieName):
         """Checks if a cookie exists in the CookieJar
@@ -480,6 +525,7 @@ class CustomUriHandler:
         Logger.Debug("Corrected from '%s' to '%s'", original, filename)
         return filename
 
+    #noinspection PyUnusedLocal
     def __PBHandler(self, blocknum, blocksize, totalsize, uriPB, pbLine1, pbLine2):
         """Callback handler for displaying Progress Bar information
 
@@ -497,7 +543,7 @@ class CustomUriHandler:
 
         """
 
-        if uriPB.iscanceled() == False:
+        if not uriPB.iscanceled():
             try:
                 retrievedsize = blocknum * blocksize
                 if totalsize != 0:
@@ -519,8 +565,11 @@ class CustomUriHandler:
         else:
             return True
 
-    def __GetOpener(self, proxy=None, userAgent=None, headOnly=False, disableCaching=False, referer=None, additionalHeaders=dict(), acceptCompression=True):
+    def __GetOpener(self, url, proxy=None, userAgent=None, headOnly=False, disableCaching=False, referer=None, additionalHeaders=None, acceptCompression=True):
         """Get's a urllib2 URL opener with cookie jar
+
+        Arguments:
+        url               : string        - The URL to get an opener for
 
         Keyword Arguments:
         proxy             : [opt] string  - The address and port (proxy.address.ext:port) of
@@ -535,20 +584,34 @@ class CustomUriHandler:
 
         """
 
+        # create an empty dict, as it cannot be used as a default parameter
+        # http://pythonconquerstheuniverse.wordpress.com/category/python-gotchas/
+        if not additionalHeaders:
+            additionalHeaders = dict()
+
         cookieHandler = urllib2.HTTPCookieProcessor(self.cookieJar)
         headHandler = HttpHeadHandler()
 
         cacheHandler = None
-        if self.useCaching and not disableCaching:
-            cacheHandler = cachehttphandler.CacheHttpHandler(self.cacheStore, logger=Logger.Instance())
+        if self.useCaching:
+            if disableCaching:
+                Logger.Info("Disabling caching for this request")
+            else:
+                cacheHandler = cachehttphandler.CacheHttpHandler(self.cacheStore, logger=Logger.Instance())
 
         uriOpener = urllib2.build_opener(cookieHandler)
 
         if proxy is None:
             pass
+        elif not proxy.UseProxyForUrl(url):
+            Logger.Debug("Not using proxy due to filter mismatch")
         else:
-            proxyHandler = proxy.GetSmartProxyHandler()
-            uriOpener.add_handler(proxyHandler)
+            Logger.Debug("Using %s", proxy)
+            uriOpener.add_handler(proxy.GetSmartProxyHandler())
+
+            # if there was an http scheme proxy, also add a https one as they will probably work
+            if proxy.Scheme == "http":
+                uriOpener.add_handler(proxy.GetSmartProxyHandler("https"))
 
         if headOnly:
             uriOpener.add_handler(headHandler)
@@ -567,30 +630,35 @@ class CustomUriHandler:
         headers = []
 
         # change the user agent (thanks to VincePirez @ xbmc forums)
-        if userAgent is None:
-            user_agent = "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-GB; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13 (.NET CLR 3.5.30729)"
+        Logger.Trace(additionalHeaders)
+        if 'User-Agent' in additionalHeaders:
+            Logger.Info("Using UserAgent from AdditionalHeaders: %s", additionalHeaders['User-Agent'])
         else:
-            Logger.Info("Using custom UserAgent for url: %s", userAgent)
-            user_agent = userAgent
-        # user_agent = "XOT/3.0 (compatible; XBMC; U)"
-        # uriOpener.addheaders = [('User-Agent', user_agent)]
-        headers.append(('User-Agent', user_agent))
+            if userAgent is None:
+                user_agent = "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-GB; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13 (.NET CLR 3.5.30729)"
+            else:
+                Logger.Info("Using custom UserAgent for url: %s", userAgent)
+                user_agent = userAgent
+            # user_agent = "XOT/3.0 (compatible; XBMC; U)"
+            # uriOpener.addheaders = [('User-Agent', user_agent)]
+            # headers.append(('User-Agent', user_agent))
+            additionalHeaders['User-Agent'] = user_agent
 
         # add the custom referer
         if not referer is None:
             Logger.Info("Adding custom Referer: '%s'", referer)
-            user_agent = userAgent
             headers.append(('referer', referer))
 
-        if additionalHeaders:
-            for header in additionalHeaders:
-                headers.append((header, additionalHeaders[header]))
+        # if additionalHeaders: -> there always is an user agent
+        for header in additionalHeaders:
+            headers.append((header, additionalHeaders[header]))
 
         uriOpener.addheaders = headers
 
         return uriOpener
 
 
+#noinspection PyShadowingBuiltins
 class AsyncOpener(threading.Thread):
     def __init__(self, uri, handler, blocksize, action=None, bytes=0, params=""):
         """Creates a new Asynchronous URL opener Thread
@@ -629,12 +697,12 @@ class AsyncOpener(threading.Thread):
             threading.Thread.__init__(self, name='UriOpenerThread', target=self.Open)
         else:
             raise Exception()
-            return
 
-    #===============================================================================
     def Open(self):
         """Opens an URL and updates properties of the AsyncOpener object"""
 
+        data = ""
+        sourceHandle = None
         try:
             # Check for posts
             if self.params == '':
@@ -660,14 +728,13 @@ class AsyncOpener(threading.Thread):
                     Logger.Trace("Found Content-Type header: %s", contentType)
                     charSetNeedle = 'charset='
                     charSetIndex = contentType.find(charSetNeedle)
-                    if (charSetIndex > 0):
+                    if charSetIndex > 0:
                         charSet = contentType[charSetIndex + len(charSetNeedle):]
                         Logger.Trace("Found Charset HTML Header: %s", charSet)
             except:
                 charSet = None
 
             data = ""
-
             # time.sleep(2)
 
             self.blocksRead = 0
@@ -678,7 +745,7 @@ class AsyncOpener(threading.Thread):
                 data = data + block
                 self.blocksRead += 1
 
-                if self.maxBytes > 0 and self.blocksRead * self.blockSize > self.maxBytes:
+                if 0 < self.maxBytes < self.blocksRead * self.blockSize:
                     Logger.Info('Stopping download because Bytes > maxBytes')
                     break
                 # need a sleep to allow reading of variables
@@ -702,7 +769,8 @@ class AsyncOpener(threading.Thread):
             self.data = data
             self.isCompleted = True
             try:
-                sourceHandle.close()
+                if sourceHandle:
+                    sourceHandle.close()
             except UnboundLocalError:
                 pass
 
@@ -710,7 +778,8 @@ class AsyncOpener(threading.Thread):
             Logger.Critical("Error Opening url %s", self.uri, exc_info=True)
             self.error = error
             try:
-                sourceHandle.close()
+                if sourceHandle:
+                    sourceHandle.close()
             except UnboundLocalError:
                 pass
 
@@ -755,6 +824,7 @@ class HttpCompressionHandler(urllib2.BaseHandler):
     def https_response(self, request, response):
         return self.http_response(request, response)
 
+    #noinspection PyUnusedLocal
     def http_response(self, request, response):  # @UnusedVariables
         Logger.Trace("Processing HTTP response for possible decompression")
         # Logger.Trace("%s\n%s", response.url, response.info())

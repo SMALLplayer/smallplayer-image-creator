@@ -8,7 +8,7 @@ import xbmcgui
 
 from t0mm0.common.addon import Addon
 
-addon = Addon('plugin.video.1channel', sys.argv)
+addon = Addon('plugin.video.1channel.smallplayer', sys.argv)
 
 
 def format_label_tvshow(info):

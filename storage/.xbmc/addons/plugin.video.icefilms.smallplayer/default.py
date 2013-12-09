@@ -47,7 +47,12 @@ sys.path.append( os.path.join( icepath, 'resources', 'lib' ) )
 #imports of things bundled in the addon
 import container_urls,clean_dirs,htmlcleaner
 import debridroutines
-from metahandler import metahandlers
+
+try:
+    from metahandler import metahandlers
+except:
+    print 'Failed to import script.module.metahandler'
+    xbmcgui.Dialog().ok("Icefilms Import Failure", "Failed to import Metahandlers", "A component needed by Icefilms is missing on your system", "Please visit www.xbmchub.com for support")
 from cleaners import *
 from BeautifulSoup import BeautifulSoup
 from xgoogle.search import GoogleSearch
@@ -95,6 +100,7 @@ url=None
 name=None
 mode=None
 imdbnum=None
+tmdbnum=None
 dirmode=None
 season_num=None
 episode_num=None
@@ -107,6 +113,15 @@ cookie_path = os.path.join(datapath, 'cookies')
 downinfopath = os.path.join(datapath, 'downloadinfologs')
 cookie_jar = os.path.join(cookie_path, "cookiejar.lwp")
 art = icepath+'/resources/art'
+
+#######################################################
+class NoRedirection(urllib2.HTTPErrorProcessor):
+    # Stop Urllib2 from bypassing the 503 page.    
+    def http_response(self, request, response):
+        code, msg, hdrs = response.code, response.msg, response.info()
+
+        return response
+    https_response = http_response
 
 ####################################################
 
@@ -523,7 +538,14 @@ def resolve_180upload(url):
            dialog.close()
            html = net.http_GET(solvemedia.group(1)).content
            hugekey=re.search('id="adcopy_challenge" value="(.+?)">', html).group(1)
-           open(puzzle_img, 'wb').write(net.http_GET("http://api.solvemedia.com%s" % re.search('<img src="(.+?)"', html).group(1)).content)
+           
+           #Check for alternate puzzle type - stored in a div
+           alt_puzzle = re.search('<div><iframe src="(/papi/media.+?)"', html)
+           if alt_puzzle:
+               open(puzzle_img, 'wb').write(net.http_GET("http://api.solvemedia.com%s" % alt_puzzle.group(1)).content)
+           else:
+               open(puzzle_img, 'wb').write(net.http_GET("http://api.solvemedia.com%s" % re.search('<img src="(/papi/media.+?)"', html).group(1)).content)
+           
            img = xbmcgui.ControlImage(450,15,400,130, puzzle_img)
            wdlg = xbmcgui.WindowDialog()
            wdlg.addControl(img)
@@ -555,7 +577,7 @@ def resolve_180upload(url):
         html = net.http_POST(url, data).content
         dialog.update(100)
         
-        link = re.search('<a href="(.+?)" onclick="thanks\(\)">Download now!</a>', html)
+        link = re.search('id="lnk_download" href="([^"]+)', html)
         if link:
             print '180Upload Link Found: %s' % link.group(1)
             return link.group(1)
@@ -747,9 +769,11 @@ def resolve_movreel(url):
 
         #Get download link
         dialog.update(100)
-        link = re.search('<a id="lnk_download" href="(.+?)">Download Original Video</a>', html, re.DOTALL).group(1)
-        
-        return link
+        link = re.search('<a href="(.+)">Download Link</a>', html)
+        if link:
+            return link.group(1)
+        else:
+        	  raise Exception("Unable to find final link")
 
     except Exception, e:
         print '**** Movreel Error occured: %s' % e
@@ -768,27 +792,56 @@ def resolve_billionuploads(url):
         dialog.update(0)
         
         print 'BillionUploads - Requesting GET URL: %s' % url
+        import cookielib
+        cj = cookielib.CookieJar()
+        opener = urllib2.build_opener(NoRedirection, urllib2.HTTPCookieProcessor(cj))
+        urllib2.install_opener(opener)
+        
         html = net.http_GET(url).content
-               
+        dialog.update(50)
+              
         #Check page for any error msgs
         if re.search('This server is in maintenance mode', html):
             print '***** BillionUploads - Site reported maintenance mode'
             raise Exception('File is currently unavailable on the host')
 
+        # Check for file not found
+        if re.search('File Not Found', html):
+            print '***** BillionUploads - File Not Found'
+            raise Exception('File Not Found - Likely Deleted')  
+
+        #New CloudFlare checks
+        jschl=re.compile('name="jschl_vc" value="(.+?)"/>').findall(html)
+        if jschl:
+            jschl = jschl[0]    
+        
+            maths=re.compile('value = (.+?);').findall(html)[0].replace('(','').replace(')','')
+
+            domain_url = re.compile('(https?://.+?/)').findall(url)[0]
+            domain = re.compile('https?://(.+?)/').findall(domain_url)[0]
+            
+            time.sleep(5)
+            
+            normal = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
+            normal.addheaders = [('User-Agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.57 Safari/537.36')]
+            link = domain_url+'cdn-cgi/l/chk_jschl?jschl_vc=%s&jschl_answer=%s'%(jschl,eval(maths)+len(domain))
+            print 'BillionUploads - Requesting GET URL: %s' % link
+            final= normal.open(domain_url+'cdn-cgi/l/chk_jschl?jschl_vc=%s&jschl_answer=%s'%(jschl,eval(maths)+len(domain))).read()
+            html = normal.open(url).read()
+                    
         #Set POST data values
-        op = 'download2'
-        rand = re.search('<input type="hidden" name="rand" value="(.+?)">', html).group(1)
-        postid = re.search('<input type="hidden" name="id" value="(.+?)">', html).group(1)
-        method_free = re.search('<input type="hidden" name="method_free" value="(.*?)">', html).group(1)
-        down_direct = re.search('<input type="hidden" name="down_direct" value="(.+?)">', html).group(1)
+        data = {}
+        r = re.findall(r'type="hidden" name="(.+?)" value="(.+?)">', html)
+        for name, value in r:
+            data[name] = value
         
         #Captcha
         captchaimg = re.search('<img src="(http://BillionUploads.com/captchas/.+?)"', html)
-        
-        dialog.close()
-        
+       
         #If Captcha image exists
         if captchaimg:
+            
+            dialog.close()
             #Grab Image and display it
             img = xbmcgui.ControlImage(550,15,240,100,captchaimg.group(1))
             wdlg = xbmcgui.WindowDialog()
@@ -815,27 +868,87 @@ def resolve_billionuploads(url):
                 return None
             wdlg.close()
             
-            data = {'op': op, 'rand': rand, 'id': postid, 'referer': url, 'method_free': method_free, 'down_direct': down_direct, 'code': capcode}
+            #Add captcha code to post data
+            data.update({'code':capcode})
+            
+            #Re-create progress dialog
+            dialog.create('Resolving', 'Resolving BillionUploads Link...') 
 
-        else:
-            data = {'op': op, 'rand': rand, 'id': postid, 'referer': url, 'method_free': method_free, 'down_direct': down_direct}
+        #Some new data values
+        data.update({'submit_btn':'', 'referer': '', 'method_free': '', 'method_premium':''})
 
-        #They need to wait for the link to activate in order to get the proper 2nd page
-        dialog.close()
-        do_wait('Waiting on link to activate', '', 3)
-               
-        dialog.create('Resolving', 'Resolving BillionUploads Link...') 
+        r = re.search('document.createElement\(\'input\'\)\)\.attr\(\'type\',\'hidden\'\)\.attr\(\'name\',\'(.+?)\'\)\.val\(\$\(\'textarea\[source="(.+?)"\]\'\)\.val', html)
+        if r:
+            ra = re.search('<textarea source="%s" style="display: none;visibility: hidden">(.+?)</textarea>' % r.group(2), html)
+            if ra:
+                data.update({r.group(1):ra.group(1)})
+            
+        r = re.search('document\.getElementById\(\'.+\'\)\.innerHTML=decodeURIComponent\(\"(.+?)\"\);', html)
+        if r:
+            r = re.findall('type="hidden" name="(.+?)" value="(.+?)">', urllib.unquote(r.group(1)).decode('utf8') )
+            for name, value in r:
+                data.update({name:value})
+
+        #Remove some data items
+        r = re.findall('\(\'input\[name=\"(.+?)\"\]\'\)\.remove\(\);', html)
+        for keyval in r:
+            del data[keyval]
+        
         dialog.update(50)
         
         print 'BillionUploads - Requesting POST URL: %s DATA: %s' % (url, data)
         html = net.http_POST(url, data).content
         dialog.update(100)
-        link = re.search('&product_download_url=(.+?)"', html).group(1)
-        link = link + "|referer=" + url
-
         
-        return link
+        def custom_range(start, end, step):
+            while start <= end:
+                yield start
+                start += step
 
+        def checkwmv(e):
+            s = ""
+            
+            # Create an array containing A-Z,a-z,0-9,+,/
+            i=[]
+            u=[[65,91],[97,123],[48,58],[43,44],[47,48]]
+            for z in range(0, len(u)):
+                for n in range(u[z][0],u[z][1]):
+                    i.append(chr(n))
+            #print i
+
+            # Create a dict with A=0, B=1, ...
+            t = {}
+            for n in range(0, 64):
+                t[i[n]]=n
+            #print t
+
+            for n in custom_range(0, len(e), 72):
+
+                a=0
+                h=e[n:n+72]
+                c=0
+
+                #print h
+                for l in range(0, len(h)):            
+                    f = t.get(h[l], 'undefined')
+                    if f == 'undefined':
+                        continue
+                    a= (a<<6) + f
+                    c = c + 6
+
+                    while c >= 8:
+                        c = c - 8
+                        s = s + chr( (a >> c) % 256 )
+            return s
+
+        dll = re.compile('<input type="hidden" id="dl" value="(.+?)">').findall(html)[0]
+        dl = dll.split('GvaZu')[1]
+        dl = checkwmv(dl)
+        dl = checkwmv(dl)
+        print 'Link Found: %s' % dl                
+
+        return dl
+        
     except Exception, e:
         print '**** BillionUploads Error occured: %s' % e
         raise
@@ -917,7 +1030,7 @@ def resolve_epicshare(url):
         html = net.http_POST(url, data).content
         dialog.update(100)
         
-        link = re.search('<a id="lnk_download"  href="(.+?)">', html)
+        link = re.search('product_download_url=(.+?)"', html)
         if link:
             print 'EpicShare Link Found: %s' % link.group(1)
             return link.group(1)
@@ -936,85 +1049,44 @@ def resolve_epicshare(url):
 def resolve_megarelease(url):
 
     try:
-
+        
         #Show dialog box so user knows something is happening
         dialog = xbmcgui.DialogProgress()
-        dialog.create('Resolving', 'Resolving MegaRelease Link...')       
+        dialog.create('Resolving', 'Resolving MegaRelease Link...')
         dialog.update(0)
         
         print 'MegaRelease - Requesting GET URL: %s' % url
         html = net.http_GET(url).content
-        
+
         dialog.update(50)
         
         #Check page for any error msgs
+        if re.search('This server is in maintenance mode', html):
+            print '***** MegaRelease - Site reported maintenance mode'
+            raise Exception('File is currently unavailable on the host')
         if re.search('<b>File Not Found</b>', html):
-            print '***** MegaRelease - File Not Found'
-            raise Exception('File Not Found')
+            print '***** MegaRelease - File not found'
+            raise Exception('File has been deleted')
 
-        #Set POST data values
-        data = {}
-        r = re.findall(r'type="hidden" name="(.+?)" value="(.+?)">', html)
+        filename = re.search('You have requested <font color="red">(.+?)</font>', html).group(1)
+        filename = filename.split('/')[-1]
+        extension = re.search('(\.[^\.]*$)', filename).group(1)
+        guid = re.search('http://megarelease.org/(.+)$', url).group(1)
         
-        for name, value in r:
-            data[name] = value
-
-        captchaimg = re.search('<script type="text/javascript" src="(http://www.google.com.+?)">', html)
+        vid_embed_url = 'http://megarelease.org/vidembed-%s%s' % (guid, extension)
         
-        if captchaimg:
-            dialog.close()
-            html = net.http_GET(captchaimg.group(1)).content
-            part = re.search("challenge \: \\'(.+?)\\'", html)
-            captchaimg = 'http://www.google.com/recaptcha/api/image?c='+part.group(1)
-            img = xbmcgui.ControlImage(450,15,400,130,captchaimg)
-            wdlg = xbmcgui.WindowDialog()
-            wdlg.addControl(img)
-            wdlg.show()
-    
-            time.sleep(3)
-    
-            kb = xbmc.Keyboard('', 'Type the letters in the image', False)
-            kb.doModal()
-            capcode = kb.getText()
-    
-            if (kb.isConfirmed()):
-                userInput = kb.getText()
-                if userInput != '':
-                    solution = kb.getText()
-                elif userInput == '':
-                    Notify('big', 'No text entered', 'You must enter text in the image to access video', '')
-                    return False
-            else:
-                return False
-            wdlg.close()
-            dialog.close() 
-            dialog.create('Resolving', 'Resolving MegaRelease Link...') 
-            dialog.update(50)
-            data.update({'recaptcha_challenge_field':part.group(1),'recaptcha_response_field':solution})
+        request = urllib2.Request(vid_embed_url)
+        request.add_header('User-Agent', USER_AGENT)
+        request.add_header('Accept', ACCEPT)
+        request.add_header('Referer', url)
+        response = urllib2.urlopen(request)
+        redirect_url = re.search('(http://.+?)video', response.geturl()).group(1)
+        download_link = redirect_url + filename
         
-        else:
-            #Check for captcha
-            captcha = re.compile("left:(\d+)px;padding-top:\d+px;'>&#(.+?);<").findall(html)
-            if captcha:
-                result = sorted(captcha, key=lambda ltr: int(ltr[0]))
-                solution = ''.join(str(int(num[1])-48) for num in result)
-            data.update({'code':solution})
-
-        print 'MegaRelease - Requesting POST URL: %s DATA: %s' % (url, data)
-        html = net.http_POST(url, data).content
-
-        #Get download link
         dialog.update(100)
-        link = re.search('<a href="(.+?)">Download', html)
-        
-        if link:
-            print 'MegaRelease Link Found: %s' % link.group(1)
-            link = link.group(1) + "|referer=" + url
-            return link
-        else:
-            print '***** MegaRelease - Cannot find final link'
-            raise Exception('Unable to resolve MegaRelease Link')
 
+        return download_link
+        
     except Exception, e:
         print '**** MegaRelease Error occured: %s' % e
         raise
@@ -1025,88 +1097,45 @@ def resolve_megarelease(url):
 def resolve_lemupload(url):
 
     try:
-
+        
         #Show dialog box so user knows something is happening
         dialog = xbmcgui.DialogProgress()
-        dialog.create('Resolving', 'Resolving LemUpload Link...')       
+        dialog.create('Resolving', 'Resolving LemUploads Link...')
         dialog.update(0)
         
-        print 'LemUpload - Requesting GET URL: %s' % url
+        print 'LemUploads - Requesting GET URL: %s' % url
         html = net.http_GET(url).content
-        
+
         dialog.update(50)
         
         #Check page for any error msgs
+        if re.search('This server is in maintenance mode', html):
+            print '***** LemUploads - Site reported maintenance mode'
+            raise Exception('File is currently unavailable on the host')
         if re.search('<b>File Not Found</b>', html):
-            print '***** LemUpload - File Not Found'
-            raise Exception('File Not Found')
+            print '***** LemUpload - File not found'
+            raise Exception('File has been deleted')
 
-        #Set POST data values
-        data = {}
-        r = re.findall('type="hidden" name="(.+?)" value="(.+?)">', html)
+        filename = re.search('<h2>(.+?)</h2>', html).group(1)
+        extension = re.search('(\.[^\.]*$)', filename).group(1)
+        guid = re.search('http://lemuploads.com/(.+)$', url).group(1)
         
-        for name, value in r:
-            data[name] = value
-
-        captchaimg = re.search('<script type="text/javascript" src="(http://www.google.com.+?)">', html)
+        vid_embed_url = 'http://lemuploads.com/vidembed-%s%s' % (guid, extension)
         
-        if captchaimg:
-            dialog.close()
-            html = net.http_GET(captchaimg.group(1)).content
-            part = re.search("challenge \: \\'(.+?)\\'", html)
-            captchaimg = 'http://www.google.com/recaptcha/api/image?c='+part.group(1)
-            img = xbmcgui.ControlImage(450,15,400,130,captchaimg)
-            wdlg = xbmcgui.WindowDialog()
-            wdlg.addControl(img)
-            wdlg.show()
-    
-            time.sleep(3)
-    
-            kb = xbmc.Keyboard('', 'Type the letters in the image', False)
-            kb.doModal()
-            capcode = kb.getText()
-    
-            if (kb.isConfirmed()):
-                userInput = kb.getText()
-                if userInput != '':
-                    solution = kb.getText()
-                elif userInput == '':
-                    Notify('big', 'No text entered', 'You must enter text in the image to access video', '')
-                    return False
-            else:
-                return False
-            wdlg.close()
-            dialog.close() 
-            dialog.create('Resolving', 'Resolving LemUpload Link...') 
-            dialog.update(50)
-            data.update({'recaptcha_challenge_field':part.group(1),'recaptcha_response_field':solution})
+        request = urllib2.Request(vid_embed_url)
+        request.add_header('User-Agent', USER_AGENT)
+        request.add_header('Accept', ACCEPT)
+        request.add_header('Referer', url)
+        response = urllib2.urlopen(request)
+        redirect_url = re.search('(http://.+?)video', response.geturl()).group(1)
+        download_link = redirect_url + filename
         
-        else:
-            #Check for captcha
-            captcha = re.compile("left:(\d+)px;padding-top:\d+px;'>&#(.+?);<").findall(html)
-            if captcha:
-                result = sorted(captcha, key=lambda ltr: int(ltr[0]))
-                solution = ''.join(str(int(num[1])-48) for num in result)
-            data.update({'code':solution})
-                               
-        print 'LemUpload - Requesting POST URL: %s DATA: %s' % (url, data)
-        html = net.http_POST(url, data).content
-
-        #Get download link
         dialog.update(100)
 
-        link = re.search('<a href="(.+?)">Download', html)
+        return download_link
         
-        if link:
-            print 'LemUpload Link Found: %s' % link.group(1)
-            link = link.group(1) + "|referer=" + url
-            return link
-        else:
-            print '***** LemUpload - Cannot find final link'
-            raise Exception('Unable to resolve LemUpload Link')
-
     except Exception, e:
-        print '**** LemUpload Error occured: %s' % e
+        print '**** LemUploads Error occured: %s' % e
         raise
     finally:
         dialog.close()
@@ -1396,16 +1425,16 @@ def CATEGORIES():  #  (homescreen of addon)
           search=handle_file('search','')
 
           #add directories
-          HideHomepage = selfAddon.getSetting('hide-homepage')
-          
+
+          addDir('Favourites',iceurl,57,os.path.join(art,'favourites.png'))          
           addDir('TV Shows',iceurl+'tv/a-z/1',50,tvshows)
           addDir('Movies',iceurl+'movies/a-z/1',51,movies)
           addDir('Music',iceurl+'music/a-z/1',52,music)
           addDir('Stand Up Comedy',iceurl+'standup/a-z/1',53,standup)
           addDir('Other',iceurl+'other/a-z/1',54,other)
-          if HideHomepage == 'false':
-                addDir('Homepage',iceurl+'index',56,homepage)
-          addDir('Favourites',iceurl,57,os.path.join(art,'favourites.png'))
+          addDir('Recently Added',iceurl+'index',60,os.path.join(art,'recently added.png'))
+          addDir('Latest Releases',iceurl+'index',61,os.path.join(art,'latest releases.png'))
+          addDir('Being Watched Now',iceurl+'index',62,os.path.join(art,'being watched now.png'))          
           addDir('Search',iceurl,55,search)
           
           #Only show if prepare_zip = True - meaning you are creating a meta pack
@@ -1669,12 +1698,6 @@ def CLEAR_FAVOURITES(url):
           except:
                pass
 
-def ICEHOMEPAGE(url):
-        addDir('Recently Added',iceurl+'index',60,os.path.join(art,'recently added.png'))
-        addDir('Latest Releases',iceurl+'index',61,os.path.join(art,'latest releases.png'))
-        addDir('Being Watched Now',iceurl+'index',62,os.path.join(art,'being watched now.png'))
-        setView(None, 'default-view')
-
 
 def check_episode(name):
     #Episode will have eg. 01x15 within the name, else we can assume it's a movie
@@ -1726,6 +1749,13 @@ def check_video_meta(name, metaget):
     return meta
 
 
+# Quick helper method to check and add listing tag folders - popularity, recently added etc.
+def folder_tags(folder_text):
+    hide_tags = str2bool(selfAddon.getSetting('hide-tags'))
+    if not hide_tags:
+        VaddDir(folder_text, '', 0, '', False)
+        
+
 def RECENT(url):
         link=GetURL(url)
 
@@ -1742,8 +1772,10 @@ def RECENT(url):
                 recadd=re.compile('<h1>Recently Added</h1>(.+?)<h1>Latest Releases</h1>', re.DOTALL).findall(scrape)
                 for scraped in recadd:
                     text = re.compile("<span style='font-size:14px;'>(.+?)<br>").findall(scraped)
+                    
                     #Add the first line
-                    VaddDir('[COLOR blue]' + text[0] + '[/COLOR]', '', 0, '', False)
+                    folder_tags('[COLOR blue]' + text[0] + '[/COLOR]')
+                    
                     mirlinks=re.compile('<a href=/(.+?)>(.+?)</a>[ ]*<(.+?)>').findall(scraped)
                     for url,name,hd in mirlinks:
                             url=iceurl+url
@@ -1784,8 +1816,10 @@ def LATEST(url):
                 latrel=re.compile('<h1>Latest Releases</h1>(.+?)<h1>Being Watched Now</h1>', re.DOTALL).findall(scrape)
                 for scraped in latrel:
                     text = re.compile("<span style='font-size:14px;'>(.+?)<br>").findall(scraped)
+                    
                     #Add the first line
-                    VaddDir('[COLOR blue]' + text[0] + '[/COLOR]', '', 0, '', False)
+                    folder_tags('[COLOR blue]' + text[0] + '[/COLOR]')
+                    
                     mirlinks=re.compile('<a href=/(.+?)>(.+?)</a>[ ]*<(.+?)>').findall(scraped)
                     for url,name,hd in mirlinks:
                             url=iceurl+url
@@ -2093,8 +2127,10 @@ def MOVIEINDEX(url):
         
     temp = re.compile('(<h3>|<a name=i id=.+?></a><img class=star><a href=)(.+?)(<div|</h3>|>(.+?)<br>)').findall(link)
     for tag, link, longname, name in temp:
+
         if tag == '<h3>':
-            VaddDir('[COLOR blue]' + link + '[/COLOR]', '', 0, '', False)
+            folder_tags('[COLOR blue]' + link + '[/COLOR]')
+
         else:
             string = tag + link + longname + name
             scrape=re.compile('<a name=i id=(.+?)></a><img class=star><a href=/(.+?)>(.+?)<br>').findall(string)
@@ -2130,7 +2166,7 @@ def TVINDEX(url):
             regex = '<h3>(.+?)<div'
         else:
             regex = '<h3>(.+?)</h3>'
-        VaddDir('[COLOR blue]' + firstText[0] + '[/COLOR]', '', 0, '',False)
+        folder_tags('[COLOR blue]' + firstText[0] + '[/COLOR]')
     else:
         regex = '<h3>(.+?)</h3>'
     scrape=re.search('<a name=i id=(.+?)></a><img class=star><a href=/(.+?)>(.+?)<br>', link)
@@ -2145,7 +2181,7 @@ def TVINDEX(url):
     for entry in temp:
         text = re.compile(regex).findall(entry)
         if text:
-            VaddDir('[COLOR blue]' + text[0] + '[/COLOR]', '', 0, '',False)
+            folder_tags('[COLOR blue]' + text[0] + '[/COLOR]')
         scrape=re.compile('<a name=i id=(.+?)></a><img class=star><a href=/(.+?)>(.+?)</a>').findall(entry)
         if scrape:
             for imdb_id,url,name in scrape:
@@ -2285,20 +2321,17 @@ def LOADMIRRORS(url):
      if not namematch:
          Notify('big','Error Loading Sources','An error occured loading sources.\nCheck your connection and/or the Icefilms site.','')
          callEndOfDirectory = False
-         return
-     
+         return 
      try:
          cache.set('videoname',namematch[0])
      except:
          pass
-
      # get and save description
      match2=re.compile('<th>Description:</th><td>(.+?)<').findall(link)
      try:
           cache.set('description',match2[0])
      except:
           pass
-     
      # get and save poster link
      try:
           imgcheck1 = re.search('<img width=250 src=', link)
@@ -2327,9 +2360,9 @@ def LOADMIRRORS(url):
      epcheck1 = re.search('Episodes</a>', link)
      epcheck2 = re.search('Episode</a>', link)
      if epcheck1 is not None or epcheck2 is not None:
-          if cache.get('mediatvshowname'):
+          if cache.get('tvshowname'):
                #open media file if it exists, as that has show name with date.
-               showname=cache.get('mediatvshowname')
+               showname=cache.get('tvshowname')
           else:
                #fall back to scraping show name without date from the page.
                print 'USING FALLBACK SHOW NAME'
@@ -2337,8 +2370,8 @@ def LOADMIRRORS(url):
                showname=fallbackshowname[0]
           try:
                #if season name file exists
-               if cache.get('mediatvshowname'):
-                    seasonname=cache.get('mediatvshowname')
+               if cache.get('tvshowname'):
+                    seasonname=cache.get('tvshowname')
                     cache.set('mediapath','TV Shows/'+ Clean_Windows_String(showname) + '/' + Clean_Windows_String(seasonname))
                else:
                     cache.set('mediapath','TV Shows/' + Clean_Windows_String(showname))
@@ -2419,7 +2452,6 @@ def CAPTCHAENTER(surl):
                Notify('big', 'No text entered!', 'To try again, close this box and then: \n Press backspace twice, and reselect your video.', '')               
 
 def GETMIRRORS(url,link):
-# This scrapes the megaupload mirrors from the separate url used for the video frame.
 # It also displays them in an informative fashion to user.
 # Displays in three directory levels: HD / DVDRip etc , Source, PART
     print "getting mirrors for: %s" % url
@@ -2482,14 +2514,18 @@ def GETMIRRORS(url,link):
                 
 def addCatDir(url,dvdrip,hd720p,dvdscreener,r5r6):
        
-        if dvdrip == 1:
-                addDir('DVDRip',url,101,os.path.join(art,'source_types','dvd.png'), imdb=imdbnum)
         if hd720p == 1:
-                addDir('HD 720p',url,102,os.path.join(art,'source_types','hd720p.png'), imdb=imdbnum)
+                HD720p(url)
+                #addDir('HD 720p',url,102,os.path.join(art,'source_types','hd720p.png'), imdb=imdbnum)
+        if dvdrip == 1:
+                DVDRip(url)
+                #addDir('DVDRip',url,101,os.path.join(art,'source_types','dvd.png'), imdb=imdbnum)
         if dvdscreener == 1:
-                addDir('DVD Screener',url,103,os.path.join(art,'source_types','dvdscreener.png'), imdb=imdbnum)
+                DVDScreener(url)
+                #addDir('DVD Screener',url,103,os.path.join(art,'source_types','dvdscreener.png'), imdb=imdbnum)
         if r5r6 == 1:
-                addDir('R5/R6 DVDRip',url,104,os.path.join(art,'source_types','r5r6.png'), imdb=imdbnum)
+                R5R6(url)
+                #addDir('R5/R6 DVDRip',url,104,os.path.join(art,'source_types','r5r6.png'), imdb=imdbnum)
 
 def determine_source(url):
 
@@ -2518,11 +2554,11 @@ def determine_source(url):
         return host_list[host_index]
 
 
-def PART(scrap,sourcenumber,args,cookie):
+def PART(scrap,sourcenumber,args,cookie,source_tag):
      #check if source exists
      sourcestring='Source #'+sourcenumber
      checkforsource = re.search(sourcestring, scrap)
-     
+         
      #if source exists proceed.
      if checkforsource:
           
@@ -2544,8 +2580,8 @@ def PART(scrap,sourcenumber,args,cookie):
 
                         hoster = determine_source(url)
 
-                        partname='Part '+partnum
-                        fullname=sourcestring + ' | ' + hoster[1] + ' | '+partname
+                        partname='Part '+ partnum
+                        fullname=sourcestring + ' | ' + hoster[1] + ' | ' + source_tag + partname
                         logo = hoster[2]
 
                         try:
@@ -2576,7 +2612,7 @@ def PART(scrap,sourcenumber,args,cookie):
                     url = GetSource(id, args, cookie)
                     
                     hoster = determine_source(url)
-                    fullname=sourcestring + ' | ' + hoster[1] + ' | Full'
+                    fullname=sourcestring + ' | ' + hoster[1] + source_tag + ' | Full '
                     addExecute(fullname,url,get_default_action(),hoster[2])
 
 
@@ -2600,7 +2636,7 @@ def GetSource(id, args, cookie):
     return url
 
 
-def SOURCE(page, sources):
+def SOURCE(page, sources, source_tag):
           # get settings
           # extract the ingredients used to generate the XHR request
           #
@@ -2664,7 +2700,7 @@ def SOURCE(page, sources):
           #...so it's not as CPU intensive as you might think.
 
           for thenumber in numlist:
-               PART(sources,thenumber,args,cookie)
+               PART(sources,thenumber,args,cookie, source_tag)
           setView(None, 'default-view')
 
 def DVDRip(url):
@@ -2673,7 +2709,7 @@ def DVDRip(url):
         #string for all text under standard def border
         defcat=re.compile('<div class=ripdiv><b>DVDRip / Standard Def</b>(.+?)</div>').findall(link)
         for scrape in defcat:
-                SOURCE(link, scrape)
+                SOURCE(link, scrape, ' | [COLOR blue]DVD[/COLOR]')
         setView(None, 'default-view')
 
 def HD720p(url):
@@ -2682,7 +2718,7 @@ def HD720p(url):
         #string for all text under hd720p border
         defcat=re.compile('<div class=ripdiv><b>HD 720p</b>(.+?)</div>').findall(link)
         for scrape in defcat:
-                SOURCE(link, scrape)
+                SOURCE(link, scrape, ' | [COLOR red]HD[/COLOR]')
         setView(None, 'default-view')
 
 def DVDScreener(url):
@@ -2691,7 +2727,7 @@ def DVDScreener(url):
         #string for all text under dvd screener border
         defcat=re.compile('<div class=ripdiv><b>DVD Screener</b>(.+?)</div>').findall(link)
         for scrape in defcat:
-                SOURCE(link, scrape)
+                SOURCE(link, scrape, ' | [COLOR yellow]DVDSCR[/COLOR]')
         setView(None, 'default-view')
         
 def R5R6(url):
@@ -2700,7 +2736,7 @@ def R5R6(url):
         #string for all text under r5/r6 border
         defcat=re.compile('<div class=ripdiv><b>R5/R6 DVDRip</b>(.+?)</div>').findall(link)
         for scrape in defcat:
-                SOURCE(link, scrape)
+                SOURCE(link, scrape, ' | [COLOR green]R5/R6[/COLOR]')
         setView(None, 'default-view')
         
 class TwoSharedDownloader:
@@ -2799,6 +2835,9 @@ def GetURL(url, params = None, referrer = ICEFILMS_REFERRER, cookie = None, save
 
      return body
 
+############################################
+## Helper Functions
+############################################
 
 #Quick helper function used to strip characters that are invalid for Windows filenames/folders
 def Clean_Windows_String(string):
@@ -2808,6 +2847,13 @@ def Clean_Windows_String(string):
 #Helper function to convert strings to boolean values
 def str2bool(v):
   return v.lower() in ("yes", "true", "t", "1")
+
+#Int parse  
+def intTryParse(value):
+    try:
+        return int(value)
+    except ValueError:
+        return 0
 
 
 def Get_Path(srcname,vidname):
@@ -2888,17 +2934,32 @@ def Item_Meta(name):
           else: poster = get_poster
 
           try: get_mpaa=cache.get('mpaa')
-          except: mpaa = None
+          except: mpaa = ''
           else: mpaa = get_mpaa
           
           #srcname=handle_file('sourcename','open')
           srcname=name
 
           listitem = xbmcgui.ListItem(srcname)
-          if not mpaa:
-               listitem.setInfo('video', {'Title': vidname, 'plotoutline': description, 'plot': description})
-          if mpaa:
-               listitem.setInfo('video', {'Title': vidname, 'plotoutline': description, 'plot': description, 'mpaa': mpaa})
+          
+          video = get_video_name(vidname)
+          params = get_params()
+          
+          if not video['year']:
+              video['year'] = 0
+
+          if video_type == 'movie':
+               listitem.setInfo('video', {'title': video['name'], 'year': int(video['year']), 'type': 'movie', 'plotoutline': description, 'plot': description, 'mpaa': mpaa})
+
+          if video_type == 'episode':               
+               show = cache.get('tvshowname')
+               show = get_video_name(show)
+               episode_year = intTryParse(show['year'])
+               episode_num = intTryParse(params['episode'])
+               episode_season = intTryParse(params['season'])
+               
+               listitem.setInfo('video', {'title': video['name'], 'tvshowtitle': show['name'], 'year': episode_year, 'episode': episode_num, 'season': episode_season, 'type': 'episode', 'plotoutline': description, 'plot': description, 'mpaa': mpaa})
+          
           listitem.setThumbnailImage(poster)
 
           return listitem
@@ -3009,7 +3070,7 @@ def Stream_Source(name, url, download_play=False, download=False, stacked=False)
     last_part = False
     current_part = 1
 
-    while last_part == False:
+    while not last_part:
         
         #If it's a stacked source, grab url one by one
         if stacked == True:
@@ -3026,10 +3087,8 @@ def Stream_Source(name, url, download_play=False, download=False, stacked=False)
                 last_part = True
                 break
         else:
-            last_part = True        
-
-        print 'Last video part: %s' % str(last_part)
-        
+            last_part = True
+            
         #Grab the final playable link
         try:
             link = Handle_Vidlink(url)
@@ -3578,32 +3637,7 @@ def Download(url, dest, displayname=False):
             return False
         return True
 
-'''     
-def QuietDownload(url, dest):
-#possibly useful in future addon versions
-     
-        #dp = xbmcgui.DialogProgress() 
-        #dp.create('Downloading', '', name) 
-        start_time = time.time() 
-        try: 
-            #urllib.urlretrieve(url, dest, lambda nb, bs, fs: _pbhook(nb, bs, fs, dp, start_time))
-            urllib.urlretrieve(url, dest)
-            #xbmc.Player().play(dest)
-        except: 
-            #delete partially downloaded file 
-            while os.path.exists(dest): 
-                try: 
-                    #os.remove(dest) 
-                    break 
-                except: 
-                     pass 
-            #only handle StopDownloading (from cancel), ContentTooShort (from urlretrieve), and OS (from the race condition); let other exceptions bubble 
-            if sys.exc_info()[0] in (urllib.ContentTooShortError, StopDownloading, OSError): 
-                return 'false' 
-            else: 
-                raise 
-        return 'downloaded' 
-'''
+
 def QuietDownload(url, dest, videoname):
     #quote parameters passed to download script     
     q_url = urllib.quote_plus(url)
@@ -3790,6 +3824,7 @@ def addDir(name, url, mode, iconimage, meta=False, imdb=False, delfromfav=False,
                  liz.setProperty('fanart_image', meta['backdrop_url'])
              #if searchMode == False:
              contextMenuItems.append(('Movie Information', 'XBMC.Action(Info)'))
+             contextMenuItems.append(('Search for Similar', 'XBMC.RunPlugin(%s?mode=991&name=%s&url=%s&tmdbnum=%s&dirmode=%s&videoType=%s)' % (sys.argv[0], sysname, sysurl, urllib.quote_plus(str(meta['tmdb_id'])), dirmode, videoType)))
          #Add Refresh & Trailer Search context menu
          if searchMode==False:
              if mode in (12, 100):
@@ -3834,7 +3869,7 @@ def addDir(name, url, mode, iconimage, meta=False, imdb=False, delfromfav=False,
              episode = int(episode_info.group(2))
              mode = 100
 
-     if mode in (12, 13, 100, 101, 102, 103, 104):
+     if mode in (12, 13, 100, 101):
          u = sys.argv[0] + "?url=" + sysurl + "&mode=" + str(mode) + "&name=" + sysname + "&imdbnum=" + urllib.quote_plus(str(imdb)) + "&videoType=" + videoType + "&season=" + str(season) + "&episode=" + str(episode)
      else:
          u = sys.argv[0] + "?url=" + sysurl + "&mode=" + str(mode) + "&name=" + sysname
@@ -3870,6 +3905,7 @@ def setView(content, viewType):
     xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_PROGRAM_COUNT )
     xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_VIDEO_RUNTIME )
     xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_GENRE )
+    xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_MPAA_RATING )
     
 #Movie Favourites folder.
 def MOVIE_FAVOURITES(url):
@@ -4053,7 +4089,7 @@ def get_episode(season, episode, imdb_id, url, metaget, meta_installed, tmp_seas
             episode=CLEANUP(episode)
              
             #Get tvshow name - don't want the year portion
-            showname=cache.get('mediatvshowname')
+            showname=cache.get('tvshowname')
             r=re.search('(.+?) [(][0-9]{4}[)]',showname)
             if r:
                 showname = r.group(1)
@@ -4083,7 +4119,7 @@ def get_episode(season, episode, imdb_id, url, metaget, meta_installed, tmp_seas
         #add without metadata -- imdb is still passed for use with Add to Favourites
         else:
             episode=CLEANUP(episode)
-            addDir(episode,iceurl+url,100,'',imdb='tt'+str(imdb_id),totalItems=totalitems)                
+            addDir(episode,iceurl+url,14,'',imdb='tt'+str(imdb_id),totalItems=totalitems)                
 
               
 def find_meta_for_search_results(results, mode, search=''):
@@ -4214,6 +4250,24 @@ def ChangeWatched(imdb_id, videoType, name, season, episode, year='', watched=''
         xbmc.executebuiltin("XBMC.Container.Refresh")
 
 
+def SimilarMovies(tmdb_id):
+    metaget=metahandlers.MetaData(preparezip=prepare_zip)
+    movie_list = metaget.similar_movies(tmdb_id)
+    name_list = []
+    filtered_movie_list = []
+    if movie_list:
+        for movie in movie_list:
+            if movie['id'] != None:
+                filtered_movie_list.append(movie)
+                name_list.append(movie['title'])
+    
+        dialog = xbmcgui.Dialog()
+        index = dialog.select('Select a movie to search in Icefilms', name_list)
+        print index
+        if index > -1:
+            xbmc.executebuiltin("XBMC.Container.Update(%s?mode=555&url=%s&search=%s&nextPage=0)" % (sys.argv[0], iceurl, name_list[index]))
+
+
 def addLocal(name,filename, listitem=False):
 
     if listitem == None:
@@ -4314,6 +4368,10 @@ try:
 except:
         pass
 try:
+        tmdbnum=urllib.unquote_plus(params["tmdbnum"])
+except:
+        pass
+try:
         mode=int(params["mode"])
 except:
         pass
@@ -4347,11 +4405,28 @@ try:
         search=urllib.unquote_plus(params["search"])
 except:
         pass
-print '==========================PARAMS:\nURL: %s\nNAME: %s\nMODE: %s\nIMDBNUM: %s\nVIDEOTYPE: %s\nMYHANDLE: %s\nPARAMS: %s' % ( url, name, mode, imdbnum, video_type, sys.argv[1], params )
+
+print '----------------Icefilms Addon Param Info----------------------'
+print '--- Version: ' + str(addon.get_version())
+print '--- Mode: ' + str(mode)
+print '--- URL: ' + str(url)
+print '--- Video Type: ' + str(video_type)
+print '--- Name: ' + str(name)
+print '--- IMDB: ' + str(imdbnum)
+print '--- TMDB: ' + str(tmdbnum)
+print '--- Season: ' + str(season_num)
+print '--- Episode: ' + str(episode_num)
+print '--- MyHandle: ' + str(sys.argv[1])
+print '--- Params: ' + str(params)
+print '---------------------------------------------------------------'
 
 if mode==None: #or url==None or len(url)<1:
         print ""
         CATEGORIES()
+
+elif mode==991:
+       print "Mode 991 ******* dirmode is " + str(dirmode) + " *************  url is -> "+url
+       SimilarMovies(tmdbnum)
 
 elif mode==999:
         print "Mode 999 ******* dirmode is " + str(dirmode) + " *************  url is -> "+url
@@ -4397,9 +4472,6 @@ elif mode==55:
         print ""+url
         SEARCH(url)
 
-elif mode==56:
-        print ""+url
-        ICEHOMEPAGE(url)
 
 elif mode==57:
         print ""+url
@@ -4519,22 +4591,6 @@ elif mode==99:
 elif mode==100:
         print ""+url
         LOADMIRRORS(url)
-
-elif mode==101:
-        print ""+url
-        DVDRip(url)
-
-elif mode==102:
-        print ""+url
-        HD720p(url)
-
-elif mode==103:
-        print ""+url
-        DVDScreener(url)
-
-elif mode==104:
-        print ""+url
-        R5R6(url)
 
 elif mode==110:
         # if you dont use the "url", "name" params() then you need to define the value# along with the other params.

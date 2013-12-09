@@ -12,7 +12,7 @@ import xbmcgui
 import xbmcaddon
 
 
-ADDON = xbmcaddon.Addon(id='plugin.video.1channel')
+ADDON = xbmcaddon.Addon(id='plugin.video.1channel.smallplayer')
 
 try:
     DB_NAME = ADDON.getSetting('db_name')
@@ -198,7 +198,7 @@ while not xbmc.abortRequested:
             is_scanning = xbmc.getCondVisibility('Library.IsScanningVideo')
             if not (monitor.isPlaying() or is_scanning):
                 xbmc.log('1Channel: Service: Updating subscriptions')
-                builtin = 'RunPlugin(plugin://plugin.video.1channel/?mode=UpdateSubscriptions)'
+                builtin = 'RunPlugin(plugin://plugin.video.1channel.smallplayer/?mode=UpdateSubscriptions)'
                 xbmc.executebuiltin(builtin)
                 ADDON.setSetting('last_run', now.strftime("%Y-%m-%d %H:%M:%S.%f"))
             else:

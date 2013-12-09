@@ -15,6 +15,10 @@ from datetime import datetime
 class Initializer:
     StartTime = datetime.now()  # : Used for duration determinination
 
+    def __init__(self):
+        """ It is a static method, so we con't get here """
+        raise NotImplementedError("Static class only")
+
     @staticmethod
     def SetUnicode():
         """Forces the environment to UTF-8"""
@@ -53,4 +57,4 @@ class Initializer:
         return path
 
 if __name__ == "__main__":
-    init = Initializer.SetupPaths()
+    init = Initializer.SetupPythonPaths()

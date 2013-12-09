@@ -30,12 +30,14 @@ from helpers.statistics import Statistics
 from logger import Logger
 
 
+#noinspection PyMethodOverriding
 class GUI(xbmcgui.WindowXML):
     """This class is the GUI representation of the window that shows the channels
     and the related programs for that channel.
 
     """
 
+    #noinspection PyUnusedLocal,PyMissingConstructor
     def __init__(self, strXMLname, strFallbackPath, strDefaultName, bforeFallback=0):
         """Initialisation of the class. All class variables should be instantiated here
 
@@ -91,7 +93,7 @@ class GUI(xbmcgui.WindowXML):
             Logger.Debug("ProgWindow :: OnInit")
             # check, if there are buttons registerd, and if there are, if
             # the buttoncount is the same as the channelcount
-            if self.channelButtonRegister != []:
+            if self.channelButtonRegister:
                 if len(self.channelButtonRegister) != len(ChannelImporter.GetRegister().GetChannels()):
                     Logger.Critical("The number of buttons that were registered is not the same as the number of channels")
                     self.close()
@@ -108,7 +110,7 @@ class GUI(xbmcgui.WindowXML):
                 # Check if the selected index is still valid?
                 self.selectedChannelIndex = self.getCurrentListPosition()
                 # Logger.Debug("Current ChannelIndex: %s", self.selectedChannelIndex)
-                if (self.selectedChannelIndex >= len(self.channelGUIs)):
+                if self.selectedChannelIndex >= len(self.channelGUIs):
                     Logger.Warning("Current ChannelIndex is too large (index %s >= len %s). Resetting to 0", self.selectedChannelIndex, len(self.channelGUIs))
                     self.selectedChannelIndex = 0
 
@@ -342,6 +344,7 @@ class GUI(xbmcgui.WindowXML):
     #===============================================================================
     #    Contextmenu stuff
     #===============================================================================
+    #noinspection PyUnboundLocalVariable
     def onActionFromContextMenu(self, controlID):
         """Handles the actions that were chosen from the contectmenu."""
 
@@ -357,7 +360,7 @@ class GUI(xbmcgui.WindowXML):
             # determine if favorites are enabled
             favs = LanguageHelper.GetLocalizedString(LanguageHelper.FavouritesId)
 
-            if (self.listMode == ProgListModes.Normal):
+            if self.listMode == ProgListModes.Normal:
                 show = LanguageHelper.GetLocalizedString(LanguageHelper.ShowId)
                 add = LanguageHelper.GetLocalizedString(LanguageHelper.AddToId)
 
@@ -400,17 +403,18 @@ class GUI(xbmcgui.WindowXML):
         del contextMenu
 
         # handle function from items
-        if (selectedItem is not None and selectedItem > -1):
+        if selectedItem is not None and selectedItem > -1:
             selectedMenuItem = contextMenuItems[selectedItem]
             functionString = "self.%s(%s)" % (selectedMenuItem.functionName, selectedIndex)
             Logger.Debug("Calling %s", functionString)
             try:
-                exec(functionString)
+                exec functionString
             except:
                 Logger.Error("onActionFromContextMenu :: Cannot execute '%s'.", functionString, exc_info=True)
 
         return None
 
+    #noinspection PyUnusedLocal
     def CtMnShowFavorites(self, selectedIndex):
         """Shows the favorites for the selected channel
 
@@ -425,6 +429,7 @@ class GUI(xbmcgui.WindowXML):
         self.favoriteItems = settings.LoadFavorites(self.activeChannelGUI)
         self.ShowListItems(self.favoriteItems)
 
+    #noinspection PyUnusedLocal
     def CtMnHideFavorites(self, selectedIndex):
         """Hides the favorites for the selected channel
 
@@ -459,6 +464,7 @@ class GUI(xbmcgui.WindowXML):
         self.favoriteItems = settings.LoadFavorites(self.activeChannelGUI)
         self.ShowListItems(self.favoriteItems)
 
+    #noinspection PyUnusedLocal
     def CtMnUpdateXOT(self, selectedIndex):
         """Checks for new XOT framework updates.
 
@@ -470,8 +476,9 @@ class GUI(xbmcgui.WindowXML):
 
         """
 
-        update.CheckVersion(Config.Version, Config.updateUrl, verbose=True)
+        update.CheckVersion(Config.version, Config.updateUrl, verbose=True)
 
+    #noinspection PyUnusedLocal
     def CtMnRefresh(self, selectedIndex):
         """Refreshes the currenlty shown list
 
@@ -495,6 +502,7 @@ class GUI(xbmcgui.WindowXML):
         else:
             Logger.Debug("Cannot refresh a list without a channel.")
 
+    #noinspection PyUnusedLocal
     def CtMnSettingsXOT(self, selectedIndex):
         """Shows the Add-On Settings dialog.
 
@@ -510,6 +518,7 @@ class GUI(xbmcgui.WindowXML):
         self.guiController.SetBackground(addonsettings.AddonSettings().BackgroundImageChannels())
         return
 
+    #noinspection PyUnusedLocal
     def CtMnUpdateChannels(self, selectedIndex):
         """Shows the XOT Channel update dialog (only for XBMC4Xbox).
 
@@ -617,6 +626,9 @@ class ProgListModes:
     like a real Enumeration (like the C# kind).
 
     """
+
+    def __init__(self):
+        raise NotImplementedError("Enums only")
 
     Normal = 1
     Favorites = 2

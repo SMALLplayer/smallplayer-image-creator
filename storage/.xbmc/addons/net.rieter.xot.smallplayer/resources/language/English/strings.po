@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: XBMC-Addons\n"
 "Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: 2013-10-09 19:48+0000\n"
+"POT-Creation-Date: 2013-11-26 10:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE\n"
@@ -34,23 +34,23 @@ msgid "Maximum number of pages to load"
 msgstr ""
 
 msgctxt "#30005"
-msgid "Dutch channels"
+msgid "Dutch"
 msgstr ""
 
 msgctxt "#30006"
-msgid "Swedish channels"
+msgid "Swedish"
 msgstr ""
 
 msgctxt "#30007"
-msgid "Lithuanian channels"
+msgid "Lithuanian"
 msgstr ""
 
 msgctxt "#30008"
-msgid "Latvian channels"
+msgid "Latvian"
 msgstr ""
 
 msgctxt "#30009"
-msgid "Add-on"
+msgid "General"
 msgstr ""
 
 msgctxt "#30010"
@@ -58,23 +58,23 @@ msgid "Channels"
 msgstr ""
 
 msgctxt "#30011"
-msgid "Requires restart of XOT-Uzg to take effect."
+msgid "Requires restart of XBMC Online TV to take effect."
 msgstr ""
 
 msgctxt "#30012"
-msgid "Other channels"
+msgid "Other"
 msgstr ""
 
 msgctxt "#30013"
-msgid "French Canadian channels"
+msgid "French Canadian"
 msgstr ""
 
 msgctxt "#30014"
-msgid "English Canadian channels"
+msgid "English Canadian"
 msgstr ""
 
 msgctxt "#30015"
-msgid "Norwegian channels"
+msgid "Norwegian"
 msgstr ""
 
 msgctxt "#30016"
@@ -102,7 +102,7 @@ msgid "Subtitle mode"
 msgstr ""
 
 msgctxt "#30022"
-msgid "if available"
+msgid "If available"
 msgstr ""
 
 msgctxt "#30023"
@@ -110,7 +110,7 @@ msgid "Never show"
 msgstr ""
 
 msgctxt "#30024"
-msgid "Belgium channels"
+msgid "Belgium"
 msgstr ""
 
 msgctxt "#30025"
@@ -120,19 +120,19 @@ msgstr ""
 #empty string with id 30026
 
 msgctxt "#30027"
-msgid "British channels"
+msgid "British"
 msgstr ""
 
 msgctxt "#30028"
-msgid "Channel Settings"
+msgid "Proxy Settings"
 msgstr ""
 
 msgctxt "#30029"
-msgid "Proxy server(empty = disabled)"
+msgid "- Proxy server"
 msgstr ""
 
 msgctxt "#30030"
-msgid "Proxy port"
+msgid "- Proxy port"
 msgstr ""
 
 msgctxt "#30031"
@@ -152,11 +152,11 @@ msgid "Backgrounds"
 msgstr ""
 
 msgctxt "#30035"
-msgid "Proxy Username"
+msgid "- Proxy Username"
 msgstr ""
 
 msgctxt "#30036"
-msgid "Proxy Password"
+msgid "- Proxy Password"
 msgstr ""
 
 msgctxt "#30037"
@@ -170,7 +170,7 @@ msgid "Channels"
 msgstr ""
 
 msgctxt "#30041"
-msgid "Available after running XOT-Uzg.v3 for the first time."
+msgid "Available after running XBMC Online TV for the first time."
 msgstr ""
 
 msgctxt "#30042"
@@ -182,19 +182,19 @@ msgid "Folder prefix"
 msgstr ""
 
 msgctxt "#30044"
-msgid "Estonian channels"
+msgid "Estonian"
 msgstr ""
 
 msgctxt "#30045"
-msgid "Danish channels"
+msgid "Danish"
 msgstr ""
 
 msgctxt "#30046"
-msgid "Hide Geo-Locked items (if possible)"
+msgid "Hide Geo-Locked/Paid items (if possible)"
 msgstr ""
 
 msgctxt "#30047"
-msgid "German channels"
+msgid "German"
 msgstr ""
 
 msgctxt "#30048"
@@ -217,7 +217,113 @@ msgctxt "#30052"
 msgid "Send usage statistics"
 msgstr ""
 
-#empty strings from id 30053 to 30500
+msgctxt "#30053"
+msgid "Appearance"
+msgstr ""
+
+msgctxt "#30054"
+msgid "Change display name (requires XBMC restart)"
+msgstr ""
+
+msgctxt "#30055"
+msgid "Advanced"
+msgstr ""
+
+msgctxt "#30056"
+msgid "Dutch Proxy"
+msgstr ""
+
+msgctxt "#30057"
+msgid "British Proxy"
+msgstr ""
+
+msgctxt "#30058"
+msgid "Swedish Proxy"
+msgstr ""
+
+msgctxt "#30059"
+msgid "Custom Proxy"
+msgstr ""
+
+msgctxt "#30060"
+msgid "Select a language to manage its channels"
+msgstr ""
+
+msgctxt "#30061"
+msgid "Channel Language"
+msgstr ""
+
+msgctxt "#30062"
+msgid "Proxy Channel Selection"
+msgstr ""
+
+msgctxt "#30063"
+msgid "Channel to configure"
+msgstr ""
+
+msgctxt "#30064"
+msgid "Proxy Group"
+msgstr ""
+
+msgctxt "#30065"
+msgid "Proxy Group Configuration"
+msgstr ""
+
+msgctxt "#30066"
+msgid "Select a proxy group to configure"
+msgstr ""
+
+msgctxt "#30067"
+msgid "Show channels in categories"
+msgstr ""
+
+msgctxt "#30068"
+msgid "Active"
+msgstr ""
+
+msgctxt "#30069"
+msgid "Select a proxy"
+msgstr ""
+
+#empty strings from id 30070 to 30099
+
+msgctxt "#30100"
+msgid "None"
+msgstr ""
+
+msgctxt "#30101"
+msgid "Regional"
+msgstr ""
+
+msgctxt "#30102"
+msgid "National"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Video"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Radio"
+msgstr ""
+
+msgctxt "#30105"
+msgid "Sport"
+msgstr ""
+
+msgctxt "#30106"
+msgid "Kids"
+msgstr ""
+
+msgctxt "#30107"
+msgid "Tech"
+msgstr ""
+
+msgctxt "#30108"
+msgid "Other"
+msgstr ""
+
+#empty strings from id 30109 to 30500
 
 msgctxt "#30501"
 msgid "Favourite"
@@ -264,11 +370,11 @@ msgid "No updates"
 msgstr ""
 
 msgctxt "#30512"
-msgid "Restart XOT-Uzg.v3"
+msgid "Restart XBMC Online TV"
 msgstr ""
 
 msgctxt "#30513"
-msgid "The update of '%s' was complete.|Please restart XOT to complete the update."
+msgid "The update of '%s' was complete.|Please restart XBMC Online TV to complete the update."
 msgstr ""
 
 msgctxt "#30514"
@@ -300,7 +406,7 @@ msgid "Repository Warning"
 msgstr ""
 
 msgctxt "#30521"
-msgid "The XOT-Uzg.v3 repository is not installed.|Please install it to allow future updates."
+msgid "The XBMC Online TV repository is not installed.|Please install it to allow future updates."
 msgstr ""
 
 msgctxt "#30522"

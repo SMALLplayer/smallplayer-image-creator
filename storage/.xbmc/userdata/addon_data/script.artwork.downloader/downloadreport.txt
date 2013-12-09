@@ -1,9 +1,13 @@
 [B]Artwork Downloader:[/B]
- - Tijd van beëindigen: 18 November 2013 - 23:10
+ - Tijd van beëindigen: 09 December 2013 - 22:19
 [B]Gedownload:[/B]
- - Artwork totaal: 14
- - Logo: 5
- - Minatuur 16:9: 5
- - ClearArt: 4
+ - Artwork totaal: 35
+ - Logo: 13
+ - Minatuur 16:9: 11
+ - ClearArt: 11
 [B]Mislukte items:[/B]
+ - [Lovelace] clearart niet gevonden!
+ - [Lovelace] landscape niet gevonden!
  - [Mud] clearart niet gevonden!
+ - [The Kings of Summer] clearart niet gevonden!
+ - [The Kings of Summer] landscape niet gevonden!
