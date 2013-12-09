@@ -760,7 +760,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.ShowLabel">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Path">service.openelec.settings</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.Animate">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.WeatherFanartDir">/storage/pictures/</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.WeatherFanartDir">/storage/pictures/weather</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.1.Playlist"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.2.Playlist"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.3.Playlist"></setting>
