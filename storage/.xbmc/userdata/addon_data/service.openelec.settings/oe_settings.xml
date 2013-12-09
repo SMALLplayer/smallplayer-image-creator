@@ -5,19 +5,19 @@
 		<system>
 			<AutoUpdate>auto</AutoUpdate>
 			<hostname>SMALLplayer</hostname>
-			<wizard_completed>False</wizard_completed>
+			<wizard_completed></wizard_completed>
 		</system>
 		<connman>
-			<wizard_completed>False</wizard_completed>
+			<wizard_completed></wizard_completed>
 		</connman>
 		<services>
-			<wizard_completed>False</wizard_completed>
+			<wizard_completed></wizard_completed>
 		</services>
 		<about>
-			<wizard_completed>False</wizard_completed>
+			<wizard_completed></wizard_completed>
 		</about>
 		<openelec>
-			<wizard_completed>False</wizard_completed>
+			<wizard_completed></wizard_completed>
 		</openelec>
 	</settings>
 </openelec>
