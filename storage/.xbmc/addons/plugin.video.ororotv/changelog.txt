@@ -1,0 +1,62 @@
+------------------------
+Ororo TV v1.1.2 (17-Dec-13)
+------------------------
+
+- Fixed issues with library integration.
+- Code cosmetics.
+
+
+------------------------
+Ororo TV v1.1.1 (14-Dec-13)
+------------------------
+
+- Fixed login issues with shows.
+- Fixed issues with backup sources.
+- Tweaked addon's settings.
+- Code cosmetics.
+
+
+------------------------
+Ororo TV v1.1.0 (4-Dec-13)
+------------------------
+
+- Added auto-play support.
+- NOTE: Can be disabled in addon's settings.
+- Added priority options for sources.
+- Tweaked tv shows outside ororo.tv database.
+- Fixed various issues.
+- Code cosmetics.
+
+
+------------------------
+Ororo TV v1.0.3 (1-Dec-13)
+------------------------
+
+- Episode listings will always be available even if login is required but not provided.
+- Added support for tv show search outside ororo.tv database.
+- Added asterisk for tv shows outside ororo.tv database.
+- NOTE: Asterisk can be disabled in addon settings.
+- Tweaked ororo.tv resolver.
+- Code cosmetics.
+
+
+------------------------
+Ororo TV v1.0.2 (30-Nov-13)
+------------------------
+
+- Fixed issues with search.
+
+
+------------------------
+Ororo TV v1.0.1 (30-Nov-13)
+------------------------
+
+- Added log in support.
+- Tweaked context menus.
+
+
+------------------------
+Ororo TV v1.0.0 (28-Nov-13)
+------------------------
+
+- Initial version

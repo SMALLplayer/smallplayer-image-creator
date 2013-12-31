@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30000">
+		<setting type="lsep" label="30001"/>
+		<setting id="asterisk" type="bool" label="30002" default="true"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting type="lsep" label="30003"/>
+		<setting id="email" type="text" label="30004" default=""/>
+		<setting id="password" type="text" label="30005" default=""/>
+	</category>
+	<category label="30020">
+		<setting id="autoplay" type="bool" label="30021" default="true"/>
+		<setting id="ororo_host" type="bool" label="30022" default="true"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting id="host1" type="labelenum" label="30031" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Putlocker"/>
+		<setting id="host2" type="labelenum" label="30032" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Sockshare"/>
+		<setting id="host3" type="labelenum" label="30033" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Movreel"/>
+		<setting id="host4" type="labelenum" label="30034" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Flashx"/>
+		<setting id="host5" type="labelenum" label="30035" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Played"/>
+		<setting id="host6" type="labelenum" label="30036" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Nowvideo"/>
+		<setting id="host7" type="labelenum" label="30037" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Filenuke"/>
+		<setting id="host8" type="labelenum" label="30038" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Vidx"/>
+		<setting id="host9" type="labelenum" label="30039" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Streamcloud"/>
+		<setting id="host10" type="labelenum" label="30040" lvalues="30050|30051|30052|30053|30054|30055|30056|30057|30058|30059|30060|30061|30062|30063|30064|30065|30066|30067|30068|30069|30070|30071|30072|30073|30074|30075" default="Novamov"/>
+	</category>
+	<category label="30100">
+		<setting id="meta" type="bool" label="30101" default="true"/>
+		<setting id="fanart" type="bool" label="30102" default="true" enable="!eq(-1,false)"/>
+	</category>
+	<category label="30120">
+		<setting id="tv_library" type="folder" label="30123" default="special://userdata/addon_data/plugin.video.ororotv/TVShows"/>
+		<setting type="lsep" label="30121"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting id="subscriptions_update" type="bool" label="30124" default="false"/>
+		<setting id="subscriptions_interval" type="enum" label="30125" values="2h|5h|10h|15h|24h" default="3" enable="!eq(-1,false)"/>
+		<setting id="subscriptions_updatelibrary" type="bool" label="30126" default="true" enable="eq(-2,true)"/>
+		<setting id="subscriptions_clean" type="bool" label="30127" default="true" enable="eq(-3,true)"/>
+		<setting id="subscriptions_run" type="text" default="1970-01-01 23:59:00.000000" visible="false"/>
+	</category>
+	<category label="30140">
+		<setting id="downloads" type="folder" label="30141" default=""/>
+	</category>
+	<category label="30160">
+		<setting id="subs" type="enum" label="30163" lvalues="30164|30165" default="0"/>
+		<setting type="lsep" label="[CR]"/>
+		<setting type="lsep" label="30161"/>
+		<setting type="lsep" label="30162"/>
+	</category>
+</settings>

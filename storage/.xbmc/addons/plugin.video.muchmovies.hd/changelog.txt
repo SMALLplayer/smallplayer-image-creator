@@ -1,0 +1,62 @@
+------------------------
+Much Movies HD v1.2.1 (4-Dec-13)
+------------------------
+
+- Code cosmetics.
+
+
+------------------------
+Much Movies HD v1.2.0 (24-Nov-13)
+------------------------
+
+- Fixed issues with watched or unwatched indicators.
+- Fixed issues with strm playback from widgets (Gotham).
+- Fixed issues with trailers (metahandler).
+- The addon will try to find trailer even if it's not available by metahandler.
+- Added support for network locations (downloads and library folder).
+- All sorting methods are now available in main window.
+- Code cosmetics.
+
+
+------------------------
+Much Movies HD v1.1.0 (31-Oct-13)
+------------------------
+
+- Added option to mark items as watched or unwatched (metahandler).
+- Added option to refresh movie information.
+- Root folders can now be added to XBMC favourites.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+Much Movies HD v1.0.3 (20-Oct-13)
+------------------------
+
+- Code cosmetics.
+
+
+------------------------
+Much Movies HD v1.0.2 (18-Oct-13)
+------------------------
+
+- Added downloading support.
+- Added "go to home" option in context menus.
+- Fixed issues with library integration.
+- Fixed issues with subtitles.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+Much Movies HD v1.0.1 (11-Oct-13)
+------------------------
+
+- Renamed addon
+
+
+------------------------
+Much Movies v1.0.0 (8-Oct-13)
+------------------------
+
+- Initial version

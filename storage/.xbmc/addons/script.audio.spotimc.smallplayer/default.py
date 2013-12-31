@@ -22,7 +22,7 @@ import os.path, xbmcaddon, xbmcgui, gc, traceback
 
 
 #Set global addon information first
-__addon_id__ = 'script.audio.spotimc'
+__addon_id__ = 'script.audio.spotimc.smallplayer'
 addon_cfg = xbmcaddon.Addon(__addon_id__)
 __addon_path__ = addon_cfg.getAddonInfo('path')
 __addon_version__ = addon_cfg.getAddonInfo('version')

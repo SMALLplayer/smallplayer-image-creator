@@ -542,7 +542,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeVideoTile5">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeVideoTile6">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile1">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile2">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile2">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile3">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeTVShowTile4">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile1">true</setting>
@@ -666,7 +666,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Label">Online overzicht</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Icon">smallplayer/video_demand.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.simply.player.smallplayer/?action=root_movies&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.muchmovies.hd/&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile3.Label">Bestanden</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile3.Icon">smallplayer/files.png</setting>
@@ -676,7 +676,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Label">Online zoeken</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Icon">smallplayer/video_searchonline.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Path">ActivateWindow(10025,&quot;plugin://plugin.video.simply.player.smallplayer/?action=movies_search&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Path">ActivateWindow(10025,&quot;plugin://plugin.video.muchmovies.hd/?action=movies_search&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.4.TypeName">New tv shows</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile3.Label"></setting>
@@ -692,12 +692,12 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Label">Online overzicht</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Icon">smallplayer/tvshows_demand.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Path">ActivateWindow(10025,&quot;plugin://plugin.video.simply.player.smallplayer/?action=root_shows&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Path">ActivateWindow(10025,&quot;plugin://plugin.video.ororotv/&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Label">Online zoeken</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Icon">smallplayer/tvshows_searchonline.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.simply.player.smallplayer/?action=shows_search&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.ororotv/?action=shows_search&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.5.TypeName">Featured albums</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile3.Label"></setting>

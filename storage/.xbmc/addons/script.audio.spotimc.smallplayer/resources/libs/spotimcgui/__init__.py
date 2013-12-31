@@ -221,7 +221,7 @@ def get_audio_buffer_size():
 def check_dirs():
     addon_data_dir = os.path.join(
         xbmc.translatePath('special://profile/addon_data'),
-        'script.audio.spotimc'
+        'script.audio.spotimc.smallplayer'
     )
     
     #Auto-create profile dir if it does not exist

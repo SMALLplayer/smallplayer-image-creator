@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: TvTunes
 # Addon id: script.tvtunes
-# Addon Provider: Ppic|Frost|ronie
+# Addon Provider: Ppic,Frost,ronie,robwebset
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -15,6 +15,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "Addon Summary"
+msgid "Get and play your Movie and TV shows Themes"
+msgstr "Hole und spiele dein TV-Sendungs-Soundthema"
+
+msgctxt "Addon Description"
+msgid "This script will help you to get themes for your movie and TV show library from www.televisiontunes.com It will save them in theme[0-9].mp3 file in each of your video folders then they will be played while browsing your video library when you enter the TV Show folder or Video Information screen (need your skin to be compatible for this feature)"
+msgstr "Dieses Script wird dir helfen, die Themen deiner TV-Sendungs-Datenbank von www.televisiontunes.com zu holen und diese in der theme.mp3 deiner TV-Sendungs-Ordner zu speichern. Diese werden dann abgespielt, wenn du in deiner TV-Sendungs Datenbank oder dem TV-Sendungs-Ordner stöberst (benötigt ein kompatibeles Skin)"
+
+msgctxt "Addon Disclaimer"
+msgid "Skinners, please see the wiki to know how to integrate it in your skin: http://wiki.xbmc.org/index.php?title=Add-on:TvTunes"
+msgstr "Skin-Ersteller, bitte seht die changelog.txt um zu wissen, wie ihr es in euer Skin integriert"
 
 msgctxt "#32001"
 msgid "Play theme in loop"
@@ -45,12 +57,72 @@ msgid "Path:"
 msgstr "Pfad:"
 
 msgctxt "#32008"
-msgid "Fade tune when you exit a tv show"
-msgstr "Verblasse Melodie wenn du eine TV-Sendung verlässt"
+msgid "Fade tune out when exiting"
+msgstr "Ton beim verlassen ausblenden"
 
 msgctxt "#32009"
 msgid "Automatically download if an exact match is found"
 msgstr "Automatisch laden, alls ein exakter Treffer gefunden wurde"
+
+msgctxt "#32010"
+msgid "Shuffle multiple tracks"
+msgstr "mehrere Spuren mischen"
+
+msgctxt "#32011"
+msgid "Random start time"
+msgstr "Zufällige Startzeit"
+
+msgctxt "#32012"
+msgid "File Types"
+msgstr "Dateiformate"
+
+msgctxt "#32013"
+msgid "Fade in the tune when starting"
+msgstr "Den Ton beim starten einblenden"
+
+msgctxt "#32014"
+msgid "Always add additional themes (no overwrite)"
+msgstr "Immer zusätzliche Themen hinzufügen (nicht überschreiben)"
+
+msgctxt "#32015"
+msgid "Search for movie themes"
+msgstr "Suche nach Filmthemen"
+
+msgctxt "#32016"
+msgid "Play themes when browsing Movie list"
+msgstr "Spiele Thema beim Durchsuchen der Film Liste"
+
+msgctxt "#32017"
+msgid "Play themes when browsing TV Show list"
+msgstr "Spiele Thema beim Durchsuchen der TV-Sendungs Liste"
+
+msgctxt "#32018"
+msgid "Debugging"
+msgstr "Debugging"
+
+msgctxt "#32019"
+msgid "Enable debug logging"
+msgstr "Debug-Logging aktivieren"
+
+msgctxt "#32020"
+msgid "Show the TvTunes button on the Video Info screen"
+msgstr "Zeige die TvTunes Schaltfläche im Videoinformations Fenster"
+
+msgctxt "#32021"
+msgid "Fade out after playing for (minutes)"
+msgstr "Ausblenden nach X (Minuten) Abspielzeit."
+
+msgctxt "#32022"
+msgid "Operations"
+msgstr "Operationen"
+
+msgctxt "#32023"
+msgid "Perform Complete Search Now"
+msgstr "Vollsuche ausführen"
+
+msgctxt "#32024"
+msgid "Delay Theme Start (Seconds)"
+msgstr "Verzögere Theme Start(Sekunden)"
 
 msgctxt "#32101"
 msgid "ERROR"
@@ -108,10 +180,6 @@ msgctxt "#32114"
 msgid "Download this one?"
 msgstr "Lade diesen hier?"
 
-msgctxt "#32115"
-msgid "TvTunes"
-msgstr "TvTunes"
-
 msgctxt "#32116"
 msgid "You can help to get more theme on:"
 msgstr "Du kannst helfen, mehr Themen zu bekommen auf:"
@@ -119,6 +187,14 @@ msgstr "Du kannst helfen, mehr Themen zu bekommen auf:"
 msgctxt "#32117"
 msgid "http://www.televisiontunes.com/"
 msgstr "http://www.televisiontunes.com/"
+
+msgctxt "#32118"
+msgid "Manual Search..."
+msgstr "Manuelle Suche..."
+
+msgctxt "#32119"
+msgid "Continue with next theme search?"
+msgstr "Weiter mit dem nächsten Suchbegriff?"
 
 msgctxt "#32991"
 msgid "Playback"
