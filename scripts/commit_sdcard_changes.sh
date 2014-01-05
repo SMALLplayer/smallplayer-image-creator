@@ -42,7 +42,7 @@ sync
 sudo umount $STOR_PART
 
 echo "Adding changes to repository"
-git add $STOR_PART_REPO -u
+git add $STOR_PART_REPO -A
 echo "Please enter a commit message:"
 read MESSAGE
 git commit -m "Update script: $MESSAGE"
