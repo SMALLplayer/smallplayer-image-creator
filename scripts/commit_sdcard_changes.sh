@@ -47,6 +47,7 @@ echo "Please enter a commit message:"
 read MESSAGE
 git commit $MESSAGE
 git push
+git clean $STOR_PART_REPO -fxd
 
 echo "Done"
 
