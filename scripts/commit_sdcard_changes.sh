@@ -24,6 +24,15 @@ rm -rf $STOR_PART_MNT
 mkdir -p $STOR_PART_MNT
 mount $STOR_PART $STOR_PART_MNT
 
+if [ ! -d $STOR_PART_MNT/.xbmc ]; then
+  echo "Mount failed. Wrong device?"
+  exit 1
+fi
+
+echo "Resetting and cleaning repo storage folder"
+git reset --hard
+git clean $STOR_PART_REPO -fxd
+
 echo "Synchronizing storage folders from sd-card to repo"
 $RSYNC $STOR_PART_MNT/.xbmc     $STOR_PART_REPO
 $RSYNC $STOR_PART_MNT/tvshows   $STOR_PART_REPO
@@ -38,6 +47,13 @@ git checkout -- $STOR_PART_REPO/.xbmc/userdata/addon_data/service.openelec.setti
 echo "Unmounting and syncing"
 sync
 umount $STOR_PART
+
+echo "Adding changes to repository"
+git add $STOR_PART_REPO
+echo "Please enter a commit message:"
+read MESSAGE
+git commit $MESSAGE
+git push
 
 echo "Done"
 
