@@ -1,15 +1,8 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
-  echo "Please execute with sudo or as root"
-  echo " example: sudo ./commit_sdcard_changes.sh /dev/sdb"
-
-  exit 1
-fi
-
 if [ -z "$1" ]; then
   echo "Please execute with your drive as option"
-  echo " example: sudo ./commit_sdcard_changes.sh /dev/sdb"
+  echo " example: ./commit_sdcard_changes.sh /dev/sdb"
   exit 1
 fi
 
@@ -19,10 +12,10 @@ STOR_PART_REPO="../storage"
 RSYNC="rsync -a --delete-after"
 
 echo "Mounting storage partition from sd-card"
-umount $STOR_PART
-rm -rf $STOR_PART_MNT
-mkdir -p $STOR_PART_MNT
-mount $STOR_PART $STOR_PART_MNT
+sudo umount $STOR_PART
+sudo rm -rf $STOR_PART_MNT
+sudo mkdir -p $STOR_PART_MNT
+sudo mount $STOR_PART $STOR_PART_MNT
 
 if [ ! -d $STOR_PART_MNT/.xbmc ]; then
   echo "Mount failed. Wrong device?"
@@ -46,7 +39,7 @@ git checkout -- $STOR_PART_REPO/.xbmc/userdata/addon_data/service.openelec.setti
 
 echo "Unmounting and syncing"
 sync
-umount $STOR_PART
+sudo umount $STOR_PART
 
 echo "Adding changes to repository"
 git add $STOR_PART_REPO
