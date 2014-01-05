@@ -45,7 +45,7 @@ echo "Adding changes to repository"
 git add $STOR_PART_REPO -u
 echo "Please enter a commit message:"
 read MESSAGE
-git commit "Update script: $MESSAGE"
+git commit -m "Update script: $MESSAGE"
 git push
 git clean $STOR_PART_REPO -fxd
 
