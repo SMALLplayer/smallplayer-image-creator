@@ -1,0 +1,28 @@
+------------------------
+Yify Movies HD v1.1.0 (3-Jan-14)
+------------------------
+
+- Added new artwork.
+- Added sorting methods for favourites (Title, Year, Added).
+- Fixed issues with trailers.
+- Fixed issues with search.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+Yify Movies HD v1.0.9 (16-Dec-13)
+------------------------
+
+- Fixed various issues.
+- NOTE: Reset addon's settings.
+- Added missing sections.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
+Yify Movies HD v1.0.0 (15-Dec-13)
+------------------------
+
+- Initial version

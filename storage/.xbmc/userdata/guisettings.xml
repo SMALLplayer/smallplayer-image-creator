@@ -459,9 +459,9 @@
     </videoplayer>
     <videoscreen>
         <guicalibration></guicalibration>
-        <haslcd>false</haslcd>
-        <resolution>0</resolution>
-        <screenmode>DESKTOP</screenmode>
+        <haslcd>true</haslcd>
+        <resolution>19</resolution>
+        <screenmode>00192001080060.00000p</screenmode>
         <vsync>2</vsync>
     </videoscreen>
     <weather>

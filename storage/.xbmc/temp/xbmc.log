@@ -1,24 +1,24 @@
-﻿01:00:16 T:3046928912  NOTICE: -----------------------------------------------------------------------
-01:00:16 T:3046928912  NOTICE: Starting XBMC (12.2 Git:d1002b4), Platform: Linux (, 3.10.20 armv6l). Built on Nov 26 2013
-01:00:16 T:3046928912  NOTICE: special://xbmc/ is mapped to: /usr/share/xbmc
-01:00:16 T:3046928912  NOTICE: special://xbmcbin/ is mapped to: /usr/lib/xbmc
-01:00:16 T:3046928912  NOTICE: special://masterprofile/ is mapped to: /storage/.xbmc/userdata
-01:00:16 T:3046928912  NOTICE: special://home/ is mapped to: /storage/.xbmc
-01:00:16 T:3046928912  NOTICE: special://temp/ is mapped to: /storage/.xbmc/temp
-01:00:16 T:3046928912  NOTICE: The executable running is: /usr/lib/xbmc/xbmc.bin
-01:00:16 T:3046928912  NOTICE: Local hostname: openelec
-01:00:16 T:3046928912  NOTICE: Log File is located: /storage/.xbmc/temp/xbmc.log
-01:00:16 T:3046928912  NOTICE: -----------------------------------------------------------------------
-01:00:16 T:3046928912  NOTICE: load settings...
-01:00:16 T:3046928912  NOTICE: special://profile/ is mapped to: special://masterprofile/
-01:00:16 T:3046928912  NOTICE: loading special://masterprofile/guisettings.xml
-01:00:16 T:3046928912  NOTICE: Getting hardware information now...
-01:00:16 T:3046928912  NOTICE: Loading player core factory settings from special://xbmc/system/playercorefactory.xml.
-01:00:16 T:3046928912  NOTICE: Loaded playercorefactory configuration
-01:00:16 T:3046928912  NOTICE: Loading player core factory settings from special://masterprofile/playercorefactory.xml.
-01:00:16 T:3046928912  NOTICE: special://masterprofile/playercorefactory.xml does not exist. Skipping.
-01:00:16 T:3046928912  NOTICE: Loaded settings file from special://xbmc/system/advancedsettings.xml
-01:00:16 T:3046928912  NOTICE: Contents of special://xbmc/system/advancedsettings.xml are...
+﻿01:00:15 T:3046318608  NOTICE: -----------------------------------------------------------------------
+01:00:15 T:3046318608  NOTICE: Starting XBMC (12.2 Git:d1002b4), Platform: Linux (, 3.10.20 armv6l). Built on Nov 26 2013
+01:00:15 T:3046318608  NOTICE: special://xbmc/ is mapped to: /usr/share/xbmc
+01:00:15 T:3046318608  NOTICE: special://xbmcbin/ is mapped to: /usr/lib/xbmc
+01:00:15 T:3046318608  NOTICE: special://masterprofile/ is mapped to: /storage/.xbmc/userdata
+01:00:15 T:3046318608  NOTICE: special://home/ is mapped to: /storage/.xbmc
+01:00:15 T:3046318608  NOTICE: special://temp/ is mapped to: /storage/.xbmc/temp
+01:00:15 T:3046318608  NOTICE: The executable running is: /usr/lib/xbmc/xbmc.bin
+01:00:15 T:3046318608  NOTICE: Local hostname: SMALLplayer
+01:00:15 T:3046318608  NOTICE: Log File is located: /storage/.xbmc/temp/xbmc.log
+01:00:15 T:3046318608  NOTICE: -----------------------------------------------------------------------
+01:00:15 T:3046318608  NOTICE: load settings...
+01:00:15 T:3046318608  NOTICE: special://profile/ is mapped to: special://masterprofile/
+01:00:15 T:3046318608  NOTICE: loading special://masterprofile/guisettings.xml
+01:00:16 T:3046318608  NOTICE: Getting hardware information now...
+01:00:16 T:3046318608  NOTICE: Loading player core factory settings from special://xbmc/system/playercorefactory.xml.
+01:00:16 T:3046318608  NOTICE: Loaded playercorefactory configuration
+01:00:16 T:3046318608  NOTICE: Loading player core factory settings from special://masterprofile/playercorefactory.xml.
+01:00:16 T:3046318608  NOTICE: special://masterprofile/playercorefactory.xml does not exist. Skipping.
+01:00:16 T:3046318608  NOTICE: Loaded settings file from special://xbmc/system/advancedsettings.xml
+01:00:16 T:3046318608  NOTICE: Contents of special://xbmc/system/advancedsettings.xml are...
                                             <?xml version="1.0" encoding="UTF-8" ?>
                                             <advancedsettings>
                                               <showexitbutton>false</showexitbutton>
@@ -47,136 +47,222 @@
                                                 <readbufferfactor>4.0</readbufferfactor>
                                               </network>
                                             </advancedsettings>
-01:00:16 T:3046928912  NOTICE: Getting hardware information now...
-01:00:16 T:3046928912  NOTICE: No settings file to load (special://masterprofile/advancedsettings.xml)
-01:00:16 T:3046928912  NOTICE: Default DVD Player: omxplayer
-01:00:16 T:3046928912  NOTICE: Default Video Player: omxplayer
-01:00:16 T:3046928912  NOTICE: Default Audio Player: omxplayer
-01:00:16 T:3046928912  NOTICE: Disabled debug logging due to GUI setting. Level 0.
-01:00:16 T:3046928912  NOTICE: Log level changed to 0
-01:00:16 T:3046928912  NOTICE: Loading media sources from special://masterprofile/sources.xml
-01:00:17 T:3046928912   ERROR: Error: Requested setting (audiooutput.guisoundmode) was not found.  It must be case-sensitive
-01:00:17 T:3046928912  NOTICE: Running database version Addons15
-01:00:18 T:3046928912  NOTICE: Register - new cec device registered on cec->RPI: CEC Adapter (2708:1001)
-01:00:18 T:3028284512  NOTICE: Thread XBMC Peripherals start, auto delete: false
-01:00:18 T:3036673120  NOTICE: Thread CEC Adapter start, auto delete: false
-01:00:19 T:3017798752  NOTICE: Thread XBMC Peripherals start, auto delete: false
-01:00:19 T:3046928912  NOTICE: Raspberry PI firmware version: Nov 15 2013 14:13:47 
+01:00:16 T:3046318608  NOTICE: Getting hardware information now...
+01:00:16 T:3046318608  NOTICE: No settings file to load (special://masterprofile/advancedsettings.xml)
+01:00:16 T:3046318608  NOTICE: Default DVD Player: omxplayer
+01:00:16 T:3046318608  NOTICE: Default Video Player: omxplayer
+01:00:16 T:3046318608  NOTICE: Default Audio Player: omxplayer
+01:00:16 T:3046318608  NOTICE: Disabled debug logging due to GUI setting. Level 0.
+01:00:16 T:3046318608  NOTICE: Log level changed to 0
+01:00:16 T:3046318608  NOTICE: Loading media sources from special://masterprofile/sources.xml
+01:00:16 T:3046318608   ERROR: Error: Requested setting (audiooutput.guisoundmode) was not found.  It must be case-sensitive
+01:00:16 T:3046318608  NOTICE: Running database version Addons15
+18:40:22 T:3046318608  NOTICE: Register - new cec device registered on cec->RPI: CEC Adapter (2708:1001)
+18:40:22 T:3027235936  NOTICE: Thread XBMC Peripherals start, auto delete: false
+18:40:22 T:3035624544  NOTICE: Thread CEC Adapter start, auto delete: false
+18:40:22 T:3016750176  NOTICE: Thread XBMC Peripherals start, auto delete: false
+18:40:22 T:3046318608  NOTICE: Raspberry PI firmware version: Nov 15 2013 14:13:47 
                                             Copyright (c) 2012 Broadcom
                                             version 162026b1448f491e97e3b3b57cdca29be6a1d61a (tainted) (release)
-01:00:19 T:3046928912  NOTICE: ARM mem: 384MB GPU mem: 128MB
-01:00:19 T:3046928912  NOTICE: InitWindowSystem: Using EGL Implementation: raspberrypi
-01:00:19 T:2967467104  NOTICE: Thread CRBPWorker start, auto delete: false
-01:00:19 T:3046928912  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 720 x 480 for display 0 with 720 x 480 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 720 x 576 for display 0 with 720 x 576 @ 50.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 50.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 50.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 960 x 720 for display 0 with 1280 x 960 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 900 x 720 for display 0 with 1280 x 1024 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found resolution 1152 x 720 for display 0 with 1680 x 1050 @ 60.000000 Hz
-01:00:19 T:3046928912  NOTICE: Found (1280x720@60.000000) at 19, setting to RES_DESKTOP at 16
-01:00:19 T:3046928912  NOTICE: Checking resolution 16
-01:00:19 T:3046928912  NOTICE: GL_VENDOR = Broadcom
-01:00:19 T:3046928912  NOTICE: GL_RENDERER = VideoCore IV HW
-01:00:19 T:3046928912  NOTICE: GL_VERSION = OpenGL ES 2.0
-01:00:19 T:3046928912  NOTICE: GL_SHADING_LANGUAGE_VERSION = OpenGL ES GLSL ES 1.00
-01:00:19 T:3046928912  NOTICE: GL_EXTENSIONS = GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_depth24 GL_OES_vertex_half_float GL_OES_EGL_image GL_OES_EGL_image_external GL_EXT_discard_framebuffer GL_OES_rgb8_rgba8 GL_OES_depth32 GL_OES_mapbuffer GL_EXT_texture_format_BGRA8888 GL_APPLE_rgb_422 GL_EXT_debug_marker
-01:00:22 T:3036673120   ERROR: CecLogMessage - failed to release the previous LA
-01:00:22 T:3036673120   ERROR: CecLogMessage - could not open a connection (try 1)
-01:00:22 T:3046928912  NOTICE: Running database version Addons15
-01:00:22 T:3046928912  NOTICE: Running database version ViewModes4
-01:00:22 T:3046928912  NOTICE: Running database version Textures13
-01:00:22 T:3046928912  NOTICE: Running database version MyMusic32
-01:00:22 T:3046928912  NOTICE: Running database version MyVideos75
-01:00:22 T:3046928912  NOTICE: Running database version TV22
-01:00:22 T:3046928912  NOTICE: Running database version Epg7
-01:00:22 T:3046928912  NOTICE: start dvd mediatype detection
-01:00:22 T:3046928912  NOTICE: initializing playlistplayer
-01:00:22 T:3046928912  NOTICE: DONE initializing playlistplayer
-01:00:22 T:3019465824  NOTICE: Thread CDetectDVDMedia start, auto delete: false
-01:00:24 T:2919347296  NOTICE: Thread CEC Adapter Update Thread start, auto delete: false
-01:00:37 T:2901447776  NOTICE: Thread XBPyThread start, auto delete: false
-01:00:37 T:3046928912  NOTICE: Previous line repeats 5 times.
-01:00:37 T:3046928912  NOTICE: initialize done
-01:00:37 T:3046928912  NOTICE: Running the application...
-01:00:37 T:2859504736  NOTICE: Thread XBPyThread start, auto delete: false
-01:00:37 T:3046928912  NOTICE: Previous line repeats 1 times.
-01:00:37 T:3046928912   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-01:00:37 T:3046928912  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-01:00:37 T:3046928912   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-01:00:37 T:2842727520  NOTICE: Thread Jobworker start, auto delete: true
-01:00:37 T:3046928912   ERROR: GLES: Vertical Blank Syncing unsupported
-01:00:41 T:2901447776  NOTICE: -->Python Interpreter Initialized<--
-01:00:41 T:2822091872  NOTICE: Thread Jobworker start, auto delete: true
-01:00:41 T:2813703264  NOTICE: Thread XBPyThread start, auto delete: false
-01:00:43 T:2805314656  NOTICE: Thread Jobworker start, auto delete: true
-01:00:43 T:2796926048  NOTICE: Thread CAlarmClock start, auto delete: false
-01:00:43 T:3046928912  NOTICE: Webserver: Starting...
-01:00:43 T:3046928912  NOTICE: WebServer: Started the webserver
-01:00:43 T:3046928912  NOTICE: starting upnp server
-01:00:43 T:3046928912  NOTICE: starting upnp renderer
-01:00:43 T:3046928912  NOTICE: ES: Starting event server
-01:00:43 T:2704467040  NOTICE: Thread CEventServer start, auto delete: false
-01:00:43 T:2704467040  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
-01:00:43 T:2704467040  NOTICE: UDP: Listening on port 9777
-01:00:43 T:3046928912   ERROR: JSONRPC Server: Failed to connect to sdpd
-01:00:43 T:3046928912  NOTICE: starting zeroconf publishing
-01:00:43 T:2686440544  NOTICE: Thread AirPlayServer start, auto delete: false
-01:00:43 T:2694829152  NOTICE: Thread CTCPServer start, auto delete: false
-01:00:43 T:3046928912   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-01:00:43 T:3046928912  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-01:00:43 T:3046928912   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-01:00:43 T:2668414048  NOTICE: Thread Jobworker start, auto delete: true
-01:00:44 T:2851116128  NOTICE: -->Python Interpreter Initialized<--
-01:00:49 T:2909836384  NOTICE: -->Python Interpreter Initialized<--
-01:00:49 T:2876281952  NOTICE: -->Python Interpreter Initialized<--
-01:00:51 T:2893059168  NOTICE: -->Python Interpreter Initialized<--
-01:00:51 T:2813703264  NOTICE: -->Python Interpreter Initialized<--
-01:00:54 T:2859504736  NOTICE: -->Python Interpreter Initialized<--
-01:00:54 T:2884670560  NOTICE: -->Python Interpreter Initialized<--
-01:00:58 T:2867893344  NOTICE: -->Python Interpreter Initialized<--
-01:00:58 T:2851116128  NOTICE:  StorageServer Module loaded RUN
-01:00:58 T:2851116128  NOTICE: StorageClient-2.5.2 Starting server
-01:00:58 T:2851116128  NOTICE: StorageServer-2.5.2 Storage Server starting /storage/.xbmc/temp/commoncache.db
-01:01:01 T:2859504736  NOTICE: ## OpenELEC Addon ## 0.2.20
-01:01:02 T:3046928912   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
-01:01:09 T:2884670560  NOTICE: 1Channel: Service: MySQL not enabled or not setup correctly
-01:01:12 T:3046928912   ERROR: Unable to find plugin plugin.video.simply.player
-01:01:14 T:2884670560  NOTICE: 1Channel: Service: Loading sqlite3 as DB engine
-01:01:14 T:2884670560  NOTICE: 1Channel: Service: Resetting...
-01:01:14 T:2893059168  NOTICE: Artwork Downloader: ## Service - Run at startup: False
-01:01:14 T:2893059168  NOTICE: Artwork Downloader: ## Service - Delayed startup:  minutes
-01:01:14 T:2893059168  NOTICE: Artwork Downloader: ## Service - Run as service: False
-01:01:14 T:2893059168  NOTICE: Artwork Downloader: ## Service - Time: :00
-01:01:15 T:2884670560  NOTICE: 1Channel: Service starting...
-01:01:20 T:3046928912   ERROR: Control 1500 in window 13000 has been asked to focus, but it can't
-01:04:43 T:3046928912   ERROR: Previous line repeats 1 times.
-01:04:43 T:3046928912   ERROR: Control 4323 in window 13007 has been asked to focus, but it can't
-01:05:02 T:3046928912   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
-16:31:32 T:3046928912   ERROR: Unable to find plugin plugin.video.simply.player
-16:32:11 T:3046928912   ERROR: ClearBlock: Trying to clear non existent block /usr/share/xbmc/addons/service.openelec.settings
-16:32:20 T:2813703264   ERROR: Previous line repeats 1 times.
-16:32:20 T:2813703264  NOTICE: Thread Jobworker start, auto delete: true
-16:32:26 T:2813703264   ERROR: GetDirectory - Error getting /storage/pictures/weatherna/
-16:33:03 T:2813703264   ERROR: Previous line repeats 1 times.
-16:33:03 T:2813703264  NOTICE: Thread BackgroundLoader start, auto delete: false
-16:33:03 T:3046928912   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-16:33:03 T:3046928912  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-16:33:03 T:3046928912   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-16:33:08 T:2813703264  NOTICE: Thread Jobworker start, auto delete: true
-16:33:08 T:2668414048  NOTICE: Thread CFileCache start, auto delete: false
-16:34:21 T:2668414048  NOTICE: Previous line repeats 3 times.
-16:34:21 T:2668414048  NOTICE: Thread Jobworker start, auto delete: true
-16:34:32 T:2842727520  NOTICE: Previous line repeats 1 times.
-16:34:32 T:2842727520  NOTICE: Thread BackgroundLoader start, auto delete: false
-16:34:32 T:2617238624  NOTICE: Thread CFileCache start, auto delete: false
-16:34:38 T:3046928912   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
-16:34:38 T:3046928912  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
-16:34:38 T:3046928912   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
-16:40:30 T:2668414048  NOTICE: Thread Jobworker start, auto delete: true
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+18:40:22 T:3046318608  NOTICE: ARM mem: 384MB GPU mem: 128MB
+18:40:22 T:3046318608  NOTICE: InitWindowSystem: Using EGL Implementation: raspberrypi
+18:40:22 T:2966418528  NOTICE: Thread CRBPWorker start, auto delete: false
+18:40:22 T:3046318608  NOTICE: Found resolution 640 x 480 for display 0 with 640 x 480 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 720 x 480 for display 0 with 720 x 480 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 720 x 576 for display 0 with 720 x 576 @ 50.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 1280 x 720 for display 0 with 1280 x 720 @ 50.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 1280 x 720 for display 0 with 1920 x 1080 @ 50.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 800 x 600 for display 0 with 800 x 600 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 960 x 720 for display 0 with 1024 x 768 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 960 x 720 for display 0 with 1280 x 960 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 900 x 720 for display 0 with 1280 x 1024 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found resolution 1152 x 720 for display 0 with 1680 x 1050 @ 60.000000 Hz
+18:40:22 T:3046318608  NOTICE: Found (720x480i@60.000000) at 17, setting to RES_DESKTOP at 16
+18:40:22 T:3046318608  NOTICE: Checking resolution 16
+18:40:22 T:3046318608  NOTICE: GL_VENDOR = Broadcom
+18:40:22 T:3046318608  NOTICE: GL_RENDERER = VideoCore IV HW
+18:40:22 T:3046318608  NOTICE: GL_VERSION = OpenGL ES 2.0
+18:40:22 T:3046318608  NOTICE: GL_SHADING_LANGUAGE_VERSION = OpenGL ES GLSL ES 1.00
+18:40:22 T:3046318608  NOTICE: GL_EXTENSIONS = GL_OES_compressed_ETC1_RGB8_texture GL_OES_compressed_paletted_texture GL_OES_texture_npot GL_OES_depth24 GL_OES_vertex_half_float GL_OES_EGL_image GL_OES_EGL_image_external GL_EXT_discard_framebuffer GL_OES_rgb8_rgba8 GL_OES_depth32 GL_OES_mapbuffer GL_EXT_texture_format_BGRA8888 GL_APPLE_rgb_422 GL_EXT_debug_marker
+18:40:25 T:3035624544   ERROR: CecLogMessage - failed to release the previous LA
+18:40:25 T:3035624544   ERROR: CecLogMessage - could not open a connection (try 1)
+18:40:26 T:3046318608  NOTICE: Running database version Addons15
+18:40:26 T:3046318608  NOTICE: Running database version ViewModes4
+18:40:26 T:3046318608  NOTICE: Running database version Textures13
+18:40:26 T:3046318608  NOTICE: Running database version MyMusic32
+18:40:26 T:3046318608  NOTICE: Running database version MyVideos75
+18:40:26 T:3046318608  NOTICE: Running database version TV22
+18:40:26 T:3046318608  NOTICE: Running database version Epg7
+18:40:26 T:3046318608  NOTICE: start dvd mediatype detection
+18:40:26 T:3046318608  NOTICE: initializing playlistplayer
+18:40:26 T:3046318608  NOTICE: DONE initializing playlistplayer
+18:40:26 T:3018847328  NOTICE: Thread CDetectDVDMedia start, auto delete: false
+18:40:27 T:2924614752  NOTICE: Thread CEC Adapter Update Thread start, auto delete: false
+18:40:39 T:2901873760  NOTICE: Thread XBPyThread start, auto delete: false
+18:40:40 T:3046318608  NOTICE: Previous line repeats 2 times.
+18:40:40 T:3046318608  NOTICE: initialize done
+18:40:40 T:3046318608  NOTICE: Running the application...
+18:40:40 T:2885096544  NOTICE: Thread XBPyThread start, auto delete: false
+18:40:40 T:3046318608  NOTICE: Previous line repeats 4 times.
+18:40:40 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:40:40 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:40:40 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:40:40 T:2843153504  NOTICE: Thread Jobworker start, auto delete: true
+18:40:40 T:3046318608   ERROR: GLES: Vertical Blank Syncing unsupported
+18:40:43 T:2901873760  NOTICE: -->Python Interpreter Initialized<--
+18:40:44 T:2825589856  NOTICE: Thread Jobworker start, auto delete: true
+18:40:44 T:2817201248  NOTICE: Thread XBPyThread start, auto delete: false
+18:40:45 T:2807034976  NOTICE: Thread Jobworker start, auto delete: true
+18:40:45 T:2798646368  NOTICE: Thread CAlarmClock start, auto delete: false
+18:40:45 T:3046318608  NOTICE: Webserver: Starting...
+18:40:45 T:3046318608  NOTICE: WebServer: Started the webserver
+18:40:45 T:3046318608  NOTICE: starting upnp server
+18:40:45 T:3046318608  NOTICE: starting upnp renderer
+18:40:45 T:3046318608  NOTICE: ES: Starting event server
+18:40:45 T:2705122400  NOTICE: Thread CEventServer start, auto delete: false
+18:40:45 T:2705122400  NOTICE: ES: Starting UDP Event server on 0.0.0.0:9777
+18:40:45 T:2705122400  NOTICE: UDP: Listening on port 9777
+18:40:46 T:3046318608   ERROR: JSONRPC Server: Failed to connect to sdpd
+18:40:46 T:3046318608  NOTICE: starting zeroconf publishing
+18:40:46 T:2688345184  NOTICE: Thread AirPlayServer start, auto delete: false
+18:40:46 T:2696733792  NOTICE: Thread CTCPServer start, auto delete: false
+18:40:46 T:2859930720  NOTICE: -->Python Interpreter Initialized<--
+18:40:46 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:40:46 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:40:46 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:40:46 T:2670318688  NOTICE: Thread Jobworker start, auto delete: true
+18:40:50 T:2893485152  NOTICE: -->Python Interpreter Initialized<--
+18:40:51 T:2910262368  NOTICE: -->Python Interpreter Initialized<--
+18:40:53 T:2885096544  NOTICE: -->Python Interpreter Initialized<--
+18:40:53 T:2851542112  NOTICE: -->Python Interpreter Initialized<--
+18:40:53 T:2817201248  NOTICE: -->Python Interpreter Initialized<--
+18:40:53 T:2868319328  NOTICE: -->Python Interpreter Initialized<--
+18:40:54 T:2876707936  NOTICE: -->Python Interpreter Initialized<--
+18:40:58 T:2859930720  NOTICE: ## OpenELEC Addon ## 0.2.20
+18:41:00 T:2851542112  NOTICE:  StorageServer Module loaded RUN
+18:41:05 T:2851542112  NOTICE: StorageClient-2.5.2 Starting server
+18:41:05 T:2851542112  NOTICE: StorageServer-2.5.2 Storage Server starting /storage/.xbmc/temp/commoncache.db
+18:41:08 T:2885096544  NOTICE: 1Channel: Service: MySQL not enabled or not setup correctly
+18:41:09 T:2893485152  NOTICE: Artwork Downloader: ## Service - Run at startup: False
+18:41:09 T:2893485152  NOTICE: Artwork Downloader: ## Service - Delayed startup:  minutes
+18:41:09 T:2893485152  NOTICE: Artwork Downloader: ## Service - Run as service: False
+18:41:09 T:2893485152  NOTICE: Artwork Downloader: ## Service - Time: :00
+18:41:09 T:2885096544  NOTICE: 1Channel: Service: Loading sqlite3 as DB engine
+18:41:09 T:2885096544  NOTICE: 1Channel: Service: Resetting...
+18:41:10 T:2885096544  NOTICE: 1Channel: Service starting...
+18:41:18 T:2843153504  NOTICE: Thread Jobworker start, auto delete: true
+18:41:33 T:3046318608   ERROR: Error: Requested setting (videoscreen.screen) was not found.  It must be case-sensitive
+18:41:33 T:3046318608   ERROR: Previous line repeats 2 times.
+18:41:33 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:41:33 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:41:33 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:41:48 T:3046318608   ERROR: Error: Requested setting (videoscreen.screen) was not found.  It must be case-sensitive
+18:41:52 T:3046318608   ERROR: Previous line repeats 1 times.
+18:41:52 T:3046318608   ERROR: XLCDproc::Connect - Unable to connect to host, LCDd not running?
+18:41:52 T:3046318608   ERROR: XLCDproc::Initialize - Connect failed. Retry in 4 seconds.
+18:41:52 T:3046318608   ERROR: Error: Requested setting (videoscreen.screen) was not found.  It must be case-sensitive
+18:41:56 T:3046318608   ERROR: Previous line repeats 1 times.
+18:41:56 T:3046318608   ERROR: XLCDproc::Connect - Unable to connect to host, LCDd not running?
+18:41:56 T:3046318608   ERROR: XLCDproc::Initialize - Connect failed. Retry in 8 seconds.
+18:42:04 T:3046318608   ERROR: XLCDproc::Connect - Unable to connect to host, LCDd not running?
+18:42:04 T:3046318608   ERROR: XLCDproc::Initialize - Connect failed. Retry in 16 seconds.
+18:42:10 T:3046318608   ERROR: Error: Requested setting (videoscreen.screen) was not found.  It must be case-sensitive
+18:42:11 T:3046318608   ERROR: Previous line repeats 2 times.
+18:42:11 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:42:11 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:42:11 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:42:11 T:2843153504  NOTICE: Thread Jobworker start, auto delete: true
+18:42:14 T:2843153504  NOTICE: Previous line repeats 1 times.
+18:42:14 T:2843153504   ERROR: GetDirectory - Error getting /storage/pictures/weather31/
+18:42:21 T:2670318688   ERROR: Previous line repeats 1 times.
+18:42:21 T:2670318688  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:42:21 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:42:21 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:42:21 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:42:21 T:3046318608   ERROR: XLCDproc::Connect - Unable to connect to host, LCDd not running?
+18:42:21 T:3046318608   ERROR: XLCDproc::Initialize - Connect failed. Retry in 32 seconds.
+18:42:24 T:2670318688  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:42:25 T:2817201248  NOTICE: Thread Jobworker start, auto delete: true
+18:42:27 T:2670318688  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:42:36 T:2642408544  NOTICE: Previous line repeats 1 times.
+18:42:36 T:2642408544  NOTICE: Thread CFileCache start, auto delete: false
+18:42:53 T:3046318608  NOTICE: Previous line repeats 1 times.
+18:42:53 T:3046318608   ERROR: XLCDproc::Connect - Unable to connect to host, LCDd not running?
+18:42:53 T:3046318608   ERROR: XLCDproc::Initialize - Connect failed. Retry in 64 seconds.
+18:43:31 T:2642408544  NOTICE: Thread CFileCache start, auto delete: false
+18:43:58 T:3046318608  NOTICE: Previous line repeats 1 times.
+18:43:58 T:3046318608   ERROR: XLCDproc::Connect - Unable to connect to host, LCDd not running?
+18:43:58 T:3046318608   ERROR: XLCDproc::Initialize - Connect failed. Giving up.
+18:44:16 T:2642408544  NOTICE: Thread Jobworker start, auto delete: true
+18:45:05 T:3046318608   ERROR: GetDirectory - Error getting addons://repository.smallplayer/xbmc.addon.video
+18:45:05 T:3046318608   ERROR: CGUIMediaWindow::GetDirectory(addons://repository.smallplayer/xbmc.addon.video) failed
+18:45:05 T:3046318608   ERROR: GetDirectory - Error getting addons://repository.smallplayer/
+18:45:05 T:3046318608   ERROR: CGUIMediaWindow::GetDirectory(addons://repository.smallplayer/) failed
+18:45:05 T:2807034976  NOTICE: Thread Jobworker start, auto delete: true
+18:45:05 T:2817201248  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:46:46 T:3046318608   ERROR: GetDirectory - Error getting addons://repository.smallplayer/
+18:46:46 T:3046318608   ERROR: CGUIMediaWindow::GetDirectory(addons://repository.smallplayer/) failed
+18:46:46 T:2817201248  NOTICE: Thread Jobworker start, auto delete: true
+18:46:46 T:2670318688  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:47:58 T:3046318608  NOTICE: Previous line repeats 2 times.
+18:47:58 T:3046318608   ERROR: GetDirectory - Error getting addons://repository.smallplayer/
+18:47:58 T:3046318608   ERROR: CGUIMediaWindow::GetDirectory(addons://repository.smallplayer/) failed
+18:48:00 T:3046318608   ERROR: GetDirectory - Error getting addons://repos/
+18:48:00 T:3046318608   ERROR: CGUIMediaWindow::GetDirectory(addons://repos/) failed
+18:49:09 T:2670318688  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:49:55 T:2817201248  NOTICE: Previous line repeats 1 times.
+18:49:55 T:2817201248  NOTICE: Thread Jobworker start, auto delete: true
+18:49:55 T:2843153504  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:49:55 T:2807034976  NOTICE: Thread Jobworker start, auto delete: true
+18:50:24 T:2642408544  NOTICE: Previous line repeats 2 times.
+18:50:24 T:2642408544  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:53:31 T:2817201248  NOTICE: Previous line repeats 1 times.
+18:53:31 T:2817201248  NOTICE: Thread Jobworker start, auto delete: true
+18:53:33 T:2825589856  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:53:36 T:2670646368  NOTICE: Previous line repeats 1 times.
+18:53:36 T:2670646368  NOTICE: Thread Jobworker start, auto delete: true
+18:53:38 T:2825589856  NOTICE: Previous line repeats 1 times.
+18:53:38 T:2825589856  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:53:39 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:53:39 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:53:39 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:53:47 T:2670646368   ERROR: GetDirectory - Error getting /storage/pictures/weather31/
+18:53:53 T:3046318608   ERROR: Previous line repeats 1 times.
+18:53:53 T:3046318608   ERROR: unmatched parentheses in IsEmpty(ListItem.Property(NumEpisodes)
+18:53:56 T:2825589856  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:53:56 T:2642408544  NOTICE: Thread XBPyThread start, auto delete: false
+18:53:57 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:53:57 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:53:57 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
+18:53:57 T:2825589856  NOTICE: Thread Jobworker start, auto delete: true
+18:53:58 T:2642408544  NOTICE: -->Python Interpreter Initialized<--
+18:54:00 T:2634019936  NOTICE: Thread XBPyThread start, auto delete: false
+18:54:02 T:2634019936  NOTICE: -->Python Interpreter Initialized<--
+18:54:41 T:2634019936  NOTICE: CommonFunctions-2.5.1
+18:54:44 T:2634019936  NOTICE: metahandler: Initializing MetaHandlers version: 2.4.0
+18:54:44 T:2634019936  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+18:54:44 T:2615145568  NOTICE: Previous line repeats 1 times.
+18:54:44 T:2615145568  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:54:50 T:2634019936  NOTICE: Thread Jobworker start, auto delete: true
+18:54:50 T:2615145568  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:54:54 T:2615145568  NOTICE: Thread XBPyThread start, auto delete: false
+18:54:57 T:2615145568  NOTICE: -->Python Interpreter Initialized<--
+18:55:03 T:2615145568  NOTICE: CommonFunctions-2.5.1
+18:55:07 T:2615145568  NOTICE: metahandler: Initializing MetaHandlers version: 2.4.0
+18:55:07 T:2615145568  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+18:55:08 T:2623534176  NOTICE: Previous line repeats 1 times.
+18:55:08 T:2623534176  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:55:36 T:2615145568  NOTICE: Previous line repeats 1 times.
+18:55:36 T:2615145568  NOTICE: Thread XBPyThread start, auto delete: false
+18:55:37 T:2615145568  NOTICE: -->Python Interpreter Initialized<--
+18:55:54 T:2615145568  NOTICE: CommonFunctions-2.5.1
+18:55:54 T:2615145568  NOTICE: metahandler: Initializing MetaHandlers version: 2.4.0
+18:55:54 T:2615145568  NOTICE: metahandler: Loading sqlite3 as DB engine version: 3.8.0.2
+18:55:54 T:2623534176  NOTICE: Previous line repeats 1 times.
+18:55:54 T:2623534176  NOTICE: Thread BackgroundLoader start, auto delete: false
+18:56:06 T:3046318608  NOTICE: Previous line repeats 1 times.
+18:56:06 T:3046318608   ERROR: COMXImageFile::ReadFile special://skin/extras/backgrounds/01.jpg not found
+18:56:06 T:3046318608  NOTICE: LoadJpeg: unable to load special://skin/extras/backgrounds/01.jpg
+18:56:06 T:3046318608   ERROR: Texture manager unable to load file: special://skin/extras/backgrounds/01.jpg
