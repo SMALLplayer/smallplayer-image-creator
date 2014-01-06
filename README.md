@@ -1,4 +1,4 @@
 smallplayer-image-creator
 =========================
 
-To ols to create and write the smallplayer image
+Tools to create and write the smallplayer image
