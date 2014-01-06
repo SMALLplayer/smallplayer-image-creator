@@ -1,0 +1,8 @@
+<settings>
+    <setting id="downloads" value="/storage/videos/" />
+    <setting id="fanart" value="true" />
+    <setting id="fav_sort" value="2" />
+    <setting id="meta" value="true" />
+    <setting id="movie_library" value="/storage/videos/" />
+    <setting id="subs" value="0" />
+</settings>

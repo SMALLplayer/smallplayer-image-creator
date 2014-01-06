@@ -1,0 +1,27 @@
+<settings>
+    <setting id="asterisk" value="true" />
+    <setting id="autoplay" value="true" />
+    <setting id="downloads" value="/storage/tvshows/" />
+    <setting id="email" value="" />
+    <setting id="fanart" value="true" />
+    <setting id="host1" value="Putlocker" />
+    <setting id="host10" value="Novamov" />
+    <setting id="host2" value="Sockshare" />
+    <setting id="host3" value="Movreel" />
+    <setting id="host4" value="Flashx" />
+    <setting id="host5" value="Played" />
+    <setting id="host6" value="Nowvideo" />
+    <setting id="host7" value="Filenuke" />
+    <setting id="host8" value="Vidx" />
+    <setting id="host9" value="Streamcloud" />
+    <setting id="meta" value="true" />
+    <setting id="ororo_host" value="true" />
+    <setting id="password" value="" />
+    <setting id="subs" value="0" />
+    <setting id="subscriptions_clean" value="true" />
+    <setting id="subscriptions_interval" value="3" />
+    <setting id="subscriptions_run" value="1970-01-01 23:59:00.000000" />
+    <setting id="subscriptions_update" value="false" />
+    <setting id="subscriptions_updatelibrary" value="true" />
+    <setting id="tv_library" value="/storage/tvshows/" />
+</settings>
