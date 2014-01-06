@@ -692,12 +692,12 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Label">Online overzicht</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Icon">smallplayer/tvshows_demand.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Path">ActivateWindow(10025,&quot;plugin://plugin.video.ororotv/&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Path">ActivateWindow(10025,&quot;plugin://plugin.video.GOtv/&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile1.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Label">Online zoeken</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Icon">smallplayer/tvshows_searchonline.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.ororotv/?action=shows_search&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.GOtv/?action=shows_search&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile2.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.5.TypeName">Featured albums</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile3.Label"></setting>
