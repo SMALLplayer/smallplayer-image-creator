@@ -110,7 +110,7 @@
         </musicfiles>
     </viewstates>
     <general>
-        <systemtotaluptime>120</systemtotaluptime>
+        <systemtotaluptime>169</systemtotaluptime>
         <addonautoupdate>true</addonautoupdate>
         <addonnotifications>true</addonnotifications>
         <addonforeignfilter>false</addonforeignfilter>
@@ -553,7 +553,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile2">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile3">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile4">true</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile5">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile5">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile6">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile7">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile8">false</setting>
@@ -589,6 +589,9 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.ProgramThumbnailSquarePlot">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ShowDailyWeatherFanart">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.spotimc_session_remember">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.TVGuide.ClearLogo">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.TVGuide.ClearArt">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.TVGuide.Landscape">false</setting>
         <setting type="string" name="skin.confluence.CustomBackgroundPath"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton1"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton2"></setting>
@@ -721,10 +724,10 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.ShowLabel">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Path">script.audio.spotimc.smallplayer</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.Animate">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Label"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Icon"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Label">Digitally Imported</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Icon">/storage/.xbmc/addons/plugin.audio.di.fm/icon.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.ShowLabel"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Path">plugin.audio.di.fm</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Animate"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Label">YouTube</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.Icon">/storage/.xbmc/addons/plugin.video.youtube/icon.png</setting>
@@ -809,7 +812,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile3.TypeName"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile4.TypeName"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.TypeName">Muziek add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile7.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile8.TypeName"></setting>
@@ -839,7 +842,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.music.path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeHomeTile1.Type"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Type">1</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Type"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile5.Type">1</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile4.Type"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.Type">1</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.Type">0</setting>

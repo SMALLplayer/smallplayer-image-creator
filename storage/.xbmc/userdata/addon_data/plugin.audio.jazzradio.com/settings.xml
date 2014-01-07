@@ -1,0 +1,8 @@
+<settings>
+    <setting id="allowstats" value="true" />
+    <setting id="bitrate" value="2" />
+    <setting id="cacheexpire" value="720" />
+    <setting id="forceupdate" value="false" />
+    <setting id="sortaz" value="true" />
+    <setting id="usefavorites" value="false" />
+</settings>

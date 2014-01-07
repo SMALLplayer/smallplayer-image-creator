@@ -2,8 +2,8 @@
     <setting id="Animate" value="false" />
     <setting id="Debug" value="false" />
     <setting id="Enabled" value="true" />
-    <setting id="Location1" value="Amsterdam" />
-    <setting id="Location1id" value="zmw:00000.1.06240" />
+    <setting id="Location1" value="" />
+    <setting id="Location1id" value="" />
     <setting id="Location2" value="" />
     <setting id="Location2id" value="" />
     <setting id="Location3" value="" />

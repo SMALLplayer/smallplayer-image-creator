@@ -1,0 +1,17 @@
+------------------------
+GOtv v1.0.1 (5-Jan-14)
+------------------------
+
+- Fixed issues with simplymovies source.
+- Fixed issues with tvonline source.
+- Added sorting methods for favourites (Title, Status, Added).
+- Tweaked detection of new episodes.
+- Tweaked episode listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.0 (1-Jan-14)
+------------------------
+
+- Initial version
