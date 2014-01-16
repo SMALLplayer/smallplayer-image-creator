@@ -51,10 +51,10 @@
 # mode 'High'                   :    950   |    450    |    450     |      6
 # mode 'Turbo'                  :   1000   |    500    |    500     |      6
 
-arm_freq=850
-core_freq=325
-sdram_freq=425
-over_voltage=0
+#arm_freq=850
+#core_freq=325
+#sdram_freq=425
+#over_voltage=0
 
 # set to 'force_turbo=1' to disable dynamic overclocking (you can lose your warranty!)
   force_turbo=0
