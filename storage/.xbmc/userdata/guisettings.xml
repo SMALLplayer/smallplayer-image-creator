@@ -670,7 +670,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Label">Online overzicht</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Icon">smallplayer/video_demand.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.muchmovies.hd/&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Path">ActivateWindow(10025,&quot;plugin://plugin.video.GOmovies/&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile2.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile3.Label">Bestanden</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile3.Icon">smallplayer/files.png</setting>
@@ -680,7 +680,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Label">Online zoeken</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Icon">smallplayer/video_searchonline.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.ShowLabel">on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Path">ActivateWindow(10025,&quot;plugin://plugin.video.muchmovies.hd/?action=movies_search&quot;,return)</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Path">ActivateWindow(10025,&quot;plugin://plugin.video.GOmovies/?action=movies_search&quot;,return)</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeVideoTile4.Animate">on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeWidget.4.TypeName">New tv shows</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile3.Label"></setting>
