@@ -8,7 +8,6 @@ import chn_class
 from regexer import Regexer
 from helpers import brightcovehelper
 from helpers.htmlhelper import HtmlHelper
-from proxyinfo import ProxyInfo
 
 from logger import Logger
 from urihandler import UriHandler
@@ -134,6 +133,8 @@ class Channel(chn_class.Channel):
 
         title = html.GetTagContent("h1", firstOnly=True)
         Logger.Trace(title)
+        if not title:
+            title = html.GetTagContent("h3", firstOnly=True)
 
         url = html.GetTagAttribute("a", {"class": "wrap"}, {"href": None})
         if not "http://" in url:

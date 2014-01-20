@@ -1,4 +1,4 @@
-[B]Changelog[/B]
+﻿[B]Changelog[/B]
 Fixed: Typo in Dutch MTV channel causing the URL to not load.
 
 Disabled: MTV.de for now as it is not yet supported by XOT-Uzg.v3.3.1

@@ -1,4 +1,24 @@
 ------------------------
+Much Movies HD v1.3.1 (10-Jan-14)
+------------------------
+
+- Tweaked watched status.
+- Code cosmetics.
+
+
+------------------------
+Much Movies HD v1.3.0 (7-Jan-14)
+------------------------
+
+- Fixed issues with watched status in library.
+- Fixed issues with trailers.
+- Added sorting methods for favourites (Title, Year, Added).
+- Notifications are now silent in Gotham or later.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
 Much Movies HD v1.2.1 (4-Dec-13)
 ------------------------
 

@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>60948038-60A4-11E2-B01B-8BE36188709B</guid>
         <name>SBS 6</name>
         <description>Online uitzendingen van SBS6 via kijk.nl.</description>
         <icon>sbs6icon.png</icon>
         <iconlarge>sbs6large.png</iconlarge>
+        <category>National</category>
         <channelcode>sbs</channelcode>
         <sortorder>7</sortorder>
         <language>nl</language>
@@ -18,6 +19,7 @@
         <description>Online uitzendingen van NET5 via kijk.nl.</description>
         <icon>net5icon.png</icon>
         <iconlarge>net5large.png</iconlarge>
+        <category>National</category>
         <channelcode>net5</channelcode>
         <sortorder>6</sortorder>
         <language>nl</language>
@@ -30,6 +32,7 @@
         <description>Uitzendingen van Veronica via kijk.nl.</description>
         <icon>veronicaicon.png</icon>
         <iconlarge>veronicalarge.png</iconlarge>
+        <category>National</category>
         <channelcode>veronica</channelcode>
         <sortorder>8</sortorder>
         <language>nl</language>

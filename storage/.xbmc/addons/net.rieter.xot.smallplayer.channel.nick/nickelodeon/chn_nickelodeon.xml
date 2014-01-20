@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>8D4EBAE8-F3C6-11DD-92EE-F2FE55D89593</guid>
         <name>Nickelodeon</name>
         <description>Afleveringen van Nickelodeon</description>
         <icon>nickelodeonicon.png</icon>
         <iconlarge>nickelodeonlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>nickelodeon</channelcode>
         <sortorder>11</sortorder>
         <language>nl</language>
@@ -17,6 +18,7 @@
         <description>Afleveringen van Nickelodeon Junior</description>
         <icon>nickelodeonicon.png</icon>
         <iconlarge>nickjrlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>nickjr</channelcode>
         <sortorder>11</sortorder>
         <language>nl</language>
@@ -28,6 +30,7 @@
         <description>Sendninger fra Nickelodeon.no</description>
         <icon>nickelodeonicon.png</icon>
         <iconlarge>nickelodeonlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>nickno</channelcode>
         <sortorder>93</sortorder>
         <language>no</language>
@@ -39,6 +42,7 @@
         <description>Sendninger fra Nick Jr.no</description>
         <icon>nickelodeonicon.png</icon>
         <iconlarge>nickjrlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>nickjrno</channelcode>
         <sortorder>93</sortorder>
         <language>no</language>
@@ -51,6 +55,7 @@
         <description>Sändningar från Nickelodeon.se</description>
         <icon>nickelodeonicon.png</icon>
         <iconlarge>nickelodeonlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>nickse</channelcode>
         <sortorder>109</sortorder>
         <language>se</language>
@@ -62,6 +67,7 @@
         <description>Sändningar från Nick Jr.se</description>
         <icon>nickelodeonicon.png</icon>
         <iconlarge>nickjrlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>nickjrse</channelcode>
         <sortorder>109</sortorder>
         <language>se</language>

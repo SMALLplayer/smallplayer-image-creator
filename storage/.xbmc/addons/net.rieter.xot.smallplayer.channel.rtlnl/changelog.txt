@@ -1,4 +1,4 @@
-[B]Changelog[/B]
+﻿[B]Changelog[/B]
 
 Fixed: RTL added a cookie check and updated main index page
 Fixed: RTL now uses M38U streams and DRM items can not be played back.

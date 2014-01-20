@@ -81,8 +81,14 @@ class Channel(chn_class.Channel):
 
         self.episodeItemRegex = ('<h3>([^<]+)</h3>\W+<a[\W\w]+?<a href="(/videos[^"]+|/video[^"]+)"', '<a href="/program/([^"]+)"[^>]+title="([^"]+)')
         self.videoItemRegex = """<a href="(/videos/[^"]+|/video/\d+-)([^/]+)[^"]* class="preview">(?:<span[^>]+>[^>]+>\W+){0,1}<img (?:alt="([^"]+)")?[^>]+src="([^"]+/)([0-9a-f]+)([0-9a-f]/[^"]+)"[^>]+/>\W+</a><div class='description'>"""
+        self.pageNavigationRegex = 'href="(/video[^?"]+\?page_\d*=)(\d+)"'
+        self.pageNavigationRegexIndex = 1
         # <a href="(/videos/[^"]+)" class="preview"><img alt="([^"]+)"[^>]+src="([^"]+/)([0-9a-f])(/[^"]+)"[^>]+/>
         # self.folderItemRegex = '<a href="\.([^"]*/)(cat/)(\d+)"( style="color:\s*white;"\s*)*>([^>]+)</a><br'  # used for the CreateFolderItem
+
+        # Test cases:
+        # SE: Huset Anubis: paging
+
         self.mediaUrlRegex = '<param name="src" value="([^"]+)" />'    # used for the UpdateVideoItem
         return True
 

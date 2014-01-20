@@ -1,6 +1,5 @@
-#===============================================================================
-# Make global object available
-#===============================================================================
+import datetime
+
 import mediaitem
 import chn_class
 
@@ -38,10 +37,11 @@ class Channel(chn_class.Channel):
         self.requiresLogon = False
         self.swfUrl = "http://www.538.nl/jwplayer/player.swf"
 
-        self.episodeItemRegex = '<li><a href="((?:overzicht|programmas)[^"]*)">([^<]+)<'  # used for the ParseMainList
-        self.folderItemRegex = '<li><a href="([^"]+)" ><span>([^<]+)</span></a></li>'
-        self.videoItemRegex = '(?:<img src="([^"]+)"([\w\W]{0,500}?)<p><a href="([^"]+)">([^<]+)</a>|<a href="#([^"]+)" onclick="window.open\(.player.php\?(id=\d+&starttijd=\d+)[^>]+>(\w+) (\d+)-(\d+)-(\d+) \((\d+):(\d+)-(\d+):(\d+)\)<)'
-        self.mediaUrlRegex = 'mp\durl="(http:[^"]+.mp\d)"'
+        # self.episodeItemRegex = ''
+        # self.folderItemRegex = '<li><a href="([^"]+)" ><span>([^<]+)</span></a></li>'
+        # self.videoItemRegex = '(?:<img src="([^"]+)"([\w\W]{0,500}?)<p><a href="([^"]+)">([^<]+)</a>|<a href="#([^"]+)" onclick="window.open\(.player.php\?(id=\d+&starttijd=\d+)[^>]+>(\w+) (\d+)-(\d+)-(\d+) \((\d+):(\d+)-(\d+):(\d+)\)<)'
+        self.videoItemJson = ('content',)
+        self.mediaUrlRegex = '<media:content url="([^"]+)"'
 
         self.pageNavigationRegex = '<li><a href="([^"]+?)(\d+)" >\d+</a></li>'  # self.pageNavigationIndicationRegex
         self.pageNavigationRegexIndex = 1
@@ -71,6 +71,7 @@ class Channel(chn_class.Channel):
         live.icon = self.icon
         live.thumb = self.noImage
         live.complete = True
+        #live.SetDate(2050, 1, 1)
 
         tv538 = mediaitem.MediaItem("TV 538", "")
         tv538.icon = self.icon
@@ -96,63 +97,32 @@ class Channel(chn_class.Channel):
         slam.complete = True
         live.items.append(slam)
 
+        items = []
+        data = ""
+        items.append(live)
+
+        now = datetime.datetime.now()
+        fromDate = now - datetime.timedelta(365)
+        Logger.Debug("Showing dates starting from %02d%02d%02d to %02d%02d%02d", fromDate.year, fromDate.month, fromDate.day, now.year, now.month, now.day)
+        current = fromDate
+        while current <= now:
+            url = "http://www.538.nl/ajax/VdaGemistBundle/Gemist/ajaxGemistFilter/date/%02d%02d%02d" % (current.year, current.month, current.day)
+            title = "Afleveringen van %02d-%02d-%02d" % (current.year, current.month, current.day)
+            dateItem = mediaitem.MediaItem(title, url)
+            dateItem.icon = self.icon
+            dateItem.thumb = self.noImage
+            dateItem.complete = True
+            dateItem.httpHeaders = {"X-Requested-With": "XMLHttpRequest"}
+            items.append(dateItem)
+            current = current + datetime.timedelta(1)
+
         if returnData:
-            (items, data) = chn_class.Channel.ParseMainList(self, returnData=returnData)
-            items.append(live)
+            # (items, data) = chn_class.Channel.ParseMainList(self, returnData=returnData)
+            # items.append(live)
             return (items, data)
         else:
-            items = chn_class.Channel.ParseMainList(self, returnData=returnData)
-            items.append(live)
             return items
         return
-
-    def CreateEpisodeItem(self, resultSet):
-        """Creates a new MediaItem for an episode
-
-        Arguments:
-        resultSet : list[string] - the resultSet of the self.episodeItemRegex
-
-        Returns:
-        A new MediaItem of type 'folder'
-
-        This method creates a new MediaItem from the Regular Expression
-        results <resultSet>. The method should be implemented by derived classes
-        and are specific to the channel.
-
-        """
-
-        url = "%s/%s" % (self.baseUrl, resultSet[0])
-
-        if "programma" in url:
-            # for programmas we need the ifram content
-            url = "http://www.radio538.nl/gemist/"
-        item = mediaitem.MediaItem(resultSet[1], url)
-        item.icon = self.icon
-        item.thumb = self.noImage
-        item.complete = True
-        return item
-
-    def CreateFolderItem(self, resultSet):
-        """Creates a MediaItem of type 'folder' using the resultSet from the regex.
-
-        Arguments:
-        resultSet : tuple(strig) - the resultSet of the self.folderItemRegex
-
-        Returns:
-        A new MediaItem of type 'folder'
-
-        This method creates a new MediaItem from the Regular Expression or Json
-        results <resultSet>. The method should be implemented by derived classes
-        and are specific to the channel.
-
-        """
-
-        url = "%s/%s" % (self.baseUrl, resultSet[0])
-        item = mediaitem.MediaItem(resultSet[1].capitalize(), url)
-        item.icon = self.folderIcon
-        item.thumb = self.noImage
-        item.complete = True
-        return item
 
     def CreateVideoItem(self, resultSet):
         """Creates a MediaItem of type 'video' using the resultSet from the regex.
@@ -174,36 +144,45 @@ class Channel(chn_class.Channel):
 
         """
 
-        # Logger.Trace(resultSet)
+        Logger.Trace(resultSet)
 
-        if (resultSet[4] == ""):
-            Logger.Trace("Simple audio")
+#         if (resultSet[4] == ""):
+#             Logger.Trace("Simple audio")
+#
+#             if not ("vote" in resultSet[1]):
+#                 return None
+#
+#             url = "%s/%s" % (self.baseUrl, resultSet[2])
+#             title = resultSet[3]
+#             item = mediaitem.MediaItem(title, url)
+#             item.type = 'video'
+#             item.thumbUrl = resultSet[0]
+#         else:
+#             Logger.Trace("Playlist audio")
+#             # http://www.radio538.nl/gemist/xml2.php?id=1&starttijd=1334808000
+#             url = "http://www.radio538.nl/gemist/xml2.php?%s" % (resultSet[5])
+#             title = "%s (%s)" % (resultSet[4], resultSet[6])
 
-            if not ("vote" in resultSet[1]):
-                return None
+        title = resultSet.get("title", "Unknown title")
+        subTitle = resultSet.get("subtitle_list", "")
+        if subTitle:
+            title = "%s - %s" % (title, subTitle)
 
-            url = "%s/%s" % (self.baseUrl, resultSet[2])
-            title = resultSet[3]
-            item = mediaitem.MediaItem(title, url)
-            item.type = 'video'
-            item.thumbUrl = resultSet[0]
-        else:
-            Logger.Trace("Playlist audio")
-            # http://www.radio538.nl/gemist/xml2.php?id=1&starttijd=1334808000
-            url = "http://www.radio538.nl/gemist/xml2.php?%s" % (resultSet[5])
-            title = "%s (%s)" % (resultSet[4], resultSet[6])
+        url = "http://www.538.nl/static/VdaGemistBundle/Feed/xml/idGemist/%s" % (resultSet["id"],)
 
-            item = mediaitem.MediaItem(title, url)
-            item.type = 'video'
+        item = mediaitem.MediaItem(title, url)
+        item.type = 'video'
 
-            day = resultSet[7]
-            month = resultSet[8]
-            year = resultSet[9]
-            hour = resultSet[10]
-            minutes = resultSet[11]
-            item.SetDate(year, month, day, hour, minutes, 0)
+        dateTime = resultSet.get("time", None)
+        if dateTime:
+            day = dateTime[0:2]
+            month = dateTime[3:5]
+            year = dateTime[6:10]
+            item.SetDate(year, month, day)
 
+        item.description = resultSet.get("description", "")
         item.thumb = self.noImage
+        item.thumbUrl = resultSet.get("image", None)
         item.icon = self.icon
         item.complete = False
         return item
@@ -231,9 +210,6 @@ class Channel(chn_class.Channel):
 
         """
 
-        if not "xml2" in item.url:
-            return  chn_class.Channel.UpdateVideoItem(self, item)
-
         Logger.Debug('Starting UpdateVideoItem for %s (%s)', item.name, self.channelName)
 
         item.thumb = self.CacheThumb(item.thumbUrl)
@@ -241,8 +217,12 @@ class Channel(chn_class.Channel):
         # now the mediaurl is derived. First we try WMV
         data = UriHandler.Open(item.url, pb=False)
         item.MediaItemParts = []
-        for part in Regexer.DoRegex('<media:content url="([^"]+)"', data):
-            item.AppendSingleStream(part, 128)
+        i = 1
+        for part in Regexer.DoRegex(self.mediaUrlRegex, data):
+            name = "%s - Deel %s" % (item.name, i)
+            mediaPart = mediaitem.MediaItemPart(name, part, 128)
+            item.MediaItemParts.append(mediaPart)
+            i += 1
 
         item.complete = True
         return item

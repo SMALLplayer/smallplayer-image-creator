@@ -40,6 +40,10 @@
 	<!-- OK -->
 	<string id="30321">YouTube addon is not installed.</string>
 	<string id="30322">This stream requires it.</string>
+	<string id="30323">You haven't added any Subscription.</string>
+	<string id="30324">Latest Episodes require it.</string>
+	<string id="30325">You have disabled Automatic Updates for Subscriptions.</string>
+	<string id="30326">Latest Episodes require it.</string>
 	<!-- YesNo -->
 	<string id="30341">You have not set the download folder.</string>
 	<string id="30342">Do you want to set it now?</string>
@@ -49,6 +53,10 @@
 	<string id="30346">Do you want to cancel it?</string>
 	<string id="30347">This TV Show seems to be ended.</string>
 	<string id="30348">Do you really want to add it?</string>
+	<string id="30349">This TV Show seems to be ended.</string>
+	<string id="30350">Do you really want to remove it?</string>
+	<string id="30351">This TV Show will remain to library.</string>
+	<string id="30352">Do you want to remove it from library?</string>
 	<!-- Misc -->
 	<string id="30361">Next Page</string>
 	<string id="30362">Search</string>
@@ -87,6 +95,7 @@
 	<string id="30430">Set Seasons view</string>
 	<string id="30431">Set Episodes view</string>
 	<string id="30432">Sources</string>
+	<string id="30433">Auto-play</string>
 	<!-- Description -->
 	<string id="30450">Watch a wide selection of movies from yify.tv</string>
 	<!-- Labels -->

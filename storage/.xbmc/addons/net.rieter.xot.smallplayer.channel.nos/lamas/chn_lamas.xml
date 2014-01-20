@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>9B43CA5A-42F3-11DD-9D91-B6F355D89593</guid>
         <name>De Lama's</name>
         <description>Al de clips en bonus materiaal van De Lama's site</description>
         <icon>lamasicon.png</icon>
         <iconlarge>lamasiconlarge.png</iconlarge>
+        <category>Video</category>
         <channelcode>None</channelcode>
         <sortorder>255</sortorder>
         <language>nl</language>

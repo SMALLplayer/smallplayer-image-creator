@@ -9,11 +9,10 @@ import chn_class
 from locker import LockWithDialog
 from config import Config
 from helpers import htmlentityhelper
-from helpers import xmlhelper
+from helpers.xmlhelper import XmlHelper
 from helpers import subtitlehelper
 from xbmcwrapper import XbmcWrapper
 from helpers.languagehelper import LanguageHelper
-import addonsettings
 
 from regexer import Regexer
 from logger import Logger
@@ -21,6 +20,30 @@ from urihandler import UriHandler
 
 
 class Channel(chn_class.Channel):
+
+    def __init__(self, channelInfo):
+        """Initialisation of the class.
+
+        WindowXMLDialog(self, xmlFilename, scriptPath[, defaultSkin, defaultRes]) -- Create a new WindowXMLDialog script.
+
+        xmlFilename     : string - the name of the xml file to look for.
+        scriptPath      : string - path to script. used to fallback to if the xml doesn't exist in the current skin. (eg os.getcwd())
+        defaultSkin     : [opt] string - name of the folder in the skins path to look in for the xml. (default='Default')
+        defaultRes      : [opt] string - default skins resolution. (default='720p')
+
+        *Note, skin folder structure is eg(resources/skins/Default/720p)
+
+        All class variables should be instantiated here and this method should not
+        be overridden by any derived classes.
+
+        """
+
+        self.liveUrl = None
+        chn_class.Channel.__init__(self, channelInfo)
+
+        # if a proxy was set, set the filter
+        if self.proxy:
+            self.proxy.Filter = ["mediaselector"]
 
     def InitialiseVariables(self, channelInfo):
         """Used for the initialisation of user defined parameters.
@@ -43,26 +66,34 @@ class Channel(chn_class.Channel):
         if self.channelCode == "bbc1":
             self.noImage = "bbc1image.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_one/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_one_london/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbc2":
             self.noImage = "bbc2image.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_two/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_two_england/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbc3":
             self.noImage = "bbc3image.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_three/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_three/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbc4":
             self.noImage = "bbc4image.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_four/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_four/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "cbbc":
             self.noImage = "cbbcimage.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/cbbc/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/cbbc/pc_stream_audio_video_simulcast_uk_v_lm_p006"
+            #self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_three/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "cbeebies":
             self.noImage = "cbeebiesimage.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/cbeebies/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/cbeebies/pc_stream_audio_video_simulcast_uk_v_lm_p006"
+            #self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_four/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbchd":
             self.noImage = "bbchdimage.png"
@@ -71,14 +102,17 @@ class Channel(chn_class.Channel):
         elif self.channelCode == "bbcnews":
             self.noImage = "bbcnewsimage.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_news24/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_news24/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbcparliament":
             self.noImage = "bbcparliamentimage.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_parliament/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_parliament/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbcalba":
             self.noImage = "bbcalbaimage.png"
             self.mainListUri = "http://feeds.bbc.co.uk/iplayer/bbc_alba/list"
+            self.liveUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/bbc_alba/pc_stream_audio_video_simulcast_uk_v_lm_p006"
 
         elif self.channelCode == "bbciplayersearch":
             self.noImage = "bbciplayerimage.png"
@@ -90,7 +124,7 @@ class Channel(chn_class.Channel):
         self.requiresLogon = False
         self.swfUrl = "http://www.bbc.co.uk/emp/releases/iplayer/revisions/617463_618125_4/617463_618125_4_emp.swf"
         self.episodeItemRegex = "(<entry>([\w\W]*?)</entry>)"
-        self.videoItemRegex = ''
+        self.videoItemRegex = '<manifest[^>]+>(.+)</manifest>'
         self.folderItemRegex = ''
         self.mediaUrlRegex = ''
 
@@ -105,22 +139,21 @@ class Channel(chn_class.Channel):
 
         return True
 
+    #noinspection PyUnusedLocal
     @LockWithDialog(logger=Logger.Instance())
     def CtMnTestProxy(self, item):  # :@UnusedVariable
         """ Checks if the proxy is OK"""
 
-        proxy = addonsettings.AddonSettings().GetIPlayerProxy()
-
-        if not proxy:
-            message = "Proxy not configured" % (addonsettings.AddonSettings().GetIPlayerProxy(),)
+        if not self.proxy:
+            message = "Proxy not configured: %s" % (self.proxy, )
         else:
             url = Config.updateUrl + "proxy"
-            data = UriHandler.Open(url, proxy=proxy)
+            data = UriHandler.Open(url, proxy=self.proxy)
             # Logger.Trace(data)
             if data == "1":
-                message = LanguageHelper.GetLocalizedString(LanguageHelper.ProxyOkId) % (addonsettings.AddonSettings().GetIPlayerProxy(),)
+                message = LanguageHelper.GetLocalizedString(LanguageHelper.ProxyOkId) % (self.proxy, )
             else:
-                message = LanguageHelper.GetLocalizedString(LanguageHelper.ProxyNokId) % (addonsettings.AddonSettings().GetIPlayerProxy(),)
+                message = LanguageHelper.GetLocalizedString(LanguageHelper.ProxyNokId) % (self.proxy, )
 
         Logger.Debug(message)
 
@@ -146,6 +179,7 @@ class Channel(chn_class.Channel):
             # clear some stuff
             self.mainListItems = []
             self.programs = dict()
+            #noinspection PyArgumentList
             keyboard = xbmc.Keyboard('')
             keyboard.doModal()
             if not keyboard.isConfirmed():
@@ -160,6 +194,22 @@ class Channel(chn_class.Channel):
             self.programs = dict()
 
         items = chn_class.Channel.ParseMainList(self, returnData=returnData)
+        if self.liveUrl and False:
+            item = mediaitem.MediaItem("\bLive TV", self.liveUrl)
+            item.icon = self.icon
+            item.type = 'folder'
+            item.thumb = self.noImage
+            item.complete = True
+
+            subItem = mediaitem.MediaItem("%s - Live" % (self.channelName, ), self.liveUrl)
+            subItem.icon = self.icon
+            subItem.type = 'video'
+            subItem.thumb = self.noImage
+            subItem.complete = False
+            item.items.append(subItem)
+
+            items.append(item)
+
         return items
 
     def CreateEpisodeItem(self, resultSet):
@@ -178,7 +228,7 @@ class Channel(chn_class.Channel):
         """
 
         # http://www.rtl.nl/system/s4m/xldata/abstract/218927.xml
-        xmlData = xmlhelper.XmlHelper(resultSet[0])
+        xmlData = XmlHelper(resultSet[0])
 
         title = xmlData.GetSingleNodeContent("title")
 
@@ -203,7 +253,7 @@ class Channel(chn_class.Channel):
             returnValue = episodeItem
 
         # attach the sub item
-        item = self.CreateVideoItem(resultSet)
+        item = self.CreateNestedVideoItem(resultSet)
 
         # update the main item
         date = xmlData.GetSingleNodeContent("updated")
@@ -222,7 +272,7 @@ class Channel(chn_class.Channel):
 
         return returnValue
 
-    def CreateVideoItem(self, resultSet):
+    def CreateLiveVideoItem(self, resultSet):
         """Creates a MediaItem of type 'video' using the resultSet from the regex.
 
         Arguments:
@@ -242,7 +292,47 @@ class Channel(chn_class.Channel):
 
         """
 
-        xmlData = xmlhelper.XmlHelper(resultSet[0])
+        Logger.Trace(resultSet)
+
+        # only used for live TV
+        live = mediaitem.MediaItem("%s - Live" % (self.channelName, ), None, type="video")
+        live.complete = True
+        live.icon = self.icon
+        live.thumb = self.noImage
+        liveRegex = '<media[^>]+href="([^"]+)"[^>]+bitrate="([^"]+)"[^>]*/>'
+
+        livePart = live.CreateNewEmptyMediaPart()
+        streams = Regexer.DoRegex(liveRegex, resultSet)
+        for stream in streams:
+            # .replace("_definst_", "?slist=").replace("http:", "rtmp:")
+            livePart.AppendMediaStream(stream[0], stream[1])
+
+        Logger.Trace("Added live item: %s", live)
+        return live
+
+    def CreateNestedVideoItem(self, resultSet):
+        """Creates a MediaItem of type 'video' using the resultSet from the regex.
+
+        Arguments:
+        resultSet : tuple (string) - the resultSet of the self.videoItemRegex
+
+        Returns:
+        A new MediaItem of type 'video' or 'audio' (despite the method's name)
+
+        This method creates a new MediaItem from the Regular Expression or Json
+        results <resultSet>. The method should be implemented by derived classes
+        and are specific to the channel.
+
+        If the item is completely processed an no further data needs to be fetched
+        the self.complete property should be set to True. If not set to True, the
+        self.UpdateVideoItem method is called if the item is focussed or selected
+        for playback.
+
+        """
+
+        Logger.Trace(resultSet)
+
+        xmlData = XmlHelper(resultSet[0])
         title = xmlData.GetSingleNodeContent("title")
 
         # http://www.bbc.co.uk/iplayer/images/episode/b014gsgn_512_288.jpg
@@ -277,20 +367,25 @@ class Channel(chn_class.Channel):
         """
         Logger.Debug('Starting UpdateVideoItem for %s (%s)', item.name, self.channelName)
 
-        metaData = UriHandler.Open(item.url, pb=False, proxy=self.proxy)
+        liveNeedle = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/"
+        liveStream = False
+        if not liveNeedle in item.url:
+            metaData = UriHandler.Open(item.url, pb=False, proxy=self.proxy)
 
-        xmlMetaData = xmlhelper.XmlHelper(metaData)
-        # <item kind="programme" duration="3600" identifier="b014r5hj" group="b014r5jm" publisher="pips">
-        videoIds = xmlMetaData.GetTagAttribute("item", {'kind': 'programme'}, {'identifier': None}, firstOnly=False)
+            xmlMetaData = XmlHelper(metaData)
+            # <item kind="programme" duration="3600" identifier="b014r5hj" group="b014r5jm" publisher="pips">
+            videoIds = xmlMetaData.GetTagAttribute("item", {'kind': 'programme'}, {'identifier': None}, firstOnly=False)
+        else:
+            videoIds = [item.url.replace(liveNeedle, "")]
+            liveStream = True
 
         for videoId in videoIds:
             Logger.Debug("Found videoId: %s", videoId)
             # foreach ID add a part
             part = item.CreateNewEmptyMediaPart()
 
-            streamDataUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/%s" % (videoId)
-            proxy = addonsettings.AddonSettings().GetIPlayerProxy()
-            streamData = UriHandler.Open(streamDataUrl, pb=False, proxy=proxy)
+            streamDataUrl = "http://www.bbc.co.uk/mediaselector/4/mtis/stream/%s" % (videoId, )
+            streamData = UriHandler.Open(streamDataUrl, pb=False, proxy=self.proxy)
             # Logger.Trace(streamData)
 
             connectionDatas = Regexer.DoRegex('<media bitrate="(\d+)"[^>]+>\W*(<connection[^>]+>)\W*(<connection[^>]+>)*\W*</media>', streamData)
@@ -305,7 +400,7 @@ class Channel(chn_class.Channel):
                     if not connection:
                         continue
 
-                    connectionXml = xmlhelper.XmlHelper(connection)
+                    connectionXml = XmlHelper(connection)
                     Logger.Debug("Analyzing: %s", connection)
 
                     # port: we take the default one
@@ -340,9 +435,11 @@ class Channel(chn_class.Channel):
                     if "akamai" in kind:
                         Logger.Debug("Not including AKAMAI streams")
                         continue
+                        #url = "%s://%s/%s?%s playpath=%s?%s" % (protocol, server, application, authentication, fileName, authentication)
+                        #Logger.Debug("Creating RTMP for Akamai type\n%s", url)
 
                     # Logger.Trace("XML: %s\nProtocol: %s, Server: %s, Application: %s, Authentication: %s, File: %s , Kind: %s", connection, protocol, server, application, authentication, fileName, kind)
-                    if kind == "limelight":
+                    elif kind == "limelight":
                         # for limelight we need to be more specific on what to play
                         url = "%s://%s/ app=%s?%s tcurl=%s://%s/%s?%s playpath=%s" % (protocol, server, application, authentication, protocol, server, application, authentication, fileName)
                         Logger.Debug("Creating RTMP for LimeLight type\n%s", url)
@@ -351,6 +448,9 @@ class Channel(chn_class.Channel):
                         url = "%s://%s/%s?%s playpath=%s" % (protocol, server, application, authentication, fileName)
                         Logger.Debug("Creating RTMP for a None-LimeLight type\n%s", url)
                     url = self.GetVerifiableVideoUrl(url)
+
+                    if liveStream:
+                        url = "%s live=1" % (url, )
                     part.AppendMediaStream(url, bitrate)
 
             # get the subtitle
@@ -358,7 +458,7 @@ class Channel(chn_class.Channel):
             if len(subtitles) > 0:
                 subtitle = subtitles[0]
                 subtitleUrl = "%s%s" % (subtitle[0], subtitle[1])
-                part.Subtitle = subtitlehelper.SubtitleHelper.DownloadSubtitle(subtitleUrl, subtitle[1], "ttml")
+                part.Subtitle = subtitlehelper.SubtitleHelper.DownloadSubtitle(subtitleUrl, subtitle[1], "ttml", proxy=self.proxy)
 
         if item.thumbUrl != "":
             item.thumb = self.CacheThumb(item.thumbUrl)

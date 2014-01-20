@@ -44,7 +44,7 @@ class Channel(chn_class.Channel):
     def ParseMainList(self, returnData=False):
         items = chn_class.Channel.ParseMainList(self, returnData=returnData)
 
-        item = mediaitem.MediaItem(".: TWiT.TV Live :.", "http://live.twit.tv/")
+        item = mediaitem.MediaItem("\a.: TWiT.TV Live :.", "http://live.twit.tv/")
         item.thumb = self.noImage
         item.icon = self.icon
         item.complete = True

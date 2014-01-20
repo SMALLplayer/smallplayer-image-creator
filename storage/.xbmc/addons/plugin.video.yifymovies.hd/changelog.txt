@@ -1,4 +1,22 @@
 ------------------------
+Yify Movies HD v1.1.2 (10-Jan-14)
+------------------------
+
+- Tweaked watched status.
+- Code cosmetics.
+
+
+------------------------
+Yify Movies HD v1.1.1 (7-Jan-14)
+------------------------
+
+- Fixed issues with watched status in library.
+- Notifications are now silent in Gotham or later.
+- Tweaked context menus.
+- Code cosmetics.
+
+
+------------------------
 Yify Movies HD v1.1.0 (3-Jan-14)
 ------------------------
 

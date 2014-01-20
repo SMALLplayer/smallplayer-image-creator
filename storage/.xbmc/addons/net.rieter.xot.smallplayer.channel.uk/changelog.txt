@@ -1,4 +1,4 @@
-[B]Changelog[/B]
+﻿[B]Changelog[/B]
 Fixed: BBC streams
 
 Fixed: BBC iPlayer channel (Issue 442)

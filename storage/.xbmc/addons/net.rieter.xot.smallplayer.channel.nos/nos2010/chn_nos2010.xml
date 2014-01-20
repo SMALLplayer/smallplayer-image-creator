@@ -1,16 +1,17 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>C2FB7F24-C5B5-11DF-A324-616DDFD72085</guid>
         <name>Uitzendinggemist.nl</name>
         <description>Uitzendingen van de publieke zenders</description>
         <icon>uzgicon.png</icon>
         <iconlarge>uzglarge.png</iconlarge>
+        <category>National</category>
         <channelcode>uzg</channelcode>
         <sortorder>0</sortorder>
         <language>nl</language>
         <compatible>Environments.All</compatible>
-        <message>XOT-Uzg.v3 gaat altijd akkoord met het plaatsen van cookies|door de uitzendinggemist.nl website. Wilt u dit niet, dan|moet u dit kanaal niet langer gebruiken binnen XOT-Uzg.v3.</message>
+        <message>XBMC Online TV gaat altijd akkoord met het plaatsen van cookies|door de uitzendinggemist.nl website. Wilt u dit niet, dan|moet u dit kanaal niet langer gebruiken binnen XBMC Online TV.</message>
     </channel>
 
     <channel>
@@ -19,6 +20,7 @@
         <description>Uitzendingen van de publieke zenders beschikbaar op mobiele devices.</description>
         <icon>uzgicon.png</icon>
         <iconlarge>uzglarge.png</iconlarge>
+        <category>National</category>
         <channelcode>uzgjson</channelcode>
         <sortorder>0</sortorder>
         <language>nl</language>
@@ -31,6 +33,7 @@
         <description>Uitzendingen van Z@pp</description>
         <icon>zappicon.png</icon>
         <iconlarge>zapplarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>zapp</channelcode>
         <sortorder>10</sortorder>
         <language>nl</language>
@@ -43,6 +46,7 @@
         <description>Uitzendingen van Z@ppelin</description>
         <icon>zappelinicon.png</icon>
         <iconlarge>zappelinlarge.png</iconlarge>
+        <category>Kids</category>
         <channelcode>zappelin</channelcode>
         <sortorder>10</sortorder>
         <language>nl</language>

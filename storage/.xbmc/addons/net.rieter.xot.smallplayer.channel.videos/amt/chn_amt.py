@@ -4,7 +4,6 @@
 import mediaitem
 import contextmenu
 import chn_class
-from helpers import jsonhelper
 from helpers import datehelper
 from helpers import htmlhelper
 from regexer import Regexer
@@ -33,7 +32,7 @@ class Channel(chn_class.Channel):
 
         # self.episodeItemRegex = '(\{"title":[\w\W]+?}]})'
         self.episodeItemJson = ''
-        self.videoItemRegex = '(<li class=\Wtrailer[\w\W]{200,2000}?<!--/trailer-->)'
+        self.videoItemRegex = "(\Wtrailer[^']+'>[\w\W]{200,2000}?\W</li>\W+(?:<li class|</ul>))"
         self.mediaUrlRegex = '<a class="movieLink" href="([^"]+_)'
 
         self.pageNavigationRegex = ''
@@ -112,7 +111,9 @@ class Channel(chn_class.Channel):
         # get the URL using the name and
         location = self.parentItem.url[:self.parentItem.url.rfind("/includes/")]
         itemName = itemName.replace(' ', '').replace('-', '').lower()
-        url = "%s/includes/%s/extralarge.html" % (location, itemName)
+
+        # take the large to make sure we always have a html file
+        url = "%s/includes/%s/large.html" % (location, itemName)
 
         item = mediaitem.MediaItem(title, url)
         item.icon = self.icon
@@ -143,6 +144,7 @@ class Channel(chn_class.Channel):
         item.complete = False
         return item
 
+    #noinspection PyUnusedLocal
     def CtMnDownloadItem(self, item):
         """ downloads a video item and returns the updated one
         """

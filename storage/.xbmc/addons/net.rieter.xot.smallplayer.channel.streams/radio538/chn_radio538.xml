@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>0C59FF4A-8E07-11E1-B2D2-8071BBE59B18</guid>
         <name>Radio 538</name>
         <description>Uitzendingen van Radio 538 gemist (www.538gemist.nl).</description>
         <icon>radio538icon.png</icon>
         <iconlarge>radio538large.png</iconlarge>
+        <category>Radio</category>
         <channelcode>538</channelcode>
         <sortorder>14</sortorder>
         <language>nl</language>

@@ -147,7 +147,7 @@ class Channel(chn_class.Channel):
         # first do the basic stuff
         items = chn_class.Channel.ParseMainList(self, returnData=returnData)
 
-        if (self.channelCode == "uzg"):
+        if self.channelCode == "uzg":
             # we need to append some stuff
             top50 = mediaitem.MediaItem("Top 50 bekeken", "%s/top50" % (self.baseUrl,))
             top50.complete = True
@@ -171,10 +171,10 @@ class Channel(chn_class.Channel):
         """
         # Logger.Trace(resultSet)
 
-        if (resultSet[0] != ''):
+        if resultSet[0] != '':
             name = "Alfabetisch's: %s" % (resultSet[1],)
             url = "%s/%s?order=latest_broadcast_date_desc&page=1" % (self.baseUrl, resultSet[0])
-        elif (resultSet[2] != ''):
+        elif resultSet[2] != '':
             # specific stuff
             name = resultSet[8].capitalize()
             url = "%s/%s/%s?display_mode=list&herhaling=ja" % (self.baseUrl, resultSet[2], resultSet[3])
@@ -188,14 +188,14 @@ class Channel(chn_class.Channel):
         item.complete = True
         item.thumb = self.noImage
 
-        if (resultSet[4] != ''):
+        if resultSet[4] != '':
             # date specified
             item.SetDate(resultSet[4], resultSet[5], resultSet[6])
             pass
-        elif (resultSet[7] == 'vandaag'):
+        elif resultSet[7] == 'vandaag':
             now = datetime.date.today()
             item.SetDate(now.year, now.month, now.day)
-        elif (resultSet[7] == 'gisteren'):
+        elif resultSet[7] == 'gisteren':
             now = datetime.date.today()
             now = now - datetime.timedelta(1)
             item.SetDate(now.year, now.month, now.day)
@@ -238,7 +238,7 @@ class Channel(chn_class.Channel):
                 self.videoItemJson = self.videoItemJsonSearch
 
         Logger.Debug("Pre-Processing finished")
-        return (data, items)
+        return data, items
 
     def CreateFolderItem(self, resultSet):
         """Creates a MediaItem of type 'folder' using the resultSet from the regex.
@@ -255,7 +255,7 @@ class Channel(chn_class.Channel):
 
         """
 
-        if (resultSet[0] == ""):
+        if resultSet[0] == "":
             # search results
             name = resultSet[10]
             url = "%s/%s" % (self.baseUrl, resultSet[9],)
@@ -325,17 +325,18 @@ class Channel(chn_class.Channel):
 
         """
 
+        #noinspection PyStatementEffect
         """
-        http://player.omroep.nl/info/security/ geeft volgende item
-        MTI4NTAwODUzMHxOUE9VR1NMIDEuMHxoNnJjbXNJZnxnb25laTFBaQ== -> SessionKey (via Convert.FromBase64String & Encoding.UTF8.GetString ) = 1285008530|NPOUGSL 1.0|h6rcmsIf|gonei1Ai -> split on "|"
-                                                                                                                                           1285413107|NPOUGSL 1.0|h6rcmsIf|gonei1Ai
-        aflid: 11420664
-        AEAE45803625654A216FB8DF43BD9ACD = MD5 van aflid|sessionKey[1]
-        Denk niet dat SessionKey[1] ooit veranderd? -> lijkt van niet
+                http://player.omroep.nl/info/security/ geeft volgende item
+                MTI4NTAwODUzMHxOUE9VR1NMIDEuMHxoNnJjbXNJZnxnb25laTFBaQ== -> SessionKey (via Convert.FromBase64String & Encoding.UTF8.GetString ) = 1285008530|NPOUGSL 1.0|h6rcmsIf|gonei1Ai -> split on "|"
+                                                                                                                                                   1285413107|NPOUGSL 1.0|h6rcmsIf|gonei1Ai
+                aflid: 11420664
+                AEAE45803625654A216FB8DF43BD9ACD = MD5 van aflid|sessionKey[1]
+                Denk niet dat SessionKey[1] ooit veranderd? -> lijkt van niet
 
-        http://player.omroep.nl/info/metadata/aflevering/11447726/5CE0A8F6DEAA0106C85C5286EA4F89E4
-        http://player.omroep.nl/info/stream/aflevering/11447726/5CE0A8F6DEAA0106C85C5286EA4F89E4
-        """
+                http://player.omroep.nl/info/metadata/aflevering/11447726/5CE0A8F6DEAA0106C85C5286EA4F89E4
+                http://player.omroep.nl/info/stream/aflevering/11447726/5CE0A8F6DEAA0106C85C5286EA4F89E4
+                """
 
         if resultSet[2] != "#" and resultSet[2] != "":
             # regex for Top 50 and Weekoverview
@@ -396,28 +397,28 @@ class Channel(chn_class.Channel):
         # first do the basic stuff
         items = chn_class.Channel.ParseMainList(self, returnData=returnData)
 
-        search = mediaitem.MediaItem(".: Zoeken :.", "searchSite")
+        search = mediaitem.MediaItem("\a.: Zoeken :.", "searchSite")
         search.complete = True
         search.icon = self.icon
         search.thumb = self.noImage
         search.SetDate(2200, 1, 1, text="")
         items.append(search)
 
-        extra = mediaitem.MediaItem(".: Populair :.", "%s/episodes/popular.json" % (self.baseUrl,))
+        extra = mediaitem.MediaItem("\a.: Populair :.", "%s/episodes/popular.json" % (self.baseUrl,))
         extra.complete = True
         extra.icon = self.icon
         extra.thumb = self.noImage
         extra.SetDate(2200, 1, 1, text="")
         items.append(extra)
 
-        extra = mediaitem.MediaItem(".: Tips :.", "%s/tips.json" % (self.baseUrl,))
+        extra = mediaitem.MediaItem("\a.: Tips :.", "%s/tips.json" % (self.baseUrl,))
         extra.complete = True
         extra.icon = self.icon
         extra.thumb = self.noImage
         extra.SetDate(2200, 1, 1, text="")
         items.append(extra)
 
-        extra = mediaitem.MediaItem(".: Recent :.", "%s/broadcasts/recent.json" % (self.baseUrl,))
+        extra = mediaitem.MediaItem("\a.: Recent :.", "%s/broadcasts/recent.json" % (self.baseUrl,))
         extra.complete = True
         extra.icon = self.icon
         extra.thumb = self.noImage
@@ -574,9 +575,10 @@ class Channel(chn_class.Channel):
                 return cachPath
 
         cachePath = chn_class.Channel.GetDefaultCachePath(self)
-        Logger.Trace("UZG Cache path resolved chn_class default: %s", cachPath)
+        Logger.Trace("UZG Cache path resolved chn_class default: %s", cachePath)
         return cachePath
 
+    #noinspection PyUnusedLocal
     def SearchSiteJson(self, url=None):  # @UnusedVariable
         """Creates an list of items by searching the site
 
@@ -594,6 +596,7 @@ class Channel(chn_class.Channel):
     def CtMnDownload(self, item):
         """ downloads a video item and returns the updated one
         """
+        #noinspection PyUnusedLocal
         item = self.DownloadVideoItem(item)
 
     def __UpdateVideoItem(self, item, episodeId):
@@ -622,7 +625,7 @@ class Channel(chn_class.Channel):
 
         # get the subtitle
         subTitleUrl = "http://e.omroep.nl/tt888/%s" % (episodeId,)
-        subTitlePath = subtitlehelper.SubtitleHelper.DownloadSubtitle(subTitleUrl, episodeId + ".srt", format='srt')
+        subTitlePath = subtitlehelper.SubtitleHelper.DownloadSubtitle(subTitleUrl, episodeId + ".srt", format='srt', proxy=self.proxy)
 
         # we need an hash code
         hashCode = self.__GetHashCode(item)
@@ -635,7 +638,7 @@ class Channel(chn_class.Channel):
 
         # streamUrl = "http://pi.omroep.nl/info/stream/aflevering/%s/%s" % (episodeId, hashCode)
         streamUrlSource = "http://ida.omroep.nl/odiplus/?prid=%s&puboptions=adaptive,h264_bb,h264_sb,h264_std&adaptive=no&part=1&token=%s" % (episodeId, hashCode,)
-        streamUrlData = UriHandler.Open(streamUrlSource, proxy=self.proxy)
+        streamUrlData = UriHandler.Open(streamUrlSource, proxy=self.proxy, noCache=True)
         Logger.Trace(streamUrlData)
 
         streamJson = JsonHelper(streamUrlData)
@@ -657,8 +660,12 @@ class Channel(chn_class.Channel):
                 bitrate = None
 
             actualJson = JsonHelper(UriHandler.Open(url, proxy=self.proxy))
-            url = "%s://%s%s" % (actualJson.GetValue('protocol'), actualJson.GetValue('server'), actualJson.GetValue('path'))
-            part.AppendMediaStream(url, bitrate=bitrate)
+            protocol = actualJson.GetValue('protocol')
+            if protocol:
+                url = "%s://%s%s" % (protocol, actualJson.GetValue('server'), actualJson.GetValue('path'))
+                part.AppendMediaStream(url, bitrate=bitrate)
+            else:
+                Logger.Warning("Found UZG Stream without a protocol. Probably a expired page.")
 
         # now we need to get extra info from the data
         item.description = metaJson.GetValue("info")
@@ -691,11 +698,10 @@ class Channel(chn_class.Channel):
         return item
 
     def __GetHashCode(self, item):
-        tokenUrl = "http://ida.omroep.nl/npoplayer/i.js?rnd=1"
+        tokenUrl = "http://ida.omroep.nl/npoplayer/i.js"
         tokenExpired = True
         tokenFile = "uzg-i.js"
         tokenPath = os.path.join(Config.cacheDir, tokenFile)
-        tokenData = None
 
         # determine valid token
         if os.path.exists(tokenPath):
@@ -711,7 +717,7 @@ class Channel(chn_class.Channel):
 
         if tokenExpired:
             Logger.Debug("Fetching a Token.")
-            tokenData = UriHandler.Open(tokenUrl, pb=True, proxy=self.proxy)
+            tokenData = UriHandler.Open(tokenUrl, pb=True, proxy=self.proxy, noCache=True)
             tokenHandle = file(tokenPath, 'w')
             tokenHandle.write(tokenData)
             tokenHandle.close()
@@ -759,6 +765,7 @@ class Channel(chn_class.Channel):
 
         # Date format: 'di 20 dec 2011, 12:00'
         #               012345678901234567890
+        year = month = day = hour = minute = 0
         partList = Regexer.DoRegex("\w+ (?P<day>\d+) (?P<month>\w+) (?P<year>\d+).+(?P<hour>\d+):(?P<minute>\d+)", datestring)
         for dateParts in partList:
             year = dateParts['year']

@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>CB6B08F0-DD6A-11E0-B158-FFFB4824019B</guid>
         <name>BBC One</name>
         <description>Episodes from BBC One iPlayer</description>
         <icon>bbc1thumb.png</icon>
         <iconlarge>bbc1large.png</iconlarge>
+        <category>National</category>
         <channelcode>bbc1</channelcode>
         <sortorder>151</sortorder>
         <language>en-gb</language>
@@ -19,6 +20,7 @@
         <description>Episodes from BBC Two iPlayer</description>
         <icon>bbc2thumb.png</icon>
         <iconlarge>bbc2large.png</iconlarge>
+        <category>National</category>
         <channelcode>bbc2</channelcode>
         <sortorder>152</sortorder>
         <language>en-gb</language>
@@ -31,6 +33,7 @@
         <description>Episodes from BBC Three iPlayer</description>
         <icon>bbc3thumb.png</icon>
         <iconlarge>bbc3large.png</iconlarge>
+        <category>National</category>
         <channelcode>bbc3</channelcode>
         <sortorder>153</sortorder>
         <language>en-gb</language>
@@ -43,6 +46,7 @@
         <description>Episodes from BBC Four iPlayer</description>
         <icon>bbc4thumb.png</icon>
         <iconlarge>bbc4large.png</iconlarge>
+        <category>National</category>
         <channelcode>bbc4</channelcode>
         <sortorder>154</sortorder>
         <language>en-gb</language>
@@ -55,6 +59,7 @@
         <description>Episodes from CBBC iPlayer</description>
         <icon>cbbcthumb.png</icon>
         <iconlarge>cbbclarge.png</iconlarge>
+        <category>National</category>
         <channelcode>cbbc</channelcode>
         <sortorder>155</sortorder>
         <language>en-gb</language>
@@ -67,6 +72,7 @@
         <description>Episodes from CBeebies iPlayer</description>
         <icon>cbeebiesthumb.png</icon>
         <iconlarge>cbeebieslarge.png</iconlarge>
+        <category>National</category>
         <channelcode>cbeebies</channelcode>
         <sortorder>156</sortorder>
         <language>en-gb</language>
@@ -79,6 +85,7 @@
         <description>Episodes from BBC HD iPlayer</description>
         <icon>bbchdthumb.png</icon>
         <iconlarge>bbchdlarge.png</iconlarge>
+        <category>National</category>
         <channelcode>bbchd</channelcode>
         <sortorder>157</sortorder>
         <language>en-gb</language>
@@ -91,6 +98,7 @@
         <description>Episodes from BBC News Channel iPlayer</description>
         <icon>bbcnewsthumb.png</icon>
         <iconlarge>bbcnewslarge.png</iconlarge>
+        <category>National</category>
         <channelcode>bbcnews</channelcode>
         <sortorder>157</sortorder>
         <language>en-gb</language>
@@ -103,6 +111,7 @@
         <description>Episodes from BBC Parliament iPlayer</description>
         <icon>bbcparliamentthumb.png</icon>
         <iconlarge>bbcparliamentlarge.png</iconlarge>
+        <category>National</category>
         <channelcode>bbcparliament</channelcode>
         <sortorder>157</sortorder>
         <language>en-gb</language>
@@ -115,6 +124,7 @@
         <description>Episodes from BBC Alba iPlayer</description>
         <icon>bbcalbathumb.png</icon>
         <iconlarge>bbcalbalarge.png</iconlarge>
+        <category>National</category>
         <channelcode>bbcalba</channelcode>
         <sortorder>157</sortorder>
         <language>en-gb</language>
@@ -127,6 +137,7 @@
         <description>Search the BBC iPlayer</description>
         <icon>bbciplayerthumb.png</icon>
         <iconlarge>bbciplayerlarge.png</iconlarge>
+        <category>National</category>
         <channelcode>bbciplayersearch</channelcode>
         <sortorder>158</sortorder>
         <language>en-gb</language>

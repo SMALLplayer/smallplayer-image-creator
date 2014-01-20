@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <!-- Ketnet broke for now -->
     <channel>
         <guid>756FFEC8-B6BA-11E0-898D-1F434824019B</guid>
@@ -7,6 +7,7 @@
         <description>Online uitzendingen van www.ketnet.be.</description>
         <icon>ketneticon.png</icon>
         <iconlarge>ketnetlarge.png</iconlarge>
+        <category>National</category>
         <channelcode>ketnet</channelcode>
         <sortorder>123</sortorder>
         <language>be</language>
@@ -19,6 +20,7 @@
         <description>Online uitzendingen van www.cobra.be.</description>
         <icon>cobraicon.png</icon>
         <iconlarge>cobralarge.png</iconlarge>
+        <category>National</category>
         <channelcode>cobra</channelcode>
         <sortorder>125</sortorder>
         <language>be</language>

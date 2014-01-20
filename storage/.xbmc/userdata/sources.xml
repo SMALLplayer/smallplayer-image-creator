@@ -1,4 +1,7 @@
-  <sources>
+<sources>
+    <programs>
+        <default pathversion="1"></default>
+    </programs>
     <video>
         <default pathversion="1"></default>
         <source>
@@ -24,4 +27,11 @@
             <path pathversion="1">/storage/pictures/</path>
         </source>
     </pictures>
-  </sources>
+    <files>
+        <default pathversion="1"></default>
+        <source>
+            <name>Opslag</name>
+            <path pathversion="1">/storage/</path>
+        </source>
+    </files>
+</sources>

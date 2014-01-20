@@ -1,5 +1,3 @@
-import urllib
-
 #===============================================================================
 # Make global object available
 #===============================================================================
@@ -122,7 +120,7 @@ class Channel(chn_class.Channel):
         # we need to create page items. So let's just spoof the paging. Youtube has
         # a 50 max results per query limit.
         itemsPerPage = 50
-        data = UriHandler.Open(self.mainListUri)
+        data = UriHandler.Open(self.mainListUri, proxy=self.proxy)
         xml = xmlhelper.XmlHelper(data)
         nrItems = xml.GetSingleNodeContent("openSearch:totalResults")
 

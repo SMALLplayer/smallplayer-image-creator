@@ -1,4 +1,4 @@
-[B]Changelog[/B]
+﻿[B]Changelog[/B]
 Fixed: new NOS player requires one more URL call.
 
 Fixed: Paging issue for NOS channels (part of Issue 469)

@@ -1,0 +1,33 @@
+<settings>
+    <setting id="autoplay" value="true" />
+    <setting id="autoplay_library" value="true" />
+    <setting id="downloads" value="/storage/videos/" />
+    <setting id="fanart" value="true" />
+    <setting id="fav_sort" value="2" />
+    <setting id="filter_search" value="true" />
+    <setting id="host1" value="iShared" />
+    <setting id="host10" value="Streamcloud" />
+    <setting id="host2" value="VK" />
+    <setting id="host3" value="Flashx" />
+    <setting id="host4" value="Played" />
+    <setting id="host5" value="Divxstage" />
+    <setting id="host6" value="Movreel" />
+    <setting id="host7" value="Putlocker" />
+    <setting id="host8" value="Sockshare" />
+    <setting id="host9" value="Vidx" />
+    <setting id="hosthd1" value="VKHD" />
+    <setting id="hosthd2" value="Muchmovies" />
+    <setting id="hosthd3" value="YIFY" />
+    <setting id="imdb_mail" value="" />
+    <setting id="imdb_password" value="" />
+    <setting id="istreamhd" value="true" />
+    <setting id="meta" value="true" />
+    <setting id="movie25" value="true" />
+    <setting id="movie_library" value="/storage/videos/" />
+    <setting id="moviestorm" value="true" />
+    <setting id="muchmovies" value="true" />
+    <setting id="quality" value="true" />
+    <setting id="simplymovies" value="true" />
+    <setting id="subs" value="0" />
+    <setting id="yify" value="true" />
+</settings>

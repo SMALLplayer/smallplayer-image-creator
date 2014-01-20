@@ -1,4 +1,40 @@
 ------------------------
+GOtv v1.1.0 (10-Jan-14)
+------------------------
+
+- Fixed issues with simplymovies source.
+- Fixed issues with istreamhd source.
+- Fixed issues with tvonline source.
+- Tweaked watched status.
+- Tweaked season listings.
+- Tweaked detection of new episodes.
+- Removed automatic cleaning of Subscriptions.
+- Tweaked cleaning of Subscriptions.
+- Tweaked removal of Subscription.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.3 (8-Jan-14)
+------------------------
+
+- If autoplay is disabled, it can now be selected from context menu.
+- Refresh option is now available in all tv show folders.
+- Tweaked season listings.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.0.2 (6-Jan-14)
+------------------------
+
+- Fixed issues with watched status in library.
+- Fixed issues with latest episodes in Gotham.
+- Notifications are now silent in Gotham or later.
+- Code cosmetics.
+
+
+------------------------
 GOtv v1.0.1 (5-Jan-14)
 ------------------------
 

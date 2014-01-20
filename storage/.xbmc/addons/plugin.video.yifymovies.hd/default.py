@@ -97,6 +97,7 @@ class main:
         elif action == 'addon_home':                contextMenu().addon_home()
         elif action == 'view_movies':               contextMenu().view('movies')
         elif action == 'metadata_movies':           contextMenu().metadata('movie', name, url, imdb, '', '')
+        elif action == 'metadata_movies2':          contextMenu().metadata2('movie', name, url, imdb, '', '')
         elif action == 'playcount_movies':          contextMenu().playcount('movie', imdb, '', '')
         elif action == 'library':                   contextMenu().library(name, url)
         elif action == 'download':                  contextMenu().download(name, url)
@@ -108,11 +109,11 @@ class main:
         elif action == 'movies_added':              movies().yify_added()
         elif action == 'movies_rating':             movies().yify_rating()
         elif action == 'movies_views':              movies().yify_views()
+        elif action == 'movies_search':             movies().yify_search(query)
+        elif action == 'movies_favourites':         favourites().movies()
         elif action == 'pages_movies':              pages().yify()
         elif action == 'genres_movies':             genres().yify()
         elif action == 'years_movies':              years().yify()
-        elif action == 'movies_favourites':         favourites().movies()
-        elif action == 'movies_search':             movies().yify_search(query)
         elif action == 'play':                      resolver().run(url, name)
 
         if action is None:
@@ -184,36 +185,25 @@ class player(xbmc.Player):
         if getProperty == 'true': return True
         return
 
-    def run(self, name, url):
+    def run(self, name, url, imdb='0'):
         if xbmc.getInfoLabel('Container.FolderPath').startswith(sys.argv[0]):
             item = xbmcgui.ListItem(path=url)
             xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
         else:
-            try: season = re.compile('S(\d{3})E\d*').findall(name)[-1]
-            except: season = None
-            try: season = re.compile('S(\d{2})E\d*').findall(name)[-1]
-            except: season = None
-            try: episode = re.compile('S%sE(\d*)' % (season)).findall(name)[-1]
-            except: episode = None
-            try: year = re.compile('[(](\d{4})[)]').findall(name)[-1]
-            except: year = None
             try:
-                if not (season is None and episode is None):
-                	show = name.replace('S%sE%s' % (season, episode), '').strip()
-                	season, episode = '%01d' % int(season), '%01d' % int(episode)
-                	imdb = metaget.get_meta('tvshow', show)['imdb_id']
-                	imdb = re.sub("[^0-9]", "", imdb)
-                	meta = metaget.get_episode_meta('', imdb, season, episode)
-                	meta.update({'tvshowtitle': show})
-                	poster = meta['cover_url']
-                elif not year is None:
-                	title = name.replace('(%s)' % year, '').strip()
-                	meta = metaget.get_meta('movie', title ,year=year ,overlay=6)
-                	poster = meta['cover_url']
-                else: raise Exception()
+                file = name + '.strm'
+                file = file.translate(None, '\/:*?"<>|')
+
+                meta = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "VideoLibrary.GetMovies", "params": {"properties" : ["title", "genre", "year", "rating", "director", "trailer", "tagline", "plot", "plotoutline", "originaltitle", "lastplayed", "playcount", "writer", "studio", "mpaa", "country", "imdbnumber", "runtime", "votes", "fanart", "thumbnail", "file", "sorttitle", "resume", "dateadded"]}, "id": 1}')
+                meta = unicode(meta, 'utf-8', errors='ignore')
+                meta = json.loads(meta)
+                meta = meta['result']['movies']
+                self.meta = [i for i in meta if i['file'].endswith(file)][0]
+                meta = {'title': self.meta['title'], 'originaltitle': self.meta['originaltitle'], 'year': self.meta['year'], 'genre': str(self.meta['genre']).replace("[u'", '').replace("']", '').replace("', u'", ' / '), 'director': str(self.meta['director']).replace("[u'", '').replace("']", '').replace("', u'", ' / '), 'country': str(self.meta['country']).replace("[u'", '').replace("']", '').replace("', u'", ' / '), 'rating': self.meta['rating'], 'votes': self.meta['votes'], 'mpaa': self.meta['mpaa'], 'duration': self.meta['runtime'], 'trailer': self.meta['trailer'], 'writer': str(self.meta['writer']).replace("[u'", '').replace("']", '').replace("', u'", ' / '), 'studio': str(self.meta['studio']).replace("[u'", '').replace("']", '').replace("', u'", ' / '), 'tagline': self.meta['tagline'], 'plotoutline': self.meta['plotoutline'], 'plot': self.meta['plot']}
+                poster = self.meta['thumbnail']
             except:
-            	meta = {'label' : name, 'title' : name}
-            	poster = ''
+                meta = {'label' : name, 'title' : name}
+                poster = ''
             item = xbmcgui.ListItem(path=url, iconImage="DefaultVideo.png", thumbnailImage=poster)
             item.setInfo( type="Video", infoLabels= meta )
             xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, item)
@@ -227,16 +217,12 @@ class player(xbmc.Player):
 
         subtitles().get(name)
 
+        self.content = 'movie'
         self.season = str(xbmc.getInfoLabel('VideoPlayer.season'))
         self.episode = str(xbmc.getInfoLabel('VideoPlayer.episode'))
-        if self.season == '' or self.episode == '':
-            self.content = 'movie'
-            self.imdb = metaget.get_meta('movie', xbmc.getInfoLabel('VideoPlayer.title') ,year=str(xbmc.getInfoLabel('VideoPlayer.year')))['imdb_id']
-            self.imdb = re.sub("[^0-9]", "", self.imdb)
-        else:
-            self.content = 'episode'
-            self.imdb = metaget.get_meta('tvshow', xbmc.getInfoLabel('VideoPlayer.tvshowtitle'))['imdb_id']
-            self.imdb = re.sub("[^0-9]", "", self.imdb)
+        if imdb == '0': imdb = metaget.get_meta('movie', xbmc.getInfoLabel('VideoPlayer.title') ,year=str(xbmc.getInfoLabel('VideoPlayer.year')))['imdb_id']
+        imdb = re.sub("[^0-9]", "", imdb)
+        self.imdb = imdb
 
         while True:
             try: self.currentTime = self.getTime()
@@ -246,11 +232,22 @@ class player(xbmc.Player):
     def onPlayBackEnded(self):
         if xbmc.getInfoLabel('Container.FolderPath') == '': index().setProperty(self.property, 'true')
         if not self.currentTime / self.totalTime >= .9: return
-        metaget.change_watched(self.content, '', self.imdb, season=self.season, episode=self.episode, year='', watched='')
-        index().container_refresh()
+        if xbmc.getInfoLabel('Container.FolderPath').startswith(sys.argv[0]):
+            metaget.change_watched(self.content, '', self.imdb, season=self.season, episode=self.episode, year='', watched='')
+            index().container_refresh()
+        else:
+            try: xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "VideoLibrary.SetMovieDetails", "params": {"movieid" : %s, "playcount" : 1 }, "id": 1 }' % str(self.meta['movieid']))
+            except: pass
 
     def onPlayBackStopped(self):
         index().clearProperty(self.property)
+        if not self.currentTime / self.totalTime >= .9: return
+        if xbmc.getInfoLabel('Container.FolderPath').startswith(sys.argv[0]):
+            metaget.change_watched(self.content, '', self.imdb, season=self.season, episode=self.episode, year='', watched='')
+            index().container_refresh()
+        else:
+            try: xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "VideoLibrary.SetMovieDetails", "params": {"movieid" : %s, "playcount" : 1 }, "id": 1 }' % str(self.meta['movieid']))
+            except: pass
 
 class subtitles:
     def get(self, name):
@@ -332,7 +329,8 @@ class subtitles:
 
 class index:
     def infoDialog(self, str, header=addonName):
-        xbmc.executebuiltin("Notification(%s,%s, 3000, %s)" % (header, str, addonIcon))
+        try: xbmcgui.Dialog().notification(header, str, addonIcon, 3000, sound=False)
+        except: xbmc.executebuiltin("Notification(%s,%s, 3000, %s)" % (header, str, addonIcon))
 
     def okDialog(self, str1, str2, header=addonName):
         xbmcgui.Dialog().ok(header, str1, str2)
@@ -508,11 +506,11 @@ class index:
                     cm.append((language(30411).encode("utf-8"), 'RunPlugin(%s?action=addon_home)' % (sys.argv[0])))
                 else:
                     cm.append((language(30416).encode("utf-8"), 'RunPlugin(%s?action=trailer&name=%s&url=%s)' % (sys.argv[0], sysname, trailer)))
+                    if getSetting("meta") == 'true': cm.append((language(30415).encode("utf-8"), 'RunPlugin(%s?action=metadata_movies2&name=%s&url=%s&imdb=%s)' % (sys.argv[0], systitle, sysurl, metaimdb)))
                     cm.append((language(30422).encode("utf-8"), 'RunPlugin(%s?action=library&name=%s&url=%s)' % (sys.argv[0], sysname, sysurl)))
                     if not '"%s"' % url in favRead: cm.append((language(30417).encode("utf-8"), 'RunPlugin(%s?action=favourite_add&name=%s&imdb=%s&url=%s&image=%s)' % (sys.argv[0], sysname, sysimdb, sysurl, sysimage)))
                     else: cm.append((language(30418).encode("utf-8"), 'RunPlugin(%s?action=favourite_delete&name=%s&url=%s)' % (sys.argv[0], sysname, sysurl)))
                     cm.append((language(30428).encode("utf-8"), 'RunPlugin(%s?action=view_movies)' % (sys.argv[0])))
-                    cm.append((language(30409).encode("utf-8"), 'RunPlugin(%s?action=settings_open)' % (sys.argv[0])))
                     cm.append((language(30410).encode("utf-8"), 'RunPlugin(%s?action=playlist_open)' % (sys.argv[0])))
                     cm.append((language(30411).encode("utf-8"), 'RunPlugin(%s?action=addon_home)' % (sys.argv[0])))
 
@@ -712,6 +710,20 @@ class contextMenu:
                             pass
                     metaget.update_meta(content, '', imdb, year='')
                     index().container_refresh()
+            elif content == 'season':
+                metaget.update_episode_meta('', imdb, season, episode)
+                index().container_refresh()
+            elif content == 'episode':
+                metaget.update_season('', imdb, season)
+                index().container_refresh()
+        except:
+            return
+
+    def metadata2(self, content, name, url, imdb, season, episode):
+        try:
+            if content == 'movie' or content == 'tvshow':
+                metaget.update_meta(content, '', imdb, year='')
+                index().container_refresh()
             elif content == 'season':
                 metaget.update_episode_meta('', imdb, season, episode)
                 index().container_refresh()

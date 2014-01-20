@@ -170,7 +170,7 @@ class Channel(chn_class.Channel):
         if (len(resultSet) > 3 and resultSet[3] != ""):
             Logger.Debug("Sub category folder found.")
             url = urlparse.urljoin(self.baseUrl, htmlentityhelper.HtmlEntityHelper.ConvertHTMLEntities(resultSet[3]))
-            name = ".: %s" % (resultSet[4],)
+            name = "\a.: %s" % (resultSet[4],)
             item = mediaitem.MediaItem(name, url)
             item.thumb = self.noImage
             item.complete = True

@@ -1,17 +1,13 @@
-import xml.dom.minidom
-import time
+import datetime
 import cookielib
 
-#===============================================================================
-# Make global object available
-#===============================================================================
 import mediaitem
 import chn_class
 
 from regexer import Regexer
 from logger import Logger
 from urihandler import UriHandler
-from addonsettings import AddonSettings
+from helpers.jsonhelper import JsonHelper
 
 
 class Channel(chn_class.Channel):
@@ -33,19 +29,13 @@ class Channel(chn_class.Channel):
         # call base function first to ensure all variables are there
         chn_class.Channel.InitialiseVariables(self, channelInfo)
 
-        self.mainListUri = "http://www.rtl.nl/system/xl/feed/a-z.xml"
-        self.mainListUri = "http://www.rtl.nl/system/xl/feed/a-z_SMOOTH.xml"
+        self.mainListUri = "http://www.rtl.nl/system/s4m/vfd/version=1/d=pc/output=json/fun=az/fmt=smooth"
         self.baseUrl = "http://www.rtl.nl"
         self.noImage = "rtlimage.png"
 
-        # self.backgroundImage = "background-rtl.png"
-        # self.backgroundImage16x9 = "background-rtl-16x9.png"
-        self.requiresLogon = False
-
-        self.episodeItemRegex = "<abstract key='([^']+)'>\W*<station>([^<]+)</station>\W*(?:<[^>]+>[^>]+>\W*){2}<name>([^<]+)</name>\W*(?:<[^>]+>[^>]+>\W+){1,3}<logo-url>([^<]*)"
-        self.videoItemRegex = ''
-        self.folderItemRegex = ''
-        # self.mediaUrlRegex = '<ref href="([^"]+_)(\d+)(K[^"]+.wmv)"[^>]*>'
+        self.episodeItemJson = ("abstracts",)
+        self.videoItemJson = ("material",)
+        self.folderItemJson = ("seasons",)
         self.mediaUrlRegex = "BANDWIDTH=(\d+)\d{3}[^\n]+\W+([^\n]+.m3u8)"
 
         self.contextMenuItems = []
@@ -54,14 +44,6 @@ class Channel(chn_class.Channel):
 
         #==============================================================================
         # non standard items
-        self.PreProcessRegex = '<ul title="([^"]*)" rel="([^"]*)videomenu.xml"'
-        self.progTitle = ""
-        self.videoMenu = ""
-
-        self.seasons = dict()
-        self.episodes = dict()
-        self.materials = dict()
-        # self.parseWvx = True
 
         self.iconSet = dict()
         self.largeIconSet = dict()
@@ -126,18 +108,26 @@ class Channel(chn_class.Channel):
 
         """
 
-        item = mediaitem.MediaItem(resultSet[2], "http://www.rtl.nl/system/s4m/xldata/abstract/%s.xml?version=2.0" % (resultSet[0]))
+        title = resultSet["name"]
+        key = resultSet["key"]
+        url = "http://www.rtl.nl/system/s4m/vfd/version=1/d=pc/output=json/fun=getseasons/ak=%s" % (key,)
+        item = mediaitem.MediaItem(title, url)
+        item.icon = self.icon
+        item.complete = True
 
-        channel = resultSet[1].lower()
+        desc = resultSet.get("synopsis", "")
+        item.description = desc
 
+        channel = resultSet.get("station", "folder").lower()
         if channel in self.largeIconSet:
             item.icon = self.iconSet[channel]
             item.thumb = self.largeIconSet[channel]
         else:
             item.icon = self.folderIcon
 
-        if resultSet[3]:
-            item.thumbUrl = "http://data.rtl.nl/service/programma_logos/%s" % (resultSet[3],)
+        progLogo = resultSet.get("proglogo", None)
+        if progLogo:
+            item.thumbUrl = "http://data.rtl.nl/service/programma_logos/%s" % (progLogo,)
 
         return item
 
@@ -161,118 +151,189 @@ class Channel(chn_class.Channel):
         """
 
         items = []
-        if not data:
-            return (data, items)
 
-        settings = AddonSettings()
+        # We need to keep the JSON data, in order to refer to it from the create methods.
+        self.currentJson = JsonHelper(data, Logger.Instance())
 
-        # process the XML file in items and return an empty data string
-        dom = xml.dom.minidom.parseString(data)
-        for abstract in dom.getElementsByTagName("abstract"):
-            programName = self.GetXmlTextForNode(abstract, "name")
-        Logger.Trace("Processing: %s", programName)
+        # Extract season (called abstracts) information
+        self.abstracts = dict()  # : the season
+        Logger.Debug("Storing abstract information")
+        for abstract in self.currentJson.GetValue("abstracts"):
+            self.abstracts[abstract["key"]] = abstract
 
-        # Do not just set the name, add the items, basically we already determine al the items
-        # that are available and already parse them here.
+        # If we have episodes available, list them
+        self.episodes = dict()
+        if "episodes" in self.currentJson.GetValue():
+            Logger.Debug("Storing episode information")
+            for episode in self.currentJson.GetValue("episodes"):
+                self.episodes[episode["key"]] = episode
 
-        for season in dom.getElementsByTagName("season"):
-            name = self.GetXmlTextForNode(season, "name")
-            key = season.getAttribute('key')
+        # extract some meta data
+        self.posterBase = self.currentJson.GetValue("meta", "poster_base_url")
+        self.thumbBase = self.currentJson.GetValue("meta", "thumb_base_url")
 
-            folderItem = mediaitem.MediaItem(name, "", parent=self)
-            folderItem.complete = True
-            folderItem.thumb = self.noImage
-            folderItem.icon = self.folderIcon
+        # And create page items
+        itemsOnPage = int(self.currentJson.GetValue("meta", "nr_of_videos_onpage"))
+        totalItems = int(self.currentJson.GetValue("meta", "nr_of_videos_total"))
+        currentPage = int(self.currentJson.GetValue("meta", "pg"))
+        Logger.Debug("Found a total of %s items (%s items per page), we are on page %s", totalItems, itemsOnPage, currentPage)
 
-            self.seasons[key] = folderItem
-            items.append(folderItem)
-            Logger.Trace("Adding Season: %s", folderItem)
+        # But don't show them if not episodes were found
+        if self.episodes:
+            if itemsOnPage < 50:
+                Logger.Debug("No more pages to show.")
+            else:
+                nextPage = currentPage + 1
+                url = self.parentItem.url[:self.parentItem.url.rindex("=")]
+                url = "%s=%s" % (url, nextPage)
+                Logger.Trace(url)
+                pageItem = mediaitem.MediaItem(str(nextPage), url)
+                pageItem.type = "page"
+                pageItem.complete = True
+                items.append(pageItem)
 
-        for episode in dom.getElementsByTagName("episode"):
-            number = self.GetXmlTextForNode(episode, "item_number")
-            name = self.GetXmlTextForNode(episode, "name")
-            synopsis = self.GetXmlTextForNode(episode, "synopsis")
-            seasonKey = episode.getAttribute('season_key')
-            key = episode.getAttribute('key')
-            season = episode.getAttribute('season_key')
-
-            if name == None:
-                name = "Aflevering #%s" % (number,)
-
-            # create the episode
-            seasonItem = self.seasons[season]
-            episodeItem = mediaitem.MediaItem(name, "", parent=seasonItem)
-            episodeItem.description = synopsis
-            episodeItem.complete = True
-            episodeItem.thumb = self.noImage
-            episodeItem.icon = self.folderIcon
-
-            # now add them
-            Logger.Trace("Adding Episode %s to Season %s", episodeItem, seasonItem)
-            seasonItem.items.append(episodeItem)
-            self.episodes[key] = episodeItem
-
-        for material in dom.getElementsByTagName("material"):
-            date = self.GetXmlTextForNode(material, "broadcast_date_display")
-            url = self.GetXmlTextForNode(material, "component_uri")
-            title = self.GetXmlTextForNode(material, "title")
-            if title is None or title == "":
-                continue
-
-            thumbId = self.GetXmlTextForNode(material, "thumbnail_id")
-            thumbUrl = "http://data.rtl.nl/system/img/71v0o4xqq2yihq1tc3gc23c2w/%s" % (thumbId,)
-            # seasonKey = material.getAttribute('season_key')
-            key = material.getAttribute('key')
-            episodeKey = material.getAttribute('episode_key')
-
-            if episodeKey == "" or episodeKey == u'':
-                Logger.Error("Error matching RTL video: %s, %s", url, seasonKey)
-                continue
-
-            episodeItem = self.episodes[episodeKey]
-
-            drm = self.GetXmlTextForNode(material, "audience")
-            if drm.lower() == "drm":
-                if settings.HideGeoLocked():
-                    Logger.Debug("Found DRM Item: %s", title)
-                    continue
-                title = "[DRM] " + title
-
-            tarief = self.GetXmlTextForNode(material, "tariff")
-            if tarief:
-                if settings.HideGeoLocked():
-                    Logger.Debug("Found Paid Item: %s", title)
-                    continue
-                title = "[Paid] " + title
-
-            # url = "http://www.rtl.nl/system/video/wvx" + url + "/1500.wvx?utf8=ok"  # or 600.wvx?utf8=ok
-            url = "http://www.rtl.nl/system/s4m/xldata/ux/%s?context=rtlxl&d=pc&fmt=adaptive&version=3" % (key,)
-            item = mediaitem.MediaItem(title, url, parent=episodeItem)
-            # description = episodeItem.description
-            item.thumbUrl = thumbUrl
-            item.thumb = self.noImage
-            item.type = "video"
-            item.icon = self.icon
-
-            dates = None
-            if not date == "":
-                dates = time.localtime(float(date))
-                item.SetDate(dates[0], dates[1], dates[2])
-            episodeItem.items.append(item)
-            Logger.Trace("Adding Clip %s to Episode %s", item, episodeItem)
-
-            # now we set the dates for the parents
-            if dates:
-                episodeItem.SetDate(dates[0], dates[1], dates[2], onlyIfNewer=True)
-                episodeItem.parent.SetDate(dates[0], dates[1], dates[2], onlyIfNewer=True)
-
-        # now sort them
-        items.sort()
-        for item in items:
-            item.items.sort()
-            for subitem in item.items:
-                subitem.items.sort()
         return (data, items)
+
+    def CreateFolderItem(self, resultSet):
+        """Creates a MediaItem of type 'folder' using the resultSet from the regex.
+
+        Arguments:
+        resultSet : tuple(strig) - the resultSet of the self.folderItemRegex
+
+        Returns:
+        A new MediaItem of type 'folder'
+
+        This method creates a new MediaItem from the Regular Expression or Json
+        results <resultSet>. The method should be implemented by derived classes
+        and are specific to the channel.
+
+        """
+        Logger.Trace(resultSet)
+
+        if "/sk=" in self.parentItem.url:
+            return None
+
+        abstractKey = resultSet["abstract_key"]
+        abstractData = self.abstracts.get(abstractKey, None)
+        if not abstractData:
+            Logger.Warning("Could not find abstract data for key: %s", abstractKey)
+            return None
+
+        Logger.Debug("Found Abstract Data: %s", abstractData)
+
+        abstractName = abstractData.get("name", "")
+        title = resultSet["name"]
+        if abstractName:
+            title = "%s - %s" % (abstractName, title)
+
+        description = resultSet.get("synopsis", None)
+        keyValue = resultSet["key"]
+        url = "http://www.rtl.nl/system/s4m/vfd/version=1/d=pc/output=json/ak=%s/sk=%s/pg=1" % (abstractKey, keyValue)
+
+        item = mediaitem.MediaItem(title.title(), url)
+        item.description = description
+        item.thumbUrl = "%s/%s.png" % (self.posterBase, keyValue,)
+        # item.thumbUrl = "%s/%s.png" % (self.thumbBase, keyValue,)
+        item.thumb = self.noImage
+        item.complete = True
+        return item
+
+    def CreateVideoItem(self, resultSet):
+        """Creates a MediaItem of type 'video' using the resultSet from the regex.
+
+        Arguments:
+        resultSet : tuple (string) - the resultSet of the self.videoItemRegex
+
+        Returns:
+        A new MediaItem of type 'video' or 'audio' (despite the method's name)
+
+        This method creates a new MediaItem from the Regular Expression or Json
+        results <resultSet>. The method should be implemented by derived classes
+        and are specific to the channel.
+
+        If the item is completely processed an no further data needs to be fetched
+        the self.complete property should be set to True. If not set to True, the
+        self.UpdateVideoItem method is called if the item is focussed or selected
+        for playback.
+
+        """
+
+        Logger.Trace(resultSet)
+
+        episodeKey = resultSet["episode_key"]
+        if episodeKey:
+            episodeData = self.episodes.get(episodeKey, None)
+            if not episodeData:
+                Logger.Warning("Could not find episodes data for key: %s", episodeKey)
+                return None
+            Logger.Debug("Found Episode Data: %s", episodeData)
+        else:
+            Logger.Debug("No Episode Data Found")
+            episodeData = None
+
+        title = resultSet["title"]
+        if episodeData:
+            if title:
+                title = "%s - %s" % (episodeData["name"], title)
+            else:
+                title = episodeData["name"]
+
+        # tarifs have datetimes
+
+        """
+            "ddr_timeframes": [{
+                    "start": 1382119200,
+                    "stop": 1382378399,
+                    "tariff": 149
+                },
+                {
+                    "start": 1382378400,
+                    "tariff": 0
+                }],
+
+        """
+
+        tariffs = resultSet.get("ddr_timeframes")
+        if tariffs:
+            Logger.Trace(tariffs)
+            for tariff in tariffs:
+                if tariff["tariff"] > 0:
+                    start = tariff.get("start", 0)
+                    end = tariff.get("stop", 4102444800)
+                    start = datetime.datetime.fromtimestamp(start)
+                    end = datetime.datetime.fromtimestamp(end)
+                    now = datetime.datetime.now()
+                    if now > start and now < end:
+                        title = "%s [Betaald]" % (title,)
+                        Logger.Debug("Found a tariff for this episode: %s - %s: %s", start, end, tariff["tariff"])
+                        break
+
+        uuid = resultSet["uuid"]
+        description = resultSet.get("synopsis", None)
+        url = "http://www.rtl.nl/system/s4m/xldata/ux/%s?context=rtlxl&d=pc&fmt=adaptive&version=3" % (uuid,)
+        # The JSON urls do not yet work
+        # url = "http://www.rtl.nl/system/s4m/vfd/version=1/d=pc/output=json/fun=abstract/uuid=%s/fmt=smooth" % (uuid,)
+
+        item = mediaitem.MediaItem(title.title(), url)
+        item.type = "video"
+        item.description = description
+        item.thumbUrl = "%s%s" % (self.posterBase, uuid,)
+        # item.thumbUrl = "%s%s" % (self.thumbBase, uuid,)
+
+        station = resultSet.get("station", None)
+        if station:
+            icon = self.iconSet.get(station.lower(), None)
+            if icon:
+                Logger.Trace("Setting icon to: %s", icon)
+                item.icon = icon
+
+        dateTime = resultSet.get("display_date", None)
+        if dateTime:
+            dateTime = datetime.datetime.fromtimestamp(int(dateTime))
+            item.SetDate(dateTime.year, dateTime.month, dateTime.day, dateTime.hour, dateTime.minute, dateTime.second)
+
+        item.thumb = self.noImage
+        return item
 
     def UpdateVideoItem(self, item):
         """Updates an existing MediaItem with more data.
@@ -318,16 +379,6 @@ class Channel(chn_class.Channel):
             part.AppendMediaStream(m3u8[1], m3u8[0])
 
         return item
-
-    def GetXmlTextForNode(self, node, nodeName):
-        elements = node.getElementsByTagName(nodeName)
-        if len(elements) == 0:
-            return ""
-
-        element = elements[0]
-        for childNode in element.childNodes:
-                if childNode.nodeType == childNode.TEXT_NODE:
-                    return childNode.data
 
     def __IgnoreCookieLaw(self):
         """ Accepts the cookies from RTL channel in order to have the site available """

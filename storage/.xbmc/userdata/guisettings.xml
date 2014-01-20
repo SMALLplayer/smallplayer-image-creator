@@ -110,7 +110,7 @@
         </musicfiles>
     </viewstates>
     <general>
-        <systemtotaluptime>169</systemtotaluptime>
+        <systemtotaluptime>191</systemtotaluptime>
         <addonautoupdate>true</addonautoupdate>
         <addonnotifications>true</addonnotifications>
         <addonforeignfilter>false</addonforeignfilter>
@@ -519,7 +519,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.HideHomeSubmenuArrow">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.MovieInformation.PlayTrailer">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.PlayTrailer.Minimized">false</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.OSDVisualisation.Enabled">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.OSDVisualisation.Enabled">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.OSDVisualisation.ShowFanart">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ArtistSlideShow.Enabled">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.ArtistSlideShow.Animate">false</setting>
@@ -550,7 +550,7 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile3">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeMusicTile4">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile1">true</setting>
-        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile2">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile2">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile3">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile4">true</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.HomeProgramTile5">true</setting>
@@ -739,10 +739,10 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.ShowLabel"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Path">plugin.audio.soundcloud</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.Animate"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Label"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Icon"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Label">Sky.fm</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Icon">/storage/.xbmc/addons/plugin.audio.sky.fm/icon.png</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.ShowLabel"></setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Path">plugin.audio.sky.fm</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Animate"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.Label"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile6.Icon"></setting>
@@ -801,7 +801,7 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile1.TypeName">Muziek add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeMusicTile2.TypeName">Muziek add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile1.TypeName">Muziek add-on</setting>
-        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.TypeName">Muziek add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.TypeName">Video add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile4.TypeName">Programma add-on</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeHomeTile1.TypeName"></setting>
@@ -851,5 +851,6 @@
         <setting type="string" name="skin.xperience1080.smallplayer.GameTile.Path"></setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.Type">0</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Type">0</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Type">1</setting>
     </skinsettings>
 </settings>

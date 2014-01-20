@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>341BFEA0-2312-11DF-B6B1-B7B256D89593</guid>
         <name>RadionNL</name>
         <description>Alle Nederlandse radio's using BigFoot87's stream collection</description>
         <icon>radionllarge.png</icon>
         <iconlarge>radionllarge.png</iconlarge>
+        <category>Radio</category>
         <channelcode>radionl</channelcode>
         <sortorder>9</sortorder>
         <language>nl</language>

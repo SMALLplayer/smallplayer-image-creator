@@ -1,11 +1,12 @@
 <?xml version="1.0" ?>
-<channels>
+<channels xmlns="http://xsd.rieter.net/net.rieter.xot/channels">
     <channel>
         <guid>743D04B2-42F3-11DD-84F5-6CEF55D89593</guid>
         <name>123Video.nl</name>
         <description>Videos van www.123video.nl</description>
         <icon>123icon.png</icon>
         <iconlarge>123large.png</iconlarge>
+        <category>Video</category>
         <language>nl</language>
         <compatible>Environments.All</compatible>
     </channel>
