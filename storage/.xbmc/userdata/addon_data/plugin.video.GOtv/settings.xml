@@ -17,20 +17,25 @@
     <setting id="hosthd1" value="VKHD" />
     <setting id="hosthd2" value="WatchfreeinHD" />
     <setting id="istreamhd" value="true" />
+    <setting id="merdb" value="true" />
     <setting id="meta" value="true" />
     <setting id="moviestorm" value="true" />
+    <setting id="playback_info" value="false" />
     <setting id="quality" value="true" />
+    <setting id="resume_playback" value="true" />
     <setting id="simplymovies" value="true" />
     <setting id="subs" value="0" />
     <setting id="subscriptions_clean" value="true" />
     <setting id="subscriptions_interval" value="3" />
-    <setting id="subscriptions_run" value="2014-01-20 11:54:44.636406" />
+    <setting id="subscriptions_run" value="1970-01-01 01:01:09.483747" />
     <setting id="subscriptions_update" value="true" />
     <setting id="subscriptions_updatelibrary" value="true" />
     <setting id="tv_library" value="/storage/tvshows/" />
     <setting id="tvonline" value="true" />
     <setting id="tvonline_password" value="" />
     <setting id="tvonline_user" value="" />
+    <setting id="vkbox" value="true" />
+    <setting id="warning_120" value="true" />
     <setting id="watchonline" value="true" />
     <setting id="watchseries" value="true" />
 </settings>

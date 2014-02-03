@@ -110,7 +110,7 @@
         </musicfiles>
     </viewstates>
     <general>
-        <systemtotaluptime>191</systemtotaluptime>
+        <systemtotaluptime>351</systemtotaluptime>
         <addonautoupdate>true</addonautoupdate>
         <addonnotifications>true</addonnotifications>
         <addonforeignfilter>false</addonforeignfilter>
@@ -592,6 +592,12 @@
         <setting type="bool" name="skin.xperience1080.smallplayer.TVGuide.ClearLogo">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.TVGuide.ClearArt">false</setting>
         <setting type="bool" name="skin.xperience1080.smallplayer.TVGuide.Landscape">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.CustomHomePanel1">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.CustomHomePanel2">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.CustomHomePanel3">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.CustomHomePanel4">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.CustomHomePanel5">false</setting>
+        <setting type="bool" name="skin.xperience1080.smallplayer.CustomHomePanel6">false</setting>
         <setting type="string" name="skin.confluence.CustomBackgroundPath"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton1"></setting>
         <setting type="string" name="skin.confluence.HomeVideosButton2"></setting>
@@ -852,5 +858,18 @@
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile3.Type">0</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeTVShowTile4.Type">0</setting>
         <setting type="string" name="skin.xperience1080.smallplayer.HomeProgramTile2.Type">1</setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel1.Label"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel2.Label"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel3.Label"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel4.Label"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel1.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel2.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel3.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel4.TypeName"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel1.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel2.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel3.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel4.Path"></setting>
+        <setting type="string" name="skin.xperience1080.smallplayer.CustomHomePanel1.Type"></setting>
     </skinsettings>
 </settings>

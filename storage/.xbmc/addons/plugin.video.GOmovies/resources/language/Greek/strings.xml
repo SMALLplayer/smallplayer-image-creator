@@ -12,7 +12,9 @@
 	<string id="30008">Ταξ.: Έτος</string>
 	<string id="30009">Ταξ.: Προσθήκη</string>
 	<string id="30010">Λήψεις</string>
-	<string id="30011">Φιλτράρισμα αναζήτησης</string>
+	<string id="30011">Πληροφορίες αναπαραγωγής</string>
+	<string id="30012">Συνέχιση αναπαραγωγής</string>
+	<string id="30013">Φιλτράρισμα αναζήτησης</string>
 	<string id="30030">Ροές</string>
 	<string id="30031">Προτεραιότητα 1</string>
 	<string id="30032">Προτεραιότητα 2</string>
@@ -59,6 +61,7 @@
 	<string id="30316">Υπάρχει ήδη στις Συνδρομές</string>
 	<string id="30317">Δεν υπάρχουν διαθέσιμοι υπότιτλοι</string>
 	<string id="30318">Δεν υπάρχει διαθέσιμη ροή</string>
+	<string id="30319">Φόρτωση σε</string>
 	<!-- OK -->
 	<string id="30321">Το πρόσθετο YouTube δεν έχει εγκατασταθεί.</string>
 	<string id="30322">Η ροή αυτή το απαιτεί.</string>
@@ -79,6 +82,9 @@
 	<string id="30350">Θέλετε πραγματικά να την αφαιρέσετε;</string>
 	<string id="30351">Η σειρά αυτή θα παραμείνει στη βιβλιοθήκη.</string>
 	<string id="30352">Θέλετε να αφαιρέθει από τη βιβλιοθήκη;</string>
+	<string id="30353">Συνέχεια από</string>
+	<string id="30354">Συνέχεια</string>
+	<string id="30355">Εκκίνηση από την αρχή</string>
 	<!-- Misc -->
 	<string id="30361">Επόμενη σελίδα</string>
 	<string id="30362">Αναζήτηση</string>
@@ -127,7 +133,8 @@
 	<string id="30504">Όσκαρ</string>
 	<string id="30505">Είδη</string>
 	<string id="30506">Έτη</string>
-	<string id="30507">Αγαπημένα</string>
+	<string id="30507">Amazon</string>
 	<string id="30508">IMDb</string>
-	<string id="30509">Αναζήτηση</string>
+	<string id="30509">Αγαπημένα</string>
+	<string id="30510">Αναζήτηση</string>
 </strings>

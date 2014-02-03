@@ -1,4 +1,93 @@
 ------------------------
+GOtv v1.2.3 (2-Feb-14)
+------------------------
+
+- Reworked all sources.
+- Added MerDB source.
+- Tweaked subscriptions.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.2 (31-Jan-14)
+------------------------
+
+- Added vkbox source.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.1 (30-Jan-14)
+------------------------
+
+- Tweaked tv show listings.
+- Tweaked season listings.
+- Fixed library integration.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.2.0 (29-Jan-14)
+------------------------
+
+- Reworked season listings (TVDB).
+- Reworked episode listings (TVDB).
+- Tweaked library integration.
+- NOTE: Delete TV folder, update subscriptions and clean library.
+- Added French, Polish and Romanian addon description.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.9 (27-Jan-14)
+------------------------
+
+- Tweaked playback from library.
+- Updated French translation.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.8 (26-Jan-14)
+------------------------
+
+- Tweaked tv show listings.
+- Reduced resolution of IMDb posters.
+- Added French translation.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.7 (24-Jan-14)
+------------------------
+
+- Added option for resuming playback.
+- Added Polish and Romanian translations.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.6 (19-Jan-14)
+------------------------
+
+- Tweaked watched status.
+- Code cosmetics.
+
+
+------------------------
+GOtv v1.1.5 (19-Jan-14)
+------------------------
+
+- Fixed issues with sources.
+- Tweaked genre listings.
+- Tweaked watched status.
+- Added option for showing playback info.
+- Autoplay is disabled by default.
+- Added new artwork.
+- Code cosmetics.
+
+
+------------------------
 GOtv v1.1.0 (10-Jan-14)
 ------------------------
 

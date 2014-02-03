@@ -2,137 +2,137 @@
 (dp1
 S'streamUrl'
 p2
-S'http://pub6.di.fm:80/di_vocaltrance_aacplus'
+S'http://pub3.di.fm:80/di_trance_aacplus'
 p3
 sS'name'
 p4
-VVocal Trance
+VTrance
 p5
 sS'isNew'
 p6
-I1
+I0
 sS'description'
 p7
-VA fusion of trance, dance, and chilling vocals together!
+VThe hottest, freshest trance music from around the globe!
 p8
 sS'bitrate'
 p9
 I40
 sS'asset'
 p10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/2.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/1.png
 p11
 sa(dp12
 g2
-S'http://pub4.di.fm:80/di_chillout_aacplus'
+S'http://pub1.di.fm:80/di_vocaltrance_aacplus'
 p13
 sg4
-VChillout
+VVocal Trance
 p14
 sg6
-I1
+I0
 sg7
-VFull of trippy flavors, this channel is just what you need to relax.
+VA fusion of trance, dance, and chilling vocals together!
 p15
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/3.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/2.png
 p16
 sa(dp17
 g2
-S'http://pub2.di.fm:80/di_trance_aacplus'
+S'http://pub2.di.fm:80/di_lounge_aacplus'
 p18
 sg4
-VTrance
+VLounge
 p19
 sg6
-I1
+I0
 sg7
-VThe hottest, freshest trance music from around the globe!
+VSit back and enjoy the lounge grooves!
 p20
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/1.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/11.png
 p21
 sa(dp22
 g2
-S'http://pub6.di.fm:80/di_lounge_aacplus'
+S'http://pub6.di.fm:80/di_undergroundtechno_aacplus'
 p23
 sg4
-VLounge
+VUnderground Techno
 p24
 sg6
-I1
+I0
 sg7
-VSit back and enjoy the lounge grooves!
+VAlternative Techno sounds
 p25
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/11.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/288.png
 p26
 sa(dp27
 g2
-S'http://pub8.di.fm:80/di_vocalchillout_aacplus'
+S'http://pub4.di.fm:80/di_psybient_aacplus'
 p28
 sg4
-VVocal Chillout
+VPsybient
 p29
 sg6
-I1
+I0
 sg7
-VEnjoy the relaxing vocal sounds of Ibiza chillout
+VThe Psychedelic side of Ambient
 p30
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/142.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/285.png
 p31
 sa(dp32
 g2
-S'http://pub7.di.fm:80/di_chillstep_aacplus'
+S'http://pub7.di.fm:80/di_electropop_aacplus'
 p33
 sg4
-VChillstep
+VElectropop
 p34
 sg6
-I1
+I0
 sg7
-VChillout with a Dubstep influence
+VCatchy Pop fused with Electro Synth
 p35
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/275.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/286.png
 p36
 sa(dp37
 g2
-S'http://pub7.di.fm:80/di_progressive_aacplus'
+S'http://pub8.di.fm:80/di_chillout_aacplus'
 p38
 sg4
-VProgressive
+VChillout
 p39
 sg6
-I1
+I0
 sg7
-VHouse, techno, and trance beats for your mind!
+VFull of trippy flavors, this channel is just what you need to relax.
 p40
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/7.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/3.png
 p41
 sa(dp42
 g2
-S'http://pub2.di.fm:80/di_chillhop_aacplus'
+S'http://pub1.di.fm:80/di_chillhop_aacplus'
 p43
 sg4
 VChillHop
 p44
 sg6
-I1
+I0
 sg7
 VTrip Hop infused, downtempo nujazz and chillout beats.
 p45
@@ -143,81 +143,81 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/224.png
 p46
 sa(dp47
 g2
-S'http://pub1.di.fm:80/di_electropop_aacplus'
+S'http://pub1.di.fm:80/di_vocalchillout_aacplus'
 p48
 sg4
-VElectropop
+VVocal Chillout
 p49
 sg6
-I1
+I0
 sg7
-VCatchy Pop fused with Electro Synth
+VEnjoy the relaxing vocal sounds of Ibiza chillout
 p50
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/286.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/142.png
 p51
 sa(dp52
 g2
-S'http://pub1.di.fm:80/di_undergroundtechno_aacplus'
+S'http://pub5.di.fm:80/di_house_aacplus'
 p53
 sg4
-VUnderground Techno
+VHouse
 p54
 sg6
-I1
+I0
 sg7
-VAlternative Techno sounds
+VSilky sexy deep house music direct from New York city!
 p55
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/288.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/4.png
 p56
 sa(dp57
 g2
-S'http://pub5.di.fm:80/di_house_aacplus'
+S'http://pub7.di.fm:80/di_chillstep_aacplus'
 p58
 sg4
-VHouse
+VChillstep
 p59
 sg6
-I1
+I0
 sg7
-VSilky sexy deep house music direct from New York city!
+VChillout with a Dubstep influence
 p60
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/4.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/275.png
 p61
 sa(dp62
 g2
-S'http://pub7.di.fm:80/di_psybient_aacplus'
+S'http://pub4.di.fm:80/di_progressive_aacplus'
 p63
 sg4
-VPsybient
+VProgressive
 p64
 sg6
-I1
+I0
 sg7
-VThe Psychedelic side of Ambient
+VHouse, techno, and trance beats for your mind!
 p65
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/285.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/7.png
 p66
 sa(dp67
 g2
-S'http://pub6.di.fm:80/di_mainstage_aacplus'
+S'http://pub2.di.fm:80/di_mainstage_aacplus'
 p68
 sg4
 VMainstage
 p69
 sg6
-I1
+I0
 sg7
 VThe biggest DJs from the best festivals around the world!
 p70
@@ -234,7 +234,7 @@ sg4
 VUMF Radio
 p74
 sg6
-I1
+I0
 sg7
 VUMF Radio 24/7
 p75
@@ -245,13 +245,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/215.png
 p76
 sa(dp77
 g2
-S'http://pub8.di.fm:80/di_minimal_aacplus'
+S'http://pub7.di.fm:80/di_minimal_aacplus'
 p78
 sg4
 VMinimal
 p79
 sg6
-I1
+I0
 sg7
 VFinest selection of Minimal Techno & House!!
 p80
@@ -262,13 +262,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/59.png
 p81
 sa(dp82
 g2
-S'http://pub2.di.fm:80/di_harddance_aacplus'
+S'http://pub7.di.fm:80/di_harddance_aacplus'
 p83
 sg4
 VHard Dance
 p84
 sg6
-I1
+I0
 sg7
 VEnjoy the harder side of throbbing house and trance. 
 p85
@@ -279,13 +279,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/5.png
 p86
 sa(dp87
 g2
-S'http://pub4.di.fm:80/di_eurodance_aacplus'
+S'http://pub5.di.fm:80/di_eurodance_aacplus'
 p88
 sg4
 VEuroDance
 p89
 sg6
-I1
+I0
 sg7
 VThe newest and best of Eurodance hits
 p90
@@ -296,64 +296,64 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/6.png
 p91
 sa(dp92
 g2
-S'http://pub3.di.fm:80/di_techhouse_aacplus'
+S'http://pub6.di.fm:80/di_vocallounge_aacplus'
 p93
 sg4
-VTech House
+VVocal Lounge
 p94
 sg6
-I1
+I0
 sg7
-VA fusion of techno and house with a deep, soulful vibe.
+VRelaxing Vocals and Lounge Grooves
 p95
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/66.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/278.png
 p96
 sa(dp97
 g2
-S'http://pub3.di.fm:80/di_vocallounge_aacplus'
+S'http://pub2.di.fm:80/di_electrohouse_aacplus'
 p98
 sg4
-VVocal Lounge
+VElectro House
 p99
 sg6
-I1
+I0
 sg7
-VRelaxing Vocals and Lounge Grooves
+VAn eclectic mix of electro and dirty house
 p100
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/278.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/56.png
 p101
 sa(dp102
 g2
-S'http://pub5.di.fm:80/di_electrohouse_aacplus'
+S'http://pub6.di.fm:80/di_techhouse_aacplus'
 p103
 sg4
-VElectro House
+VTech House
 p104
 sg6
-I1
+I0
 sg7
-VAn eclectic mix of electro and dirty house
+VA fusion of techno and house with a deep, soulful vibe.
 p105
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/56.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/66.png
 p106
 sa(dp107
 g2
-S'http://pub4.di.fm:80/di_bigroomhouse_aacplus'
+S'http://pub5.di.fm:80/di_bigroomhouse_aacplus'
 p108
 sg4
 VBig Room House
 p109
 sg6
-I1
+I0
 sg7
 VThe most uplifting, floor-filling Big Room House!
 p110
@@ -364,64 +364,64 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/209.png
 p111
 sa(dp112
 g2
-S'http://pub4.di.fm:80/di_psychill_aacplus'
+S'http://pub8.di.fm:80/di_trap_aacplus'
 p113
 sg4
-VPsyChill
+VTrap
 p114
 sg6
-I1
+I0
 sg7
-VDowntempo psychedelic dub grooves, goa ambient, and world beats.
+VElectronic 808 beats with Hip Hop roots.
 p115
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/67.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/230.png
 p116
 sa(dp117
 g2
-S'http://pub5.di.fm:80/di_progressivepsy_aacplus'
+S'http://pub6.di.fm:80/di_psychill_aacplus'
 p118
 sg4
-VProgressive Psy
+VPsyChill
 p119
 sg6
-I1
+I0
 sg7
-VProgress your mind to undiscovered psychedelic dimensions.
+VDowntempo psychedelic dub grooves, goa ambient, and world beats.
 p120
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/178.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/67.png
 p121
 sa(dp122
 g2
-S'http://pub7.di.fm:80/di_trap_aacplus'
+S'http://pub5.di.fm:80/di_goapsy_aacplus'
 p123
 sg4
-VTrap
+VGoa-Psy Trance
 p124
 sg6
-I1
+I0
 sg7
-VElectronic 808 beats with Hip Hop roots.
+VA psychedelic voyage out of this world!
 p125
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/230.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/8.png
 p126
 sa(dp127
 g2
-S'http://pub7.di.fm:80/di_hardcore_aacplus'
+S'http://pub3.di.fm:80/di_hardcore_aacplus'
 p128
 sg4
 VHardcore
 p129
 sg6
-I1
+I0
 sg7
 VDJ mixes, hard dance and NuNRG
 p130
@@ -432,30 +432,30 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/9.png
 p131
 sa(dp132
 g2
-S'http://pub3.di.fm:80/di_goapsy_aacplus'
+S'http://pub4.di.fm:80/di_progressivepsy_aacplus'
 p133
 sg4
-VGoa-Psy Trance
+VProgressive Psy
 p134
 sg6
-I1
+I0
 sg7
-VA psychedelic voyage out of this world!
+VProgress your mind to undiscovered psychedelic dimensions.
 p135
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/8.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/178.png
 p136
 sa(dp137
 g2
-S'http://pub2.di.fm:80/di_downtempolounge_aacplus'
+S'http://pub1.di.fm:80/di_downtempolounge_aacplus'
 p138
 sg4
 VDowntempo Lounge
 p139
 sg6
-I1
+I0
 sg7
 VRelax with some Downtempo grooves.
 p140
@@ -466,83 +466,83 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/180.png
 p141
 sa(dp142
 g2
-S'http://pub1.di.fm:80/di_djmixes_aacplus'
+S'http://pub2.di.fm:80/di_moombahton_aacplus'
 p143
 sg4
-VDJ Mixes
+VMoombahton
 p144
 sg6
-I1
+I0
 sg7
-VNon-stop DJ sets featuring various forms of techno & trance!
+VHot House meets Dancehall Reggaeton
 p145
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/10.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/277.png
 p146
 sa(dp147
 g2
-S'http://pub1.di.fm:80/di_moombahton_aacplus'
+S'http://pub5.di.fm:80/di_djmixes_aacplus'
 p148
 sg4
-VMoombahton
+VDJ Mixes
 p149
 sg6
-I1
+I0
 sg7
-VHot House meets Dancehall Reggaeton
+VNon-stop DJ sets featuring various forms of techno & trance!
 p150
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/277.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/10.png
 p151
 sa(dp152
 g2
-S'http://pub3.di.fm:80/di_ambient_aacplus'
+S'http://pub3.di.fm:80/di_russianclubhits_aacplus'
 p153
 sg4
-VAmbient
+VRussian Club Hits
 p154
 sg6
-I1
+I0
 sg7
-VA blend of ambient, downtempo, and chillout
+VRussia's hottest club hits.
 p155
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/12.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/213.png
 p156
 sa(dp157
 g2
-S'http://pub2.di.fm:80/di_russianclubhits_aacplus'
+S'http://pub2.di.fm:80/di_ambient_aacplus'
 p158
 sg4
-VRussian Club Hits
+VAmbient
 p159
 sg6
-I1
+I0
 sg7
-VRussia's hottest club hits.
+VA blend of ambient, downtempo, and chillout
 p160
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/213.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/12.png
 p161
 sa(dp162
 g2
-S'http://pub8.di.fm:80/di_drumandbass_aacplus'
+S'http://pub6.di.fm:80/di_drumandbass_aacplus'
 p163
 sg4
 VDrum 'n Bass
 p164
 sg6
-I1
+I0
 sg7
-VTasty assortment to satisfy your drum and bass fix!
+VRepresenting the finest drum n' bass selection.
 p165
 sg9
 I40
@@ -551,13 +551,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/13.png
 p166
 sa(dp167
 g2
-S'http://pub2.di.fm:80/di_eclectronica_aacplus'
+S'http://pub4.di.fm:80/di_eclectronica_aacplus'
 p168
 sg4
 VEcLectronica
 p169
 sg6
-I1
+I0
 sg7
 VAn eclectic mixture of modern electronica.
 p170
@@ -568,13 +568,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/208.png
 p171
 sa(dp172
 g2
-S'http://pub4.di.fm:80/di_scousehouse_aacplus'
+S'http://pub3.di.fm:80/di_scousehouse_aacplus'
 p173
 sg4
 VScouse House
 p174
 sg6
-I1
+I0
 sg7
 VBouncy and Pumping House Beats
 p175
@@ -585,13 +585,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/279.png
 p176
 sa(dp177
 g2
-S'http://pub1.di.fm:80/di_oldschoolelectronica_aacplus'
+S'http://pub6.di.fm:80/di_oldschoolelectronica_aacplus'
 p178
 sg4
 VOldschool Electronica
 p179
 sg6
-I1
+I0
 sg7
 Vold school techno, trance & rave!
 p180
@@ -602,13 +602,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/14.png
 p181
 sa(dp182
 g2
-S'http://pub7.di.fm:80/di_epictrance_aacplus'
+S'http://pub8.di.fm:80/di_epictrance_aacplus'
 p183
 sg4
 VEpic Trance
 p184
 sg6
-I1
+I0
 sg7
 VThe best in uplifting and euphoric Trance
 p185
@@ -619,98 +619,98 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/175.png
 p186
 sa(dp187
 g2
-S'http://pub7.di.fm:80/di_ukgarage_aacplus'
+S'http://pub8.di.fm:80/di_breaks_aacplus'
 p188
 sg4
-VUK Garage
+VBreaks
 p189
 sg6
-I1
+I0
 sg7
-VThe latest and greatest in UK Garage!!
+VA fine assortment of trance and house breaks
 p190
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/123.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/15.png
 p191
 sa(dp192
 g2
-S'http://pub7.di.fm:80/di_breaks_aacplus'
+S'http://pub3.di.fm:80/di_ukgarage_aacplus'
 p193
 sg4
-VBreaks
+VUK Garage
 p194
 sg6
-I1
+I0
 sg7
-VA fine assortment of trance and house breaks
+VThe latest and greatest in UK Garage!!
 p195
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/15.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/123.png
 p196
 sa(dp197
 g2
-S'http://pub3.di.fm:80/di_hardtechno_aacplus'
+S'http://pub3.di.fm:80/di_gabber_aacplus'
 p198
 sg4
-VHard Techno
+VGabber
 p199
 sg6
-I1
+I0
 sg7
-VHeavy hitting Hard Techno & Schranz!
+VBanging to the hardest sounds of gabber!
 p200
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/276.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/16.png
 p201
 sa(dp202
 g2
-S'http://pub8.di.fm:80/di_gabber_aacplus'
+S'http://pub4.di.fm:80/di_cosmicdowntempo_aacplus'
 p203
 sg4
-VGabber
+VCosmic Downtempo
 p204
 sg6
-I1
+I0
 sg7
-VBanging to the hardest sounds of gabber!
+VA downtempo journey into the cosmos
 p205
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/16.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/136.png
 p206
 sa(dp207
 g2
-S'http://pub4.di.fm:80/di_cosmicdowntempo_aacplus'
+S'http://pub2.di.fm:80/di_hardtechno_aacplus'
 p208
 sg4
-VCosmic Downtempo
+VHard Techno
 p209
 sg6
-I1
+I0
 sg7
-VA downtempo journey into the cosmos
+VHeavy hitting Hard Techno & Schranz!
 p210
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/136.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/276.png
 p211
 sa(dp212
 g2
-S'http://pub7.di.fm:80/di_techno_aacplus'
+S'http://pub5.di.fm:80/di_techno_aacplus'
 p213
 sg4
 VTechno
 p214
 sg6
-I1
+I0
 sg7
 VFrom Minimal to Detroit to Schranz & all in between!
 p215
@@ -721,54 +721,54 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/36.png
 p216
 sa(dp217
 g2
-S'http://pub8.di.fm:80/di_deephouse_aacplus'
+S'http://pub6.di.fm:80/di_electronicpioneers_aacplus'
 p218
 sg4
-VDeep House
+VElectronic Pioneers
 p219
 sg6
-I1
+I0
 sg7
-VOnly the sexiest, silky smooth and groovy Deep House.
+VRediscover the earliest sounds of Electronica
 p220
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/174.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/280.png
 p221
 sa(dp222
 g2
-S'http://pub6.di.fm:80/di_electronicpioneers_aacplus'
+S'http://pub5.di.fm:80/di_soulfulhouse_aacplus'
 p223
 sg4
-VElectronic Pioneers
+VSoulful House
 p224
 sg6
-I1
+I0
 sg7
-VRediscover the earliest sounds of Electronica
+VHouse music selected from Paris with love!
 p225
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/280.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/47.png
 p226
 sa(dp227
 g2
-S'http://pub4.di.fm:80/di_soulfulhouse_aacplus'
+S'http://pub8.di.fm:80/di_deephouse_aacplus'
 p228
 sg4
-VSoulful House
+VDeep House
 p229
 sg6
-I1
+I0
 sg7
-VHouse music selected from Paris with love!
+VOnly the sexiest, silky smooth and groovy Deep House.
 p230
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/47.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/174.png
 p231
 sa(dp232
 g2
@@ -778,7 +778,7 @@ sg4
 VDeep Tech
 p234
 sg6
-I1
+I0
 sg7
 VDeeper shades of house and techno with dub and blues influences.
 p235
@@ -789,13 +789,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/182.png
 p236
 sa(dp237
 g2
-S'http://pub2.di.fm:80/di_tribalhouse_aacplus'
+S'http://pub4.di.fm:80/di_tribalhouse_aacplus'
 p238
 sg4
 VTribal House
 p239
 sg6
-I1
+I0
 sg7
 VFinest selection of tribal and tech house!!
 p240
@@ -806,81 +806,81 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/57.png
 p241
 sa(dp242
 g2
-S'http://pub1.di.fm:80/di_funkyhouse_aacplus'
+S'http://pub2.di.fm:80/di_deepnudisco_aacplus'
 p243
 sg4
-VFunky House
+VDeep Nu-Disco
 p244
 sg6
-I1
+I0
 sg7
-VA fine selection of funky house music!!
+VSlo-mo house with ear perking space disco and low-slung bass beats!
 p245
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/58.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/137.png
 p246
 sa(dp247
 g2
-S'http://pub5.di.fm:80/di_deepnudisco_aacplus'
+S'http://pub5.di.fm:80/di_funkyhouse_aacplus'
 p248
 sg4
-VDeep Nu-Disco
+VFunky House
 p249
 sg6
-I1
+I0
 sg7
-VSlo-mo house with ear perking space disco and low-slung bass beats!
+VA fine selection of funky house music!!
 p250
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/137.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/58.png
 p251
 sa(dp252
 g2
-S'http://pub5.di.fm:80/di_spacemusic_aacplus'
+S'http://pub3.di.fm:80/di_hardstyle_aacplus'
 p253
 sg4
-VSpace Dreams
+VHardstyle
 p254
 sg6
-I1
+I0
 sg7
-VAmbient space music for expanding minds
+VBanging Hardstyle for your ears!!!
 p255
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/64.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/60.png
 p256
 sa(dp257
 g2
-S'http://pub3.di.fm:80/di_hardstyle_aacplus'
+S'http://pub6.di.fm:80/di_spacemusic_aacplus'
 p258
 sg4
-VHardstyle
+VSpace Dreams
 p259
 sg6
-I1
+I0
 sg7
-VBanging Hardstyle for your ears!!!
+VAmbient space music for expanding minds
 p260
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/60.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/64.png
 p261
 sa(dp262
 g2
-S'http://pub3.di.fm:80/di_chilloutdreams_aacplus'
+S'http://pub1.di.fm:80/di_chilloutdreams_aacplus'
 p263
 sg4
 VChillout Dreams
 p264
 sg6
-I1
+I0
 sg7
 VRelax to the sounds of dream and Ibiza style chillout
 p265
@@ -891,13 +891,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/68.png
 p266
 sa(dp267
 g2
-S'http://pub4.di.fm:80/di_liquiddnb_aacplus'
+S'http://pub3.di.fm:80/di_liquiddnb_aacplus'
 p268
 sg4
 VLiquid DnB
 p269
 sg6
-I1
+I0
 sg7
 VFlowing with the freshest Liquid DnB!!
 p270
@@ -908,13 +908,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/105.png
 p271
 sa(dp272
 g2
-S'http://pub1.di.fm:80/di_darkdnb_aacplus'
+S'http://pub6.di.fm:80/di_darkdnb_aacplus'
 p273
 sg4
 VDark DnB
 p274
 sg6
-I1
+I0
 sg7
 VA twisted blend of heavy hitting Dark Drum and Bass!
 p275
@@ -925,132 +925,132 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/181.png
 p276
 sa(dp277
 g2
-S'http://pub4.di.fm:80/di_classiceurodance_aacplus'
+S'http://pub7.di.fm:80/di_handsup_aacplus'
 p278
 sg4
-VClassic EuroDance
+VHands Up
 p279
 sg6
-I1
+I0
 sg7
-VThe finest imported cheese on the net!
+VHands Up beats blending harder dance, trance and happy hardcore
 p280
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/69.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/176.png
 p281
 sa(dp282
 g2
-S'http://pub1.di.fm:80/di_handsup_aacplus'
+S'http://pub6.di.fm:80/di_classiceurodance_aacplus'
 p283
 sg4
-VHands Up
+VClassic EuroDance
 p284
 sg6
-I1
+I0
 sg7
-VHands Up beats blending harder dance, trance and happy hardcore
+VThe finest imported cheese on the net!
 p285
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/176.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/69.png
 p286
 sa(dp287
 g2
-S'http://pub6.di.fm:80/di_classictrance_aacplus'
+S'http://pub8.di.fm:80/di_clubsounds_aacplus'
 p288
 sg4
-VClassic Trance
+VClub Sounds
 p289
 sg6
-I1
+I0
 sg7
-VRelive the classic trance hits!!
+VThe hottest club and dance tunes 24/7
 p290
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/90.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/70.png
 p291
 sa(dp292
 g2
-S'http://pub7.di.fm:80/di_clubdubstep_aacplus'
+S'http://pub1.di.fm:80/di_classicvocaltrance_aacplus'
 p293
 sg4
-VClub Dubstep
+VClassic Vocal Trance
 p294
 sg6
-I1
+I0
 sg7
-VBass fuelled, club shaking Dubstep.
+VClassic sounds of Vocal Trance
 p295
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/177.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/125.png
 p296
 sa(dp297
 g2
-S'http://pub5.di.fm:80/di_clubsounds_aacplus'
+S'http://pub4.di.fm:80/di_classictrance_aacplus'
 p298
 sg4
-VClub Sounds
+VClassic Trance
 p299
 sg6
-I1
+I0
 sg7
-VThe hottest club and dance tunes 24/7
+VRelive the classic trance hits!!
 p300
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/70.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/90.png
 p301
 sa(dp302
 g2
-S'http://pub7.di.fm:80/di_classicvocaltrance_aacplus'
+S'http://pub4.di.fm:80/di_dubstep_aacplus'
 p303
 sg4
-VClassic Vocal Trance
+VDubstep
 p304
 sg6
-I1
+I0
 sg7
-VClassic sounds of Vocal Trance
+VDubstep hits and mixes!!!!
 p305
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/125.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/91.png
 p306
 sa(dp307
 g2
-S'http://pub4.di.fm:80/di_dubstep_aacplus'
+S'http://pub2.di.fm:80/di_clubdubstep_aacplus'
 p308
 sg4
-VDubstep
+VClub Dubstep
 p309
 sg6
-I1
+I0
 sg7
-VDubstep hits and mixes!!!!
+VBass fuelled, club shaking Dubstep.
 p310
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/91.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/177.png
 p311
 sa(dp312
 g2
-S'http://pub8.di.fm:80/di_liquiddubstep_aacplus'
+S'http://pub3.di.fm:80/di_liquiddubstep_aacplus'
 p313
 sg4
 VLiquid Dubstep
 p314
 sg6
-I1
+I0
 sg7
 VMellow out to the rolling, soothing deep bass of Liquid Dubstep.
 p315
@@ -1061,13 +1061,13 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/184.png
 p316
 sa(dp317
 g2
-S'http://pub2.di.fm:80/di_glitchhop_aacplus'
+S'http://pub8.di.fm:80/di_glitchhop_aacplus'
 p318
 sg4
 VGlitch Hop
 p319
 sg6
-I1
+I0
 sg7
 VBit-crushing, dub-infused Hip Hop sounds!
 p320
@@ -1078,64 +1078,64 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/198.png
 p321
 sa(dp322
 g2
-S'http://pub1.di.fm:80/di_discohouse_aacplus'
+S'http://pub7.di.fm:80/di_classiceurodisco_aacplus'
 p323
 sg4
-VDisco House
+VClassic EuroDisco
 p324
 sg6
-I1
+I0
 sg7
-VThe grooviest Disco House tunes on the web.
+VRelive the sounds of Euro & Italo Disco.
 p325
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/92.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/183.png
 p326
 sa(dp327
 g2
-S'http://pub5.di.fm:80/di_classiceurodisco_aacplus'
+S'http://pub4.di.fm:80/di_futuresynthpop_aacplus'
 p328
 sg4
-VClassic EuroDisco
+VFuture Synthpop
 p329
 sg6
-I1
+I0
 sg7
-VRelive the sounds of Euro & Italo Disco.
+VFinest selection of futurepop and synthpop!!
 p330
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/183.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/53.png
 p331
 sa(dp332
 g2
-S'http://pub8.di.fm:80/di_futuresynthpop_aacplus'
+S'http://pub3.di.fm:80/di_discohouse_aacplus'
 p333
 sg4
-VFuture Synthpop
+VDisco House
 p334
 sg6
-I1
+I0
 sg7
-VFinest selection of futurepop and synthpop!!
+VThe grooviest Disco House tunes on the web.
 p335
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/53.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/92.png
 p336
 sa(dp337
 g2
-S'http://pub3.di.fm:80/di_latinhouse_aacplus'
+S'http://pub4.di.fm:80/di_latinhouse_aacplus'
 p338
 sg4
 VLatin House
 p339
 sg6
-I1
+I0
 sg7
 VFinest selection of Latin house!!
 p340
@@ -1146,53 +1146,53 @@ V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/117.png
 p341
 sa(dp342
 g2
-S'http://pub4.di.fm:80/di_sankeys_aacplus'
+S'http://pub8.di.fm:80/di_oldschoolacid_aacplus'
 p343
 sg4
-VSankeys Radio
+VOldschool Acid
 p344
 sg6
-I1
+I0
 sg7
-VThe sound of the white isle direct from Sankeys Ibiza.
+VOldschool sounds of Acid Techno, House, and Trance!
 p345
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/225.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/124.png
 p346
 sa(dp347
 g2
-S'http://pub4.di.fm:80/di_chiptunes_aacplus'
+S'http://pub1.di.fm:80/di_sankeys_aacplus'
 p348
 sg4
-VChiptunes
+VSankeys Radio
 p349
 sg6
-I1
+I0
 sg7
-VPlaying the best chiptunes and video game music.
+VThe sound of the white isle direct from Sankeys Ibiza.
 p350
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/106.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/225.png
 p351
 sa(dp352
 g2
-S'http://pub1.di.fm:80/di_oldschoolacid_aacplus'
+S'http://pub8.di.fm:80/di_chiptunes_aacplus'
 p353
 sg4
-VOldschool Acid
+VChiptunes
 p354
 sg6
-I1
+I0
 sg7
-VOldschool sounds of Acid Techno, House, and Trance!
+VPlaying the best chiptunes and video game music.
 p355
 sg9
 I40
 sg10
-V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/124.png
+V/storage/.xbmc/userdata/addon_data/plugin.audio.di.fm/106.png
 p356
 sa.

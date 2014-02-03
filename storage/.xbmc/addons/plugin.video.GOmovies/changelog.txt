@@ -1,4 +1,44 @@
 ------------------------
+GOmovies v1.1.9 (27-Jan-14)
+------------------------
+
+- Tweaked playback from library.
+- Updated French translation.
+- Code cosmetics.
+
+
+------------------------
+GOmovies v1.1.8 (26-Jan-14)
+------------------------
+
+- Tweaked IMDb listings.
+- Reduced resolution of IMDb posters.
+- Added French translation.
+- Code cosmetics.
+
+
+------------------------
+GOmovies v1.1.7 (24-Jan-14)
+------------------------
+
+- Added option for resuming playback.
+- Added Polish and Romanian translations.
+- Tweaked movie25 source.
+- Code cosmetics.
+
+
+------------------------
+GOmovies v1.1.0 (20-Jan-14)
+------------------------
+
+- Tweaked movie25 source.
+- Tweaked watched status.
+- Added section for Amazon's latest movies.
+- Added option for showing playback info.
+- Code cosmetics.
+
+
+------------------------
 GOmovies v1.0.0 (16-Jan-14)
 ------------------------
 

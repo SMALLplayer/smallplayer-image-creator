@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.GOtv" name="GOtv" version="1.1.0" provider-name="lambda">
+<addon id="plugin.video.GOtv" name="GOtv" version="1.2.3" provider-name="lambda">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.metahandler" version="1.0.0"/>
@@ -14,9 +14,15 @@
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Watch tv shows from various sources</summary>
-		<summary lang="el">Παρακολουθήστε σειρές από διάφορες πηγές</summary>
 		<description lang="en">Watch tv shows from various sources</description>
+		<summary lang="el">Παρακολουθήστε σειρές από διάφορες πηγές</summary>
 		<description lang="el">Παρακολουθήστε σειρές από διάφορες πηγές</description>
+		<summary lang="fr">Regardez des séries TV en version originale (Anglais)</summary>
+		<description lang="fr">Regardez des séries TV en version originale (Anglais)</description>
+		<summary lang="pl">Oglądaj seriale z różnych źródeł</summary>
+		<description lang="pl">Oglądaj seriale z różnych źródeł</description>
+		<summary lang="ro">Urmărește seriale din diverse surse</summary>
+		<description lang="ro">Urmărește seriale din diverse surse</description>
 		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
 		<disclaimer lang="el">Ο συγγραφέας δεν φιλοξενεί ή διανέμει οποιοδήποτε περιεχόμενο που εμφανίζεται από τo πρόσθετο αυτό. Ο συγγραφέας δεν έχει καμία σχέση με τον πάροχο του περιεχομένου.</disclaimer>
 		<forum>http://www.xbmchub.com/forums/lambdas-xbmc-repository/</forum>

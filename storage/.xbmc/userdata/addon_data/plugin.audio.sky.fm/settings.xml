@@ -1,0 +1,8 @@
+<settings>
+    <setting id="bitrate" value="4" />
+    <setting id="cacheexpire_days" value="7" />
+    <setting id="forceupdate" value="false" />
+    <setting id="randomstream" value="true" />
+    <setting id="sortaz" value="true" />
+    <setting id="usefavorites" value="false" />
+</settings>
