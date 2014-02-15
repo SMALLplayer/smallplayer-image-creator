@@ -59,15 +59,12 @@ fi
 DISK="$1"
 if [ "$DISK" = "/dev/mmcblk0" ]; then
   PART1="${DISK}p1"
-  PART2="${DISK}p2"
 elif [ "$DISK" = "/dev/loop0" ]; then
   PART1="${DISK}p1"
-  PART2="${DISK}p2"
   IMGFILE="$2"
   losetup $DISK $IMGFILE
 else
   PART1="${DISK}1"
-  PART2="${DISK}2"
 fi
 
 clear
@@ -200,23 +197,14 @@ echo "#########################################################"
 
 # create a single partition
   echo "creating partitions on $DISK..."
-  parted -s "$DISK" unit cyl mkpart primary fat32 -- 0 32
-  parted -s "$DISK" unit cyl mkpart primary ext2 -- 32 -2
-
-# make partition active (bootable)
-  echo "marking partition active..."
-  parted -s "$DISK" set 1 boot on
+  parted -s "$DISK" unit cyl mkpart primary ext2 -- 0 -2
 
 # tell kernel we have a new partition table
   echo "telling kernel we have a new partition table..."
   partprobe "$DISK"
 
-# create filesystem
   echo "creating filesystem on $PART1..."
-  mkfs.vfat "$PART1" -I -n System
-
-  echo "creating filesystem on $PART2..."
-  mkfs.ext4 "$PART2" -L Storage
+  mkfs.ext2 "$PART1" -L Storage
 
 # remount loopback device
   if [ "$DISK" = "/dev/loop0" ]; then
@@ -226,41 +214,14 @@ echo "#########################################################"
     PART1=$DISK
   fi
 
-# mount partition
-  echo "mounting partition $PART1 ..."
-  rm -rf /tmp/openelec_install
-  mkdir -p /tmp/openelec_install
-  mount -t vfat "$PART1" /tmp/openelec_install
-  MOUNTPOINT=/tmp/openelec_install
-
-# create bootloader configuration
-  echo "creating bootloader configuration..."
-
-  echo "boot=/dev/mmcblk0p1 disk=/dev/mmcblk0p2 quiet noram" > $MOUNTPOINT/cmdline.txt
-
-
-# copy files
-  echo "copying files to $MOUNTPOINT..."
-  cp $OE_PATH/target/KERNEL $MOUNTPOINT/kernel.img
-  cp $OE_PATH/../SYSTEM $MOUNTPOINT
-  cp $OE_PATH/3rdparty/bootloader/* $MOUNTPOINT
-  cp $OE_PATH/openelec.ico $MOUNTPOINT
-  cp $OE_PATH/README.md $MOUNTPOINT
-  cp $OE_PATH/../../../oemsplash.png $MOUNTPOINT
-  cp $OE_PATH/../../../config.txt $MOUNTPOINT
-
-# sync disk
-  echo "syncing disk..."
-  sync
-
-# unmount partition
-  echo "unmounting partition $MOUNTPOINT ..."
-  umount $MOUNTPOINT
-
   echo "mounting storage partition"
-  mount "$PART2" $MOUNTPOINT
+  MOUNTPOINT=/tmp/openelec_install
+  rm -rf $MOUNTPOINT
+  mkdir -p $MOUNTPOINT
+  mount "$PART1" $MOUNTPOINT
 
   echo "copying data to storage partition"
+  cp $OE_PATH/../SYSTEM $MOUNTPOINT
   rsync -a -f"- .git*" -f"+ *" $STORAGE/. $MOUNTPOINT
 
   echo "syncing disks"

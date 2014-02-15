@@ -59,15 +59,12 @@ fi
 DISK="$1"
 if [ "$DISK" = "/dev/mmcblk0" ]; then
   PART1="${DISK}p1"
-  PART2="${DISK}p2"
 elif [ "$DISK" = "/dev/loop0" ]; then
   PART1="${DISK}p1"
-  PART2="${DISK}p2"
   IMGFILE="$2"
   losetup $DISK $IMGFILE
 else
   PART1="${DISK}1"
-  PART2="${DISK}2"
 fi
 
 clear
@@ -200,8 +197,7 @@ echo "#########################################################"
 
 # create a single partition
   echo "creating partitions on $DISK..."
-  parted -s "$DISK" unit cyl mkpart primary fat32 -- 0 32
-  parted -s "$DISK" unit cyl mkpart primary ext2 -- 32 -2
+  parted -s "$DISK" unit cyl mkpart primary fat32 -- 0 -2
 
 # make partition active (bootable)
   echo "marking partition active..."
@@ -214,9 +210,6 @@ echo "#########################################################"
 # create filesystem
   echo "creating filesystem on $PART1..."
   mkfs.vfat "$PART1" -I -n System
-
-  echo "creating filesystem on $PART2..."
-  mkfs.ext4 "$PART2" -L Storage
 
 # remount loopback device
   if [ "$DISK" = "/dev/loop0" ]; then
@@ -236,18 +229,17 @@ echo "#########################################################"
 # create bootloader configuration
   echo "creating bootloader configuration..."
 
-  echo "boot=/dev/mmcblk0p1 disk=/dev/mmcblk0p2 quiet noram" > $MOUNTPOINT/cmdline.txt
+  echo "boot=/dev/mmcblk0p1 disk=/dev/sda1 SYSTEM_IMAGE=../storage/SYSTEM quiet noram" > $MOUNTPOINT/cmdline.txt
 
 
 # copy files
   echo "copying files to $MOUNTPOINT..."
   cp $OE_PATH/target/KERNEL $MOUNTPOINT/kernel.img
-  cp $OE_PATH/../SYSTEM $MOUNTPOINT
   cp $OE_PATH/3rdparty/bootloader/* $MOUNTPOINT
   cp $OE_PATH/openelec.ico $MOUNTPOINT
   cp $OE_PATH/README.md $MOUNTPOINT
   cp $OE_PATH/../../../oemsplash.png $MOUNTPOINT
-  cp $OE_PATH/../../../config.txt $MOUNTPOINT
+  cp $OE_PATH/../../../config_usb.txt $MOUNTPOINT/config.txt
 
 # sync disk
   echo "syncing disk..."
@@ -255,18 +247,6 @@ echo "#########################################################"
 
 # unmount partition
   echo "unmounting partition $MOUNTPOINT ..."
-  umount $MOUNTPOINT
-
-  echo "mounting storage partition"
-  mount "$PART2" $MOUNTPOINT
-
-  echo "copying data to storage partition"
-  rsync -a -f"- .git*" -f"+ *" $STORAGE/. $MOUNTPOINT
-
-  echo "syncing disks"
-  sync
-
-  echo "unmounting partition"
   umount $MOUNTPOINT
 
 # cleaning
